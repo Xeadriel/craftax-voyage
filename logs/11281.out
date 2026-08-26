@@ -1,0 +1,24 @@
+Started vLLM with PID 629080
+Waiting for vLLM to become ready...
+vLLM is ready.
+Collecting Craftax source...
+Craftax source size: 307,498 characters
+Collecting Voyager Base Skills source...
+Voyager Base Skills source size: 24,826 characters
+Sending request to vLLM...
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/mine_block.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/move_to_block.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/attack_mob.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/craft_item.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/place_block.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/open_chest.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/drink_water.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/eat_plant.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/sleep.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/descend_ladder.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/cast_spell.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/enchant_item.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/read_book.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/level_up_attribute.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/explore_until.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/collect_resources.py
