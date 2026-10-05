@@ -1,0 +1,116 @@
+Sending request to vLLM...
+The user is asking about how trajectories are recorded, saved, loaded, and displayed in the Craftax game code. I need to search through the provided source code to find any functionality related to trajectory recording, saving, loading, and display.
+
+Let me search through the code for:
+1. Trajectory recording
+2. Saving trajectories
+3. Loading trajectories
+4. Displaying trajectories
+
+Looking at the code, I can see in `craftax/play_craftax.py` there's a section that handles trajectory recording:
+
+```python
+traj_history = {"state": [env_state], "action": [], "reward": [], "done": []}
+
+...
+
+if args.save_trajectories:
+    save_name = f"play_data/trajectories_{int(time.time())}"
+    if args.god_mode:
+        save_name += "_GM"
+    save_name += ".pkl"
+    Path("play_data").mkdir(parents=True, exist_ok=True)
+    save_compressed_pickle(save_name, traj_history)
+```
+
+And there's a `save_compressed_pickle` function defined in `environment_base/util.py`:
+
+```python
+def save_compressed_pickle(title: str, data: Any):
+    with bz2.BZ2File(title, "w") as f:
+        pickle.dump(data, f)
+```
+
+However, I don't see any loading functionality in the provided code. The code only shows saving trajectories when `--save_trajectories` flag is passed.
+
+For display, I can see in `play_craftax.py` there's a `CraftaxRenderer` class that renders the game state to a pygame window. This is for displaying the game during play, not for replaying saved trajectories.
+
+Let me check if there's any trajectory replay functionality...
+
+Looking through the code, I don't see any functionality for:
+1. Loading saved trajectories
+2. Replay/displaying saved trajectories
+
+The code only provides:
+
+
+1. Recording trajectories during gameplay (when `--save_trajectories` flag is used)
+2. Saving them as compressed pickle files
+3. Displaying the game during play (via pygame rendering)
+
+There's no code for loading and replaying saved trajectories. The `play_craftax.py` file shows trajectory recording functionality, but there's no corresponding loading or replay mechanism in the provided source code.
+</think>
+
+Based on my analysis of the Craftax source code, here's what I found regarding trajectory recording, saving, loading, and display:
+
+## Trajectory Recording and Saving
+
+**Yes, the code provides trajectory recording functionality**, but only for saving during gameplay. Here's how it works:
+
+### Recording Location
+In `craftax/play_craftax.py`, the `main()` function records trajectories:
+
+```python
+traj_history = {"state": [env_state], "action": [], "reward": [], "done": []}
+```
+
+### Saving Functionality
+When the `--save_trajectories` flag is passed, trajectories are saved:
+
+```python
+if args.save_trajectories:
+    save_name = f"play_data/trajectories_{int(time.time())}"
+    if args.god_mode:
+        save_name += "_GM"
+    save_name += ".pkl"
+    Path("play_data").mkdir(parents=True, exist_ok=True)
+    save_compressed_pickle(save_name, traj_history)
+```
+
+### Save Function
+The `save_compressed_pickle` function is defined in `environment_base/util.py`:
+
+```python
+def save_compressed_pickle(title: str, data: Any):
+    with bz2.BZ2File(title, "w") as f:
+        pickle.dump(data, f)
+```
+
+Trajectories are saved as **compressed pickle files** in the `play_data/` directory.
+
+## Trajectory Loading and Display
+
+**No, the code does NOT provide functionality for loading and replaying saved trajectories.**
+
+### What's Missing:
+1. **No loading function** - There's no code to read/load the saved pickle files
+2. **No replay functionality** - There's no mechanism to iterate through saved trajectories and display them
+3. **No trajectory viewer** - There's no separate application or function to view recorded gameplay
+
+### What's Available:
+- **Real-time display during gameplay** - The `CraftaxRenderer` class in `play_craftax.py` renders the game to a pygame window during active play
+- **Trajectory recording** - Only during active gameplay when `--save_trajectories` is used
+
+## Summary
+
+| Functionality | Available |
+|--------------|-----------|
+| Recording trajectories | ✅ Yes (during gameplay) |
+| Saving trajectories | ✅ Yes (as compressed pickle files) |
+| Loading trajectories | ❌ No |
+| Replay/displaying trajectories | ❌ No |
+
+The codebase is designed for **training and playing** the game, not for **replaying recorded sessions**. If you need trajectory replay functionality, you would need to implement it separately by:
+1. Adding a loading function to read the pickle files
+2. Creating a replay loop that iterates through the saved trajectory data
+3. Rendering each frame using the existing `CraftaxRenderer` or `render_craftax_symbolic` functions

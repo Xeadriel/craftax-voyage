@@ -95,6 +95,30 @@ class ActionAgent:
         critique="",
         max_retries=3,
     ):
+        """
+        Generate and validate an action skill.
+
+        Always returns a dictionary.
+
+        Successful result:
+            {
+                "program_code": str,
+                "program_name": str,
+                "description": str,
+                "generation_failed": False,
+                "error": None,
+            }
+
+        Failed result after all retries:
+            {
+                "program_code": str,
+                "program_name": "failed_action_skill",
+                "description": str,
+                "generation_failed": True,
+                "error": str,
+            }
+        """
+
         messages = [
             self.render_system_message(skills),
             self.render_human_message(
@@ -110,6 +134,11 @@ class ActionAgent:
         error = None
 
         while retry > 0:
+            # Important:
+            # Reset this every iteration so an old AI response cannot
+            # accidentally be appended if the next LLM call fails.
+            response = None
+
             try:
                 response = self.llm(messages)
 
@@ -122,8 +151,8 @@ class ActionAgent:
 
                 result = self.process_ai_message(response)
 
-                # process_ai_message returns a string when the
-                # model response could not be parsed.
+                # process_ai_message() returns a string when parsing
+                # or validation failed.
                 if isinstance(result, str):
                     error = result
 
@@ -136,7 +165,8 @@ class ActionAgent:
                     # Preserve the failed AI response.
                     messages.append(response)
 
-                    # Feed the parsing/validation error back to the AI.
+                    # Give the exact error back to the model so that
+                    # it can correct its generated skill.
                     messages.append(
                         HumanMessage(
                             content=(
@@ -148,9 +178,13 @@ class ActionAgent:
                     )
 
                     retry -= 1
-                    time.sleep(1)
+
+                    if retry > 0:
+                        time.sleep(1)
+
                     continue
 
+                # Successful skill generation.
                 return result
 
             except Exception as e:
@@ -165,9 +199,8 @@ class ActionAgent:
                     "\033[0m"
                 )
 
-                # There may not be an AI response if the LLM call
-                # itself failed, so only append one if we have it.
-                if "response" in locals():
+                # Only append an AI response from this iteration.
+                if response is not None:
                     messages.append(response)
 
                 messages.append(
@@ -181,14 +214,44 @@ class ActionAgent:
                 )
 
                 retry -= 1
-                time.sleep(1)
 
-        # Do not raise. The caller gets an error string, just like
-        # Voyager's process_ai_message().
-        return (
-            "Error generating action response "
-            f"(before program execution): {error}"
+                if retry > 0:
+                    time.sleep(1)
+
+        # ---------------------------------------------------------
+        # All retries failed.
+        #
+        # IMPORTANT:
+        # Never return a string here.
+        # generate_skill() ALWAYS returns a dictionary.
+        # ---------------------------------------------------------
+
+        error = error or "Unknown action-generation error."
+
+        print(
+            "\033[35m"
+            "Action Agent failed after all retries.\n"
+            f"{error}"
+            "\033[0m"
         )
+
+        fallback_code = f'''def failed_action_skill(state, step_func, log_fn):
+    """Fallback skill generated because ActionAgent failed."""
+    log_fn("ActionAgent failed to generate a valid skill.")
+    return False
+'''
+
+        return {
+            "program_code": fallback_code,
+            "program_name": "failed_action_skill",
+            "description": (
+                "Fallback skill: ActionAgent failed to generate "
+                f"a valid skill after {max_retries} attempts. "
+                f"Error: {error}"
+            ),
+            "generation_failed": True,
+            "error": error,
+        }
 
     def process_ai_message(self, message):
         """
@@ -225,7 +288,13 @@ class ActionAgent:
                 for block in code_blocks
             )
 
-            namespace = globals().copy()
+            # Use a separate namespace for generated code.
+            #
+            # This prevents imported/global callables from being
+            # accidentally selected as the generated skill.
+            namespace = {
+                "__builtins__": __builtins__,
+            }
 
             try:
                 exec(
@@ -243,6 +312,7 @@ class ActionAgent:
                     f"{type(e).__name__}: {e}"
                 ) from e
 
+            # Only functions defined by the generated code.
             functions = [
                 (name, value)
                 for name, value in namespace.items()
@@ -255,14 +325,25 @@ class ActionAgent:
                     "No function found in the generated code."
                 )
 
-            program_name, main_function = functions[-1]
+            if len(functions) > 1:
+                raise ValueError(
+                    "Generated code must contain exactly one "
+                    "skill function. "
+                    f"Found {len(functions)} functions: "
+                    + ", ".join(name for name, _ in functions)
+                )
+
+            program_name, main_function = functions[0]
 
             if not hasattr(main_function, "__code__"):
                 raise ValueError(
                     f"'{program_name}' is not a valid Python function."
                 )
 
-            argcount = main_function.__code__.co_argcount
+            # Validate the exact function signature.
+            code = main_function.__code__
+
+            argcount = code.co_argcount
 
             if argcount != 3:
                 raise ValueError(
@@ -271,12 +352,32 @@ class ActionAgent:
                     f"It currently takes {argcount}."
                 )
 
+            argument_names = code.co_varnames[:argcount]
+
+            expected_arguments = (
+                "state",
+                "step_func",
+                "log_fn",
+            )
+
+            if argument_names != expected_arguments:
+                raise ValueError(
+                    f"Main function '{program_name}' must have the "
+                    f"exact signature:\n"
+                    f"    def {program_name}"
+                    f"(state, step_func, log_fn)\n"
+                    f"It currently has arguments: "
+                    f"{argument_names}."
+                )
+
             return {
                 "program_code": program_code,
                 "program_name": program_name,
                 "description": self.extract_description(
                     message.content
                 ),
+                "generation_failed": False,
+                "error": None,
             }
 
         except Exception as e:
@@ -292,7 +393,10 @@ class ActionAgent:
             re.DOTALL,
         )
 
-        description = code_pattern.sub("", content).strip()
+        description = code_pattern.sub(
+            "",
+            content,
+        ).strip()
 
         return description or "No description provided."
 
