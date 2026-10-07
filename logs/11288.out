@@ -1,0 +1,21 @@
+Started vLLM with PID 661283
+Waiting for vLLM to become ready...
+vLLM is ready.
+Collecting Craftax source...
+Craftax source size: 307,498 characters
+Collecting Voyager Base Skills source...
+Voyager Base Skills source size: 24,826 characters
+Sending request to vLLM...
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/move_to_block.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/mine_block.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/craft_item.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/place_block.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/kill_mob.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/explore_until.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/check_condition.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/open_chest.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/level_up_attribute.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/sleep.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/rest.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/drink_potion.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/collect_resource.py

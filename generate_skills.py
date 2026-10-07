@@ -124,6 +124,66 @@ class Action(Enum):
     Comments/docstrings may explain the implementation, but do not output
     prose outside the Python files. Every file must contain functioning code + appropriate and accurate comments. 
     Do not create python files that are comment only.
+=======
+
+
+PROJECT_ROOT = Path.home() / "craftax-voyage"
+CRAFTAX_ROOT = PROJECT_ROOT / "Craftax-1.6.1"
+VOYAGER_BASE_SKILLS_ROOT = (
+    PROJECT_ROOT / "Voyager-main" / "voyager" / "control_primitives"
+)
+
+MODEL = "unsloth/Qwen3.5-9B-GGUF"
+BASE_URL = "http://localhost:8000/v1"
+
+OUTPUT_DIR = PROJECT_ROOT / "generated_skills"
+
+
+SYSTEM_PROMPT = r"""
+You are an expert software engineer.
+
+Your task is to design a set of reusable low-level control primitives ("base
+skills") for the Craftax environment.
+
+You are given the complete Craftax source code and some example skills
+from voyager which did the same for minecraft.
+
+Treat the Craftax source code as the authoritative
+specification of the environment and its APIs. 
+The Voyager code is only an example of how reusable control primitives can be
+structured. Do not assume Minecraft APIs exist in Craftax.
+
+The goal is NOT to copy Minecraft/Voyager functionality mechanically.
+
+Instead, infer what useful reusable control primitives should exist for
+Craftax based on:
+- the actual Craftax state representation,
+- the actual Craftax action space,
+- the actual Craftax environment API,
+- Craftax's items, blocks, resources, entities, crafting and progression
+  mechanics,
+- and the way the environment is actually implemented.
+
+Important requirements:
+
+1. Only use APIs and concepts that actually exist in Craftax.
+2. Do not assume Craftax has Minecraft's bot APIs, Mineflayer, pathfinder,
+   Vec3, chests, Minecraft commands, etc.
+3. Skills must be implemented in Python. You may create helper functions but try to avoid them.
+4. Prefer small, composable skills with clear purposes.
+5. A skill should perform a clear short-term objective rather than attempting
+   to solve an entire long-horizon objective.
+6. Reuse existing Craftax functions and abstractions whenever appropriate.
+7. Do not invent APIs merely because they would be convenient.
+8. Explain the assumptions behind each proposed skill as code comments ONLY.
+9. Produce actual Python implementations for the skills that can be
+    implemented reliably from the supplied source code.
+10. Do not reply with anything other than commented code.
+11. Definitely use the constants given in craftax.craftax.constants whenever applicable.
+
+Before writing the final skills, inspect the Craftax source carefully and
+derive the relevant environment interfaces.
+>>>>>>> 90f000267c4b3500e6f409a54007a4e2fc6e4fcc
 """
 
 

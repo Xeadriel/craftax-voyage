@@ -1,0 +1,30 @@
+Started vLLM with PID 963493
+Waiting for vLLM to become ready...
+vLLM is ready.
+Collecting Craftax source...
+Craftax source size: 307,498 characters
+Collecting Voyager Base Skills source...
+Voyager Base Skills source size: 24,826 characters
+Sending request to vLLM...
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/mine_block.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/craft_item.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/smelt_item.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/kill_mob.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/place_block.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/use_chest.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/descend_ladder.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/ascend_ladder.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/make_pickaxe.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/make_sword.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/make_armour.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/make_arrow.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/make_torch.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/place_torch.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/place_plant.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/drink_potion.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/read_book.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/place_crafting_table.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/place_furnace.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/place_stone.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/enchant_item.py
+Generated: /home/oasik/craftax-voyage/generated_skills/craftax_skills/place_table.py
