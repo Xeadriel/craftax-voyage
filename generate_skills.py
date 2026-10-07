@@ -12,7 +12,7 @@ VOYAGER_CONTROL_PRIMITIVES_ROOT = PROJECT_ROOT / "Voyager-main" / "voyager" / "c
 MODEL = "Qwen/Qwen3.5-4B"
 BASE_URL = "http://localhost:8000/v1"
 
-OUTPUT_DIR = PROJECT_ROOT / "generated_control primitives" / str(int(time.time()))
+OUTPUT_DIR = PROJECT_ROOT / "generated_control_primitives" / str(int(time.time()))
 
 
 SYSTEM_PROMPT = """
@@ -45,10 +45,12 @@ Always consider the character's current direction because it matters for many ac
 Every control primitive must at least take the game state as a parameter as you will heavily make use of it in the code.
 Every control primitive must also take a step function which takes one argument, which is a value from the action enum. 
 Furthermore every control primitive must take a log function for logging purposes.
+Use this log function to log what you make the player character do.
 You may not actively change the game state via any other function other than via the step function.
+The step function returns a new state that you can use.
 Every action you take in a control primitive must be taken via the step function. 
-You may write and use your own helper functions but you should try to avoid them and keep them minimal.
-Every control primitive file you provide should contain exactly one control primitive. 
+Do not write helper functions and keep everything inside one minimal function.
+Your reply should contain the python code for exactly ONE control primitive.
 
 As a reminder, this is the action enum:
 
@@ -108,14 +110,14 @@ class Action(Enum):
     # Description:
     # Moves, clears path to and Mines a specified block...
 
-    def mine_block(...):
+    def mine_block(state, log, step_func, ...):
         ...
 
     === FILE: explore.py ===
     # Description:
     # Explores the environment until...
 
-    def exploreUntil(...):
+    def exploreUntil(state, log, step_func, ...):
         ...
 
     Every file must be complete and directly saveable as a .py file.
@@ -136,7 +138,7 @@ def collect_craftax_source():
         "craftax_state.py",
         "game_logic.py",
         "tutorial.md",
-        # "obs_description.md",
+        "obs_description.md",
     }
 
     for path in sorted(CRAFTAX_ROOT.rglob("*")):
@@ -221,9 +223,15 @@ def main():
         <Craftax source>
         {craftax_source}
         </Craftax source>
-        """
+        
     
-    # Now design the following control primitive:
+    Now design the following control primitive:
+    A control primitive to explore and walk around until a certain specified thing is found or X number of steps are reached. This can be a block or entity.  
+        It should return true at the end if no error was thrown.
+        It should throw an error if max_steps number of steps are reached before finding the specified object.
+    """
+        # It should throw an error if food, drink or energy fall to 3 or below.
+
     # - A control primitive to sleep or rest.
     #         It should move to a place of safety.
     #         If possible it should try to close the entrance to that safe spot by placing a block.
@@ -250,16 +258,7 @@ def main():
     #         It should throw an error if an enemy gets too close (3 blocks radius).
     #         It should throw an error after X (default 50) steps if not succeeded.
     #         It should throw an error if the character died.
-    # - 1 A control primitive to explore and walk around until a certain specified thing is found or X number of steps are reached. This can be a block or entity. 
-    #     It should be able to clear blocks (by mining it) or water/lava (by placing and removing a block where the water/lava is) that are in the way. 
-    #     It should return true at the end if no error was thrown.
-    #     It should be able to ascend and descend ladders.
-    #     It should throw an error if hunger, thirst or energy fall to 3 or below.
-    #     It should throw an error if hp falls to 5 or below.
-    #     It should throw an error if an enemy gets too close (3 blocks radius).
-    #     It should throw an error if X number of steps are reached before finding the specified object.
-    #     It should throw an error after X (default 100) steps if not succeeded.
-    #     It should throw an error if the character died.
+    
         
       
     #     - 3 A control primitive to fight an enemy type or passive mob via melee attacks.
