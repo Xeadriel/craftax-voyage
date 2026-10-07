@@ -1,0 +1,41 @@
+
+[explore_until] Start exploring for block COAL with a budget of 10 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/10: position (24, 24), floor 0, facing UP, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found block COAL at (22, 21), distance 5, after 0 steps
+[explore_until] Start exploring for block COAL with a budget of 10 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/10: position (24, 24), floor 0, facing UP, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found block COAL at (22, 21), distance 5, after 0 steps
+[explore_until] Start exploring for block COAL with a budget of 10 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/10: position (24, 24), floor 0, facing UP, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found block COAL at (22, 21), distance 5, after 0 steps
+[explore_until] Start exploring for block COAL with a budget of 10 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/10: position (24, 24), floor 0, facing UP, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found block COAL at (22, 21), distance 5, after 0 steps
+[explore_until] Start exploring for block COAL with a budget of 10 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/10: position (24, 24), floor 0, facing UP, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found block COAL at (22, 21), distance 5, after 0 steps
+[explore_until] Start exploring for block COAL with a budget of 10 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/10: position (24, 24), floor 0, facing UP, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found block COAL at (22, 21), distance 5, after 0 steps
+[explore_until] Start exploring for block COAL with a budget of 10 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/10: position (24, 24), floor 0, facing UP, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found block COAL at (22, 21), distance 5, after 0 steps
+[explore_until] Start exploring for block COAL with a budget of 10 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/10: position (24, 24), floor 0, facing UP, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found block COAL at (22, 21), distance 5, after 0 steps
+[explore_until] Start exploring for block COAL with a budget of 10 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/10: position (24, 24), floor 0, facing UP, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found block COAL at (22, 21), distance 5, after 0 steps
+[explore_until] Start exploring for block COAL with a budget of 10 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/10: position (24, 24), floor 0, facing UP, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found block COAL at (22, 21), distance 5, after 0 steps

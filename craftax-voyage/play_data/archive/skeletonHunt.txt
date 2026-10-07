@@ -1,0 +1,221 @@
+
+[explore_until] Start exploring for mob RANGED with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (24, 24), floor 0, facing UP, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] New exploration goal (20, 24) with path cost 4 (31 frontier cells available)
+[explore_until] Step 1/200: UP - moving to (23, 24) towards goal (20, 24)
+[explore_until] Step 1/200: position (23, 24), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 110/2304 cells
+[explore_until] Goal (20, 24) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (19, 24) with path cost 4 (30 frontier cells available)
+[explore_until] Step 2/200: UP - moving to (22, 24) towards goal (19, 24)
+[explore_until] Step 2/200: position (22, 24), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 121/2304 cells
+[explore_until] Goal (19, 24) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (21, 29) with path cost 6 (29 frontier cells available)
+[explore_until] Step 3/200: UP - moving to (21, 24) towards goal (21, 29)
+[explore_until] Step 3/200: position (21, 24), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 132/2304 cells
+[explore_until] Step 4/200: RIGHT - moving to (21, 25) towards goal (21, 29)
+[explore_until] Step 4/200: position (21, 25), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 141/2304 cells
+[explore_until] Goal (21, 29) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (20, 30) with path cost 6 (30 frontier cells available)
+[explore_until] Step 5/200: RIGHT - moving to (21, 26) towards goal (20, 30)
+[explore_until] Step 5/200: position (21, 26), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 150/2304 cells
+[explore_until] Goal (20, 30) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (20, 31) with path cost 6 (32 frontier cells available)
+[explore_until] Step 6/200: RIGHT - moving to (21, 27) towards goal (20, 31)
+[explore_until] Step 6/200: position (21, 27), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 159/2304 cells
+[explore_until] Goal (20, 31) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (20, 32) with path cost 6 (34 frontier cells available)
+[explore_until] Step 7/200: UP - moving to (20, 27) towards goal (20, 32)
+[explore_until] Step 7/200: position (20, 27), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 170/2304 cells
+[explore_until] Step 8/200: RIGHT - moving to (20, 28) towards goal (20, 32)
+[explore_until] Step 8/200: position (20, 28), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 179/2304 cells
+[explore_until] Goal (20, 32) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (20, 33) with path cost 5 (35 frontier cells available)
+[explore_until] Step 9/200: RIGHT - moving to (20, 29) towards goal (20, 33)
+[explore_until] Step 9/200: position (20, 29), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 188/2304 cells
+[explore_until] Goal (20, 33) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (16, 30) with path cost 5 (37 frontier cells available)
+[explore_until] Step 10/200: RIGHT - moving to (20, 30) towards goal (16, 30)
+[explore_until] Step 10/200: position (20, 30), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 197/2304 cells
+[explore_until] Step 11/200: UP - moving to (19, 30) towards goal (16, 30)
+[explore_until] Step 11/200: position (19, 30), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 208/2304 cells
+[explore_until] Goal (16, 30) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (15, 31) with path cost 5 (39 frontier cells available)
+[explore_until] Step 12/200: UP - moving to (18, 30) towards goal (15, 31)
+[explore_until] Step 12/200: position (18, 30), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 219/2304 cells
+[explore_until] Goal (15, 31) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (18, 35) with path cost 5 (39 frontier cells available)
+[explore_until] Step 13/200: RIGHT - moving to (18, 31) towards goal (18, 35)
+[explore_until] Step 13/200: position (18, 31), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 228/2304 cells
+[explore_until] Found RANGED mob (type_id 0) at (22, 35) after 13 steps
+[kill_mob] Start hunting a RANGED mob with a budget of 200 steps
+[kill_mob] Step 0/200: position (18, 31), floor 0, facing RIGHT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Targeting Skeleton (RANGED #0) at (22, 35) with 3.00 health; damage per attack: melee 1.00
+[kill_mob] Step 1/200: RIGHT - moving to (18, 32) towards attack position (21, 35) 1 cell(s) from Skeleton (RANGED #0) at (22, 35) (path cost 7)
+[kill_mob] Step 1/200: position (18, 32), floor 0, facing RIGHT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 2/200: RIGHT - moving to (18, 33) towards attack position (21, 34) 1 cell(s) from Skeleton (RANGED #0) at (22, 34) (path cost 5)
+[kill_mob] Step 2/200: position (18, 33), floor 0, facing RIGHT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 3/200: RIGHT - moving to (18, 34) towards attack position (21, 34) 1 cell(s) from Skeleton (RANGED #0) at (22, 34) (path cost 4)
+[kill_mob] Step 3/200: position (18, 34), floor 0, facing RIGHT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 4/200: DOWN - moving to (19, 34) towards attack position (20, 34) 1 cell(s) from Skeleton (RANGED #0) at (21, 34) (path cost 2)
+[kill_mob] Warning: health dropped from 9.0 to 7.0
+[kill_mob] Step 4/200: position (19, 34), floor 0, facing DOWN, health 7.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 5/200: RIGHT - moving to (19, 35) towards attack position (20, 35) 1 cell(s) from Skeleton (RANGED #0) at (21, 35) (path cost 2)
+[kill_mob] Step 5/200: position (19, 35), floor 0, facing RIGHT, health 7.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 6/200: DOWN - moving to (20, 35) towards attack position (20, 36) 1 cell(s) from Skeleton (RANGED #0) at (21, 36) (path cost 2)
+[kill_mob] Step 6/200: position (20, 35), floor 0, facing DOWN, health 7.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 7/200: RIGHT - moving to (20, 36) towards attack position (21, 36) 1 cell(s) from Skeleton (RANGED #0) at (22, 36) (path cost 2)
+[kill_mob] Step 7/200: position (20, 36), floor 0, facing RIGHT, health 7.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 8/200: DOWN - moving to (21, 36) towards attack position (22, 36) 1 cell(s) from Skeleton (RANGED #0) at (23, 36) (path cost 2)
+[kill_mob] Step 8/200: position (21, 36), floor 0, facing DOWN, health 7.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 9/200: DOWN - moving to (22, 36) towards attack position (22, 36) 1 cell(s) from Skeleton (RANGED #0) at (23, 36) (path cost 1)
+[kill_mob] Warning: health dropped from 7.0 to 5.0
+[kill_mob] Step 9/200: position (22, 36), floor 0, facing DOWN, health 5.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 10/200: LEFT - moving to (22, 35) towards attack position (22, 35) 1 cell(s) from Skeleton (RANGED #0) at (23, 35) (path cost 1)
+[kill_mob] Step 10/200: position (22, 35), floor 0, facing LEFT, health 5.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 11/200: DOWN - moving to (23, 35) towards attack position (23, 35) 1 cell(s) from Skeleton (RANGED #0) at (24, 35) (path cost 1)
+[kill_mob] Step 11/200: position (23, 35), floor 0, facing DOWN, health 5.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 12/200: RIGHT - moving to (23, 36) towards attack position (23, 36) 1 cell(s) from Skeleton (RANGED #0) at (24, 36) (path cost 1)
+[kill_mob] Step 12/200: position (23, 36), floor 0, facing RIGHT, health 5.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 13/200: DOWN - moving to (24, 36) towards attack position (24, 36) 1 cell(s) from Skeleton (RANGED #0) at (25, 36) (path cost 1)
+[kill_mob] Warning: health dropped from 5.0 to 4.0
+[kill_mob] Step 13/200: position (24, 36), floor 0, facing DOWN, health 4.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 14/200: DO - attacking target Skeleton (RANGED #0) at (25, 36) with melee from 1 cell(s) away (expected damage 1.00, health 3.00)
+[kill_mob] Skeleton (RANGED #0) took 1.00 damage, health 3.00 -> 2.00
+[kill_mob] Step 14/200: position (24, 36), floor 0, facing DOWN, health 4.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 15/200: LEFT - moving to (24, 35) towards attack position (24, 35) 1 cell(s) from Skeleton (RANGED #0) at (25, 35) (path cost 1)
+[kill_mob] Step 15/200: position (24, 35), floor 0, facing LEFT, health 4.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 16/200: DOWN - moving to (25, 35) towards attack position (25, 35) 1 cell(s) from Skeleton (RANGED #0) at (26, 35) (path cost 1)
+[kill_mob] Step 16/200: position (25, 35), floor 0, facing DOWN, health 4.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 17/200: RIGHT - moving to (25, 36) towards attack position (25, 36) 1 cell(s) from Skeleton (RANGED #0) at (26, 36) (path cost 1)
+[kill_mob] Step 17/200: position (25, 36), floor 0, facing RIGHT, health 4.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 18/200: DOWN - facing target Skeleton (RANGED #0) at (26, 36), 1 cell(s) away, to attack with melee
+[kill_mob] Step 18/200: position (25, 36), floor 0, facing DOWN, health 4.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 19/200: LEFT - moving to (25, 35) towards attack position (25, 35) 1 cell(s) from Skeleton (RANGED #0) at (26, 35) (path cost 1)
+[kill_mob] Step 19/200: position (25, 35), floor 0, facing LEFT, health 4.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 20/200: LEFT - moving to (25, 34) towards attack position (25, 34) 1 cell(s) from Skeleton (RANGED #0) at (26, 34) (path cost 1)
+[kill_mob] Step 20/200: position (25, 34), floor 0, facing LEFT, health 4.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 21/200: DOWN - moving to (26, 34) towards attack position (26, 34) 1 cell(s) from Skeleton (RANGED #0) at (27, 34) (path cost 1)
+[kill_mob] Warning: health dropped from 4.0 to 2.0
+[kill_mob] Step 21/200: position (26, 34), floor 0, facing DOWN, health 2.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 22/200: DO - attacking target Skeleton (RANGED #0) at (27, 34) with melee from 1 cell(s) away (expected damage 1.00, health 2.00)
+[kill_mob] Skeleton (RANGED #0) took 1.00 damage, health 2.00 -> 1.00
+[kill_mob] Step 22/200: position (26, 34), floor 0, facing DOWN, health 2.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 23/200: DO - attacking target Skeleton (RANGED #0) at (27, 34) with melee from 1 cell(s) away (expected damage 1.00, health 1.00)
+[kill_mob] Monsters killed on floor 0: 10 -> 11
+[kill_mob] Killed Skeleton (RANGED #0) at (27, 34) after 23 steps
+[kill_mob] Successfully killed a RANGED mob
+[explore_until] Start exploring for mob RANGED with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (26, 34), floor 0, facing DOWN, health 2.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] New exploration goal (22, 34) with path cost 4 (27 frontier cells available)
+[explore_until] Step 1/200: UP - moving to (25, 34) towards goal (22, 34)
+[explore_until] Step 1/200: position (25, 34), floor 0, facing UP, health 2.0, revealed 11 new cells, explored 110/2304 cells
+[explore_until] Goal (22, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (21, 34) with path cost 4 (27 frontier cells available)
+[explore_until] Step 2/200: UP - moving to (24, 34) towards goal (21, 34)
+[explore_until] Step 2/200: position (24, 34), floor 0, facing UP, health 2.0, revealed 11 new cells, explored 121/2304 cells
+[explore_until] Goal (21, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (20, 34) with path cost 4 (27 frontier cells available)
+[explore_until] Step 3/200: UP - moving to (23, 34) towards goal (20, 34)
+[explore_until] Step 3/200: position (23, 34), floor 0, facing UP, health 2.0, revealed 11 new cells, explored 132/2304 cells
+[explore_until] Goal (20, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (19, 34) with path cost 4 (27 frontier cells available)
+[explore_until] Step 4/200: UP - moving to (22, 34) towards goal (19, 34)
+[explore_until] Step 4/200: position (22, 34), floor 0, facing UP, health 2.0, revealed 11 new cells, explored 143/2304 cells
+[explore_until] Goal (19, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (18, 34) with path cost 4 (28 frontier cells available)
+[explore_until] Step 5/200: UP - moving to (21, 34) towards goal (18, 34)
+[explore_until] Step 5/200: position (21, 34), floor 0, facing UP, health 2.0, revealed 11 new cells, explored 154/2304 cells
+[explore_until] Goal (18, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (17, 34) with path cost 4 (29 frontier cells available)
+[explore_until] Step 6/200: UP - moving to (20, 34) towards goal (17, 34)
+[explore_until] Step 6/200: position (20, 34), floor 0, facing UP, health 2.0, revealed 11 new cells, explored 165/2304 cells
+[explore_until] Goal (17, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (16, 34) with path cost 4 (29 frontier cells available)
+[explore_until] Step 7/200: UP - moving to (19, 34) towards goal (16, 34)
+[explore_until] Step 7/200: position (19, 34), floor 0, facing UP, health 2.0, revealed 11 new cells, explored 176/2304 cells
+[explore_until] Goal (16, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (15, 34) with path cost 4 (29 frontier cells available)
+[explore_until] Step 8/200: UP - moving to (18, 34) towards goal (15, 34)
+[explore_until] Step 8/200: position (18, 34), floor 0, facing UP, health 2.0, revealed 11 new cells, explored 187/2304 cells
+[explore_until] Goal (15, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (14, 35) with path cost 5 (28 frontier cells available)
+[explore_until] Step 9/200: UP - moving to (17, 34) towards goal (14, 35)
+[explore_until] Step 9/200: position (17, 34), floor 0, facing UP, health 2.0, revealed 11 new cells, explored 198/2304 cells
+[explore_until] Goal (14, 35) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (13, 35) with path cost 5 (27 frontier cells available)
+[explore_until] Step 10/200: RIGHT - moving to (17, 35) towards goal (13, 35)
+[explore_until] Step 10/200: position (17, 35), floor 0, facing RIGHT, health 2.0, revealed 9 new cells, explored 207/2304 cells
+[explore_until] Step 11/200: LEFT - moving to (17, 34) towards goal (13, 35)
+[explore_until] Step 11/200: position (17, 34), floor 0, facing LEFT, health 2.0, revealed 0 new cells, explored 207/2304 cells
+[explore_until] Step 12/200: UP - moving to (16, 34) towards goal (13, 35)
+[explore_until] Step 12/200: position (16, 34), floor 0, facing UP, health 2.0, revealed 11 new cells, explored 218/2304 cells
+[explore_until] Goal (13, 35) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (12, 36) with path cost 6 (26 frontier cells available)
+[explore_until] Step 13/200: UP - moving to (15, 34) towards goal (12, 36)
+[explore_until] Step 13/200: position (15, 34), floor 0, facing UP, health 2.0, revealed 11 new cells, explored 229/2304 cells
+[explore_until] Goal (12, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (11, 36) with path cost 6 (27 frontier cells available)
+[explore_until] Step 14/200: UP - moving to (14, 34) towards goal (11, 36)
+[explore_until] Step 14/200: position (14, 34), floor 0, facing UP, health 2.0, revealed 11 new cells, explored 240/2304 cells
+[explore_until] Goal (11, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (10, 38) with path cost 8 (26 frontier cells available)
+[explore_until] Step 15/200: UP - moving to (13, 34) towards goal (10, 38)
+[explore_until] Step 15/200: position (13, 34), floor 0, facing UP, health 2.0, revealed 11 new cells, explored 251/2304 cells
+[explore_until] Goal (10, 38) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (11, 39) with path cost 7 (26 frontier cells available)
+[explore_until] Step 16/200: RIGHT - moving to (13, 35) towards goal (11, 39)
+[explore_until] Step 16/200: position (13, 35), floor 0, facing RIGHT, health 3.0, revealed 4 new cells, explored 255/2304 cells
+[explore_until] Goal (11, 39) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (9, 39) with path cost 8 (26 frontier cells available)
+[explore_until] Step 17/200: RIGHT - moving to (13, 36) towards goal (9, 39)
+[explore_until] Step 17/200: position (13, 36), floor 0, facing RIGHT, health 3.0, revealed 9 new cells, explored 264/2304 cells
+[explore_until] Step 18/200: UP - moving to (12, 36) towards goal (9, 39)
+[explore_until] Step 18/200: position (12, 36), floor 0, facing UP, health 3.0, revealed 11 new cells, explored 275/2304 cells
+[explore_until] Goal (9, 39) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (10, 41) with path cost 7 (26 frontier cells available)
+[explore_until] Step 19/200: UP - moving to (11, 36) towards goal (10, 41)
+[explore_until] Step 19/200: position (11, 36), floor 0, facing UP, health 3.0, revealed 11 new cells, explored 286/2304 cells
+[explore_until] Step 20/200: RIGHT - moving to (11, 37) towards goal (10, 41)
+[explore_until] Step 20/200: position (11, 37), floor 0, facing RIGHT, health 3.0, revealed 9 new cells, explored 295/2304 cells
+[explore_until] Goal (10, 41) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (10, 42) with path cost 6 (30 frontier cells available)
+[explore_until] Step 21/200: RIGHT - moving to (11, 38) towards goal (10, 42)
+[explore_until] Step 21/200: position (11, 38), floor 0, facing RIGHT, health 3.0, revealed 9 new cells, explored 304/2304 cells
+[explore_until] Goal (10, 42) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (10, 43) with path cost 6 (31 frontier cells available)
+[explore_until] Step 22/200: UP - moving to (10, 38) towards goal (10, 43)
+[explore_until] Step 22/200: position (10, 38), floor 0, facing UP, health 3.0, revealed 11 new cells, explored 315/2304 cells
+[explore_until] Step 23/200: RIGHT - moving to (10, 39) towards goal (10, 43)
+[explore_until] Step 23/200: position (10, 39), floor 0, facing RIGHT, health 3.0, revealed 9 new cells, explored 324/2304 cells
+[explore_until] Goal (10, 43) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (10, 44) with path cost 5 (30 frontier cells available)
+[explore_until] Step 24/200: RIGHT - moving to (10, 40) towards goal (10, 44)
+[explore_until] Step 24/200: position (10, 40), floor 0, facing RIGHT, health 3.0, revealed 9 new cells, explored 333/2304 cells
+[explore_until] Found RANGED mob (type_id 0) at (9, 45) after 24 steps
+[kill_mob] Start hunting a RANGED mob with a budget of 200 steps
+[kill_mob] Step 0/200: position (10, 40), floor 0, facing RIGHT, health 3.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Targeting Skeleton (RANGED #0) at (9, 45) with 3.00 health; damage per attack: melee 1.00
+[kill_mob] Step 1/200: UP - moving to (9, 40) towards attack position (9, 44) 1 cell(s) from Skeleton (RANGED #0) at (9, 45) (path cost 5)
+[kill_mob] Step 1/200: position (9, 40), floor 0, facing UP, health 3.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 2/200: RIGHT - moving to (9, 41) towards attack position (9, 44) 1 cell(s) from Skeleton (RANGED #0) at (9, 45) (path cost 4)
+[kill_mob] Step 2/200: position (9, 41), floor 0, facing RIGHT, health 3.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 3/200: RIGHT - moving to (9, 42) towards attack position (9, 45) 1 cell(s) from Skeleton (RANGED #0) at (9, 46) (path cost 4)
+[kill_mob] Warning: health dropped from 3.0 to 1.0
+[kill_mob] Step 3/200: position (9, 42), floor 0, facing RIGHT, health 1.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 4/200: RIGHT - moving to (9, 43) towards attack position (9, 46) 1 cell(s) from Skeleton (RANGED #0) at (9, 47) (path cost 4)
+[kill_mob] Step 4/200: position (9, 43), floor 0, facing RIGHT, health 1.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 5/200: RIGHT - moving to (9, 44) towards attack position (9, 46) 1 cell(s) from Skeleton (RANGED #0) at (9, 47) (path cost 3)
+[kill_mob] Step 5/200: position (9, 44), floor 0, facing RIGHT, health 1.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 6/200: RIGHT - moving to (9, 45) towards attack position (9, 45) 1 cell(s) from Skeleton (RANGED #0) at (9, 46) (path cost 1)
+[kill_mob] Step 6/200: position (9, 45), floor 0, facing RIGHT, health 1.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 7/200: RIGHT - moving to (9, 46) towards attack position (9, 46) 1 cell(s) from Skeleton (RANGED #0) at (9, 47) (path cost 1)
+[kill_mob] Step 7/200: position (9, 46), floor 0, facing RIGHT, health 1.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 8/200: UP - moving to (8, 46) towards attack position (8, 46) 1 cell(s) from Skeleton (RANGED #0) at (8, 47) (path cost 1)
+[kill_mob] Step 8/200: position (8, 46), floor 0, facing UP, health 1.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 9/200: UP - moving to (7, 46) towards attack position (7, 46) 1 cell(s) from Skeleton (RANGED #0) at (7, 47) (path cost 1)
+[kill_mob] Step 9/200: position (7, 46), floor 0, facing UP, health 1.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 10/200: UP - moving to (6, 46) towards attack position (6, 46) 1 cell(s) from Skeleton (RANGED #0) at (6, 47) (path cost 1)
+[kill_mob] The player died or the episode ended during the fight
+Error: Killing failed: the player died while hunting a RANGED mob

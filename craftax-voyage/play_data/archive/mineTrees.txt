@@ -1,0 +1,864 @@
+
+[explore_until] Start exploring for block TREE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (24, 24), floor 0, facing UP, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found block TREE at (26, 23), distance 3, after 0 steps
+[mine_block] Start mining 5 TREE block(s) with a budget of 200 steps (no pickaxe, 0 stone)
+[mine_block] Step 0/200: position (24, 24), facing UP, mined 0/5, 8 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (26, 23) with path cost 6
+[mine_block] Step 1/200: LEFT - moving to (24, 23) towards TREE at (26, 23) (path cost 6)
+[mine_block] Step 1/200: position (24, 23), facing LEFT, mined 0/5, 8 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 2/200: DOWN - moving to (25, 23) towards TREE at (26, 23) (path cost 5)
+[mine_block] Step 2/200: position (25, 23), facing DOWN, mined 0/5, 8 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 3/200: DO - mining target TREE at (26, 23) (1/5)
+[mine_block] Mined TREE at (26, 23), it is now GRASS
+[mine_block] Mined TREE 1/5, wood 0 -> 1
+[mine_block] Step 3/200: position (25, 23), facing DOWN, mined 1/5, 7 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (27, 23) with path cost 5
+[mine_block] Step 4/200: DOWN - moving to (26, 23) towards TREE at (27, 23) (path cost 5)
+[mine_block] Step 4/200: position (26, 23), facing DOWN, mined 1/5, 7 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 5/200: DO - mining target TREE at (27, 23) (2/5)
+[mine_block] Mined TREE at (27, 23), it is now GRASS
+[mine_block] Mined TREE 2/5, wood 1 -> 2
+[mine_block] Step 5/200: position (26, 23), facing DOWN, mined 2/5, 6 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (27, 22) with path cost 5
+[mine_block] Step 6/200: LEFT - moving to (26, 22) towards TREE at (27, 22) (path cost 5)
+[mine_block] Step 6/200: position (26, 22), facing LEFT, mined 2/5, 5 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 7/200: DOWN - turning towards TREE at (27, 22)
+[mine_block] Step 7/200: position (26, 22), facing DOWN, mined 2/5, 5 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 8/200: DO - mining target TREE at (27, 22) (3/5)
+[mine_block] Mined TREE at (27, 22), it is now GRASS
+[mine_block] Mined TREE 3/5, wood 2 -> 3
+[mine_block] Step 8/200: position (26, 22), facing DOWN, mined 3/5, 4 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (22, 21) with path cost 8
+[mine_block] Step 9/200: UP - moving to (25, 22) towards TREE at (22, 21) (path cost 8)
+[mine_block] Step 9/200: position (25, 22), facing UP, mined 3/5, 3 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 10/200: UP - moving to (24, 22) towards TREE at (22, 21) (path cost 7)
+[mine_block] Step 10/200: position (24, 22), facing UP, mined 3/5, 3 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 11/200: UP - moving to (23, 22) towards TREE at (22, 21) (path cost 6)
+[mine_block] Step 11/200: position (23, 22), facing UP, mined 3/5, 3 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 12/200: UP - moving to (22, 22) towards TREE at (22, 21) (path cost 5)
+[mine_block] Step 12/200: position (22, 22), facing UP, mined 3/5, 3 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 13/200: LEFT - turning towards TREE at (22, 21)
+[mine_block] Step 13/200: position (22, 22), facing LEFT, mined 3/5, 3 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 14/200: DO - mining target TREE at (22, 21) (4/5)
+[mine_block] Mined TREE at (22, 21), it is now GRASS
+[mine_block] Mined TREE 4/5, wood 3 -> 4
+[mine_block] Step 14/200: position (22, 22), facing LEFT, mined 4/5, 2 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (24, 19) with path cost 8
+[mine_block] Step 15/200: LEFT - moving to (22, 21) towards TREE at (24, 19) (path cost 8)
+[mine_block] Step 15/200: position (22, 21), facing LEFT, mined 4/5, 2 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 16/200: LEFT - moving to (22, 20) towards TREE at (24, 19) (path cost 7)
+[mine_block] Step 16/200: position (22, 20), facing LEFT, mined 4/5, 5 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 17/200: LEFT - moving to (22, 19) towards TREE at (24, 19) (path cost 6)
+[mine_block] Step 17/200: position (22, 19), facing LEFT, mined 4/5, 7 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 18/200: DOWN - moving to (23, 19) towards TREE at (24, 19) (path cost 5)
+[mine_block] Step 18/200: position (23, 19), facing DOWN, mined 4/5, 7 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 19/200: DO - mining target TREE at (24, 19) (5/5)
+[mine_block] Mined TREE at (24, 19), it is now GRASS
+[mine_block] Mined TREE 5/5, wood 4 -> 5
+[mine_block] Successfully mined 5 TREE block(s) after 19 steps
+[explore_until] Start exploring for block TREE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (23, 19), floor 0, facing DOWN, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found block TREE at (21, 15), distance 6, after 0 steps
+[mine_block] Start mining 5 TREE block(s) with a budget of 200 steps (no pickaxe, 0 stone)
+[mine_block] Step 0/200: position (23, 19), facing DOWN, mined 0/5, 6 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (21, 15) with path cost 9
+[mine_block] Step 1/200: UP - moving to (22, 19) towards TREE at (21, 15) (path cost 9)
+[mine_block] Step 1/200: position (22, 19), facing UP, mined 0/5, 6 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 2/200: UP - moving to (21, 19) towards TREE at (21, 15) (path cost 8)
+[mine_block] Step 2/200: position (21, 19), facing UP, mined 0/5, 5 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 3/200: LEFT - moving to (21, 18) towards TREE at (21, 15) (path cost 7)
+[mine_block] Step 3/200: position (21, 18), facing LEFT, mined 0/5, 5 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 4/200: LEFT - moving to (21, 17) towards TREE at (21, 15) (path cost 6)
+[mine_block] Step 4/200: position (21, 17), facing LEFT, mined 0/5, 6 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 5/200: LEFT - moving to (21, 16) towards TREE at (21, 15) (path cost 5)
+[mine_block] Step 5/200: position (21, 16), facing LEFT, mined 0/5, 6 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 6/200: DO - mining target TREE at (21, 15) (1/5)
+[mine_block] Mined TREE at (21, 15), it is now GRASS
+[mine_block] Mined TREE 1/5, wood 5 -> 6
+[mine_block] Step 6/200: position (21, 16), facing LEFT, mined 1/5, 5 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (19, 16) with path cost 5
+[mine_block] Step 7/200: UP - moving to (20, 16) towards TREE at (19, 16) (path cost 5)
+[mine_block] Step 7/200: position (20, 16), facing UP, mined 1/5, 2 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 8/200: DO - mining target TREE at (19, 16) (2/5)
+[mine_block] Mined TREE at (19, 16), it is now GRASS
+[mine_block] Mined TREE 2/5, wood 6 -> 7
+[mine_block] Step 8/200: position (20, 16), facing UP, mined 2/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (21, 14) with path cost 6
+[mine_block] Step 9/200: LEFT - moving to (20, 15) towards TREE at (21, 14) (path cost 6)
+[mine_block] Step 9/200: position (20, 15), facing LEFT, mined 2/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 10/200: LEFT - moving to (20, 14) towards TREE at (21, 14) (path cost 5)
+[mine_block] Step 10/200: position (20, 14), facing LEFT, mined 2/5, 2 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 11/200: DOWN - turning towards TREE at (21, 14)
+[mine_block] Step 11/200: position (20, 14), facing DOWN, mined 2/5, 2 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 12/200: DO - mining target TREE at (21, 14) (3/5)
+[mine_block] Mined TREE at (21, 14), it is now GRASS
+[mine_block] Mined TREE 3/5, wood 7 -> 8
+[mine_block] Step 12/200: position (20, 14), facing DOWN, mined 3/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (24, 9) with path cost 12
+[mine_block] Step 13/200: LEFT - moving to (20, 13) towards TREE at (24, 9) (path cost 12)
+[mine_block] Step 13/200: position (20, 13), facing LEFT, mined 3/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 14/200: LEFT - moving to (20, 12) towards TREE at (24, 9) (path cost 11)
+[mine_block] Step 14/200: position (20, 12), facing LEFT, mined 3/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 15/200: DOWN - moving to (21, 12) towards TREE at (24, 9) (path cost 10)
+[mine_block] Step 15/200: position (21, 12), facing DOWN, mined 3/5, 4 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 16/200: LEFT - moving to (21, 11) towards TREE at (24, 9) (path cost 9)
+[mine_block] Step 16/200: position (21, 11), facing LEFT, mined 3/5, 4 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 17/200: LEFT - moving to (21, 10) towards TREE at (24, 9) (path cost 8)
+[mine_block] Step 17/200: position (21, 10), facing LEFT, mined 3/5, 5 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 18/200: DOWN - moving to (22, 10) towards TREE at (24, 9) (path cost 7)
+[mine_block] Step 18/200: position (22, 10), facing DOWN, mined 3/5, 7 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 19/200: LEFT - moving to (22, 9) towards TREE at (24, 9) (path cost 6)
+[mine_block] Step 19/200: position (22, 9), facing LEFT, mined 3/5, 8 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 20/200: DOWN - moving to (23, 9) towards TREE at (24, 9) (path cost 5)
+[mine_block] Step 20/200: position (23, 9), facing DOWN, mined 3/5, 9 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 21/200: DO - mining target TREE at (24, 9) (4/5)
+[mine_block] Mined TREE at (24, 9), it is now GRASS
+[mine_block] Mined TREE 4/5, wood 8 -> 9
+[mine_block] Step 21/200: position (23, 9), facing DOWN, mined 4/5, 8 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (23, 5) with path cost 7
+[mine_block] Step 22/200: LEFT - moving to (23, 8) towards TREE at (23, 5) (path cost 7)
+[mine_block] Step 22/200: position (23, 8), facing LEFT, mined 4/5, 7 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 23/200: LEFT - moving to (23, 7) towards TREE at (23, 5) (path cost 6)
+[mine_block] Step 23/200: position (23, 7), facing LEFT, mined 4/5, 8 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 24/200: LEFT - moving to (23, 6) towards TREE at (23, 5) (path cost 5)
+[mine_block] Step 24/200: position (23, 6), facing LEFT, mined 4/5, 7 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 25/200: DO - mining target TREE at (23, 5) (5/5)
+[mine_block] Mined TREE at (23, 5), it is now GRASS
+[mine_block] Mined TREE 5/5, wood 9 -> 10
+[mine_block] Successfully mined 5 TREE block(s) after 25 steps
+[explore_until] Start exploring for block TREE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (23, 6), floor 0, facing LEFT, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found block TREE at (22, 4), distance 3, after 0 steps
+[mine_block] Start mining 5 TREE block(s) with a budget of 200 steps (no pickaxe, 0 stone)
+[mine_block] Step 0/200: position (23, 6), facing LEFT, mined 0/5, 6 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (22, 4) with path cost 6
+[mine_block] Step 1/200: UP - moving to (22, 6) towards TREE at (22, 4) (path cost 6)
+[mine_block] Step 1/200: position (22, 6), facing UP, mined 0/5, 5 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 2/200: LEFT - moving to (22, 5) towards TREE at (22, 4) (path cost 5)
+[mine_block] Step 2/200: position (22, 5), facing LEFT, mined 0/5, 4 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 3/200: DO - mining target TREE at (22, 4) (1/5)
+[mine_block] Mined TREE at (22, 4), it is now GRASS
+[mine_block] Mined TREE 1/5, wood 10 -> 11
+[mine_block] Step 3/200: position (22, 5), facing LEFT, mined 1/5, 3 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (24, 4) with path cost 6
+[mine_block] Step 4/200: LEFT - moving to (22, 4) towards TREE at (24, 4) (path cost 6)
+[mine_block] Step 4/200: position (22, 4), facing LEFT, mined 1/5, 3 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 5/200: DOWN - moving to (23, 4) towards TREE at (24, 4) (path cost 5)
+[mine_block] Step 5/200: position (23, 4), facing DOWN, mined 1/5, 4 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 6/200: DO - mining target TREE at (24, 4) (2/5)
+[mine_block] Mined TREE at (24, 4), it is now GRASS
+[mine_block] Mined TREE 2/5, wood 11 -> 12
+[mine_block] Step 6/200: position (23, 4), facing DOWN, mined 2/5, 3 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (26, 4) with path cost 6
+[mine_block] Step 7/200: DOWN - moving to (24, 4) towards TREE at (26, 4) (path cost 6)
+[mine_block] Step 7/200: position (24, 4), facing DOWN, mined 2/5, 4 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 8/200: DOWN - moving to (25, 4) towards TREE at (26, 4) (path cost 5)
+[mine_block] Step 8/200: position (25, 4), facing DOWN, mined 2/5, 6 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 9/200: DO - mining target TREE at (26, 4) (3/5)
+[mine_block] Mined TREE at (26, 4), it is now GRASS
+[mine_block] Mined TREE 3/5, wood 12 -> 13
+[mine_block] Step 9/200: position (25, 4), facing DOWN, mined 3/5, 5 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (27, 5) with path cost 6
+[mine_block] Step 10/200: RIGHT - moving to (25, 5) towards TREE at (27, 5) (path cost 6)
+[mine_block] Step 10/200: position (25, 5), facing RIGHT, mined 3/5, 5 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 11/200: DOWN - moving to (26, 5) towards TREE at (27, 5) (path cost 5)
+[mine_block] Step 11/200: position (26, 5), facing DOWN, mined 3/5, 8 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 12/200: DO - mining target TREE at (27, 5) (4/5)
+[mine_block] Mined TREE at (27, 5), it is now GRASS
+[mine_block] Mined TREE 4/5, wood 13 -> 14
+[mine_block] Step 12/200: position (26, 5), facing DOWN, mined 4/5, 7 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (28, 5) with path cost 5
+[mine_block] Step 13/200: DOWN - moving to (27, 5) towards TREE at (28, 5) (path cost 5)
+[mine_block] Step 13/200: position (27, 5), facing DOWN, mined 4/5, 7 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 14/200: DO - mining target TREE at (28, 5) (5/5)
+[mine_block] Mined TREE at (28, 5), it is now GRASS
+[mine_block] Mined TREE 5/5, wood 14 -> 15
+[mine_block] Successfully mined 5 TREE block(s) after 14 steps
+[explore_until] Start exploring for block TREE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (27, 5), floor 0, facing DOWN, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found block TREE at (29, 5), distance 2, after 0 steps
+[mine_block] Start mining 5 TREE block(s) with a budget of 200 steps (no pickaxe, 0 stone)
+[mine_block] Step 0/200: position (27, 5), facing DOWN, mined 0/5, 6 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (29, 5) with path cost 5
+[mine_block] Step 1/200: DOWN - moving to (28, 5) towards TREE at (29, 5) (path cost 5)
+[mine_block] Step 1/200: position (28, 5), facing DOWN, mined 0/5, 8 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 2/200: DO - mining target TREE at (29, 5) (1/5)
+[mine_block] Mined TREE at (29, 5), it is now GRASS
+[mine_block] Mined TREE 1/5, wood 15 -> 16
+[mine_block] Step 2/200: position (28, 5), facing DOWN, mined 1/5, 7 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (29, 4) with path cost 5
+[mine_block] Step 3/200: LEFT - moving to (28, 4) towards TREE at (29, 4) (path cost 5)
+[mine_block] Step 3/200: position (28, 4), facing LEFT, mined 1/5, 6 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 4/200: DOWN - turning towards TREE at (29, 4)
+[mine_block] Step 4/200: position (28, 4), facing DOWN, mined 1/5, 6 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 5/200: DO - mining target TREE at (29, 4) (2/5)
+[mine_block] Mined TREE at (29, 4), it is now GRASS
+[mine_block] Mined TREE 2/5, wood 16 -> 17
+[mine_block] Step 5/200: position (28, 4), facing DOWN, mined 2/5, 5 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (30, 5) with path cost 6
+[mine_block] Step 6/200: RIGHT - moving to (28, 5) towards TREE at (30, 5) (path cost 6)
+[mine_block] Step 6/200: position (28, 5), facing RIGHT, mined 2/5, 6 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 7/200: DOWN - moving to (29, 5) towards TREE at (30, 5) (path cost 5)
+[mine_block] Step 7/200: position (29, 5), facing DOWN, mined 2/5, 6 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 8/200: DO - mining target TREE at (30, 5) (3/5)
+[mine_block] Mined TREE at (30, 5), it is now GRASS
+[mine_block] Mined TREE 3/5, wood 17 -> 18
+[mine_block] Step 8/200: position (29, 5), facing DOWN, mined 3/5, 5 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (30, 6) with path cost 5
+[mine_block] Step 9/200: RIGHT - moving to (29, 6) towards TREE at (30, 6) (path cost 5)
+[mine_block] Step 9/200: position (29, 6), facing RIGHT, mined 3/5, 5 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 10/200: DOWN - turning towards TREE at (30, 6)
+[mine_block] Step 10/200: position (29, 6), facing DOWN, mined 3/5, 5 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 11/200: DO - mining target TREE at (30, 6) (4/5)
+[mine_block] Mined TREE at (30, 6), it is now GRASS
+[mine_block] Mined TREE 4/5, wood 18 -> 19
+[mine_block] Step 11/200: position (29, 6), facing DOWN, mined 4/5, 4 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (29, 9) with path cost 6
+[mine_block] Step 12/200: RIGHT - moving to (29, 7) towards TREE at (29, 9) (path cost 6)
+[mine_block] Step 12/200: position (29, 7), facing RIGHT, mined 4/5, 5 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 13/200: RIGHT - moving to (29, 8) towards TREE at (29, 9) (path cost 5)
+[mine_block] Step 13/200: position (29, 8), facing RIGHT, mined 4/5, 5 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 14/200: DO - mining target TREE at (29, 9) (5/5)
+[mine_block] Mined TREE at (29, 9), it is now GRASS
+[mine_block] Mined TREE 5/5, wood 19 -> 20
+[mine_block] Successfully mined 5 TREE block(s) after 14 steps
+[explore_until] Start exploring for block TREE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (29, 8), floor 0, facing RIGHT, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found block TREE at (30, 8), distance 1, after 0 steps
+[mine_block] Start mining 5 TREE block(s) with a budget of 200 steps (no pickaxe, 0 stone)
+[mine_block] Step 0/200: position (29, 8), facing RIGHT, mined 0/5, 4 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (30, 8) with path cost 4
+[mine_block] Step 1/200: DOWN - turning towards TREE at (30, 8)
+[mine_block] Step 1/200: position (29, 8), facing DOWN, mined 0/5, 4 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 2/200: DO - mining target TREE at (30, 8) (1/5)
+[mine_block] Mined TREE at (30, 8), it is now GRASS
+[mine_block] Mined TREE 1/5, wood 20 -> 21
+[mine_block] Step 2/200: position (29, 8), facing DOWN, mined 1/5, 3 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (32, 10) with path cost 8
+[mine_block] Step 3/200: RIGHT - moving to (29, 9) towards TREE at (32, 10) (path cost 8)
+[mine_block] Step 3/200: position (29, 9), facing RIGHT, mined 1/5, 4 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 4/200: RIGHT - moving to (29, 10) towards TREE at (32, 10) (path cost 7)
+[mine_block] Step 4/200: position (29, 10), facing RIGHT, mined 1/5, 6 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 5/200: DOWN - moving to (30, 10) towards TREE at (32, 10) (path cost 6)
+[mine_block] Step 5/200: position (30, 10), facing DOWN, mined 1/5, 3 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 6/200: DOWN - moving to (31, 10) towards TREE at (32, 10) (path cost 5)
+[mine_block] Step 6/200: position (31, 10), facing DOWN, mined 1/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 7/200: DO - mining target TREE at (32, 10) (2/5)
+[mine_block] Mined TREE at (32, 10), it is now GRASS
+[mine_block] Mined TREE 2/5, wood 21 -> 22
+[mine_block] Step 7/200: position (31, 10), facing DOWN, mined 2/5, 0 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] No more TREE blocks in sight, mined 2/5
+Error: Mining failed: no more TREE blocks in sight after mining 2/5
+[explore_until] Start exploring for block TREE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (31, 10), floor 0, facing DOWN, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] New exploration goal (35, 10) with path cost 4 (34 frontier cells available)
+[explore_until] Step 1/200: DOWN - moving to (32, 10) towards goal (35, 10)
+[explore_until] Step 1/200: position (32, 10), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 110/2304 cells
+[explore_until] Goal (35, 10) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (36, 10) with path cost 4 (34 frontier cells available)
+[explore_until] Step 2/200: DOWN - moving to (33, 10) towards goal (36, 10)
+[explore_until] Step 2/200: position (33, 10), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 121/2304 cells
+[explore_until] Found block TREE at (37, 5), distance 9, after 2 steps
+[mine_block] Start mining 5 TREE block(s) with a budget of 200 steps (no pickaxe, 0 stone)
+[mine_block] Step 0/200: position (33, 10), facing DOWN, mined 0/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (37, 5) with path cost 12
+[mine_block] Step 1/200: LEFT - moving to (33, 9) towards TREE at (37, 5) (path cost 12)
+[mine_block] Step 1/200: position (33, 9), facing LEFT, mined 0/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 2/200: LEFT - moving to (33, 8) towards TREE at (37, 5) (path cost 11)
+[mine_block] Step 2/200: position (33, 8), facing LEFT, mined 0/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 3/200: LEFT - moving to (33, 7) towards TREE at (37, 5) (path cost 10)
+[mine_block] Step 3/200: position (33, 7), facing LEFT, mined 0/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 4/200: LEFT - moving to (33, 6) towards TREE at (37, 5) (path cost 9)
+[mine_block] Step 4/200: position (33, 6), facing LEFT, mined 0/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 5/200: LEFT - moving to (33, 5) towards TREE at (37, 5) (path cost 8)
+[mine_block] Step 5/200: position (33, 5), facing LEFT, mined 0/5, 2 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 6/200: DOWN - moving to (34, 5) towards TREE at (37, 5) (path cost 7)
+[mine_block] Step 6/200: position (34, 5), facing DOWN, mined 0/5, 2 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 7/200: DOWN - moving to (35, 5) towards TREE at (37, 5) (path cost 6)
+[mine_block] Step 7/200: position (35, 5), facing DOWN, mined 0/5, 2 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 8/200: DOWN - moving to (36, 5) towards TREE at (37, 5) (path cost 5)
+[mine_block] Step 8/200: position (36, 5), facing DOWN, mined 0/5, 2 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 9/200: DO - mining target TREE at (37, 5) (1/5)
+[mine_block] Mined TREE at (37, 5), it is now GRASS
+[mine_block] Mined TREE 1/5, wood 22 -> 23
+[mine_block] Step 9/200: position (36, 5), facing DOWN, mined 1/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (32, 0) with path cost 12
+[mine_block] Step 10/200: UP - moving to (35, 5) towards TREE at (32, 0) (path cost 12)
+[mine_block] Step 10/200: position (35, 5), facing UP, mined 1/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 11/200: UP - moving to (34, 5) towards TREE at (32, 0) (path cost 11)
+[mine_block] Step 11/200: position (34, 5), facing UP, mined 1/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 12/200: UP - moving to (33, 5) towards TREE at (32, 0) (path cost 10)
+[mine_block] Step 12/200: position (33, 5), facing UP, mined 1/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 13/200: UP - moving to (32, 5) towards TREE at (32, 0) (path cost 9)
+[mine_block] Step 13/200: position (32, 5), facing UP, mined 1/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 14/200: LEFT - moving to (32, 4) towards TREE at (32, 0) (path cost 8)
+[mine_block] Step 14/200: position (32, 4), facing LEFT, mined 1/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 15/200: LEFT - moving to (32, 3) towards TREE at (32, 0) (path cost 7)
+[mine_block] Step 15/200: position (32, 3), facing LEFT, mined 1/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 16/200: LEFT - moving to (32, 2) towards TREE at (32, 0) (path cost 6)
+[mine_block] Step 16/200: position (32, 2), facing LEFT, mined 1/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 17/200: LEFT - moving to (32, 1) towards TREE at (32, 0) (path cost 5)
+[mine_block] Step 17/200: position (32, 1), facing LEFT, mined 1/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 18/200: DO - mining target TREE at (32, 0) (2/5)
+[mine_block] Mined TREE at (32, 0), it is now GRASS
+[mine_block] Mined TREE 2/5, wood 23 -> 24
+[mine_block] Step 18/200: position (32, 1), facing LEFT, mined 2/5, 0 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] No more TREE blocks in sight, mined 2/5
+Error: Mining failed: no more TREE blocks in sight after mining 2/5
+[explore_until] Start exploring for block TREE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (32, 1), floor 0, facing LEFT, health 9.0, revealed 63 new cells, explored 63/2304 cells
+[explore_until] New exploration goal (28, 1) with path cost 4 (21 frontier cells available)
+[explore_until] Step 1/200: UP - moving to (31, 1) towards goal (28, 1)
+[explore_until] Step 1/200: position (31, 1), floor 0, facing UP, health 9.0, revealed 7 new cells, explored 70/2304 cells
+[explore_until] Goal (28, 1) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (27, 1) with path cost 4 (21 frontier cells available)
+[explore_until] Step 2/200: UP - moving to (30, 1) towards goal (27, 1)
+[explore_until] Step 2/200: position (30, 1), floor 0, facing UP, health 9.0, revealed 7 new cells, explored 77/2304 cells
+[explore_until] Goal (27, 1) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (26, 1) with path cost 4 (22 frontier cells available)
+[explore_until] Step 3/200: UP - moving to (29, 1) towards goal (26, 1)
+[explore_until] Step 3/200: position (29, 1), floor 0, facing UP, health 9.0, revealed 7 new cells, explored 84/2304 cells
+[explore_until] Goal (26, 1) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (25, 1) with path cost 4 (23 frontier cells available)
+[explore_until] Step 4/200: UP - moving to (28, 1) towards goal (25, 1)
+[explore_until] Step 4/200: position (28, 1), floor 0, facing UP, health 9.0, revealed 7 new cells, explored 91/2304 cells
+[explore_until] Goal (25, 1) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (24, 1) with path cost 4 (23 frontier cells available)
+[explore_until] Step 5/200: UP - moving to (27, 1) towards goal (24, 1)
+[explore_until] Step 5/200: position (27, 1), floor 0, facing UP, health 9.0, revealed 7 new cells, explored 98/2304 cells
+[explore_until] Goal (24, 1) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (23, 1) with path cost 4 (24 frontier cells available)
+[explore_until] Step 6/200: UP - moving to (26, 1) towards goal (23, 1)
+[explore_until] Step 6/200: position (26, 1), floor 0, facing UP, health 9.0, revealed 7 new cells, explored 105/2304 cells
+[explore_until] Goal (23, 1) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (26, 6) with path cost 5 (24 frontier cells available)
+[explore_until] Step 7/200: RIGHT - moving to (26, 2) towards goal (26, 6)
+[explore_until] Step 7/200: position (26, 2), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 114/2304 cells
+[explore_until] Goal (26, 6) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (22, 3) with path cost 5 (25 frontier cells available)
+[explore_until] Step 8/200: UP - moving to (25, 2) towards goal (22, 3)
+[explore_until] Step 8/200: position (25, 2), floor 0, facing UP, health 9.0, revealed 8 new cells, explored 122/2304 cells
+[explore_until] Goal (22, 3) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (21, 3) with path cost 5 (27 frontier cells available)
+[explore_until] Step 9/200: RIGHT - moving to (25, 3) towards goal (21, 3)
+[explore_until] Step 9/200: position (25, 3), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 131/2304 cells
+[explore_until] Step 10/200: UP - moving to (24, 3) towards goal (21, 3)
+[explore_until] Step 10/200: position (24, 3), floor 0, facing UP, health 9.0, revealed 9 new cells, explored 140/2304 cells
+[explore_until] Found block TREE at (20, 2), distance 5, after 10 steps
+[mine_block] Start mining 5 TREE block(s) with a budget of 200 steps (no pickaxe, 0 stone)
+[mine_block] Step 0/200: position (24, 3), facing UP, mined 0/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (20, 2) with path cost 8
+[mine_block] Step 1/200: UP - moving to (23, 3) towards TREE at (20, 2) (path cost 8)
+[mine_block] Step 1/200: position (23, 3), facing UP, mined 0/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 2/200: UP - moving to (22, 3) towards TREE at (20, 2) (path cost 7)
+[mine_block] Step 2/200: position (22, 3), facing UP, mined 0/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 3/200: UP - moving to (21, 3) towards TREE at (20, 2) (path cost 6)
+[mine_block] Step 3/200: position (21, 3), facing UP, mined 0/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 4/200: UP - moving to (20, 3) towards TREE at (20, 2) (path cost 5)
+[mine_block] Step 4/200: position (20, 3), facing UP, mined 0/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 5/200: LEFT - turning towards TREE at (20, 2)
+[mine_block] Step 5/200: position (20, 3), facing LEFT, mined 0/5, 1 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 6/200: DO - mining target TREE at (20, 2) (1/5)
+[mine_block] Mined TREE at (20, 2), it is now GRASS
+[mine_block] Mined TREE 1/5, wood 24 -> 25
+[mine_block] Step 6/200: position (20, 3), facing LEFT, mined 1/5, 0 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] No more TREE blocks in sight, mined 1/5
+Error: Mining failed: no more TREE blocks in sight after mining 1/5
+[explore_until] Start exploring for block TREE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (20, 3), floor 0, facing LEFT, health 9.0, revealed 81 new cells, explored 81/2304 cells
+[explore_until] New exploration goal (24, 3) with path cost 4 (12 frontier cells available)
+[explore_until] Step 1/200: DOWN - moving to (21, 3) towards goal (24, 3)
+[explore_until] Step 1/200: position (21, 3), floor 0, facing DOWN, health 9.0, revealed 9 new cells, explored 90/2304 cells
+[explore_until] Goal (24, 3) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (21, 8) with path cost 5 (15 frontier cells available)
+[explore_until] Step 2/200: RIGHT - moving to (21, 4) towards goal (21, 8)
+[explore_until] Step 2/200: position (21, 4), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 99/2304 cells
+[explore_until] Goal (21, 8) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (25, 4) with path cost 4 (15 frontier cells available)
+[explore_until] Step 3/200: DOWN - moving to (22, 4) towards goal (25, 4)
+[explore_until] Step 3/200: position (22, 4), floor 0, facing DOWN, health 9.0, revealed 10 new cells, explored 109/2304 cells
+[explore_until] Goal (25, 4) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (26, 4) with path cost 4 (16 frontier cells available)
+[explore_until] Step 4/200: DOWN - moving to (23, 4) towards goal (26, 4)
+[explore_until] Step 4/200: position (23, 4), floor 0, facing DOWN, health 9.0, revealed 10 new cells, explored 119/2304 cells
+[explore_until] Goal (26, 4) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (27, 4) with path cost 4 (17 frontier cells available)
+[explore_until] Step 5/200: DOWN - moving to (24, 4) towards goal (27, 4)
+[explore_until] Step 5/200: position (24, 4), floor 0, facing DOWN, health 9.0, revealed 10 new cells, explored 129/2304 cells
+[explore_until] Goal (27, 4) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (28, 4) with path cost 4 (19 frontier cells available)
+[explore_until] Step 6/200: DOWN - moving to (25, 4) towards goal (28, 4)
+[explore_until] Step 6/200: position (25, 4), floor 0, facing DOWN, health 9.0, revealed 10 new cells, explored 139/2304 cells
+[explore_until] Goal (28, 4) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (29, 4) with path cost 4 (20 frontier cells available)
+[explore_until] Step 7/200: DOWN - moving to (26, 4) towards goal (29, 4)
+[explore_until] Step 7/200: position (26, 4), floor 0, facing DOWN, health 9.0, revealed 10 new cells, explored 149/2304 cells
+[explore_until] Goal (29, 4) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (30, 4) with path cost 4 (21 frontier cells available)
+[explore_until] Step 8/200: DOWN - moving to (27, 4) towards goal (30, 4)
+[explore_until] Step 8/200: position (27, 4), floor 0, facing DOWN, health 9.0, revealed 10 new cells, explored 159/2304 cells
+[explore_until] Goal (30, 4) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (31, 4) with path cost 4 (22 frontier cells available)
+[explore_until] Step 9/200: DOWN - moving to (28, 4) towards goal (31, 4)
+[explore_until] Warning: health dropped from 9.0 to 7.0
+[explore_until] Step 9/200: position (28, 4), floor 0, facing DOWN, health 7.0, revealed 10 new cells, explored 169/2304 cells
+[explore_until] Goal (31, 4) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (32, 4) with path cost 4 (23 frontier cells available)
+[explore_until] Step 10/200: DOWN - moving to (29, 4) towards goal (32, 4)
+[explore_until] Step 10/200: position (29, 4), floor 0, facing DOWN, health 7.0, revealed 10 new cells, explored 179/2304 cells
+[explore_until] Goal (32, 4) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (33, 4) with path cost 4 (24 frontier cells available)
+[explore_until] Step 11/200: DOWN - moving to (30, 4) towards goal (33, 4)
+[explore_until] Step 11/200: position (30, 4), floor 0, facing DOWN, health 7.0, revealed 10 new cells, explored 189/2304 cells
+[explore_until] Goal (33, 4) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (34, 4) with path cost 4 (25 frontier cells available)
+[explore_until] Step 12/200: DOWN - moving to (31, 4) towards goal (34, 4)
+[explore_until] Step 12/200: position (31, 4), floor 0, facing DOWN, health 7.0, revealed 10 new cells, explored 199/2304 cells
+[explore_until] Goal (34, 4) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (35, 4) with path cost 4 (26 frontier cells available)
+[explore_until] Step 13/200: DOWN - moving to (32, 4) towards goal (35, 4)
+[explore_until] Step 13/200: position (32, 4), floor 0, facing DOWN, health 7.0, revealed 10 new cells, explored 209/2304 cells
+[explore_until] Goal (35, 4) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (36, 4) with path cost 4 (27 frontier cells available)
+[explore_until] Step 14/200: DOWN - moving to (33, 4) towards goal (36, 4)
+[explore_until] Step 14/200: position (33, 4), floor 0, facing DOWN, health 7.0, revealed 10 new cells, explored 219/2304 cells
+[explore_until] Goal (36, 4) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (37, 4) with path cost 4 (28 frontier cells available)
+[explore_until] Step 15/200: DOWN - moving to (34, 4) towards goal (37, 4)
+[explore_until] Step 15/200: position (34, 4), floor 0, facing DOWN, health 8.0, revealed 10 new cells, explored 229/2304 cells
+[explore_until] Goal (37, 4) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (38, 4) with path cost 4 (28 frontier cells available)
+[explore_until] Step 16/200: DOWN - moving to (35, 4) towards goal (38, 4)
+[explore_until] Step 16/200: position (35, 4), floor 0, facing DOWN, health 8.0, revealed 10 new cells, explored 239/2304 cells
+[explore_until] Goal (38, 4) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (39, 4) with path cost 4 (26 frontier cells available)
+[explore_until] Step 17/200: DOWN - moving to (36, 4) towards goal (39, 4)
+[explore_until] Step 17/200: position (36, 4), floor 0, facing DOWN, health 8.0, revealed 10 new cells, explored 249/2304 cells
+[explore_until] Goal (39, 4) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (36, 9) with path cost 5 (22 frontier cells available)
+[explore_until] Step 18/200: RIGHT - moving to (36, 5) towards goal (36, 9)
+[explore_until] Step 18/200: position (36, 5), floor 0, facing RIGHT, health 8.0, revealed 9 new cells, explored 258/2304 cells
+[explore_until] Goal (36, 9) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (36, 10) with path cost 5 (23 frontier cells available)
+[explore_until] Step 19/200: RIGHT - moving to (36, 6) towards goal (36, 10)
+[explore_until] Step 19/200: position (36, 6), floor 0, facing RIGHT, health 8.0, revealed 9 new cells, explored 267/2304 cells
+[explore_until] Goal (36, 10) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (36, 11) with path cost 5 (25 frontier cells available)
+[explore_until] Step 20/200: RIGHT - moving to (36, 7) towards goal (36, 11)
+[explore_until] Step 20/200: position (36, 7), floor 0, facing RIGHT, health 8.0, revealed 9 new cells, explored 276/2304 cells
+[explore_until] Goal (36, 11) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (35, 12) with path cost 6 (25 frontier cells available)
+[explore_until] Step 21/200: UP - moving to (35, 7) towards goal (35, 12)
+[explore_until] Warning: health dropped from 8.0 to 6.0
+[explore_until] Step 21/200: position (35, 7), floor 0, facing UP, health 6.0, revealed 3 new cells, explored 279/2304 cells
+[explore_until] Step 22/200: RIGHT - moving to (35, 8) towards goal (35, 12)
+[explore_until] Step 22/200: position (35, 8), floor 0, facing RIGHT, health 6.0, revealed 9 new cells, explored 288/2304 cells
+[explore_until] Goal (35, 12) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (30, 9) with path cost 6 (25 frontier cells available)
+[explore_until] Step 23/200: UP - moving to (34, 8) towards goal (30, 9)
+[explore_until] Step 23/200: position (34, 8), floor 0, facing UP, health 6.0, revealed 4 new cells, explored 292/2304 cells
+[explore_until] Goal (30, 9) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (34, 13) with path cost 5 (25 frontier cells available)
+[explore_until] Step 24/200: RIGHT - moving to (34, 9) towards goal (34, 13)
+[explore_until] Step 24/200: position (34, 9), floor 0, facing RIGHT, health 6.0, revealed 9 new cells, explored 301/2304 cells
+[explore_until] Goal (34, 13) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (30, 10) with path cost 5 (26 frontier cells available)
+[explore_until] Step 25/200: RIGHT - moving to (34, 10) towards goal (30, 10)
+[explore_until] Step 25/200: position (34, 10), floor 0, facing RIGHT, health 6.0, revealed 9 new cells, explored 310/2304 cells
+[explore_until] Step 26/200: UP - moving to (33, 10) towards goal (30, 10)
+[explore_until] Step 26/200: position (33, 10), floor 0, facing UP, health 6.0, revealed 6 new cells, explored 316/2304 cells
+[explore_until] Goal (30, 10) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (29, 10) with path cost 4 (30 frontier cells available)
+[explore_until] Step 27/200: UP - moving to (32, 10) towards goal (29, 10)
+[explore_until] Step 27/200: position (32, 10), floor 0, facing UP, health 6.0, revealed 6 new cells, explored 322/2304 cells
+[explore_until] Goal (29, 10) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (28, 10) with path cost 4 (30 frontier cells available)
+[explore_until] Step 28/200: UP - moving to (31, 10) towards goal (28, 10)
+[explore_until] Step 28/200: position (31, 10), floor 0, facing UP, health 6.0, revealed 6 new cells, explored 328/2304 cells
+[explore_until] Goal (28, 10) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (27, 10) with path cost 4 (30 frontier cells available)
+[explore_until] Step 29/200: UP - moving to (30, 10) towards goal (27, 10)
+[explore_until] Step 29/200: position (30, 10), floor 0, facing UP, health 6.0, revealed 6 new cells, explored 334/2304 cells
+[explore_until] Found block TREE at (26, 11), distance 5, after 29 steps
+[mine_block] Start mining 5 TREE block(s) with a budget of 200 steps (no pickaxe, 0 stone)
+[mine_block] Step 0/200: position (30, 10), facing UP, mined 0/5, 2 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] New target TREE at (26, 11) with path cost 8
+[mine_block] Step 1/200: UP - moving to (29, 10) towards TREE at (26, 11) (path cost 8)
+[mine_block] Step 1/200: position (29, 10), facing UP, mined 0/5, 5 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 2/200: UP - moving to (28, 10) towards TREE at (26, 11) (path cost 7)
+[mine_block] Step 2/200: position (28, 10), facing UP, mined 0/5, 5 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 3/200: UP - moving to (27, 10) towards TREE at (26, 11) (path cost 6)
+[mine_block] Step 3/200: position (27, 10), facing UP, mined 0/5, 5 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 4/200: UP - moving to (26, 10) towards TREE at (26, 11) (path cost 5)
+[mine_block] Step 4/200: position (26, 10), facing UP, mined 0/5, 5 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 5/200: RIGHT - turning towards TREE at (26, 11)
+[mine_block] Step 5/200: position (26, 10), facing RIGHT, mined 0/5, 5 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 6/200: DO - mining target TREE at (26, 11) (1/5)
+[mine_block] Mined TREE at (26, 11), it is now GRASS
+[mine_block] Mined TREE 1/5, wood 25 -> 26
+[mine_block] Step 6/200: position (26, 10), facing RIGHT, mined 1/5, 4 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] New target TREE at (25, 12) with path cost 6
+[mine_block] Step 7/200: UP - moving to (25, 10) towards TREE at (25, 12) (path cost 6)
+[mine_block] Step 7/200: position (25, 10), facing UP, mined 1/5, 4 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 8/200: RIGHT - moving to (25, 11) towards TREE at (25, 12) (path cost 5)
+[mine_block] Step 8/200: position (25, 11), facing RIGHT, mined 1/5, 5 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 9/200: DO - mining target TREE at (25, 12) (2/5)
+[mine_block] Mined TREE at (25, 12), it is now GRASS
+[mine_block] Mined TREE 2/5, wood 26 -> 27
+[mine_block] Step 9/200: position (25, 11), facing RIGHT, mined 2/5, 4 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] New target TREE at (25, 14) with path cost 6
+[mine_block] Step 10/200: RIGHT - moving to (25, 12) towards TREE at (25, 14) (path cost 6)
+[mine_block] Step 10/200: position (25, 12), facing RIGHT, mined 2/5, 4 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 11/200: RIGHT - moving to (25, 13) towards TREE at (25, 14) (path cost 5)
+[mine_block] Step 11/200: position (25, 13), facing RIGHT, mined 2/5, 4 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 12/200: DO - mining target TREE at (25, 14) (3/5)
+[mine_block] Mined TREE at (25, 14), it is now GRASS
+[mine_block] Mined TREE 3/5, wood 27 -> 28
+[mine_block] Step 12/200: position (25, 13), facing RIGHT, mined 3/5, 3 TREE block(s) in sight, stone 0, health 7.0
+[mine_block] New target TREE at (25, 15) with path cost 5
+[mine_block] Step 13/200: RIGHT - moving to (25, 14) towards TREE at (25, 15) (path cost 5)
+[mine_block] Step 13/200: position (25, 14), facing RIGHT, mined 3/5, 3 TREE block(s) in sight, stone 0, health 7.0
+[mine_block] Step 14/200: DO - mining target TREE at (25, 15) (4/5)
+[mine_block] Mined TREE at (25, 15), it is now GRASS
+[mine_block] Mined TREE 4/5, wood 28 -> 29
+[mine_block] Step 14/200: position (25, 14), facing RIGHT, mined 4/5, 2 TREE block(s) in sight, stone 0, health 7.0
+[mine_block] New target TREE at (26, 15) with path cost 5
+[mine_block] Step 15/200: RIGHT - moving to (25, 15) towards TREE at (26, 15) (path cost 5)
+[mine_block] Step 15/200: position (25, 15), facing RIGHT, mined 4/5, 2 TREE block(s) in sight, stone 0, health 7.0
+[mine_block] Step 16/200: DOWN - turning towards TREE at (26, 15)
+[mine_block] Step 16/200: position (25, 15), facing DOWN, mined 4/5, 2 TREE block(s) in sight, stone 0, health 7.0
+[mine_block] Step 17/200: DO - mining target TREE at (26, 15) (5/5)
+[mine_block] Mined TREE at (26, 15), it is now GRASS
+[mine_block] Mined TREE 5/5, wood 29 -> 30
+[mine_block] Successfully mined 5 TREE block(s) after 17 steps
+[explore_until] Start exploring for block TREE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (25, 15), floor 0, facing DOWN, health 7.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found block TREE at (28, 16), distance 4, after 0 steps
+[mine_block] Start mining 5 TREE block(s) with a budget of 200 steps (no pickaxe, 0 stone)
+[mine_block] Step 0/200: position (25, 15), facing DOWN, mined 0/5, 1 TREE block(s) in sight, stone 0, health 7.0
+[mine_block] New target TREE at (28, 16) with path cost 7
+[mine_block] Step 1/200: RIGHT - moving to (25, 16) towards TREE at (28, 16) (path cost 7)
+[mine_block] Step 1/200: position (25, 16), facing RIGHT, mined 0/5, 1 TREE block(s) in sight, stone 0, health 7.0
+[mine_block] Step 2/200: DOWN - moving to (26, 16) towards TREE at (28, 16) (path cost 6)
+[mine_block] Step 2/200: position (26, 16), facing DOWN, mined 0/5, 2 TREE block(s) in sight, stone 0, health 7.0
+[mine_block] Step 3/200: DOWN - moving to (27, 16) towards TREE at (28, 16) (path cost 5)
+[mine_block] Step 3/200: position (27, 16), facing DOWN, mined 0/5, 2 TREE block(s) in sight, stone 0, health 7.0
+[mine_block] Step 4/200: DO - mining target TREE at (28, 16) (1/5)
+[mine_block] Warning: health dropped from 7.0 to 5.0
+[mine_block] Mined TREE at (28, 16), it is now GRASS
+[mine_block] Mined TREE 1/5, wood 30 -> 31
+[mine_block] Step 4/200: position (27, 16), facing DOWN, mined 1/5, 1 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] New target TREE at (30, 17) with path cost 7
+[mine_block] Step 5/200: RIGHT - moving to (27, 17) towards TREE at (30, 17) (path cost 7)
+[mine_block] Step 5/200: position (27, 17), facing RIGHT, mined 1/5, 1 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] Step 6/200: DOWN - moving to (28, 17) towards TREE at (30, 17) (path cost 6)
+[mine_block] Step 6/200: position (28, 17), facing DOWN, mined 1/5, 2 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] Step 7/200: DOWN - moving to (29, 17) towards TREE at (30, 17) (path cost 5)
+[mine_block] Step 7/200: position (29, 17), facing DOWN, mined 1/5, 2 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] Step 8/200: DO - mining target TREE at (30, 17) (2/5)
+[mine_block] Mined TREE at (30, 17), it is now GRASS
+[mine_block] Mined TREE 2/5, wood 31 -> 32
+[mine_block] Step 8/200: position (29, 17), facing DOWN, mined 2/5, 1 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] New target TREE at (32, 17) with path cost 6
+[mine_block] Step 9/200: DOWN - moving to (30, 17) towards TREE at (32, 17) (path cost 6)
+[mine_block] Step 9/200: position (30, 17), facing DOWN, mined 2/5, 1 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] Step 10/200: DOWN - moving to (31, 17) towards TREE at (32, 17) (path cost 5)
+[mine_block] Step 10/200: position (31, 17), facing DOWN, mined 2/5, 1 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] Step 11/200: DO - mining target TREE at (32, 17) (3/5)
+[mine_block] Mined TREE at (32, 17), it is now GRASS
+[mine_block] Mined TREE 3/5, wood 32 -> 33
+[mine_block] Step 11/200: position (31, 17), facing DOWN, mined 3/5, 0 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] No more TREE blocks in sight, mined 3/5
+Error: Mining failed: no more TREE blocks in sight after mining 3/5
+[explore_until] Start exploring for block TREE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (31, 17), floor 0, facing DOWN, health 5.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] New exploration goal (27, 17) with path cost 4 (28 frontier cells available)
+[explore_until] Step 1/200: UP - moving to (30, 17) towards goal (27, 17)
+[explore_until] Step 1/200: position (30, 17), floor 0, facing UP, health 5.0, revealed 11 new cells, explored 110/2304 cells
+[explore_until] Goal (27, 17) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (26, 17) with path cost 4 (30 frontier cells available)
+[explore_until] Step 2/200: UP - moving to (29, 17) towards goal (26, 17)
+[explore_until] Step 2/200: position (29, 17), floor 0, facing UP, health 5.0, revealed 11 new cells, explored 121/2304 cells
+[explore_until] Goal (26, 17) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (25, 17) with path cost 4 (32 frontier cells available)
+[explore_until] Step 3/200: UP - moving to (28, 17) towards goal (25, 17)
+[explore_until] Step 3/200: position (28, 17), floor 0, facing UP, health 5.0, revealed 11 new cells, explored 132/2304 cells
+[explore_until] Goal (25, 17) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (24, 17) with path cost 4 (34 frontier cells available)
+[explore_until] Step 4/200: UP - moving to (27, 17) towards goal (24, 17)
+[explore_until] Step 4/200: position (27, 17), floor 0, facing UP, health 5.0, revealed 11 new cells, explored 143/2304 cells
+[explore_until] Goal (24, 17) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (23, 17) with path cost 4 (36 frontier cells available)
+[explore_until] Step 5/200: UP - moving to (26, 17) towards goal (23, 17)
+[explore_until] Step 5/200: position (26, 17), floor 0, facing UP, health 5.0, revealed 11 new cells, explored 154/2304 cells
+[explore_until] Goal (23, 17) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (22, 17) with path cost 4 (38 frontier cells available)
+[explore_until] Step 6/200: UP - moving to (25, 17) towards goal (22, 17)
+[explore_until] Step 6/200: position (25, 17), floor 0, facing UP, health 5.0, revealed 11 new cells, explored 165/2304 cells
+[explore_until] Goal (22, 17) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (21, 17) with path cost 4 (40 frontier cells available)
+[explore_until] Step 7/200: UP - moving to (24, 17) towards goal (21, 17)
+[explore_until] Step 7/200: position (24, 17), floor 0, facing UP, health 5.0, revealed 11 new cells, explored 176/2304 cells
+[explore_until] Goal (21, 17) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (20, 17) with path cost 4 (42 frontier cells available)
+[explore_until] Step 8/200: UP - moving to (23, 17) towards goal (20, 17)
+[explore_until] Step 8/200: position (23, 17), floor 0, facing UP, health 5.0, revealed 11 new cells, explored 187/2304 cells
+[explore_until] Goal (20, 17) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (19, 17) with path cost 4 (43 frontier cells available)
+[explore_until] Step 9/200: UP - moving to (22, 17) towards goal (19, 17)
+[explore_until] Step 9/200: position (22, 17), floor 0, facing UP, health 5.0, revealed 11 new cells, explored 198/2304 cells
+[explore_until] Goal (19, 17) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (18, 17) with path cost 4 (43 frontier cells available)
+[explore_until] Step 10/200: UP - moving to (21, 17) towards goal (18, 17)
+[explore_until] Step 10/200: position (21, 17), floor 0, facing UP, health 6.0, revealed 11 new cells, explored 209/2304 cells
+[explore_until] Goal (18, 17) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (17, 17) with path cost 4 (44 frontier cells available)
+[explore_until] Step 11/200: UP - moving to (20, 17) towards goal (17, 17)
+[explore_until] Step 11/200: position (20, 17), floor 0, facing UP, health 6.0, revealed 11 new cells, explored 220/2304 cells
+[explore_until] Goal (17, 17) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (16, 17) with path cost 4 (45 frontier cells available)
+[explore_until] Step 12/200: UP - moving to (19, 17) towards goal (16, 17)
+[explore_until] Step 12/200: position (19, 17), floor 0, facing UP, health 6.0, revealed 11 new cells, explored 231/2304 cells
+[explore_until] Found block TREE at (15, 16), distance 5, after 12 steps
+[mine_block] Start mining 5 TREE block(s) with a budget of 200 steps (no pickaxe, 0 stone)
+[mine_block] Step 0/200: position (19, 17), facing UP, mined 0/5, 1 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] New target TREE at (15, 16) with path cost 8
+[mine_block] Step 1/200: UP - moving to (18, 17) towards TREE at (15, 16) (path cost 8)
+[mine_block] Step 1/200: position (18, 17), facing UP, mined 0/5, 1 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 2/200: UP - moving to (17, 17) towards TREE at (15, 16) (path cost 7)
+[mine_block] Step 2/200: position (17, 17), facing UP, mined 0/5, 1 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 3/200: UP - moving to (16, 17) towards TREE at (15, 16) (path cost 6)
+[mine_block] Step 3/200: position (16, 17), facing UP, mined 0/5, 1 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 4/200: UP - moving to (15, 17) towards TREE at (15, 16) (path cost 5)
+[mine_block] Step 4/200: position (15, 17), facing UP, mined 0/5, 2 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 5/200: LEFT - turning towards TREE at (15, 16)
+[mine_block] Step 5/200: position (15, 17), facing LEFT, mined 0/5, 2 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 6/200: DO - mining target TREE at (15, 16) (1/5)
+[mine_block] Mined TREE at (15, 16), it is now GRASS
+[mine_block] Mined TREE 1/5, wood 33 -> 34
+[mine_block] Step 6/200: position (15, 17), facing LEFT, mined 1/5, 1 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] New target TREE at (11, 22) with path cost 12
+[mine_block] Step 7/200: UP - moving to (14, 17) towards TREE at (11, 22) (path cost 12)
+[mine_block] Step 7/200: position (14, 17), facing UP, mined 1/5, 1 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 8/200: RIGHT - moving to (14, 18) towards TREE at (11, 22) (path cost 11)
+[mine_block] Step 8/200: position (14, 18), facing RIGHT, mined 1/5, 3 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 9/200: RIGHT - moving to (14, 19) towards TREE at (11, 22) (path cost 10)
+[mine_block] Step 9/200: position (14, 19), facing RIGHT, mined 1/5, 4 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 10/200: RIGHT - moving to (14, 20) towards TREE at (11, 22) (path cost 9)
+[mine_block] Step 10/200: position (14, 20), facing RIGHT, mined 1/5, 4 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 11/200: UP - moving to (13, 20) towards TREE at (11, 22) (path cost 8)
+[mine_block] Step 11/200: position (13, 20), facing UP, mined 1/5, 5 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 12/200: RIGHT - moving to (13, 21) towards TREE at (11, 22) (path cost 7)
+[mine_block] Step 12/200: position (13, 21), facing RIGHT, mined 1/5, 5 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 13/200: UP - moving to (12, 21) towards TREE at (11, 22) (path cost 6)
+[mine_block] Step 13/200: position (12, 21), facing UP, mined 1/5, 6 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 14/200: UP - moving to (11, 21) towards TREE at (11, 22) (path cost 5)
+[mine_block] Step 14/200: position (11, 21), facing UP, mined 1/5, 7 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 15/200: RIGHT - turning towards TREE at (11, 22)
+[mine_block] Step 15/200: position (11, 21), facing RIGHT, mined 1/5, 7 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 16/200: DO - mining target TREE at (11, 22) (2/5)
+[mine_block] Mined TREE at (11, 22), it is now GRASS
+[mine_block] Mined TREE 2/5, wood 34 -> 35
+[mine_block] Step 16/200: position (11, 21), facing RIGHT, mined 2/5, 6 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] New target TREE at (12, 23) with path cost 6
+[mine_block] Step 17/200: RIGHT - moving to (11, 22) towards TREE at (12, 23) (path cost 6)
+[mine_block] Step 17/200: position (11, 22), facing RIGHT, mined 2/5, 6 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 18/200: RIGHT - moving to (11, 23) towards TREE at (12, 23) (path cost 5)
+[mine_block] Step 18/200: position (11, 23), facing RIGHT, mined 2/5, 8 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 19/200: DOWN - turning towards TREE at (12, 23)
+[mine_block] Step 19/200: position (11, 23), facing DOWN, mined 2/5, 8 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 20/200: DO - mining target TREE at (12, 23) (3/5)
+[mine_block] Mined TREE at (12, 23), it is now GRASS
+[mine_block] Mined TREE 3/5, wood 35 -> 36
+[mine_block] Step 20/200: position (11, 23), facing DOWN, mined 3/5, 7 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] New target TREE at (14, 23) with path cost 6
+[mine_block] Step 21/200: DOWN - moving to (12, 23) towards TREE at (14, 23) (path cost 6)
+[mine_block] Step 21/200: position (12, 23), facing DOWN, mined 3/5, 6 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 22/200: DOWN - moving to (13, 23) towards TREE at (14, 23) (path cost 5)
+[mine_block] Step 22/200: position (13, 23), facing DOWN, mined 3/5, 6 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 23/200: DO - mining target TREE at (14, 23) (4/5)
+[mine_block] Mined TREE at (14, 23), it is now GRASS
+[mine_block] Mined TREE 4/5, wood 36 -> 37
+[mine_block] Step 23/200: position (13, 23), facing DOWN, mined 4/5, 5 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] New target TREE at (16, 24) with path cost 7
+[mine_block] Step 24/200: RIGHT - moving to (13, 24) towards TREE at (16, 24) (path cost 7)
+[mine_block] Step 24/200: position (13, 24), facing RIGHT, mined 4/5, 6 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 25/200: DOWN - moving to (14, 24) towards TREE at (16, 24) (path cost 6)
+[mine_block] Step 25/200: position (14, 24), facing DOWN, mined 4/5, 5 TREE block(s) in sight, stone 0, health 6.0
+[mine_block] Step 26/200: DOWN - moving to (15, 24) towards TREE at (16, 24) (path cost 5)
+[mine_block] Warning: health dropped from 6.0 to 5.0
+[mine_block] Step 26/200: position (15, 24), facing DOWN, mined 4/5, 5 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] Step 27/200: DO - mining target TREE at (16, 24) (5/5)
+[mine_block] Mined TREE at (16, 24), it is now GRASS
+[mine_block] Mined TREE 5/5, wood 37 -> 38
+[mine_block] Successfully mined 5 TREE block(s) after 27 steps
+[explore_until] Start exploring for block TREE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (15, 24), floor 0, facing DOWN, health 5.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found block TREE at (15, 27), distance 3, after 0 steps
+[mine_block] Start mining 5 TREE block(s) with a budget of 200 steps (no pickaxe, 0 stone)
+[mine_block] Step 0/200: position (15, 24), facing DOWN, mined 0/5, 4 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] New target TREE at (15, 27) with path cost 6
+[mine_block] Step 1/200: RIGHT - moving to (15, 25) towards TREE at (15, 27) (path cost 6)
+[mine_block] Step 1/200: position (15, 25), facing RIGHT, mined 0/5, 5 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] Step 2/200: RIGHT - moving to (15, 26) towards TREE at (15, 27) (path cost 5)
+[mine_block] Step 2/200: position (15, 26), facing RIGHT, mined 0/5, 8 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] Step 3/200: DO - mining target TREE at (15, 27) (1/5)
+[mine_block] Mined TREE at (15, 27), it is now GRASS
+[mine_block] Mined TREE 1/5, wood 38 -> 39
+[mine_block] Step 3/200: position (15, 26), facing RIGHT, mined 1/5, 7 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] New target TREE at (15, 28) with path cost 5
+[mine_block] Step 4/200: RIGHT - moving to (15, 27) towards TREE at (15, 28) (path cost 5)
+[mine_block] Step 4/200: position (15, 27), facing RIGHT, mined 1/5, 9 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] Step 5/200: DO - mining target TREE at (15, 28) (2/5)
+[mine_block] Mined TREE at (15, 28), it is now GRASS
+[mine_block] Mined TREE 2/5, wood 39 -> 40
+[mine_block] Step 5/200: position (15, 27), facing RIGHT, mined 2/5, 8 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] New target TREE at (13, 28) with path cost 6
+[mine_block] Step 6/200: UP - moving to (14, 27) towards TREE at (13, 28) (path cost 6)
+[mine_block] Step 6/200: position (14, 27), facing UP, mined 2/5, 9 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] Step 7/200: UP - moving to (13, 27) towards TREE at (13, 28) (path cost 5)
+[mine_block] Step 7/200: position (13, 27), facing UP, mined 2/5, 10 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] Step 8/200: RIGHT - turning towards TREE at (13, 28)
+[mine_block] Step 8/200: position (13, 27), facing RIGHT, mined 2/5, 10 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] Step 9/200: DO - mining target TREE at (13, 28) (3/5)
+[mine_block] Mined TREE at (13, 28), it is now GRASS
+[mine_block] Mined TREE 3/5, wood 40 -> 41
+[mine_block] Step 9/200: position (13, 27), facing RIGHT, mined 3/5, 9 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] New target TREE at (13, 29) with path cost 5
+[mine_block] Step 10/200: RIGHT - moving to (13, 28) towards TREE at (13, 29) (path cost 5)
+[mine_block] Step 10/200: position (13, 28), facing RIGHT, mined 3/5, 9 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] Step 11/200: DO - mining target TREE at (13, 29) (4/5)
+[mine_block] Mined TREE at (13, 29), it is now GRASS
+[mine_block] Mined TREE 4/5, wood 41 -> 42
+[mine_block] Step 11/200: position (13, 28), facing RIGHT, mined 4/5, 8 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] New target TREE at (13, 31) with path cost 6
+[mine_block] Step 12/200: RIGHT - moving to (13, 29) towards TREE at (13, 31) (path cost 6)
+[mine_block] Step 12/200: position (13, 29), facing RIGHT, mined 4/5, 8 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] Step 13/200: RIGHT - moving to (13, 30) towards TREE at (13, 31) (path cost 5)
+[mine_block] Step 13/200: position (13, 30), facing RIGHT, mined 4/5, 8 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] Step 14/200: DO - mining target TREE at (13, 31) (5/5)
+[mine_block] Mined TREE at (13, 31), it is now GRASS
+[mine_block] Mined TREE 5/5, wood 42 -> 43
+[mine_block] Successfully mined 5 TREE block(s) after 14 steps
+[explore_until] Start exploring for block TREE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (13, 30), floor 0, facing RIGHT, health 5.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found block TREE at (13, 32), distance 2, after 0 steps
+[mine_block] Start mining 5 TREE block(s) with a budget of 200 steps (no pickaxe, 0 stone)
+[mine_block] Step 0/200: position (13, 30), facing RIGHT, mined 0/5, 7 TREE block(s) in sight, stone 0, health 5.0
+[mine_block] New target TREE at (13, 32) with path cost 5
+[mine_block] Step 1/200: RIGHT - moving to (13, 31) towards TREE at (13, 32) (path cost 5)
+[mine_block] Warning: health dropped from 5.0 to 4.0
+[mine_block] Step 1/200: position (13, 31), facing RIGHT, mined 0/5, 7 TREE block(s) in sight, stone 0, health 4.0
+[mine_block] Step 2/200: DO - mining target TREE at (13, 32) (1/5)
+[mine_block] Mined TREE at (13, 32), it is now GRASS
+[mine_block] Mined TREE 1/5, wood 43 -> 44
+[mine_block] Step 2/200: position (13, 31), facing RIGHT, mined 1/5, 6 TREE block(s) in sight, stone 0, health 4.0
+[mine_block] New target TREE at (11, 31) with path cost 5
+[mine_block] Step 3/200: UP - moving to (12, 31) towards TREE at (11, 31) (path cost 5)
+[mine_block] Step 3/200: position (12, 31), facing UP, mined 1/5, 6 TREE block(s) in sight, stone 0, health 4.0
+[mine_block] Step 4/200: DO - mining target TREE at (11, 31) (2/5)
+[mine_block] Mined TREE at (11, 31), it is now GRASS
+[mine_block] Mined TREE 2/5, wood 44 -> 45
+[mine_block] Step 4/200: position (12, 31), facing UP, mined 2/5, 5 TREE block(s) in sight, stone 0, health 4.0
+[mine_block] New target TREE at (10, 30) with path cost 6
+[mine_block] Step 5/200: UP - moving to (11, 31) towards TREE at (10, 30) (path cost 6)
+[mine_block] Step 5/200: position (11, 31), facing UP, mined 2/5, 5 TREE block(s) in sight, stone 0, health 4.0
+[mine_block] Step 6/200: UP - moving to (10, 31) towards TREE at (10, 30) (path cost 5)
+[mine_block] Step 6/200: position (10, 31), facing UP, mined 2/5, 2 TREE block(s) in sight, stone 0, health 4.0
+[mine_block] Step 7/200: LEFT - turning towards TREE at (10, 30)
+[mine_block] Step 7/200: position (10, 31), facing LEFT, mined 2/5, 2 TREE block(s) in sight, stone 0, health 4.0
+[mine_block] Step 8/200: DO - mining target TREE at (10, 30) (3/5)
+[mine_block] Mined TREE at (10, 30), it is now GRASS
+[mine_block] Mined TREE 3/5, wood 45 -> 46
+[mine_block] Step 8/200: position (10, 31), facing LEFT, mined 3/5, 1 TREE block(s) in sight, stone 0, health 4.0
+[mine_block] New target TREE at (9, 30) with path cost 5
+[mine_block] Step 9/200: UP - moving to (9, 31) towards TREE at (9, 30) (path cost 5)
+[mine_block] Step 9/200: position (9, 31), facing UP, mined 3/5, 1 TREE block(s) in sight, stone 0, health 4.0
+[mine_block] Step 10/200: LEFT - turning towards TREE at (9, 30)
+[mine_block] Step 10/200: position (9, 31), facing LEFT, mined 3/5, 1 TREE block(s) in sight, stone 0, health 4.0
+[mine_block] Step 11/200: DO - mining target TREE at (9, 30) (4/5)
+[mine_block] Mined TREE at (9, 30), it is now GRASS
+[mine_block] Mined TREE 4/5, wood 46 -> 47
+[mine_block] Step 11/200: position (9, 31), facing LEFT, mined 4/5, 0 TREE block(s) in sight, stone 0, health 4.0
+[mine_block] No more TREE blocks in sight, mined 4/5
+Error: Mining failed: no more TREE blocks in sight after mining 4/5
+[explore_until] Start exploring for block TREE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (9, 31), floor 0, facing LEFT, health 4.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] New exploration goal (9, 26) with path cost 5 (16 frontier cells available)
+[explore_until] Step 1/200: LEFT - moving to (9, 30) towards goal (9, 26)
+[explore_until] Step 1/200: position (9, 30), floor 0, facing LEFT, health 4.0, revealed 9 new cells, explored 108/2304 cells
+[explore_until] Found block TREE at (7, 25), distance 7, after 1 steps
+[mine_block] Start mining 5 TREE block(s) with a budget of 200 steps (no pickaxe, 0 stone)
+[mine_block] Step 0/200: position (9, 30), facing LEFT, mined 0/5, 1 TREE block(s) in sight, stone 0, health 4.0
+[mine_block] New target TREE at (7, 25) with path cost 10
+[mine_block] Step 1/200: LEFT - moving to (9, 29) towards TREE at (7, 25) (path cost 10)
+[mine_block] Step 1/200: position (9, 29), facing LEFT, mined 0/5, 1 TREE block(s) in sight, stone 0, health 4.0
+[mine_block] Step 2/200: LEFT - moving to (9, 28) towards TREE at (7, 25) (path cost 9)
+[mine_block] Step 2/200: position (9, 28), facing LEFT, mined 0/5, 1 TREE block(s) in sight, stone 0, health 4.0
+[mine_block] Step 3/200: UP - moving to (8, 28) towards TREE at (7, 25) (path cost 8)
+[mine_block] Step 3/200: position (8, 28), facing UP, mined 0/5, 1 TREE block(s) in sight, stone 0, health 4.0
+[mine_block] Step 4/200: LEFT - moving to (8, 27) towards TREE at (7, 25) (path cost 7)
+[mine_block] Step 4/200: position (8, 27), facing LEFT, mined 0/5, 1 TREE block(s) in sight, stone 0, health 4.0
+[mine_block] Step 5/200: LEFT - moving to (8, 26) towards TREE at (7, 25) (path cost 6)
+[mine_block] Warning: health dropped from 4.0 to 3.0
+[mine_block] Step 5/200: position (8, 26), facing LEFT, mined 0/5, 1 TREE block(s) in sight, stone 0, health 3.0
+[mine_block] Step 6/200: UP - moving to (7, 26) towards TREE at (7, 25) (path cost 5)
+[mine_block] Step 6/200: position (7, 26), facing UP, mined 0/5, 3 TREE block(s) in sight, stone 0, health 3.0
+[mine_block] Step 7/200: LEFT - turning towards TREE at (7, 25)
+[mine_block] Step 7/200: position (7, 26), facing LEFT, mined 0/5, 3 TREE block(s) in sight, stone 0, health 3.0
+[mine_block] Step 8/200: DO - mining target TREE at (7, 25) (1/5)
+[mine_block] Mined TREE at (7, 25), it is now GRASS
+[mine_block] Mined TREE 1/5, wood 47 -> 48
+[mine_block] Step 8/200: position (7, 26), facing LEFT, mined 1/5, 2 TREE block(s) in sight, stone 0, health 3.0
+[mine_block] New target TREE at (3, 26) with path cost 7
+[mine_block] Step 9/200: UP - moving to (6, 26) towards TREE at (3, 26) (path cost 7)
+[mine_block] Step 9/200: position (6, 26), facing UP, mined 1/5, 5 TREE block(s) in sight, stone 0, health 3.0
+[mine_block] Step 10/200: UP - moving to (5, 26) towards TREE at (3, 26) (path cost 6)
+[mine_block] Step 10/200: position (5, 26), facing UP, mined 1/5, 6 TREE block(s) in sight, stone 0, health 3.0
+[mine_block] Step 11/200: UP - moving to (4, 26) towards TREE at (3, 26) (path cost 5)
+[mine_block] Step 11/200: position (4, 26), facing UP, mined 1/5, 7 TREE block(s) in sight, stone 0, health 3.0
+[mine_block] Step 12/200: DO - mining target TREE at (3, 26) (2/5)
+[mine_block] Mined TREE at (3, 26), it is now GRASS
+[mine_block] Mined TREE 2/5, wood 48 -> 49
+[mine_block] Step 12/200: position (4, 26), facing UP, mined 2/5, 6 TREE block(s) in sight, stone 0, health 3.0
+[mine_block] New target TREE at (2, 25) with path cost 6
+[mine_block] Step 13/200: UP - moving to (3, 26) towards TREE at (2, 25) (path cost 6)
+[mine_block] Step 13/200: position (3, 26), facing UP, mined 2/5, 6 TREE block(s) in sight, stone 0, health 3.0
+[mine_block] Step 14/200: UP - moving to (2, 26) towards TREE at (2, 25) (path cost 5)
+[mine_block] Step 14/200: position (2, 26), facing UP, mined 2/5, 6 TREE block(s) in sight, stone 0, health 3.0
+[mine_block] Step 15/200: LEFT - turning towards TREE at (2, 25)
+[mine_block] Warning: health dropped from 3.0 to 1.0
+[mine_block] Step 15/200: position (2, 26), facing LEFT, mined 2/5, 6 TREE block(s) in sight, stone 0, health 1.0
+[mine_block] Step 16/200: DO - mining target TREE at (2, 25) (3/5)
+[mine_block] Mined TREE at (2, 25), it is now GRASS
+[mine_block] Mined TREE 3/5, wood 49 -> 50
+[mine_block] Step 16/200: position (2, 26), facing LEFT, mined 3/5, 5 TREE block(s) in sight, stone 0, health 1.0
+[mine_block] New target TREE at (2, 27) with path cost 4
+[mine_block] Step 17/200: RIGHT - turning towards TREE at (2, 27)
+[mine_block] Step 17/200: position (2, 26), facing RIGHT, mined 3/5, 5 TREE block(s) in sight, stone 0, health 1.0
+[mine_block] Step 18/200: DO - mining target TREE at (2, 27) (4/5)
+[mine_block] Mined TREE at (2, 27), it is now GRASS
+[mine_block] Mined TREE 4/5, wood 50 -> 51
+[mine_block] Step 18/200: position (2, 26), facing RIGHT, mined 4/5, 4 TREE block(s) in sight, stone 0, health 1.0
+[mine_block] New target TREE at (1, 25) with path cost 5
+[mine_block] Step 19/200: UP - moving to (1, 26) towards TREE at (1, 25) (path cost 5)
+[mine_block] Step 19/200: position (1, 26), facing UP, mined 4/5, 4 TREE block(s) in sight, stone 0, health 1.0
+[mine_block] Step 20/200: LEFT - turning towards TREE at (1, 25)
+[mine_block] Step 20/200: position (1, 26), facing LEFT, mined 4/5, 4 TREE block(s) in sight, stone 0, health 1.0
+[mine_block] Step 21/200: DO - mining target TREE at (1, 25) (5/5)
+[mine_block] The player died or the episode ended
+Error: Mining failed: the player died after mining 4/5 TREE

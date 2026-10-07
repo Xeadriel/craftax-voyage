@@ -1,10 +1,15 @@
 from pathlib import Path
 
 from utils import file_utils as U
-from control_primitives.mine_blocks import *
-from control_primitives.explore_until_target_found import *
-from control_primitives.drink_water import *
-from control_primitives.sleep_or_rest import *
+from control_primitives.explore_until import *
+from control_primitives.kill_mob import *
+from control_primitives.mine_block import *
+from control_primitives.collect_sapling import *
+from control_primitives.place import *
+from control_primitives.craft import *
+from control_primitives.enchant import *
+from control_primitives.drink import *
+from control_primitives.sleep import *
 
 
 def load_control_primitives(primitive_names=None):

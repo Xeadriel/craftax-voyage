@@ -1,0 +1,1017 @@
+
+[explore_until] Start exploring for mob PASSIVE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (24, 24), floor 0, facing UP, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] New exploration goal (20, 24) with path cost 4 (36 frontier cells available)
+[explore_until] Step 1/200: UP - moving to (23, 24) towards goal (20, 24)
+[explore_until] Step 1/200: position (23, 24), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 110/2304 cells
+[explore_until] Goal (20, 24) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (19, 24) with path cost 4 (38 frontier cells available)
+[explore_until] Step 2/200: UP - moving to (22, 24) towards goal (19, 24)
+[explore_until] Step 2/200: position (22, 24), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 121/2304 cells
+[explore_until] Goal (19, 24) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (18, 24) with path cost 4 (40 frontier cells available)
+[explore_until] Step 3/200: UP - moving to (21, 24) towards goal (18, 24)
+[explore_until] Step 3/200: position (21, 24), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 132/2304 cells
+[explore_until] Goal (18, 24) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (17, 25) with path cost 5 (42 frontier cells available)
+[explore_until] Step 4/200: UP - moving to (20, 24) towards goal (17, 25)
+[explore_until] Step 4/200: position (20, 24), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 143/2304 cells
+[explore_until] Goal (17, 25) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (16, 25) with path cost 5 (44 frontier cells available)
+[explore_until] Step 5/200: UP - moving to (19, 24) towards goal (16, 25)
+[explore_until] Step 5/200: position (19, 24), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 154/2304 cells
+[explore_until] Goal (16, 25) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (15, 25) with path cost 5 (46 frontier cells available)
+[explore_until] Step 6/200: UP - moving to (18, 24) towards goal (15, 25)
+[explore_until] Step 6/200: position (18, 24), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 165/2304 cells
+[explore_until] Goal (15, 25) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (14, 26) with path cost 6 (41 frontier cells available)
+[explore_until] Step 7/200: RIGHT - moving to (18, 25) towards goal (14, 26)
+[explore_until] Step 7/200: position (18, 25), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 174/2304 cells
+[explore_until] Step 8/200: UP - moving to (17, 25) towards goal (14, 26)
+[explore_until] Step 8/200: position (17, 25), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 185/2304 cells
+[explore_until] Goal (14, 26) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (17, 30) with path cost 5 (41 frontier cells available)
+[explore_until] Step 9/200: RIGHT - moving to (17, 26) towards goal (17, 30)
+[explore_until] Step 9/200: position (17, 26), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 194/2304 cells
+[explore_until] Goal (17, 30) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (17, 31) with path cost 5 (41 frontier cells available)
+[explore_until] Step 10/200: RIGHT - moving to (17, 27) towards goal (17, 31)
+[explore_until] Step 10/200: position (17, 27), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 203/2304 cells
+[explore_until] Goal (17, 31) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (13, 28) with path cost 5 (42 frontier cells available)
+[explore_until] Step 11/200: UP - moving to (16, 27) towards goal (13, 28)
+[explore_until] Step 11/200: position (16, 27), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 214/2304 cells
+[explore_until] Goal (13, 28) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (16, 32) with path cost 5 (41 frontier cells available)
+[explore_until] Step 12/200: RIGHT - moving to (16, 28) towards goal (16, 32)
+[explore_until] Step 12/200: position (16, 28), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 223/2304 cells
+[explore_until] Goal (16, 32) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (12, 29) with path cost 5 (41 frontier cells available)
+[explore_until] Step 13/200: UP - moving to (15, 28) towards goal (12, 29)
+[explore_until] Step 13/200: position (15, 28), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 234/2304 cells
+[explore_until] Goal (12, 29) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (11, 29) with path cost 5 (41 frontier cells available)
+[explore_until] Step 14/200: UP - moving to (14, 28) towards goal (11, 29)
+[explore_until] Step 14/200: position (14, 28), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 245/2304 cells
+[explore_until] Goal (11, 29) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (10, 29) with path cost 5 (40 frontier cells available)
+[explore_until] Step 15/200: UP - moving to (13, 28) towards goal (10, 29)
+[explore_until] Step 15/200: position (13, 28), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 256/2304 cells
+[explore_until] Goal (10, 29) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (14, 33) with path cost 6 (39 frontier cells available)
+[explore_until] Step 16/200: RIGHT - moving to (13, 29) towards goal (14, 33)
+[explore_until] Step 16/200: position (13, 29), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 265/2304 cells
+[explore_until] Goal (14, 33) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (14, 34) with path cost 6 (39 frontier cells available)
+[explore_until] Step 17/200: RIGHT - moving to (13, 30) towards goal (14, 34)
+[explore_until] Step 17/200: position (13, 30), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 274/2304 cells
+[explore_until] Goal (14, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (14, 35) with path cost 6 (40 frontier cells available)
+[explore_until] Step 18/200: DOWN - moving to (14, 30) towards goal (14, 35)
+[explore_until] Step 18/200: position (14, 30), floor 0, facing DOWN, health 9.0, revealed 2 new cells, explored 276/2304 cells
+[explore_until] Step 19/200: RIGHT - moving to (14, 31) towards goal (14, 35)
+[explore_until] Step 19/200: position (14, 31), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 285/2304 cells
+[explore_until] Goal (14, 35) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (18, 34) with path cost 7 (37 frontier cells available)
+[explore_until] Step 20/200: RIGHT - moving to (14, 32) towards goal (18, 34)
+[explore_until] Step 20/200: position (14, 32), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 294/2304 cells
+[explore_until] Step 21/200: RIGHT - moving to (14, 33) towards goal (18, 34)
+[explore_until] Step 21/200: position (14, 33), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 303/2304 cells
+[explore_until] Step 22/200: RIGHT - moving to (14, 34) towards goal (18, 34)
+[explore_until] Step 22/200: position (14, 34), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 312/2304 cells
+[explore_until] Step 23/200: DOWN - moving to (15, 34) towards goal (18, 34)
+[explore_until] Step 23/200: position (15, 34), floor 0, facing DOWN, health 9.0, revealed 6 new cells, explored 318/2304 cells
+[explore_until] Goal (18, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (19, 34) with path cost 4 (35 frontier cells available)
+[explore_until] Step 24/200: DOWN - moving to (16, 34) towards goal (19, 34)
+[explore_until] Step 24/200: position (16, 34), floor 0, facing DOWN, health 9.0, revealed 6 new cells, explored 324/2304 cells
+[explore_until] Goal (19, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (20, 34) with path cost 4 (34 frontier cells available)
+[explore_until] Step 25/200: DOWN - moving to (17, 34) towards goal (20, 34)
+[explore_until] Step 25/200: position (17, 34), floor 0, facing DOWN, health 9.0, revealed 7 new cells, explored 331/2304 cells
+[explore_until] Goal (20, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (21, 34) with path cost 4 (34 frontier cells available)
+[explore_until] Step 26/200: DOWN - moving to (18, 34) towards goal (21, 34)
+[explore_until] Step 26/200: position (18, 34), floor 0, facing DOWN, health 9.0, revealed 9 new cells, explored 340/2304 cells
+[explore_until] Goal (21, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (22, 33) with path cost 5 (33 frontier cells available)
+[explore_until] Step 27/200: LEFT - moving to (18, 33) towards goal (22, 33)
+[explore_until] Step 27/200: position (18, 33), floor 0, facing LEFT, health 9.0, revealed 0 new cells, explored 340/2304 cells
+[explore_until] Step 28/200: DOWN - moving to (19, 33) towards goal (22, 33)
+[explore_until] Step 28/200: position (19, 33), floor 0, facing DOWN, health 9.0, revealed 9 new cells, explored 349/2304 cells
+[explore_until] Goal (22, 33) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (23, 32) with path cost 5 (31 frontier cells available)
+[explore_until] Step 29/200: LEFT - moving to (19, 32) towards goal (23, 32)
+[explore_until] Step 29/200: position (19, 32), floor 0, facing LEFT, health 9.0, revealed 0 new cells, explored 349/2304 cells
+[explore_until] Step 30/200: DOWN - moving to (20, 32) towards goal (23, 32)
+[explore_until] Step 30/200: position (20, 32), floor 0, facing DOWN, health 9.0, revealed 8 new cells, explored 357/2304 cells
+[explore_until] Goal (23, 32) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (24, 32) with path cost 4 (30 frontier cells available)
+[explore_until] Step 31/200: DOWN - moving to (21, 32) towards goal (24, 32)
+[explore_until] Step 31/200: position (21, 32), floor 0, facing DOWN, health 9.0, revealed 8 new cells, explored 365/2304 cells
+[explore_until] Goal (24, 32) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (25, 32) with path cost 4 (29 frontier cells available)
+[explore_until] Step 32/200: DOWN - moving to (22, 32) towards goal (25, 32)
+[explore_until] Step 32/200: position (22, 32), floor 0, facing DOWN, health 9.0, revealed 8 new cells, explored 373/2304 cells
+[explore_until] Goal (25, 32) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (26, 32) with path cost 4 (28 frontier cells available)
+[explore_until] Step 33/200: DOWN - moving to (23, 32) towards goal (26, 32)
+[explore_until] Step 33/200: position (23, 32), floor 0, facing DOWN, health 9.0, revealed 8 new cells, explored 381/2304 cells
+[explore_until] Goal (26, 32) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (27, 32) with path cost 4 (27 frontier cells available)
+[explore_until] Step 34/200: DOWN - moving to (24, 32) towards goal (27, 32)
+[explore_until] Step 34/200: position (24, 32), floor 0, facing DOWN, health 9.0, revealed 8 new cells, explored 389/2304 cells
+[explore_until] Goal (27, 32) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (28, 32) with path cost 4 (28 frontier cells available)
+[explore_until] Step 35/200: DOWN - moving to (25, 32) towards goal (28, 32)
+[explore_until] Step 35/200: position (25, 32), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 400/2304 cells
+[explore_until] Goal (28, 32) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (29, 32) with path cost 4 (28 frontier cells available)
+[explore_until] Step 36/200: DOWN - moving to (26, 32) towards goal (29, 32)
+[explore_until] Step 36/200: position (26, 32), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 411/2304 cells
+[explore_until] Goal (29, 32) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (30, 32) with path cost 4 (30 frontier cells available)
+[explore_until] Step 37/200: DOWN - moving to (27, 32) towards goal (30, 32)
+[explore_until] Step 37/200: position (27, 32), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 422/2304 cells
+[explore_until] Goal (30, 32) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (31, 32) with path cost 4 (32 frontier cells available)
+[explore_until] Step 38/200: DOWN - moving to (28, 32) towards goal (31, 32)
+[explore_until] Step 38/200: position (28, 32), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 433/2304 cells
+[explore_until] Goal (31, 32) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (32, 32) with path cost 4 (34 frontier cells available)
+[explore_until] Step 39/200: DOWN - moving to (29, 32) towards goal (32, 32)
+[explore_until] Step 39/200: position (29, 32), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 444/2304 cells
+[explore_until] Goal (32, 32) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (33, 31) with path cost 5 (35 frontier cells available)
+[explore_until] Step 40/200: LEFT - moving to (29, 31) towards goal (33, 31)
+[explore_until] Step 40/200: position (29, 31), floor 0, facing LEFT, health 9.0, revealed 5 new cells, explored 449/2304 cells
+[explore_until] Step 41/200: DOWN - moving to (30, 31) towards goal (33, 31)
+[explore_until] Step 41/200: position (30, 31), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 460/2304 cells
+[explore_until] Goal (33, 31) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (34, 30) with path cost 5 (36 frontier cells available)
+[explore_until] Step 42/200: LEFT - moving to (30, 30) towards goal (34, 30)
+[explore_until] Step 42/200: position (30, 30), floor 0, facing LEFT, health 9.0, revealed 6 new cells, explored 466/2304 cells
+[explore_until] Step 43/200: DOWN - moving to (31, 30) towards goal (34, 30)
+[explore_until] Step 43/200: position (31, 30), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 477/2304 cells
+[explore_until] Goal (34, 30) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (35, 30) with path cost 4 (37 frontier cells available)
+[explore_until] Step 44/200: DOWN - moving to (32, 30) towards goal (35, 30)
+[explore_until] Step 44/200: position (32, 30), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 488/2304 cells
+[explore_until] Goal (35, 30) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (36, 30) with path cost 4 (39 frontier cells available)
+[explore_until] Step 45/200: DOWN - moving to (33, 30) towards goal (36, 30)
+[explore_until] Step 45/200: position (33, 30), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 499/2304 cells
+[explore_until] Goal (36, 30) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (37, 30) with path cost 4 (41 frontier cells available)
+[explore_until] Step 46/200: DOWN - moving to (34, 30) towards goal (37, 30)
+[explore_until] Step 46/200: position (34, 30), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 510/2304 cells
+[explore_until] Found PASSIVE mob (type_id 0) at (31, 29) after 46 steps
+[kill_mob] Start hunting a PASSIVE mob with a budget of 200 steps
+[kill_mob] Step 0/200: position (34, 30), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Targeting Cow (PASSIVE #0) at (31, 29) with 3.00 health; damage per attack: melee 1.00
+[kill_mob] Step 1/200: UP - moving to (33, 30) towards attack position (31, 30) 1 cell(s) from Cow (PASSIVE #0) at (31, 29) (path cost 3)
+[kill_mob] Step 1/200: position (33, 30), floor 0, facing UP, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 2/200: UP - moving to (32, 30) towards attack position (31, 30) 1 cell(s) from Cow (PASSIVE #0) at (31, 29) (path cost 2)
+[kill_mob] Step 2/200: position (32, 30), floor 0, facing UP, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 3/200: UP - moving to (31, 30) towards attack position (31, 30) 1 cell(s) from Cow (PASSIVE #0) at (31, 29) (path cost 1)
+[kill_mob] Step 3/200: position (31, 30), floor 0, facing UP, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 4/200: LEFT - facing target Cow (PASSIVE #0) at (31, 29), 1 cell(s) away, to attack with melee
+[kill_mob] Step 4/200: position (31, 30), floor 0, facing LEFT, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 5/200: LEFT - moving to (31, 29) towards attack position (31, 29) 1 cell(s) from Cow (PASSIVE #0) at (31, 28) (path cost 1)
+[kill_mob] Step 5/200: position (31, 29), floor 0, facing LEFT, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 6/200: DO - attacking target Cow (PASSIVE #0) at (31, 28) with melee from 1 cell(s) away (expected damage 1.00, health 3.00)
+[kill_mob] Cow (PASSIVE #0) took 1.00 damage, health 3.00 -> 2.00
+[kill_mob] Step 6/200: position (31, 29), floor 0, facing LEFT, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 7/200: DO - attacking target Cow (PASSIVE #0) at (31, 28) with melee from 1 cell(s) away (expected damage 1.00, health 2.00)
+[kill_mob] Cow (PASSIVE #0) took 1.00 damage, health 2.00 -> 1.00
+[kill_mob] Step 7/200: position (31, 29), floor 0, facing LEFT, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 8/200: DO - attacking target Cow (PASSIVE #0) at (31, 28) with melee from 1 cell(s) away (expected damage 1.00, health 1.00)
+[kill_mob] Killed Cow (PASSIVE #0) at (31, 28) after 8 steps
+[kill_mob] Successfully killed a PASSIVE mob
+[explore_until] Start exploring for mob PASSIVE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (31, 29), floor 0, facing LEFT, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] New exploration goal (27, 29) with path cost 4 (32 frontier cells available)
+[explore_until] Step 1/200: UP - moving to (30, 29) towards goal (27, 29)
+[explore_until] Step 1/200: position (30, 29), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 110/2304 cells
+[explore_until] Goal (27, 29) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (26, 29) with path cost 4 (33 frontier cells available)
+[explore_until] Step 2/200: UP - moving to (29, 29) towards goal (26, 29)
+[explore_until] Step 2/200: position (29, 29), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 121/2304 cells
+[explore_until] Goal (26, 29) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (25, 29) with path cost 4 (34 frontier cells available)
+[explore_until] Step 3/200: UP - moving to (28, 29) towards goal (25, 29)
+[explore_until] Step 3/200: position (28, 29), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 132/2304 cells
+[explore_until] Goal (25, 29) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (24, 29) with path cost 4 (35 frontier cells available)
+[explore_until] Step 4/200: UP - moving to (27, 29) towards goal (24, 29)
+[explore_until] Step 4/200: position (27, 29), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 143/2304 cells
+[explore_until] Goal (24, 29) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (23, 29) with path cost 4 (36 frontier cells available)
+[explore_until] Step 5/200: UP - moving to (26, 29) towards goal (23, 29)
+[explore_until] Step 5/200: position (26, 29), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 154/2304 cells
+[explore_until] Goal (23, 29) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (22, 28) with path cost 5 (38 frontier cells available)
+[explore_until] Step 6/200: UP - moving to (25, 29) towards goal (22, 28)
+[explore_until] Step 6/200: position (25, 29), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 165/2304 cells
+[explore_until] Found PASSIVE mob (type_id 0) at (21, 34) after 6 steps
+[kill_mob] Start hunting a PASSIVE mob with a budget of 200 steps
+[kill_mob] Step 0/200: position (25, 29), floor 0, facing UP, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Targeting Cow (PASSIVE #0) at (21, 34) with 3.00 health; damage per attack: melee 1.00
+[kill_mob] Step 1/200: UP - moving to (24, 29) towards attack position (21, 33) 1 cell(s) from Cow (PASSIVE #0) at (21, 34) (path cost 8)
+[kill_mob] Step 1/200: position (24, 29), floor 0, facing UP, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 2/200: RIGHT - moving to (24, 30) towards attack position (21, 33) 1 cell(s) from Cow (PASSIVE #0) at (21, 34) (path cost 7)
+[kill_mob] Step 2/200: position (24, 30), floor 0, facing RIGHT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 3/200: RIGHT - moving to (24, 31) towards attack position (21, 33) 1 cell(s) from Cow (PASSIVE #0) at (21, 34) (path cost 6)
+[kill_mob] Step 3/200: position (24, 31), floor 0, facing RIGHT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 4/200: UP - moving to (23, 31) towards attack position (21, 33) 1 cell(s) from Cow (PASSIVE #0) at (21, 34) (path cost 5)
+[kill_mob] Step 4/200: position (23, 31), floor 0, facing UP, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 5/200: RIGHT - moving to (23, 32) towards attack position (20, 33) 1 cell(s) from Cow (PASSIVE #0) at (20, 34) (path cost 5)
+[kill_mob] Step 5/200: position (23, 32), floor 0, facing RIGHT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 6/200: UP - moving to (22, 32) towards attack position (20, 33) 1 cell(s) from Cow (PASSIVE #0) at (20, 34) (path cost 4)
+[kill_mob] Step 6/200: position (22, 32), floor 0, facing UP, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 7/200: UP - moving to (21, 32) towards attack position (20, 33) 1 cell(s) from Cow (PASSIVE #0) at (20, 34) (path cost 3)
+[kill_mob] Step 7/200: position (21, 32), floor 0, facing UP, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 8/200: UP - moving to (20, 32) towards attack position (20, 33) 1 cell(s) from Cow (PASSIVE #0) at (20, 34) (path cost 2)
+[kill_mob] Step 8/200: position (20, 32), floor 0, facing UP, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 9/200: RIGHT - facing target Cow (PASSIVE #0) at (20, 33), 1 cell(s) away, to attack with melee
+[kill_mob] Step 9/200: position (20, 32), floor 0, facing RIGHT, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 10/200: RIGHT - moving to (20, 33) towards attack position (20, 33) 1 cell(s) from Cow (PASSIVE #0) at (20, 34) (path cost 1)
+[kill_mob] Step 10/200: position (20, 33), floor 0, facing RIGHT, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 11/200: DO - attacking target Cow (PASSIVE #0) at (20, 34) with melee from 1 cell(s) away (expected damage 1.00, health 3.00)
+[kill_mob] Cow (PASSIVE #0) took 1.00 damage, health 3.00 -> 2.00
+[kill_mob] Step 11/200: position (20, 33), floor 0, facing RIGHT, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 12/200: UP - moving to (19, 33) towards attack position (19, 33) 1 cell(s) from Cow (PASSIVE #0) at (19, 34) (path cost 1)
+[kill_mob] Step 12/200: position (19, 33), floor 0, facing UP, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 13/200: RIGHT - moving to (19, 34) towards attack position (19, 34) 1 cell(s) from Cow (PASSIVE #0) at (20, 34) (path cost 1)
+[kill_mob] Step 13/200: position (19, 34), floor 0, facing RIGHT, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 14/200: DOWN - facing target Cow (PASSIVE #0) at (20, 34), 1 cell(s) away, to attack with melee
+[kill_mob] Step 14/200: position (19, 34), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 15/200: DOWN - moving to (20, 34) towards attack position (20, 34) 1 cell(s) from Cow (PASSIVE #0) at (21, 34) (path cost 1)
+[kill_mob] Step 15/200: position (20, 34), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 16/200: DO - attacking target Cow (PASSIVE #0) at (21, 34) with melee from 1 cell(s) away (expected damage 1.00, health 2.00)
+[kill_mob] Cow (PASSIVE #0) took 1.00 damage, health 2.00 -> 1.00
+[kill_mob] Cow (PASSIVE #1) despawned at distance 14
+[kill_mob] Step 16/200: position (20, 34), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 17/200: DO - attacking target Cow (PASSIVE #0) at (21, 34) with melee from 1 cell(s) away (expected damage 1.00, health 1.00)
+[kill_mob] Killed Cow (PASSIVE #0) at (21, 34) after 17 steps
+[kill_mob] Successfully killed a PASSIVE mob
+[explore_until] Start exploring for mob PASSIVE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (20, 34), floor 0, facing DOWN, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] New exploration goal (16, 34) with path cost 4 (18 frontier cells available)
+[explore_until] Step 1/200: UP - moving to (19, 34) towards goal (16, 34)
+[explore_until] Step 1/200: position (19, 34), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 110/2304 cells
+[explore_until] Goal (16, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (15, 34) with path cost 4 (19 frontier cells available)
+[explore_until] Step 2/200: UP - moving to (18, 34) towards goal (15, 34)
+[explore_until] Step 2/200: position (18, 34), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 121/2304 cells
+[explore_until] Goal (15, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (14, 34) with path cost 4 (20 frontier cells available)
+[explore_until] Step 3/200: UP - moving to (17, 34) towards goal (14, 34)
+[explore_until] Step 3/200: position (17, 34), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 132/2304 cells
+[explore_until] Goal (14, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (17, 29) with path cost 5 (16 frontier cells available)
+[explore_until] Step 4/200: LEFT - moving to (17, 33) towards goal (17, 29)
+[explore_until] Step 4/200: position (17, 33), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 141/2304 cells
+[explore_until] Goal (17, 29) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (17, 28) with path cost 5 (17 frontier cells available)
+[explore_until] Step 5/200: LEFT - moving to (17, 32) towards goal (17, 28)
+[explore_until] Step 5/200: position (17, 32), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 150/2304 cells
+[explore_until] Goal (17, 28) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (17, 27) with path cost 5 (18 frontier cells available)
+[explore_until] Step 6/200: LEFT - moving to (17, 31) towards goal (17, 27)
+[explore_until] Step 6/200: position (17, 31), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 159/2304 cells
+[explore_until] Goal (17, 27) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (13, 30) with path cost 5 (19 frontier cells available)
+[explore_until] Step 7/200: UP - moving to (16, 31) towards goal (13, 30)
+[explore_until] Step 7/200: position (16, 31), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 170/2304 cells
+[explore_until] Goal (13, 30) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (12, 30) with path cost 5 (18 frontier cells available)
+[explore_until] Step 8/200: UP - moving to (15, 31) towards goal (12, 30)
+[explore_until] Step 8/200: position (15, 31), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 181/2304 cells
+[explore_until] Goal (12, 30) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (11, 30) with path cost 5 (18 frontier cells available)
+[explore_until] Step 9/200: UP - moving to (14, 31) towards goal (11, 30)
+[explore_until] Step 9/200: position (14, 31), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 192/2304 cells
+[explore_until] Goal (11, 30) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (14, 26) with path cost 5 (17 frontier cells available)
+[explore_until] Step 10/200: LEFT - moving to (14, 30) towards goal (14, 26)
+[explore_until] Step 10/200: position (14, 30), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 201/2304 cells
+[explore_until] Goal (14, 26) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (10, 29) with path cost 5 (16 frontier cells available)
+[explore_until] Step 11/200: UP - moving to (13, 30) towards goal (10, 29)
+[explore_until] Step 11/200: position (13, 30), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 212/2304 cells
+[explore_until] Goal (10, 29) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (15, 25) with path cost 7 (15 frontier cells available)
+[explore_until] Step 12/200: LEFT - moving to (13, 29) towards goal (15, 25)
+[explore_until] Step 12/200: position (13, 29), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 221/2304 cells
+[explore_until] Goal (15, 25) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (15, 24) with path cost 7 (15 frontier cells available)
+[explore_until] Step 13/200: LEFT - moving to (13, 28) towards goal (15, 24)
+[explore_until] Step 13/200: position (13, 28), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 230/2304 cells
+[explore_until] Goal (15, 24) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (15, 23) with path cost 7 (16 frontier cells available)
+[explore_until] Step 14/200: DOWN - moving to (14, 28) towards goal (15, 23)
+[explore_until] Step 14/200: position (14, 28), floor 0, facing DOWN, health 9.0, revealed 2 new cells, explored 232/2304 cells
+[explore_until] Step 15/200: LEFT - moving to (14, 27) towards goal (15, 23)
+[explore_until] Step 15/200: position (14, 27), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 241/2304 cells
+[explore_until] Goal (15, 23) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (15, 22) with path cost 6 (18 frontier cells available)
+[explore_until] Step 16/200: LEFT - moving to (14, 26) towards goal (15, 22)
+[explore_until] Step 16/200: position (14, 26), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 250/2304 cells
+[explore_until] Goal (15, 22) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (18, 25) with path cost 5 (19 frontier cells available)
+[explore_until] Step 17/200: DOWN - moving to (15, 26) towards goal (18, 25)
+[explore_until] Step 17/200: position (15, 26), floor 0, facing DOWN, health 9.0, revealed 5 new cells, explored 255/2304 cells
+[explore_until] Goal (18, 25) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (15, 21) with path cost 5 (19 frontier cells available)
+[explore_until] Step 18/200: LEFT - moving to (15, 25) towards goal (15, 21)
+[explore_until] Step 18/200: position (15, 25), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 264/2304 cells
+[explore_until] Goal (15, 21) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (19, 25) with path cost 4 (20 frontier cells available)
+[explore_until] Step 19/200: DOWN - moving to (16, 25) towards goal (19, 25)
+[explore_until] Step 19/200: position (16, 25), floor 0, facing DOWN, health 9.0, revealed 6 new cells, explored 270/2304 cells
+[explore_until] Found PASSIVE mob (type_id 0) at (20, 26) after 19 steps
+[kill_mob] Start hunting a PASSIVE mob with a budget of 200 steps
+[kill_mob] Step 0/200: position (16, 25), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Targeting Cow (PASSIVE #0) at (20, 26) with 3.00 health; damage per attack: melee 1.00
+[kill_mob] Step 1/200: RIGHT - moving to (16, 26) towards attack position (19, 26) 1 cell(s) from Cow (PASSIVE #0) at (20, 26) (path cost 4)
+[kill_mob] Step 1/200: position (16, 26), floor 0, facing RIGHT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 2/200: DOWN - moving to (17, 26) towards attack position (19, 26) 1 cell(s) from Cow (PASSIVE #0) at (20, 26) (path cost 3)
+[kill_mob] Step 2/200: position (17, 26), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 3/200: RIGHT - moving to (17, 27) towards attack position (19, 27) 1 cell(s) from Cow (PASSIVE #0) at (20, 27) (path cost 3)
+[kill_mob] Step 3/200: position (17, 27), floor 0, facing RIGHT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 4/200: RIGHT - moving to (17, 28) towards attack position (19, 28) 1 cell(s) from Cow (PASSIVE #0) at (20, 28) (path cost 3)
+[kill_mob] Step 4/200: position (17, 28), floor 0, facing RIGHT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 5/200: DOWN - moving to (18, 28) towards attack position (19, 28) 1 cell(s) from Cow (PASSIVE #0) at (20, 28) (path cost 2)
+[kill_mob] Step 5/200: position (18, 28), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 6/200: DOWN - moving to (19, 28) towards attack position (19, 28) 1 cell(s) from Cow (PASSIVE #0) at (20, 28) (path cost 1)
+[kill_mob] Step 6/200: position (19, 28), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 7/200: DO - attacking target Cow (PASSIVE #0) at (20, 28) with melee from 1 cell(s) away (expected damage 1.00, health 3.00)
+[kill_mob] Cow (PASSIVE #0) took 1.00 damage, health 3.00 -> 2.00
+[kill_mob] Step 7/200: position (19, 28), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 8/200: DOWN - moving to (20, 28) towards attack position (20, 28) 1 cell(s) from Cow (PASSIVE #0) at (21, 28) (path cost 1)
+[kill_mob] Step 8/200: position (20, 28), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 9/200: DO - attacking target Cow (PASSIVE #0) at (21, 28) with melee from 1 cell(s) away (expected damage 1.00, health 2.00)
+[kill_mob] Cow (PASSIVE #0) took 1.00 damage, health 2.00 -> 1.00
+[kill_mob] Step 9/200: position (20, 28), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 10/200: DO - attacking target Cow (PASSIVE #0) at (21, 28) with melee from 1 cell(s) away (expected damage 1.00, health 1.00)
+[kill_mob] Killed Cow (PASSIVE #0) at (21, 28) after 10 steps
+[kill_mob] Successfully killed a PASSIVE mob
+[explore_until] Start exploring for mob PASSIVE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (20, 28), floor 0, facing DOWN, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] New exploration goal (16, 28) with path cost 4 (34 frontier cells available)
+[explore_until] Step 1/200: UP - moving to (19, 28) towards goal (16, 28)
+[explore_until] Step 1/200: position (19, 28), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 110/2304 cells
+[explore_until] Goal (16, 28) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (15, 28) with path cost 4 (36 frontier cells available)
+[explore_until] Step 2/200: UP - moving to (18, 28) towards goal (15, 28)
+[explore_until] Step 2/200: position (18, 28), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 121/2304 cells
+[explore_until] Goal (15, 28) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (14, 28) with path cost 4 (35 frontier cells available)
+[explore_until] Step 3/200: UP - moving to (17, 28) towards goal (14, 28)
+[explore_until] Step 3/200: position (17, 28), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 132/2304 cells
+[explore_until] Goal (14, 28) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (13, 28) with path cost 4 (31 frontier cells available)
+[explore_until] Step 4/200: UP - moving to (16, 28) towards goal (13, 28)
+[explore_until] Step 4/200: position (16, 28), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 143/2304 cells
+[explore_until] Goal (13, 28) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (12, 29) with path cost 5 (30 frontier cells available)
+[explore_until] Step 5/200: UP - moving to (15, 28) towards goal (12, 29)
+[explore_until] Step 5/200: position (15, 28), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 154/2304 cells
+[explore_until] Goal (12, 29) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (11, 29) with path cost 5 (30 frontier cells available)
+[explore_until] Step 6/200: UP - moving to (14, 28) towards goal (11, 29)
+[explore_until] Step 6/200: position (14, 28), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 165/2304 cells
+[explore_until] Goal (11, 29) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (10, 29) with path cost 5 (29 frontier cells available)
+[explore_until] Step 7/200: UP - moving to (13, 28) towards goal (10, 29)
+[explore_until] Step 7/200: position (13, 28), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 176/2304 cells
+[explore_until] Goal (10, 29) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (14, 33) with path cost 6 (28 frontier cells available)
+[explore_until] Step 8/200: RIGHT - moving to (13, 29) towards goal (14, 33)
+[explore_until] Step 8/200: position (13, 29), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 185/2304 cells
+[explore_until] Goal (14, 33) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (14, 34) with path cost 6 (28 frontier cells available)
+[explore_until] Step 9/200: RIGHT - moving to (13, 30) towards goal (14, 34)
+[explore_until] Step 9/200: position (13, 30), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 194/2304 cells
+[explore_until] Goal (14, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (14, 35) with path cost 6 (29 frontier cells available)
+[explore_until] Step 10/200: DOWN - moving to (14, 30) towards goal (14, 35)
+[explore_until] Step 10/200: position (14, 30), floor 0, facing DOWN, health 9.0, revealed 2 new cells, explored 196/2304 cells
+[explore_until] Step 11/200: RIGHT - moving to (14, 31) towards goal (14, 35)
+[explore_until] Step 11/200: position (14, 31), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 205/2304 cells
+[explore_until] Goal (14, 35) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (18, 34) with path cost 7 (26 frontier cells available)
+[explore_until] Step 12/200: RIGHT - moving to (14, 32) towards goal (18, 34)
+[explore_until] Step 12/200: position (14, 32), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 214/2304 cells
+[explore_until] Step 13/200: RIGHT - moving to (14, 33) towards goal (18, 34)
+[explore_until] Step 13/200: position (14, 33), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 223/2304 cells
+[explore_until] Step 14/200: RIGHT - moving to (14, 34) towards goal (18, 34)
+[explore_until] Step 14/200: position (14, 34), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 232/2304 cells
+[explore_until] Step 15/200: DOWN - moving to (15, 34) towards goal (18, 34)
+[explore_until] Step 15/200: position (15, 34), floor 0, facing DOWN, health 9.0, revealed 6 new cells, explored 238/2304 cells
+[explore_until] Goal (18, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (19, 34) with path cost 4 (24 frontier cells available)
+[explore_until] Step 16/200: DOWN - moving to (16, 34) towards goal (19, 34)
+[explore_until] Step 16/200: position (16, 34), floor 0, facing DOWN, health 9.0, revealed 6 new cells, explored 244/2304 cells
+[explore_until] Goal (19, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (20, 34) with path cost 4 (22 frontier cells available)
+[explore_until] Step 17/200: DOWN - moving to (17, 34) towards goal (20, 34)
+[explore_until] Step 17/200: position (17, 34), floor 0, facing DOWN, health 9.0, revealed 6 new cells, explored 250/2304 cells
+[explore_until] Goal (20, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (21, 34) with path cost 4 (21 frontier cells available)
+[explore_until] Step 18/200: DOWN - moving to (18, 34) towards goal (21, 34)
+[explore_until] Step 18/200: position (18, 34), floor 0, facing DOWN, health 9.0, revealed 6 new cells, explored 256/2304 cells
+[explore_until] Goal (21, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (24, 32) with path cost 8 (19 frontier cells available)
+[explore_until] Step 19/200: LEFT - moving to (18, 33) towards goal (24, 32)
+[explore_until] Step 19/200: position (18, 33), floor 0, facing LEFT, health 9.0, revealed 0 new cells, explored 256/2304 cells
+[explore_until] Step 20/200: LEFT - moving to (18, 32) towards goal (24, 32)
+[explore_until] Step 20/200: position (18, 32), floor 0, facing LEFT, health 9.0, revealed 0 new cells, explored 256/2304 cells
+[explore_until] Step 21/200: DOWN - moving to (19, 32) towards goal (24, 32)
+[explore_until] Step 21/200: position (19, 32), floor 0, facing DOWN, health 9.0, revealed 4 new cells, explored 260/2304 cells
+[explore_until] Step 22/200: DOWN - moving to (20, 32) towards goal (24, 32)
+[explore_until] Step 22/200: position (20, 32), floor 0, facing DOWN, health 9.0, revealed 4 new cells, explored 264/2304 cells
+[explore_until] Step 23/200: DOWN - moving to (21, 32) towards goal (24, 32)
+[explore_until] Step 23/200: position (21, 32), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 275/2304 cells
+[explore_until] Goal (24, 32) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (25, 32) with path cost 4 (19 frontier cells available)
+[explore_until] Step 24/200: DOWN - moving to (22, 32) towards goal (25, 32)
+[explore_until] Step 24/200: position (22, 32), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 286/2304 cells
+[explore_until] Goal (25, 32) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (26, 32) with path cost 4 (20 frontier cells available)
+[explore_until] Step 25/200: DOWN - moving to (23, 32) towards goal (26, 32)
+[explore_until] Step 25/200: position (23, 32), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 297/2304 cells
+[explore_until] Goal (26, 32) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (27, 32) with path cost 4 (21 frontier cells available)
+[explore_until] Step 26/200: DOWN - moving to (24, 32) towards goal (27, 32)
+[explore_until] Step 26/200: position (24, 32), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 308/2304 cells
+[explore_until] Goal (27, 32) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (28, 32) with path cost 4 (23 frontier cells available)
+[explore_until] Step 27/200: DOWN - moving to (25, 32) towards goal (28, 32)
+[explore_until] Step 27/200: position (25, 32), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 319/2304 cells
+[explore_until] Goal (28, 32) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (29, 32) with path cost 4 (24 frontier cells available)
+[explore_until] Step 28/200: DOWN - moving to (26, 32) towards goal (29, 32)
+[explore_until] Step 28/200: position (26, 32), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 330/2304 cells
+[explore_until] Goal (29, 32) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (30, 32) with path cost 4 (26 frontier cells available)
+[explore_until] Step 29/200: DOWN - moving to (27, 32) towards goal (30, 32)
+[explore_until] Step 29/200: position (27, 32), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 341/2304 cells
+[explore_until] Goal (30, 32) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (31, 32) with path cost 4 (28 frontier cells available)
+[explore_until] Step 30/200: DOWN - moving to (28, 32) towards goal (31, 32)
+[explore_until] Step 30/200: position (28, 32), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 352/2304 cells
+[explore_until] Goal (31, 32) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (28, 27) with path cost 5 (30 frontier cells available)
+[explore_until] Step 31/200: LEFT - moving to (28, 31) towards goal (28, 27)
+[explore_until] Step 31/200: position (28, 31), floor 0, facing LEFT, health 9.0, revealed 8 new cells, explored 360/2304 cells
+[explore_until] Goal (28, 27) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (32, 30) with path cost 5 (30 frontier cells available)
+[explore_until] Step 32/200: LEFT - moving to (28, 30) towards goal (32, 30)
+[explore_until] Step 32/200: position (28, 30), floor 0, facing LEFT, health 9.0, revealed 8 new cells, explored 368/2304 cells
+[explore_until] Step 33/200: DOWN - moving to (29, 30) towards goal (32, 30)
+[explore_until] Step 33/200: position (29, 30), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 379/2304 cells
+[explore_until] Goal (32, 30) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (33, 30) with path cost 4 (31 frontier cells available)
+[explore_until] Step 34/200: DOWN - moving to (30, 30) towards goal (33, 30)
+[explore_until] Step 34/200: position (30, 30), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 390/2304 cells
+[explore_until] Goal (33, 30) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (34, 30) with path cost 4 (33 frontier cells available)
+[explore_until] Step 35/200: DOWN - moving to (31, 30) towards goal (34, 30)
+[explore_until] Step 35/200: position (31, 30), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 401/2304 cells
+[explore_until] Goal (34, 30) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (35, 30) with path cost 4 (35 frontier cells available)
+[explore_until] Step 36/200: DOWN - moving to (32, 30) towards goal (35, 30)
+[explore_until] Step 36/200: position (32, 30), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 412/2304 cells
+[explore_until] Goal (35, 30) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (36, 30) with path cost 4 (37 frontier cells available)
+[explore_until] Step 37/200: DOWN - moving to (33, 30) towards goal (36, 30)
+[explore_until] Step 37/200: position (33, 30), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 423/2304 cells
+[explore_until] Goal (36, 30) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (37, 30) with path cost 4 (39 frontier cells available)
+[explore_until] Step 38/200: DOWN - moving to (34, 30) towards goal (37, 30)
+[explore_until] Step 38/200: position (34, 30), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 434/2304 cells
+[explore_until] Goal (37, 30) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (38, 30) with path cost 4 (40 frontier cells available)
+[explore_until] Step 39/200: DOWN - moving to (35, 30) towards goal (38, 30)
+[explore_until] Step 39/200: position (35, 30), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 445/2304 cells
+[explore_until] Goal (38, 30) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (39, 30) with path cost 4 (41 frontier cells available)
+[explore_until] Step 40/200: DOWN - moving to (36, 30) towards goal (39, 30)
+[explore_until] Step 40/200: position (36, 30), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 456/2304 cells
+[explore_until] Goal (39, 30) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (40, 30) with path cost 4 (42 frontier cells available)
+[explore_until] Step 41/200: DOWN - moving to (37, 30) towards goal (40, 30)
+[explore_until] Step 41/200: position (37, 30), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 467/2304 cells
+[explore_until] Goal (40, 30) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (41, 30) with path cost 4 (43 frontier cells available)
+[explore_until] Step 42/200: DOWN - moving to (38, 30) towards goal (41, 30)
+[explore_until] Step 42/200: position (38, 30), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 478/2304 cells
+[explore_until] Found PASSIVE mob (type_id 0) at (42, 33) after 42 steps
+[kill_mob] Start hunting a PASSIVE mob with a budget of 200 steps
+[kill_mob] Step 0/200: position (38, 30), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Targeting Cow (PASSIVE #0) at (42, 33) with 3.00 health; damage per attack: melee 1.00
+[kill_mob] Step 1/200: RIGHT - moving to (38, 31) towards attack position (41, 33) 1 cell(s) from Cow (PASSIVE #0) at (42, 33) (path cost 6)
+[kill_mob] Step 1/200: position (38, 31), floor 0, facing RIGHT, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 2/200: RIGHT - moving to (38, 32) towards attack position (41, 33) 1 cell(s) from Cow (PASSIVE #0) at (42, 33) (path cost 5)
+[kill_mob] Cow (PASSIVE #1) despawned at distance 13
+[kill_mob] Step 2/200: position (38, 32), floor 0, facing RIGHT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 3/200: RIGHT - moving to (38, 33) towards attack position (42, 33) 1 cell(s) from Cow (PASSIVE #0) at (43, 33) (path cost 5)
+[kill_mob] Step 3/200: position (38, 33), floor 0, facing RIGHT, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 4/200: DOWN - moving to (39, 33) towards attack position (42, 33) 1 cell(s) from Cow (PASSIVE #0) at (43, 33) (path cost 4)
+[kill_mob] Cow (PASSIVE #1) despawned at distance 15
+[kill_mob] Step 4/200: position (39, 33), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 5/200: DOWN - moving to (40, 33) towards attack position (43, 33) 1 cell(s) from Cow (PASSIVE #0) at (44, 33) (path cost 4)
+[kill_mob] Step 5/200: position (40, 33), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 6/200: DOWN - moving to (41, 33) towards attack position (43, 33) 1 cell(s) from Cow (PASSIVE #0) at (44, 33) (path cost 3)
+[kill_mob] Step 6/200: position (41, 33), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 7/200: DOWN - moving to (42, 33) towards attack position (43, 33) 1 cell(s) from Cow (PASSIVE #0) at (44, 33) (path cost 2)
+[kill_mob] Step 7/200: position (42, 33), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 8/200: DOWN - moving to (43, 33) towards attack position (43, 33) 1 cell(s) from Cow (PASSIVE #0) at (44, 33) (path cost 1)
+[kill_mob] Step 8/200: position (43, 33), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 9/200: DO - attacking target Cow (PASSIVE #0) at (44, 33) with melee from 1 cell(s) away (expected damage 1.00, health 3.00)
+[kill_mob] Cow (PASSIVE #0) took 1.00 damage, health 3.00 -> 2.00
+[kill_mob] Step 9/200: position (43, 33), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 10/200: DO - attacking target Cow (PASSIVE #0) at (44, 33) with melee from 1 cell(s) away (expected damage 1.00, health 2.00)
+[kill_mob] Cow (PASSIVE #0) took 1.00 damage, health 2.00 -> 1.00
+[kill_mob] Step 10/200: position (43, 33), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 11/200: DO - attacking target Cow (PASSIVE #0) at (44, 33) with melee from 1 cell(s) away (expected damage 1.00, health 1.00)
+[kill_mob] Killed Cow (PASSIVE #0) at (44, 33) after 11 steps
+[kill_mob] Successfully killed a PASSIVE mob
+[explore_until] Start exploring for mob PASSIVE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (43, 33), floor 0, facing DOWN, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] New exploration goal (39, 33) with path cost 4 (18 frontier cells available)
+[explore_until] Step 1/200: UP - moving to (42, 33) towards goal (39, 33)
+[explore_until] Step 1/200: position (42, 33), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 110/2304 cells
+[explore_until] Found PASSIVE mob (type_id 0) at (38, 32) after 1 steps
+[kill_mob] Start hunting a PASSIVE mob with a budget of 200 steps
+[kill_mob] Step 0/200: position (42, 33), floor 0, facing UP, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Targeting Cow (PASSIVE #0) at (38, 32) with 3.00 health; damage per attack: melee 1.00
+[kill_mob] Step 1/200: UP - moving to (41, 33) towards attack position (38, 33) 1 cell(s) from Cow (PASSIVE #0) at (38, 32) (path cost 4)
+[kill_mob] Step 1/200: position (41, 33), floor 0, facing UP, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 2/200: UP - moving to (40, 33) towards attack position (37, 33) 1 cell(s) from Cow (PASSIVE #0) at (37, 32) (path cost 4)
+[kill_mob] Cow (PASSIVE #1) despawned at distance 16
+[kill_mob] Step 2/200: position (40, 33), floor 0, facing UP, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 3/200: UP - moving to (39, 33) towards attack position (37, 33) 1 cell(s) from Cow (PASSIVE #0) at (37, 32) (path cost 3)
+[kill_mob] Step 3/200: position (39, 33), floor 0, facing UP, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 4/200: UP - moving to (38, 33) towards attack position (37, 33) 1 cell(s) from Cow (PASSIVE #0) at (37, 32) (path cost 2)
+[kill_mob] Step 4/200: position (38, 33), floor 0, facing UP, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 5/200: UP - moving to (37, 33) towards attack position (37, 33) 1 cell(s) from Cow (PASSIVE #0) at (37, 32) (path cost 1)
+[kill_mob] Step 5/200: position (37, 33), floor 0, facing UP, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 6/200: LEFT - facing target Cow (PASSIVE #0) at (37, 32), 1 cell(s) away, to attack with melee
+[kill_mob] Step 6/200: position (37, 33), floor 0, facing LEFT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 7/200: LEFT - moving to (37, 32) towards attack position (37, 32) 1 cell(s) from Cow (PASSIVE #0) at (38, 32) (path cost 1)
+[kill_mob] Step 7/200: position (37, 32), floor 0, facing LEFT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 8/200: DOWN - facing target Cow (PASSIVE #0) at (38, 32), 1 cell(s) away, to attack with melee
+[kill_mob] Step 8/200: position (37, 32), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 9/200: RIGHT - moving to (37, 33) towards attack position (37, 33) 1 cell(s) from Cow (PASSIVE #0) at (38, 33) (path cost 1)
+[kill_mob] Step 9/200: position (37, 33), floor 0, facing RIGHT, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 10/200: DOWN - moving to (38, 33) towards attack position (38, 33) 1 cell(s) from Cow (PASSIVE #0) at (39, 33) (path cost 1)
+[kill_mob] Step 10/200: position (38, 33), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 11/200: DO - attacking target Cow (PASSIVE #0) at (39, 33) with melee from 1 cell(s) away (expected damage 1.00, health 3.00)
+[kill_mob] Cow (PASSIVE #0) took 1.00 damage, health 3.00 -> 2.00
+[kill_mob] Step 11/200: position (38, 33), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 12/200: DO - attacking target Cow (PASSIVE #0) at (39, 33) with melee from 1 cell(s) away (expected damage 1.00, health 2.00)
+[kill_mob] Cow (PASSIVE #0) took 1.00 damage, health 2.00 -> 1.00
+[kill_mob] Step 12/200: position (38, 33), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 13/200: DO - attacking target Cow (PASSIVE #0) at (39, 33) with melee from 1 cell(s) away (expected damage 1.00, health 1.00)
+[kill_mob] Killed Cow (PASSIVE #0) at (39, 33) after 13 steps
+[kill_mob] Successfully killed a PASSIVE mob
+[explore_until] Start exploring for mob PASSIVE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (38, 33), floor 0, facing DOWN, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found PASSIVE mob (type_id 0) at (41, 28) after 0 steps
+[kill_mob] Start hunting a PASSIVE mob with a budget of 200 steps
+[kill_mob] Step 0/200: position (38, 33), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Targeting Cow (PASSIVE #1) at (41, 28) with 3.00 health; damage per attack: melee 1.00
+[kill_mob] Step 1/200: LEFT - moving to (38, 32) towards attack position (40, 28) 1 cell(s) from Cow (PASSIVE #1) at (41, 28) (path cost 7)
+[kill_mob] Step 1/200: position (38, 32), floor 0, facing LEFT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 2/200: LEFT - moving to (38, 31) towards attack position (40, 28) 1 cell(s) from Cow (PASSIVE #1) at (41, 28) (path cost 6)
+[kill_mob] Step 2/200: position (38, 31), floor 0, facing LEFT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 3/200: LEFT - moving to (38, 30) towards attack position (41, 28) 1 cell(s) from Cow (PASSIVE #1) at (42, 28) (path cost 6)
+[kill_mob] Step 3/200: position (38, 30), floor 0, facing LEFT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 4/200: LEFT - moving to (38, 29) towards attack position (41, 27) 1 cell(s) from Cow (PASSIVE #1) at (42, 27) (path cost 6)
+[kill_mob] Step 4/200: position (38, 29), floor 0, facing LEFT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 5/200: LEFT - moving to (38, 28) towards attack position (41, 28) 1 cell(s) from Cow (PASSIVE #1) at (42, 28) (path cost 4)
+[kill_mob] Step 5/200: position (38, 28), floor 0, facing LEFT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 6/200: RIGHT - moving to (38, 29) towards attack position (41, 29) 1 cell(s) from Cow (PASSIVE #1) at (42, 29) (path cost 4)
+[kill_mob] Step 6/200: position (38, 29), floor 0, facing RIGHT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 7/200: DOWN - moving to (39, 29) towards attack position (40, 29) 1 cell(s) from Cow (PASSIVE #1) at (41, 29) (path cost 2)
+[kill_mob] Step 7/200: position (39, 29), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 8/200: DOWN - moving to (40, 29) towards attack position (40, 29) 1 cell(s) from Cow (PASSIVE #1) at (41, 29) (path cost 1)
+[kill_mob] Cow (PASSIVE #0) despawned at distance 14
+[kill_mob] Step 8/200: position (40, 29), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 9/200: DO - attacking target Cow (PASSIVE #1) at (41, 29) with melee from 1 cell(s) away (expected damage 1.00, health 3.00)
+[kill_mob] Cow (PASSIVE #1) took 1.00 damage, health 3.00 -> 2.00
+[kill_mob] Step 9/200: position (40, 29), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 10/200: DO - attacking target Cow (PASSIVE #1) at (41, 29) with melee from 1 cell(s) away (expected damage 1.00, health 2.00)
+[kill_mob] Cow (PASSIVE #1) took 1.00 damage, health 2.00 -> 1.00
+[kill_mob] Step 10/200: position (40, 29), floor 0, facing DOWN, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 11/200: DO - attacking target Cow (PASSIVE #1) at (41, 29) with melee from 1 cell(s) away (expected damage 1.00, health 1.00)
+[kill_mob] Killed Cow (PASSIVE #1) at (41, 29) after 11 steps
+[kill_mob] Successfully killed a PASSIVE mob
+[explore_until] Start exploring for mob PASSIVE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (40, 29), floor 0, facing DOWN, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] New exploration goal (36, 29) with path cost 4 (36 frontier cells available)
+[explore_until] Step 1/200: UP - moving to (39, 29) towards goal (36, 29)
+[explore_until] Step 1/200: position (39, 29), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 110/2304 cells
+[explore_until] Goal (36, 29) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (35, 29) with path cost 4 (38 frontier cells available)
+[explore_until] Step 2/200: UP - moving to (38, 29) towards goal (35, 29)
+[explore_until] Step 2/200: position (38, 29), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 121/2304 cells
+[explore_until] Goal (35, 29) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (34, 28) with path cost 5 (40 frontier cells available)
+[explore_until] Step 3/200: UP - moving to (37, 29) towards goal (34, 28)
+[explore_until] Step 3/200: position (37, 29), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 132/2304 cells
+[explore_until] Goal (34, 28) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (33, 28) with path cost 5 (42 frontier cells available)
+[explore_until] Step 4/200: UP - moving to (36, 29) towards goal (33, 28)
+[explore_until] Step 4/200: position (36, 29), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 143/2304 cells
+[explore_until] Goal (33, 28) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (32, 28) with path cost 5 (44 frontier cells available)
+[explore_until] Step 5/200: UP - moving to (35, 29) towards goal (32, 28)
+[explore_until] Step 5/200: position (35, 29), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 154/2304 cells
+[explore_until] Goal (32, 28) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (31, 28) with path cost 5 (46 frontier cells available)
+[explore_until] Step 6/200: LEFT - moving to (35, 28) towards goal (31, 28)
+[explore_until] Step 6/200: position (35, 28), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 163/2304 cells
+[explore_until] Step 7/200: UP - moving to (34, 28) towards goal (31, 28)
+[explore_until] Step 7/200: position (34, 28), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 174/2304 cells
+[explore_until] Goal (31, 28) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (30, 27) with path cost 5 (48 frontier cells available)
+[explore_until] Step 8/200: UP - moving to (33, 28) towards goal (30, 27)
+[explore_until] Step 8/200: position (33, 28), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 185/2304 cells
+[explore_until] Goal (30, 27) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (29, 27) with path cost 5 (50 frontier cells available)
+[explore_until] Step 9/200: UP - moving to (32, 28) towards goal (29, 27)
+[explore_until] Step 9/200: position (32, 28), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 196/2304 cells
+[explore_until] Goal (29, 27) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (28, 27) with path cost 5 (52 frontier cells available)
+[explore_until] Step 10/200: UP - moving to (31, 28) towards goal (28, 27)
+[explore_until] Step 10/200: position (31, 28), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 207/2304 cells
+[explore_until] Goal (28, 27) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (27, 27) with path cost 5 (53 frontier cells available)
+[explore_until] Step 11/200: LEFT - moving to (31, 27) towards goal (27, 27)
+[explore_until] Step 11/200: position (31, 27), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 216/2304 cells
+[explore_until] Step 12/200: UP - moving to (30, 27) towards goal (27, 27)
+[explore_until] Step 12/200: position (30, 27), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 227/2304 cells
+[explore_until] Goal (27, 27) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (26, 27) with path cost 4 (55 frontier cells available)
+[explore_until] Step 13/200: UP - moving to (29, 27) towards goal (26, 27)
+[explore_until] Step 13/200: position (29, 27), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 238/2304 cells
+[explore_until] Goal (26, 27) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (25, 27) with path cost 4 (57 frontier cells available)
+[explore_until] Step 14/200: UP - moving to (28, 27) towards goal (25, 27)
+[explore_until] Step 14/200: position (28, 27), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 249/2304 cells
+[explore_until] Goal (25, 27) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (24, 27) with path cost 4 (59 frontier cells available)
+[explore_until] Step 15/200: UP - moving to (27, 27) towards goal (24, 27)
+[explore_until] Step 15/200: position (27, 27), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 260/2304 cells
+[explore_until] Found PASSIVE mob (type_id 0) at (23, 24) after 15 steps
+[kill_mob] Start hunting a PASSIVE mob with a budget of 200 steps
+[kill_mob] Step 0/200: position (27, 27), floor 0, facing UP, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Targeting Cow (PASSIVE #0) at (23, 24) with 3.00 health; damage per attack: melee 1.00
+[kill_mob] Step 1/200: UP - moving to (26, 27) towards attack position (23, 25) 1 cell(s) from Cow (PASSIVE #0) at (23, 24) (path cost 6)
+[kill_mob] Step 1/200: position (26, 27), floor 0, facing UP, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 2/200: UP - moving to (25, 27) towards attack position (24, 25) 1 cell(s) from Cow (PASSIVE #0) at (24, 24) (path cost 4)
+[kill_mob] Step 2/200: position (25, 27), floor 0, facing UP, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 3/200: UP - moving to (24, 27) towards attack position (24, 26) 1 cell(s) from Cow (PASSIVE #0) at (24, 25) (path cost 2)
+[kill_mob] Step 3/200: position (24, 27), floor 0, facing UP, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 4/200: LEFT - facing target Cow (PASSIVE #0) at (24, 26), 1 cell(s) away, to attack with melee
+[kill_mob] Step 4/200: position (24, 27), floor 0, facing LEFT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 5/200: DO - attacking target Cow (PASSIVE #0) at (24, 26) with melee from 1 cell(s) away (expected damage 1.00, health 3.00)
+[kill_mob] Cow (PASSIVE #0) took 1.00 damage, health 3.00 -> 2.00
+[kill_mob] Step 5/200: position (24, 27), floor 0, facing LEFT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 6/200: UP - moving to (23, 27) towards attack position (23, 27) 1 cell(s) from Cow (PASSIVE #0) at (23, 26) (path cost 1)
+[kill_mob] Step 6/200: position (23, 27), floor 0, facing UP, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 7/200: LEFT - facing target Cow (PASSIVE #0) at (23, 26), 1 cell(s) away, to attack with melee
+[kill_mob] Step 7/200: position (23, 27), floor 0, facing LEFT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 8/200: UP - moving to (22, 27) towards attack position (22, 27) 1 cell(s) from Cow (PASSIVE #0) at (22, 26) (path cost 1)
+[kill_mob] Step 8/200: position (22, 27), floor 0, facing UP, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 9/200: LEFT - moving to (22, 26) towards attack position (22, 26) 1 cell(s) from Cow (PASSIVE #0) at (22, 25) (path cost 1)
+[kill_mob] Step 9/200: position (22, 26), floor 0, facing LEFT, health 9.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 10/200: LEFT - moving to (22, 25) towards attack position (22, 25) 1 cell(s) from Cow (PASSIVE #0) at (22, 24) (path cost 1)
+[kill_mob] Step 10/200: position (22, 25), floor 0, facing LEFT, health 9.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 11/200: DO - attacking target Cow (PASSIVE #0) at (22, 24) with melee from 1 cell(s) away (expected damage 1.00, health 2.00)
+[kill_mob] Warning: health dropped from 9.0 to 8.0
+[kill_mob] Cow (PASSIVE #0) took 1.00 damage, health 2.00 -> 1.00
+[kill_mob] Cow (PASSIVE #1) despawned at distance 16
+[kill_mob] Step 11/200: position (22, 25), floor 0, facing LEFT, health 8.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 12/200: DO - attacking target Cow (PASSIVE #0) at (22, 24) with melee from 1 cell(s) away (expected damage 1.00, health 1.00)
+[kill_mob] Killed Cow (PASSIVE #0) at (22, 24) after 12 steps
+[kill_mob] Successfully killed a PASSIVE mob
+[explore_until] Start exploring for mob PASSIVE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (22, 25), floor 0, facing LEFT, health 8.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] New exploration goal (18, 25) with path cost 4 (36 frontier cells available)
+[explore_until] Step 1/200: UP - moving to (21, 25) towards goal (18, 25)
+[explore_until] Step 1/200: position (21, 25), floor 0, facing UP, health 8.0, revealed 11 new cells, explored 110/2304 cells
+[explore_until] Goal (18, 25) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (17, 25) with path cost 4 (38 frontier cells available)
+[explore_until] Step 2/200: UP - moving to (20, 25) towards goal (17, 25)
+[explore_until] Step 2/200: position (20, 25), floor 0, facing UP, health 8.0, revealed 11 new cells, explored 121/2304 cells
+[explore_until] Goal (17, 25) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (16, 25) with path cost 4 (40 frontier cells available)
+[explore_until] Step 3/200: UP - moving to (19, 25) towards goal (16, 25)
+[explore_until] Step 3/200: position (19, 25), floor 0, facing UP, health 8.0, revealed 11 new cells, explored 132/2304 cells
+[explore_until] Goal (16, 25) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (15, 25) with path cost 4 (42 frontier cells available)
+[explore_until] Step 4/200: UP - moving to (18, 25) towards goal (15, 25)
+[explore_until] Step 4/200: position (18, 25), floor 0, facing UP, health 8.0, revealed 11 new cells, explored 143/2304 cells
+[explore_until] Goal (15, 25) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (14, 26) with path cost 5 (38 frontier cells available)
+[explore_until] Step 5/200: UP - moving to (17, 25) towards goal (14, 26)
+[explore_until] Step 5/200: position (17, 25), floor 0, facing UP, health 8.0, revealed 11 new cells, explored 154/2304 cells
+[explore_until] Goal (14, 26) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (17, 30) with path cost 5 (37 frontier cells available)
+[explore_until] Step 6/200: RIGHT - moving to (17, 26) towards goal (17, 30)
+[explore_until] Step 6/200: position (17, 26), floor 0, facing RIGHT, health 8.0, revealed 9 new cells, explored 163/2304 cells
+[explore_until] Goal (17, 30) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (17, 31) with path cost 5 (37 frontier cells available)
+[explore_until] Step 7/200: RIGHT - moving to (17, 27) towards goal (17, 31)
+[explore_until] Step 7/200: position (17, 27), floor 0, facing RIGHT, health 8.0, revealed 9 new cells, explored 172/2304 cells
+[explore_until] Goal (17, 31) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (13, 28) with path cost 5 (38 frontier cells available)
+[explore_until] Step 8/200: UP - moving to (16, 27) towards goal (13, 28)
+[explore_until] Step 8/200: position (16, 27), floor 0, facing UP, health 8.0, revealed 11 new cells, explored 183/2304 cells
+[explore_until] Goal (13, 28) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (16, 32) with path cost 5 (37 frontier cells available)
+[explore_until] Step 9/200: RIGHT - moving to (16, 28) towards goal (16, 32)
+[explore_until] Step 9/200: position (16, 28), floor 0, facing RIGHT, health 8.0, revealed 9 new cells, explored 192/2304 cells
+[explore_until] Found PASSIVE mob (type_id 0) at (18, 32) after 9 steps
+[kill_mob] Start hunting a PASSIVE mob with a budget of 200 steps
+[kill_mob] Step 0/200: position (16, 28), floor 0, facing RIGHT, health 8.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Targeting Cow (PASSIVE #0) at (18, 32) with 3.00 health; damage per attack: melee 1.00
+[kill_mob] Step 1/200: RIGHT - moving to (16, 29) towards attack position (17, 32) 1 cell(s) from Cow (PASSIVE #0) at (18, 32) (path cost 5)
+[kill_mob] Step 1/200: position (16, 29), floor 0, facing RIGHT, health 8.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 2/200: RIGHT - moving to (16, 30) towards attack position (17, 32) 1 cell(s) from Cow (PASSIVE #0) at (18, 32) (path cost 4)
+[kill_mob] Step 2/200: position (16, 30), floor 0, facing RIGHT, health 8.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 3/200: RIGHT - moving to (16, 31) towards attack position (18, 32) 1 cell(s) from Cow (PASSIVE #0) at (19, 32) (path cost 4)
+[kill_mob] Step 3/200: position (16, 31), floor 0, facing RIGHT, health 8.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 4/200: RIGHT - moving to (16, 32) towards attack position (18, 32) 1 cell(s) from Cow (PASSIVE #0) at (19, 32) (path cost 3)
+[kill_mob] Step 4/200: position (16, 32), floor 0, facing RIGHT, health 8.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 5/200: DOWN - moving to (17, 32) towards attack position (17, 32) 1 cell(s) from Cow (PASSIVE #0) at (18, 32) (path cost 1)
+[kill_mob] Step 5/200: position (17, 32), floor 0, facing DOWN, health 8.0, mana 9, arrows 0, 3 matching mob(s) alive
+[kill_mob] Step 6/200: DOWN - moving to (18, 32) towards attack position (18, 32) 1 cell(s) from Cow (PASSIVE #0) at (19, 32) (path cost 1)
+[kill_mob] Warning: health dropped from 8.0 to 7.0
+[kill_mob] Step 6/200: position (18, 32), floor 0, facing DOWN, health 7.0, mana 9, arrows 0, 3 matching mob(s) alive
+[kill_mob] Step 7/200: DO - attacking target Cow (PASSIVE #0) at (19, 32) with melee from 1 cell(s) away (expected damage 1.00, health 3.00)
+[kill_mob] Cow (PASSIVE #0) took 1.00 damage, health 3.00 -> 2.00
+[kill_mob] Step 7/200: position (18, 32), floor 0, facing DOWN, health 7.0, mana 9, arrows 0, 3 matching mob(s) alive
+[kill_mob] Step 8/200: DO - attacking target Cow (PASSIVE #0) at (19, 32) with melee from 1 cell(s) away (expected damage 1.00, health 2.00)
+[kill_mob] Cow (PASSIVE #0) took 1.00 damage, health 2.00 -> 1.00
+[kill_mob] Step 8/200: position (18, 32), floor 0, facing DOWN, health 7.0, mana 9, arrows 0, 3 matching mob(s) alive
+[kill_mob] Step 9/200: DO - attacking target Cow (PASSIVE #0) at (19, 32) with melee from 1 cell(s) away (expected damage 1.00, health 1.00)
+[kill_mob] Killed Cow (PASSIVE #0) at (19, 32) after 9 steps
+[kill_mob] Successfully killed a PASSIVE mob
+[explore_until] Start exploring for mob PASSIVE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (18, 32), floor 0, facing DOWN, health 7.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found PASSIVE mob (type_id 0) at (21, 31) after 0 steps
+[kill_mob] Start hunting a PASSIVE mob with a budget of 200 steps
+[kill_mob] Step 0/200: position (18, 32), floor 0, facing DOWN, health 7.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Targeting Cow (PASSIVE #2) at (21, 31) with 3.00 health; damage per attack: melee 1.00
+[kill_mob] Step 1/200: LEFT - moving to (18, 31) towards attack position (20, 31) 1 cell(s) from Cow (PASSIVE #2) at (21, 31) (path cost 3)
+[kill_mob] Step 1/200: position (18, 31), floor 0, facing LEFT, health 7.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 2/200: DOWN - moving to (19, 31) towards attack position (20, 31) 1 cell(s) from Cow (PASSIVE #2) at (21, 31) (path cost 2)
+[kill_mob] Step 2/200: position (19, 31), floor 0, facing DOWN, health 7.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 3/200: DOWN - moving to (20, 31) towards attack position (20, 30) 1 cell(s) from Cow (PASSIVE #2) at (21, 30) (path cost 2)
+[kill_mob] Step 3/200: position (20, 31), floor 0, facing DOWN, health 7.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 4/200: LEFT - moving to (20, 30) towards attack position (21, 30) 1 cell(s) from Cow (PASSIVE #2) at (22, 30) (path cost 2)
+[kill_mob] Step 4/200: position (20, 30), floor 0, facing LEFT, health 7.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 5/200: DOWN - moving to (21, 30) towards attack position (21, 30) 1 cell(s) from Cow (PASSIVE #2) at (22, 30) (path cost 1)
+[kill_mob] Step 5/200: position (21, 30), floor 0, facing DOWN, health 7.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 6/200: DO - attacking target Cow (PASSIVE #2) at (22, 30) with melee from 1 cell(s) away (expected damage 1.00, health 3.00)
+[kill_mob] Cow (PASSIVE #2) took 1.00 damage, health 3.00 -> 2.00
+[kill_mob] Step 6/200: position (21, 30), floor 0, facing DOWN, health 7.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 7/200: DO - attacking target Cow (PASSIVE #2) at (22, 30) with melee from 1 cell(s) away (expected damage 1.00, health 2.00)
+[kill_mob] Cow (PASSIVE #2) took 1.00 damage, health 2.00 -> 1.00
+[kill_mob] Step 7/200: position (21, 30), floor 0, facing DOWN, health 7.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 8/200: DO - attacking target Cow (PASSIVE #2) at (22, 30) with melee from 1 cell(s) away (expected damage 1.00, health 1.00)
+[kill_mob] Killed Cow (PASSIVE #2) at (22, 30) after 8 steps
+[kill_mob] Successfully killed a PASSIVE mob
+[explore_until] Start exploring for mob PASSIVE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (21, 30), floor 0, facing DOWN, health 7.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] New exploration goal (17, 31) with path cost 5 (28 frontier cells available)
+[explore_until] Step 1/200: UP - moving to (20, 30) towards goal (17, 31)
+[explore_until] Step 1/200: position (20, 30), floor 0, facing UP, health 7.0, revealed 11 new cells, explored 110/2304 cells
+[explore_until] Goal (17, 31) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (16, 31) with path cost 5 (30 frontier cells available)
+[explore_until] Step 2/200: RIGHT - moving to (20, 31) towards goal (16, 31)
+[explore_until] Step 2/200: position (20, 31), floor 0, facing RIGHT, health 7.0, revealed 9 new cells, explored 119/2304 cells
+[explore_until] Step 3/200: UP - moving to (19, 31) towards goal (16, 31)
+[explore_until] Step 3/200: position (19, 31), floor 0, facing UP, health 7.0, revealed 11 new cells, explored 130/2304 cells
+[explore_until] Goal (16, 31) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (15, 31) with path cost 4 (28 frontier cells available)
+[explore_until] Step 4/200: UP - moving to (18, 31) towards goal (15, 31)
+[explore_until] Step 4/200: position (18, 31), floor 0, facing UP, health 7.0, revealed 11 new cells, explored 141/2304 cells
+[explore_until] Goal (15, 31) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (14, 31) with path cost 4 (29 frontier cells available)
+[explore_until] Step 5/200: UP - moving to (17, 31) towards goal (14, 31)
+[explore_until] Warning: health dropped from 7.0 to 6.0
+[explore_until] Step 5/200: position (17, 31), floor 0, facing UP, health 6.0, revealed 11 new cells, explored 152/2304 cells
+[explore_until] Goal (14, 31) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (13, 30) with path cost 5 (23 frontier cells available)
+[explore_until] Step 6/200: UP - moving to (16, 31) towards goal (13, 30)
+[explore_until] Step 6/200: position (16, 31), floor 0, facing UP, health 6.0, revealed 11 new cells, explored 163/2304 cells
+[explore_until] Goal (13, 30) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (12, 30) with path cost 5 (22 frontier cells available)
+[explore_until] Step 7/200: UP - moving to (15, 31) towards goal (12, 30)
+[explore_until] Step 7/200: position (15, 31), floor 0, facing UP, health 6.0, revealed 11 new cells, explored 174/2304 cells
+[explore_until] Found PASSIVE mob (type_id 0) at (11, 29) after 7 steps
+[kill_mob] Start hunting a PASSIVE mob with a budget of 200 steps
+[kill_mob] Step 0/200: position (15, 31), floor 0, facing UP, health 6.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Targeting Cow (PASSIVE #1) at (11, 29) with 3.00 health; damage per attack: melee 1.00
+[kill_mob] Step 1/200: UP - moving to (14, 31) towards attack position (11, 30) 1 cell(s) from Cow (PASSIVE #1) at (11, 29) (path cost 5)
+[kill_mob] Step 1/200: position (14, 31), floor 0, facing UP, health 6.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 2/200: LEFT - moving to (14, 30) towards attack position (11, 29) 1 cell(s) from Cow (PASSIVE #1) at (10, 29) (path cost 5)
+[kill_mob] Step 2/200: position (14, 30), floor 0, facing LEFT, health 6.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 3/200: UP - moving to (13, 30) towards attack position (11, 29) 1 cell(s) from Cow (PASSIVE #1) at (10, 29) (path cost 4)
+[kill_mob] Step 3/200: position (13, 30), floor 0, facing UP, health 6.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 4/200: UP - moving to (12, 30) towards attack position (11, 29) 1 cell(s) from Cow (PASSIVE #1) at (10, 29) (path cost 3)
+[kill_mob] Cow (PASSIVE #0) despawned at distance 15
+[kill_mob] Step 4/200: position (12, 30), floor 0, facing UP, health 6.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 5/200: UP - moving to (11, 30) towards attack position (11, 29) 1 cell(s) from Cow (PASSIVE #1) at (10, 29) (path cost 2)
+[kill_mob] Step 5/200: position (11, 30), floor 0, facing UP, health 6.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 6/200: LEFT - moving to (11, 29) towards attack position (11, 29) 1 cell(s) from Cow (PASSIVE #1) at (10, 29) (path cost 1)
+[kill_mob] Step 6/200: position (11, 29), floor 0, facing LEFT, health 6.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 7/200: UP - facing target Cow (PASSIVE #1) at (10, 29), 1 cell(s) away, to attack with melee
+[kill_mob] Step 7/200: position (11, 29), floor 0, facing UP, health 6.0, mana 9, arrows 0, 3 matching mob(s) alive
+[kill_mob] Step 8/200: DO - attacking target Cow (PASSIVE #1) at (10, 29) with melee from 1 cell(s) away (expected damage 1.00, health 3.00)
+[kill_mob] Cow (PASSIVE #0) despawned at distance 14
+[kill_mob] Cow (PASSIVE #1) took 1.00 damage, health 3.00 -> 2.00
+[kill_mob] Step 8/200: position (11, 29), floor 0, facing UP, health 6.0, mana 9, arrows 0, 3 matching mob(s) alive
+[kill_mob] Step 9/200: DO - attacking target Cow (PASSIVE #1) at (10, 29) with melee from 1 cell(s) away (expected damage 1.00, health 2.00)
+[kill_mob] Cow (PASSIVE #0) despawned at distance 18
+[kill_mob] Cow (PASSIVE #1) took 1.00 damage, health 2.00 -> 1.00
+[kill_mob] Step 9/200: position (11, 29), floor 0, facing UP, health 6.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 10/200: DO - attacking target Cow (PASSIVE #1) at (10, 29) with melee from 1 cell(s) away (expected damage 1.00, health 1.00)
+[kill_mob] Killed Cow (PASSIVE #1) at (10, 29) after 10 steps
+[kill_mob] Successfully killed a PASSIVE mob
+[explore_until] Start exploring for mob PASSIVE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (11, 29), floor 0, facing UP, health 6.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] New exploration goal (15, 29) with path cost 4 (12 frontier cells available)
+[explore_until] Step 1/200: DOWN - moving to (12, 29) towards goal (15, 29)
+[explore_until] Step 1/200: position (12, 29), floor 0, facing DOWN, health 6.0, revealed 11 new cells, explored 110/2304 cells
+[explore_until] Goal (15, 29) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (16, 29) with path cost 4 (14 frontier cells available)
+[explore_until] Step 2/200: DOWN - moving to (13, 29) towards goal (16, 29)
+[explore_until] Step 2/200: position (13, 29), floor 0, facing DOWN, health 6.0, revealed 11 new cells, explored 121/2304 cells
+[explore_until] Goal (16, 29) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (17, 29) with path cost 4 (16 frontier cells available)
+[explore_until] Step 3/200: DOWN - moving to (14, 29) towards goal (17, 29)
+[explore_until] Step 3/200: position (14, 29), floor 0, facing DOWN, health 6.0, revealed 11 new cells, explored 132/2304 cells
+[explore_until] Goal (17, 29) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (14, 34) with path cost 5 (18 frontier cells available)
+[explore_until] Step 4/200: RIGHT - moving to (14, 30) towards goal (14, 34)
+[explore_until] Warning: health dropped from 6.0 to 5.0
+[explore_until] Step 4/200: position (14, 30), floor 0, facing RIGHT, health 5.0, revealed 9 new cells, explored 141/2304 cells
+[explore_until] Found PASSIVE mob (type_id 0) at (14, 26) after 4 steps
+[kill_mob] Start hunting a PASSIVE mob with a budget of 200 steps
+[kill_mob] Step 0/200: position (14, 30), floor 0, facing RIGHT, health 5.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Targeting Cow (PASSIVE #0) at (14, 26) with 3.00 health; damage per attack: melee 1.00
+[kill_mob] Step 1/200: LEFT - moving to (14, 29) towards attack position (14, 27) 1 cell(s) from Cow (PASSIVE #0) at (14, 26) (path cost 3)
+[kill_mob] Step 1/200: position (14, 29), floor 0, facing LEFT, health 5.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 2/200: LEFT - moving to (14, 28) towards attack position (14, 27) 1 cell(s) from Cow (PASSIVE #0) at (14, 26) (path cost 2)
+[kill_mob] Step 2/200: position (14, 28), floor 0, facing LEFT, health 5.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 3/200: LEFT - moving to (14, 27) towards attack position (14, 27) 1 cell(s) from Cow (PASSIVE #0) at (14, 26) (path cost 1)
+[kill_mob] Step 3/200: position (14, 27), floor 0, facing LEFT, health 5.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 4/200: DO - attacking target Cow (PASSIVE #0) at (14, 26) with melee from 1 cell(s) away (expected damage 1.00, health 3.00)
+[kill_mob] Cow (PASSIVE #0) took 1.00 damage, health 3.00 -> 2.00
+[kill_mob] Step 4/200: position (14, 27), floor 0, facing LEFT, health 5.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 5/200: DO - attacking target Cow (PASSIVE #0) at (14, 26) with melee from 1 cell(s) away (expected damage 1.00, health 2.00)
+[kill_mob] Cow (PASSIVE #0) took 1.00 damage, health 2.00 -> 1.00
+[kill_mob] Step 5/200: position (14, 27), floor 0, facing LEFT, health 5.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 6/200: DO - attacking target Cow (PASSIVE #0) at (14, 26) with melee from 1 cell(s) away (expected damage 1.00, health 1.00)
+[kill_mob] Killed Cow (PASSIVE #0) at (14, 26) after 6 steps
+[kill_mob] Successfully killed a PASSIVE mob
+[explore_until] Start exploring for mob PASSIVE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (14, 27), floor 0, facing LEFT, health 5.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] New exploration goal (18, 27) with path cost 4 (19 frontier cells available)
+[explore_until] Step 1/200: DOWN - moving to (15, 27) towards goal (18, 27)
+[explore_until] Step 1/200: position (15, 27), floor 0, facing DOWN, health 5.0, revealed 11 new cells, explored 110/2304 cells
+[explore_until] Goal (18, 27) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (19, 27) with path cost 4 (21 frontier cells available)
+[explore_until] Step 2/200: DOWN - moving to (16, 27) towards goal (19, 27)
+[explore_until] Step 2/200: position (16, 27), floor 0, facing DOWN, health 5.0, revealed 11 new cells, explored 121/2304 cells
+[explore_until] Goal (19, 27) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (20, 27) with path cost 4 (23 frontier cells available)
+[explore_until] Step 3/200: DOWN - moving to (17, 27) towards goal (20, 27)
+[explore_until] Step 3/200: position (17, 27), floor 0, facing DOWN, health 5.0, revealed 11 new cells, explored 132/2304 cells
+[explore_until] Found PASSIVE mob (type_id 0) at (21, 30) after 3 steps
+[kill_mob] Start hunting a PASSIVE mob with a budget of 200 steps
+[kill_mob] Step 0/200: position (17, 27), floor 0, facing DOWN, health 5.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Targeting Cow (PASSIVE #2) at (21, 30) with 3.00 health; damage per attack: melee 1.00
+[kill_mob] Step 1/200: RIGHT - moving to (17, 28) towards attack position (20, 30) 1 cell(s) from Cow (PASSIVE #2) at (21, 30) (path cost 6)
+[kill_mob] Step 1/200: position (17, 28), floor 0, facing RIGHT, health 5.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 2/200: RIGHT - moving to (17, 29) towards attack position (20, 31) 1 cell(s) from Cow (PASSIVE #2) at (21, 31) (path cost 6)
+[kill_mob] Step 2/200: position (17, 29), floor 0, facing RIGHT, health 5.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 3/200: RIGHT - moving to (17, 30) towards attack position (20, 31) 1 cell(s) from Cow (PASSIVE #2) at (21, 31) (path cost 5)
+[kill_mob] Step 3/200: position (17, 30), floor 0, facing RIGHT, health 5.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 4/200: RIGHT - moving to (17, 31) towards attack position (20, 31) 1 cell(s) from Cow (PASSIVE #2) at (21, 31) (path cost 4)
+[kill_mob] Step 4/200: position (17, 31), floor 0, facing RIGHT, health 5.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 5/200: DOWN - moving to (18, 31) towards attack position (20, 31) 1 cell(s) from Cow (PASSIVE #2) at (21, 31) (path cost 3)
+[kill_mob] Step 5/200: position (18, 31), floor 0, facing DOWN, health 5.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 6/200: DOWN - moving to (19, 31) towards attack position (20, 30) 1 cell(s) from Cow (PASSIVE #2) at (21, 30) (path cost 3)
+[kill_mob] Step 6/200: position (19, 31), floor 0, facing DOWN, health 5.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 7/200: DOWN - moving to (20, 31) towards attack position (20, 30) 1 cell(s) from Cow (PASSIVE #2) at (21, 30) (path cost 2)
+[kill_mob] Warning: health dropped from 5.0 to 4.0
+[kill_mob] Step 7/200: position (20, 31), floor 0, facing DOWN, health 4.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 8/200: LEFT - moving to (20, 30) towards attack position (21, 30) 1 cell(s) from Cow (PASSIVE #2) at (22, 30) (path cost 2)
+[kill_mob] Step 8/200: position (20, 30), floor 0, facing LEFT, health 4.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 9/200: DOWN - facing target Cow (PASSIVE #2) at (21, 30), 1 cell(s) away, to attack with melee
+[kill_mob] Step 9/200: position (20, 30), floor 0, facing DOWN, health 4.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 10/200: LEFT - moving to (20, 29) towards attack position (20, 29) 1 cell(s) from Cow (PASSIVE #2) at (21, 29) (path cost 1)
+[kill_mob] Step 10/200: position (20, 29), floor 0, facing LEFT, health 4.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 11/200: LEFT - moving to (20, 28) towards attack position (20, 28) 1 cell(s) from Cow (PASSIVE #2) at (21, 28) (path cost 1)
+[kill_mob] Step 11/200: position (20, 28), floor 0, facing LEFT, health 4.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 12/200: DOWN - facing target Cow (PASSIVE #2) at (21, 28), 1 cell(s) away, to attack with melee
+[kill_mob] Step 12/200: position (20, 28), floor 0, facing DOWN, health 4.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 13/200: LEFT - moving to (20, 27) towards attack position (20, 27) 1 cell(s) from Cow (PASSIVE #2) at (21, 27) (path cost 1)
+[kill_mob] Step 13/200: position (20, 27), floor 0, facing LEFT, health 4.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 14/200: LEFT - moving to (20, 26) towards attack position (20, 26) 1 cell(s) from Cow (PASSIVE #2) at (21, 26) (path cost 1)
+[kill_mob] Step 14/200: position (20, 26), floor 0, facing LEFT, health 4.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 15/200: DOWN - facing target Cow (PASSIVE #2) at (21, 26), 1 cell(s) away, to attack with melee
+[kill_mob] Step 15/200: position (20, 26), floor 0, facing DOWN, health 4.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 16/200: DO - attacking target Cow (PASSIVE #2) at (21, 26) with melee from 1 cell(s) away (expected damage 1.00, health 3.00)
+[kill_mob] Cow (PASSIVE #2) took 1.00 damage, health 3.00 -> 2.00
+[kill_mob] Step 16/200: position (20, 26), floor 0, facing DOWN, health 4.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 17/200: DO - attacking target Cow (PASSIVE #2) at (21, 26) with melee from 1 cell(s) away (expected damage 1.00, health 2.00)
+[kill_mob] Cow (PASSIVE #2) took 1.00 damage, health 2.00 -> 1.00
+[kill_mob] Step 17/200: position (20, 26), floor 0, facing DOWN, health 4.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 18/200: DO - attacking target Cow (PASSIVE #2) at (21, 26) with melee from 1 cell(s) away (expected damage 1.00, health 1.00)
+[kill_mob] Killed Cow (PASSIVE #2) at (21, 26) after 18 steps
+[kill_mob] Successfully killed a PASSIVE mob
+[explore_until] Start exploring for mob PASSIVE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (20, 26), floor 0, facing DOWN, health 4.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found PASSIVE mob (type_id 0) at (24, 27) after 0 steps
+[kill_mob] Start hunting a PASSIVE mob with a budget of 200 steps
+[kill_mob] Step 0/200: position (20, 26), floor 0, facing DOWN, health 4.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Targeting Cow (PASSIVE #0) at (24, 27) with 3.00 health; damage per attack: melee 1.00
+[kill_mob] Step 1/200: RIGHT - moving to (20, 27) towards attack position (23, 27) 1 cell(s) from Cow (PASSIVE #0) at (24, 27) (path cost 4)
+[kill_mob] Step 1/200: position (20, 27), floor 0, facing RIGHT, health 4.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 2/200: RIGHT - moving to (20, 28) towards attack position (23, 28) 1 cell(s) from Cow (PASSIVE #0) at (24, 28) (path cost 4)
+[kill_mob] Step 2/200: position (20, 28), floor 0, facing RIGHT, health 4.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 3/200: DOWN - moving to (21, 28) towards attack position (23, 29) 1 cell(s) from Cow (PASSIVE #0) at (24, 29) (path cost 4)
+[kill_mob] Step 3/200: position (21, 28), floor 0, facing DOWN, health 4.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 4/200: DOWN - moving to (22, 28) towards attack position (23, 29) 1 cell(s) from Cow (PASSIVE #0) at (24, 29) (path cost 3)
+[kill_mob] Step 4/200: position (22, 28), floor 0, facing DOWN, health 4.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 5/200: DOWN - moving to (23, 28) towards attack position (24, 29) 1 cell(s) from Cow (PASSIVE #0) at (25, 29) (path cost 3)
+[kill_mob] Warning: health dropped from 4.0 to 3.0
+[kill_mob] Step 5/200: position (23, 28), floor 0, facing DOWN, health 3.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 6/200: RIGHT - moving to (23, 29) towards attack position (24, 29) 1 cell(s) from Cow (PASSIVE #0) at (25, 29) (path cost 2)
+[kill_mob] Cow (PASSIVE #1) despawned at distance 13
+[kill_mob] Step 6/200: position (23, 29), floor 0, facing RIGHT, health 3.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 7/200: DOWN - moving to (24, 29) towards attack position (24, 29) 1 cell(s) from Cow (PASSIVE #0) at (25, 29) (path cost 1)
+[kill_mob] Step 7/200: position (24, 29), floor 0, facing DOWN, health 3.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 8/200: DOWN - moving to (25, 29) towards attack position (25, 29) 1 cell(s) from Cow (PASSIVE #0) at (26, 29) (path cost 1)
+[kill_mob] Step 8/200: position (25, 29), floor 0, facing DOWN, health 3.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 9/200: DO - attacking target Cow (PASSIVE #0) at (26, 29) with melee from 1 cell(s) away (expected damage 1.00, health 3.00)
+[kill_mob] Cow (PASSIVE #0) took 1.00 damage, health 3.00 -> 2.00
+[kill_mob] Step 9/200: position (25, 29), floor 0, facing DOWN, health 3.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 10/200: LEFT - moving to (25, 28) towards attack position (25, 28) 1 cell(s) from Cow (PASSIVE #0) at (26, 28) (path cost 1)
+[kill_mob] Step 10/200: position (25, 28), floor 0, facing LEFT, health 3.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 11/200: DOWN - facing target Cow (PASSIVE #0) at (26, 28), 1 cell(s) away, to attack with melee
+[kill_mob] Step 11/200: position (25, 28), floor 0, facing DOWN, health 3.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 12/200: LEFT - moving to (25, 27) towards attack position (25, 27) 1 cell(s) from Cow (PASSIVE #0) at (26, 27) (path cost 1)
+[kill_mob] Step 12/200: position (25, 27), floor 0, facing LEFT, health 3.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 13/200: RIGHT - moving to (25, 28) towards attack position (25, 28) 1 cell(s) from Cow (PASSIVE #0) at (26, 28) (path cost 1)
+[kill_mob] Step 13/200: position (25, 28), floor 0, facing RIGHT, health 3.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 14/200: DOWN - facing target Cow (PASSIVE #0) at (26, 28), 1 cell(s) away, to attack with melee
+[kill_mob] Warning: health dropped from 3.0 to 1.0
+[kill_mob] Step 14/200: position (25, 28), floor 0, facing DOWN, health 1.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 15/200: DO - attacking target Cow (PASSIVE #0) at (26, 28) with melee from 1 cell(s) away (expected damage 1.00, health 2.00)
+[kill_mob] Cow (PASSIVE #0) took 1.00 damage, health 2.00 -> 1.00
+[kill_mob] Step 15/200: position (25, 28), floor 0, facing DOWN, health 1.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 16/200: DO - attacking target Cow (PASSIVE #0) at (26, 28) with melee from 1 cell(s) away (expected damage 1.00, health 1.00)
+[kill_mob] Killed Cow (PASSIVE #0) at (26, 28) after 16 steps
+[kill_mob] Successfully killed a PASSIVE mob
+[explore_until] Start exploring for mob PASSIVE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (25, 28), floor 0, facing DOWN, health 1.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found PASSIVE mob (type_id 0) at (21, 31) after 0 steps
+[kill_mob] Start hunting a PASSIVE mob with a budget of 200 steps
+[kill_mob] Step 0/200: position (25, 28), floor 0, facing DOWN, health 1.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Targeting Cow (PASSIVE #1) at (21, 31) with 3.00 health; damage per attack: melee 1.00
+[kill_mob] Step 1/200: RIGHT - facing adjacent monster Zombie (MELEE #0) at (25, 29), 1 cell(s) away, to attack with melee
+[kill_mob] Step 1/200: position (25, 28), floor 0, facing RIGHT, health 1.0, mana 9, arrows 0, 2 matching mob(s) alive
+[kill_mob] Step 2/200: DO - attacking adjacent monster Zombie (MELEE #0) at (25, 29) with melee from 1 cell(s) away (expected damage 1.00, health 5.00)
+[kill_mob] Cow (PASSIVE #0) despawned at distance 16
+[kill_mob] Step 2/200: position (25, 28), floor 0, facing RIGHT, health 1.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 3/200: UP - moving to (24, 28) towards attack position (20, 30) 1 cell(s) from Cow (PASSIVE #1) at (20, 31) (path cost 7)
+[kill_mob] Step 3/200: position (24, 28), floor 0, facing UP, health 1.0, mana 9, arrows 0, 1 matching mob(s) alive
+[kill_mob] Step 4/200: RIGHT - facing adjacent monster Zombie (MELEE #0) at (24, 29), 1 cell(s) away, to attack with melee
+[kill_mob] The player died or the episode ended during the fight
+Error: Killing failed: the player died while hunting a PASSIVE mob

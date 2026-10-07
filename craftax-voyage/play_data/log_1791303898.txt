@@ -1,0 +1,11 @@
+
+Error: Max steps (10 steps) reached before finding target.
+Error: Max steps (10 steps) reached before finding target.
+Error: Max steps (10 steps) reached before finding target.
+Error: Max steps (10 steps) reached before finding target.
+Error: Max steps (10 steps) reached before finding target.
+Error: Max steps (10 steps) reached before finding target.
+Error: Max steps (10 steps) reached before finding target.
+Error: Enemy is too close (2 blocks). Cannot explore.
+Error: Enemy is too close (2 blocks). Cannot explore.
+Error: Enemy is too close (2 blocks). Cannot explore.

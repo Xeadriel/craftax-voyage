@@ -1,4 +1,5 @@
 from __future__ import annotations
+import inspect
 
 import re
 import time
@@ -34,7 +35,7 @@ class ActionAgent:
         system_template = load_prompt("action_template")
 
         programs = "\n\n".join(
-            load_control_primitives() + skills
+            skills
         )
 
         response_format = load_prompt("action_response_format")
@@ -146,7 +147,8 @@ class ActionAgent:
                     "\033[31m"
                     "****Action Agent AI message****\n"
                     f"{response.content}"
-                    "\033[0m"
+                    "\033[0m",
+                    flush=True
                 )
 
                 result = self.process_ai_message(response)
@@ -316,7 +318,7 @@ class ActionAgent:
             functions = [
                 (name, value)
                 for name, value in namespace.items()
-                if callable(value)
+                if inspect.isfunction(value)
                 and not name.startswith("__")
             ]
 

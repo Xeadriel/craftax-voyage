@@ -19,6 +19,8 @@ from craftax.craftax.constants import (
     OBS_DIM,
     Achievement,
     Action,
+    BlockType,
+    MobType
 )
 from craftax.craftax.envs.craftax_symbolic_env import CraftaxSymbolicEnv as CraftaxEnv
 from craftax.craftax.renderer import make_craftax_pixel_renderer
@@ -45,7 +47,10 @@ def load_compressed_pickle(path: str):
 
 
 class CraftaxRenderer:
-    def __init__(self, pixel_render_size=4):
+    def __init__(self, pixel_render_size=None):
+        if pixel_render_size is None:
+            pixel_render_size = 64 // BLOCK_PIXEL_SIZE_HUMAN
+
         self.pixel_render_size = pixel_render_size
         self.pygame_events = []
 
@@ -205,7 +210,7 @@ class CraftaxVoyage:
     def step(self, action):
         self.rng, step_rng = jax.random.split(self.rng)
         old_achievements = self.env_state.achievements
-
+        
         (
             self.obs,
             self.env_state,
@@ -227,6 +232,8 @@ class CraftaxVoyage:
         self.traj_history["reward"].append(self.reward)
         self.traj_history["done"].append(self.done)
 
+        # self.log_message(render_craftax_text(self.env_state))
+
         print_new_achievements(
             old_achievements,
             self.env_state.achievements,
@@ -237,74 +244,91 @@ class CraftaxVoyage:
         return self.env_state
 
     def pass_through_ai_agents(self):
-        print("\n========== CURRICULUM AGENT ==========")
-
-        textual_state = render_craftax_text(self.env_state)
-
-        self.current_task, self.current_context = (
-            self.curriculum_agent.propose_next_task(
-                env_state=self.env_state,
-                textual_state=textual_state,
+        self.env_state = self.env_state.replace(
+            inventory=self.env_state.inventory.replace(
+                pickaxe=jnp.asarray(4, dtype=self.env_state.inventory.pickaxe.dtype)
             )
         )
+        try:
+            explore_until(self.env_state, self.log_message, self.step, BlockType.COAL, max_steps=200)
+        except Exception as e:
+            self.log_message(f"Error: {e}")
+        
+        try:
+            mine_block(self.env_state, self.log_message, self.step, BlockType.COAL, 5, max_steps=200)
+        except Exception as e:
+            self.log_message(f"Error: {e}")
+            
+        # explore_until_target_found(self.env_state, self.log_message, self.step, BlockType.STONE, max_steps=10)
+        # print("\n========== CURRICULUM AGENT ==========")
 
-        print(f"Task: {self.current_task}")
-        print(f"Context: {self.current_context}")
+        # textual_state = render_craftax_text(self.env_state)
 
-        print("\n========== SKILL MANAGER ==========")
+        # self.current_task, self.current_context = (
+        #     self.curriculum_agent.propose_next_task(
+        #         env_state=self.env_state,
+        #         textual_state=textual_state,
+        #     )
+        # )
 
-        skills = self.skill_manager.retrieve_skills(
-            query=self.current_task,
-        )
+        # print(f"Task: {self.current_task}", flush=True)
+        # print(f"Context: {self.current_context}")
 
-        print("\n========== ACTION AGENT ==========")
+        # print("\n========== SKILL MANAGER ==========")
 
-        self.current_skill = self.action_agent.generate_skill(
-            task=self.current_task,
-            context=self.current_context,
-            textual_state=textual_state,
-            skills=skills,
-            critique=self.current_critique
-        )
+        # skills = self.skill_manager.retrieve_skills(
+        #     query=self.current_task,
+        # )
 
-        print("\nGenerated skill:")
-        print(self.current_skill["description"])
+        # print("\n========== ACTION AGENT ==========")
 
-        print("\n========== SKILL EXECUTION ==========")
+        # self.current_skill = self.action_agent.generate_skill(
+        #     task=self.current_task,
+        #     context=self.current_context,
+        #     textual_state=textual_state,
+        #     skills=skills,
+        #     critique=self.current_critique
+        # )
 
-        errorMessage = self.execute_skill(self.current_skill)
+        # print("\nGenerated skill:")
+        # print(self.current_skill["description"])
+        # print(self.current_skill["program_code"])
 
-        print("\n========== CRITIC AGENT ==========")
+        # print("\n========== SKILL EXECUTION ==========")
 
-        textual_state_after = render_craftax_text(self.env_state)
-        print(textual_state_after)
+        # errorMessage = self.execute_skill(self.current_skill)
 
-        success, critique = self.critic_agent.check_task_success(
-            task=self.current_task,
-            context=self.current_context,
-            textual_state=textual_state_after,
-            errorMessage=errorMessage
-        )
+        # print("\n========== CRITIC AGENT ==========")
 
-        self.current_critique = critique
+        # textual_state_after = render_craftax_text(self.env_state)
+        # print(textual_state_after)
 
-        print(f"Success: {success}")
-        print(f"Critique: {critique}")
+        # success, critique = self.critic_agent.check_task_success(
+        #     task=self.current_task,
+        #     context=self.current_context,
+        #     textual_state=textual_state_after,
+        #     errorMessage=errorMessage
+        # )
 
-        self.curriculum_agent.update_exploration_progress(
-            {
-                "task": self.current_task,
-                "success": success,
-            }
-        )
+        # self.current_critique = critique
 
-        if success:
-            print("\n========== ADDING SKILL ==========")
-            self.skill_manager.add_new_skill(
-                skill=self.current_skill
-            )
+        # print(f"Success: {success}")
+        # print(f"Critique: {critique}")
 
-        return success
+        # self.curriculum_agent.update_exploration_progress(
+        #     {
+        #         "task": self.current_task,
+        #         "success": success,
+        #     }
+        # )
+
+        # if success:
+        #     print("\n========== ADDING SKILL ==========")
+        #     self.skill_manager.add_new_skill(
+        #         skill=self.current_skill
+        #     )
+
+        # return success
 
     def execute_skill(self, skill):
         namespace = {"Action": Action}

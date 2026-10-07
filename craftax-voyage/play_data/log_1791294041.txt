@@ -1,0 +1,21 @@
+
+Target found at position [25 24]
+Successfully found target after 0 steps.
+Target found at position [25 24]
+Successfully found target after 0 steps.
+Target found at position [25 24]
+Successfully found target after 0 steps.
+Target found at position [25 24]
+Successfully found target after 0 steps.
+Target found at position [25 24]
+Successfully found target after 0 steps.
+Target found at position [25 24]
+Successfully found target after 0 steps.
+Target found at position [25 24]
+Successfully found target after 0 steps.
+Target found at position [25 24]
+Successfully found target after 0 steps.
+Target found at position [25 24]
+Successfully found target after 0 steps.
+Target found at position [25 24]
+Successfully found target after 0 steps.

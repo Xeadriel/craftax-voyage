@@ -1,0 +1,232 @@
+pygame 2.6.1 (SDL 2.28.4, Python 3.12.14)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+
+========== TURN 1 ==========
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+Error: Max steps (10 steps) reached before finding target.
+
+========== TURN 2 ==========
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+Error: Max steps (10 steps) reached before finding target.
+
+========== TURN 3 ==========
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+food before:  9
+food after:  9
+Error: Max steps (10 steps) reached before finding target.
+
+========== TURN 4 ==========
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+Error: Max steps (10 steps) reached before finding target.
+
+========== TURN 5 ==========
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+Error: Max steps (10 steps) reached before finding target.
+
+========== TURN 6 ==========
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+food before:  8
+food after:  8
+Error: Max steps (10 steps) reached before finding target.
+
+========== TURN 7 ==========
+food before:  7
+food after:  7
+food before:  7
+food after:  7
+food before:  7
+food after:  7
+food before:  7
+food after:  7
+food before:  7
+food after:  7
+food before:  7
+food after:  7
+food before:  7
+food after:  7
+food before:  7
+food after:  7
+food before:  7
+food after:  7
+food before:  7
+food after:  7
+Error: Max steps (10 steps) reached before finding target.
+
+========== TURN 8 ==========
+food before:  7
+food after:  7
+food before:  7
+food after:  7
+food before:  7
+food after:  7
+food before:  7
+food after:  7
+food before:  7
+food after:  7
+food before:  7
+food after:  7
+food before:  7
+food after:  7
+food before:  7
+food after:  7
+food before:  7
+food after:  7
+food before:  7
+food after:  7
+Error: Max steps (10 steps) reached before finding target.
+
+========== TURN 9 ==========
+food before:  6
+food after:  6
+food before:  6
+food after:  6
+food before:  6
+food after:  6
+food before:  6
+food after:  6
+food before:  6
+food after:  6
+food before:  6
+food after:  6
+food before:  6
+food after:  6
+food before:  6
+food after:  6
+food before:  6
+food after:  6
+food before:  6
+food after:  6
+Error: Max steps (10 steps) reached before finding target.
+
+========== TURN 10 ==========
+food before:  6
+food after:  6
+food before:  6
+food after:  6
+food before:  6
+food after:  6
+food before:  6
+food after:  6
+food before:  6
+food after:  6
+food before:  6
+food after:  6
+food before:  6
+food after:  6
+food before:  6
+food after:  6
+food before:  6
+food after:  6
+food before:  6
+food after:  6
+Error: Max steps (10 steps) reached before finding target.

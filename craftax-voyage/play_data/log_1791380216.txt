@@ -1,0 +1,864 @@
+
+[explore_until] Start exploring for item LADDER_DOWN with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (24, 24), floor 0, facing UP, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] New exploration goal (28, 24) with path cost 4 (13 frontier cells available)
+[explore_until] Step 1/200: DOWN - moving to (25, 24) towards goal (28, 24)
+[explore_until] Step 1/200: position (25, 24), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 110/2304 cells
+[explore_until] Goal (28, 24) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (25, 19) with path cost 5 (11 frontier cells available)
+[explore_until] Step 2/200: LEFT - moving to (25, 23) towards goal (25, 19)
+[explore_until] Step 2/200: position (25, 23), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 119/2304 cells
+[explore_until] Goal (25, 19) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (25, 18) with path cost 5 (12 frontier cells available)
+[explore_until] Step 3/200: LEFT - moving to (25, 22) towards goal (25, 18)
+[explore_until] Step 3/200: position (25, 22), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 128/2304 cells
+[explore_until] Goal (25, 18) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (25, 17) with path cost 5 (14 frontier cells available)
+[explore_until] Step 4/200: LEFT - moving to (25, 21) towards goal (25, 17)
+[explore_until] Step 4/200: position (25, 21), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 137/2304 cells
+[explore_until] Goal (25, 17) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (25, 16) with path cost 5 (16 frontier cells available)
+[explore_until] Step 5/200: LEFT - moving to (25, 20) towards goal (25, 16)
+[explore_until] Step 5/200: position (25, 20), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 146/2304 cells
+[explore_until] Goal (25, 16) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (20, 20) with path cost 5 (18 frontier cells available)
+[explore_until] Step 6/200: UP - moving to (24, 20) towards goal (20, 20)
+[explore_until] Step 6/200: position (24, 20), floor 0, facing UP, health 9.0, revealed 4 new cells, explored 150/2304 cells
+[explore_until] Step 7/200: UP - moving to (23, 20) towards goal (20, 20)
+[explore_until] Step 7/200: position (23, 20), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 161/2304 cells
+[explore_until] Goal (20, 20) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (19, 20) with path cost 4 (20 frontier cells available)
+[explore_until] Step 8/200: UP - moving to (22, 20) towards goal (19, 20)
+[explore_until] Step 8/200: position (22, 20), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 172/2304 cells
+[explore_until] Goal (19, 20) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (18, 19) with path cost 5 (20 frontier cells available)
+[explore_until] Step 9/200: UP - moving to (21, 20) towards goal (18, 19)
+[explore_until] Step 9/200: position (21, 20), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 183/2304 cells
+[explore_until] Goal (18, 19) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (17, 19) with path cost 5 (21 frontier cells available)
+[explore_until] Step 10/200: UP - moving to (20, 20) towards goal (17, 19)
+[explore_until] Step 10/200: position (20, 20), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 194/2304 cells
+[explore_until] Goal (17, 19) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (20, 15) with path cost 5 (21 frontier cells available)
+[explore_until] Step 11/200: LEFT - moving to (20, 19) towards goal (20, 15)
+[explore_until] Step 11/200: position (20, 19), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 203/2304 cells
+[explore_until] Goal (20, 15) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (16, 18) with path cost 5 (22 frontier cells available)
+[explore_until] Step 12/200: UP - moving to (19, 19) towards goal (16, 18)
+[explore_until] Step 12/200: position (19, 19), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 214/2304 cells
+[explore_until] Goal (16, 18) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (15, 18) with path cost 5 (23 frontier cells available)
+[explore_until] Step 13/200: UP - moving to (18, 19) towards goal (15, 18)
+[explore_until] Step 13/200: position (18, 19), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 225/2304 cells
+[explore_until] Goal (15, 18) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (18, 14) with path cost 5 (19 frontier cells available)
+[explore_until] Step 14/200: LEFT - moving to (18, 18) towards goal (18, 14)
+[explore_until] Step 14/200: position (18, 18), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 234/2304 cells
+[explore_until] Goal (18, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (18, 13) with path cost 5 (18 frontier cells available)
+[explore_until] Step 15/200: LEFT - moving to (18, 17) towards goal (18, 13)
+[explore_until] Step 15/200: position (18, 17), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 243/2304 cells
+[explore_until] Goal (18, 13) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (18, 12) with path cost 5 (19 frontier cells available)
+[explore_until] Step 16/200: LEFT - moving to (18, 16) towards goal (18, 12)
+[explore_until] Step 16/200: position (18, 16), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 252/2304 cells
+[explore_until] Goal (18, 12) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (17, 11) with path cost 6 (24 frontier cells available)
+[explore_until] Step 17/200: UP - moving to (17, 16) towards goal (17, 11)
+[explore_until] Step 17/200: position (17, 16), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 263/2304 cells
+[explore_until] Step 18/200: LEFT - moving to (17, 15) towards goal (17, 11)
+[explore_until] Step 18/200: position (17, 15), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 272/2304 cells
+[explore_until] Goal (17, 11) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (19, 10) with path cost 7 (17 frontier cells available)
+[explore_until] Step 19/200: LEFT - moving to (17, 14) towards goal (19, 10)
+[explore_until] Step 19/200: position (17, 14), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 281/2304 cells
+[explore_until] Goal (19, 10) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (22, 13) with path cost 6 (18 frontier cells available)
+[explore_until] Step 20/200: DOWN - moving to (18, 14) towards goal (22, 13)
+[explore_until] Step 20/200: position (18, 14), floor 0, facing DOWN, health 9.0, revealed 2 new cells, explored 283/2304 cells
+[explore_until] Step 21/200: DOWN - moving to (19, 14) towards goal (22, 13)
+[explore_until] Step 21/200: position (19, 14), floor 0, facing DOWN, health 9.0, revealed 5 new cells, explored 288/2304 cells
+[explore_until] Goal (22, 13) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (23, 13) with path cost 5 (19 frontier cells available)
+[explore_until] Step 22/200: DOWN - moving to (20, 14) towards goal (23, 13)
+[explore_until] Step 22/200: position (20, 14), floor 0, facing DOWN, health 9.0, revealed 5 new cells, explored 293/2304 cells
+[explore_until] Goal (23, 13) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (24, 14) with path cost 4 (20 frontier cells available)
+[explore_until] Step 23/200: DOWN - moving to (21, 14) towards goal (24, 14)
+[explore_until] Step 23/200: position (21, 14), floor 0, facing DOWN, health 9.0, revealed 6 new cells, explored 299/2304 cells
+[explore_until] Goal (24, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (25, 14) with path cost 4 (20 frontier cells available)
+[explore_until] Step 24/200: DOWN - moving to (22, 14) towards goal (25, 14)
+[explore_until] Step 24/200: position (22, 14), floor 0, facing DOWN, health 9.0, revealed 6 new cells, explored 305/2304 cells
+[explore_until] Goal (25, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (26, 14) with path cost 4 (20 frontier cells available)
+[explore_until] Step 25/200: DOWN - moving to (23, 14) towards goal (26, 14)
+[explore_until] Step 25/200: position (23, 14), floor 0, facing DOWN, health 9.0, revealed 6 new cells, explored 311/2304 cells
+[explore_until] Goal (26, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (27, 14) with path cost 4 (19 frontier cells available)
+[explore_until] Step 26/200: DOWN - moving to (24, 14) towards goal (27, 14)
+[explore_until] Step 26/200: position (24, 14), floor 0, facing DOWN, health 9.0, revealed 6 new cells, explored 317/2304 cells
+[explore_until] Goal (27, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (28, 14) with path cost 4 (17 frontier cells available)
+[explore_until] Step 27/200: DOWN - moving to (25, 14) towards goal (28, 14)
+[explore_until] Step 27/200: position (25, 14), floor 0, facing DOWN, health 9.0, revealed 6 new cells, explored 323/2304 cells
+[explore_until] Goal (28, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (29, 14) with path cost 4 (16 frontier cells available)
+[explore_until] Step 28/200: DOWN - moving to (26, 14) towards goal (29, 14)
+[explore_until] Step 28/200: position (26, 14), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 334/2304 cells
+[explore_until] Goal (29, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (30, 14) with path cost 4 (16 frontier cells available)
+[explore_until] Step 29/200: DOWN - moving to (27, 14) towards goal (30, 14)
+[explore_until] Step 29/200: position (27, 14), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 345/2304 cells
+[explore_until] Goal (30, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (31, 14) with path cost 4 (16 frontier cells available)
+[explore_until] Step 30/200: DOWN - moving to (28, 14) towards goal (31, 14)
+[explore_until] Step 30/200: position (28, 14), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 356/2304 cells
+[explore_until] Goal (31, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (32, 14) with path cost 4 (16 frontier cells available)
+[explore_until] Step 31/200: DOWN - moving to (29, 14) towards goal (32, 14)
+[explore_until] Step 31/200: position (29, 14), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 367/2304 cells
+[explore_until] Goal (32, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (33, 14) with path cost 4 (20 frontier cells available)
+[explore_until] Step 32/200: DOWN - moving to (30, 14) towards goal (33, 14)
+[explore_until] Step 32/200: position (30, 14), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 378/2304 cells
+[explore_until] Goal (33, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (34, 14) with path cost 4 (21 frontier cells available)
+[explore_until] Step 33/200: DOWN - moving to (31, 14) towards goal (34, 14)
+[explore_until] Step 33/200: position (31, 14), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 389/2304 cells
+[explore_until] Goal (34, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (35, 14) with path cost 4 (22 frontier cells available)
+[explore_until] Step 34/200: DOWN - moving to (32, 14) towards goal (35, 14)
+[explore_until] Step 34/200: position (32, 14), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 400/2304 cells
+[explore_until] Goal (35, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (36, 14) with path cost 4 (23 frontier cells available)
+[explore_until] Step 35/200: DOWN - moving to (33, 14) towards goal (36, 14)
+[explore_until] Step 35/200: position (33, 14), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 411/2304 cells
+[explore_until] Goal (36, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (37, 14) with path cost 4 (25 frontier cells available)
+[explore_until] Step 36/200: DOWN - moving to (34, 14) towards goal (37, 14)
+[explore_until] Step 36/200: position (34, 14), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 422/2304 cells
+[explore_until] Goal (37, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (38, 14) with path cost 4 (27 frontier cells available)
+[explore_until] Step 37/200: DOWN - moving to (35, 14) towards goal (38, 14)
+[explore_until] Step 37/200: position (35, 14), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 433/2304 cells
+[explore_until] Goal (38, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (39, 14) with path cost 4 (31 frontier cells available)
+[explore_until] Step 38/200: DOWN - moving to (36, 14) towards goal (39, 14)
+[explore_until] Step 38/200: position (36, 14), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 444/2304 cells
+[explore_until] Goal (39, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (40, 14) with path cost 4 (33 frontier cells available)
+[explore_until] Step 39/200: DOWN - moving to (37, 14) towards goal (40, 14)
+[explore_until] Step 39/200: position (37, 14), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 455/2304 cells
+[explore_until] Goal (40, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (41, 14) with path cost 4 (35 frontier cells available)
+[explore_until] Step 40/200: DOWN - moving to (38, 14) towards goal (41, 14)
+[explore_until] Step 40/200: position (38, 14), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 466/2304 cells
+[explore_until] Goal (41, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (42, 14) with path cost 4 (37 frontier cells available)
+[explore_until] Step 41/200: DOWN - moving to (39, 14) towards goal (42, 14)
+[explore_until] Step 41/200: position (39, 14), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 477/2304 cells
+[explore_until] Goal (42, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (43, 14) with path cost 4 (39 frontier cells available)
+[explore_until] Step 42/200: DOWN - moving to (40, 14) towards goal (43, 14)
+[explore_until] Step 42/200: position (40, 14), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 488/2304 cells
+[explore_until] Goal (43, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (44, 14) with path cost 4 (41 frontier cells available)
+[explore_until] Step 43/200: DOWN - moving to (41, 14) towards goal (44, 14)
+[explore_until] Step 43/200: position (41, 14), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 499/2304 cells
+[explore_until] Goal (44, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (45, 14) with path cost 4 (43 frontier cells available)
+[explore_until] Step 44/200: DOWN - moving to (42, 14) towards goal (45, 14)
+[explore_until] Step 44/200: position (42, 14), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 510/2304 cells
+[explore_until] Goal (45, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (46, 14) with path cost 4 (45 frontier cells available)
+[explore_until] Step 45/200: DOWN - moving to (43, 14) towards goal (46, 14)
+[explore_until] Step 45/200: position (43, 14), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 521/2304 cells
+[explore_until] Goal (46, 14) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (43, 9) with path cost 5 (38 frontier cells available)
+[explore_until] Step 46/200: LEFT - moving to (43, 13) towards goal (43, 9)
+[explore_until] Step 46/200: position (43, 13), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 530/2304 cells
+[explore_until] Goal (43, 9) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (43, 8) with path cost 5 (38 frontier cells available)
+[explore_until] Step 47/200: LEFT - moving to (43, 12) towards goal (43, 8)
+[explore_until] Step 47/200: position (43, 12), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 539/2304 cells
+[explore_until] Goal (43, 8) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (43, 7) with path cost 5 (39 frontier cells available)
+[explore_until] Step 48/200: LEFT - moving to (43, 11) towards goal (43, 7)
+[explore_until] Step 48/200: position (43, 11), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 548/2304 cells
+[explore_until] Goal (43, 7) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (43, 6) with path cost 5 (40 frontier cells available)
+[explore_until] Step 49/200: LEFT - moving to (43, 10) towards goal (43, 6)
+[explore_until] Step 49/200: position (43, 10), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 557/2304 cells
+[explore_until] Goal (43, 6) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (43, 5) with path cost 5 (41 frontier cells available)
+[explore_until] Step 50/200: LEFT - moving to (43, 9) towards goal (43, 5)
+[explore_until] Step 50/200: position (43, 9), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 566/2304 cells
+[explore_until] Goal (43, 5) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (39, 8) with path cost 5 (42 frontier cells available)
+[explore_until] Step 51/200: UP - moving to (42, 9) towards goal (39, 8)
+[explore_until] Step 51/200: position (42, 9), floor 0, facing UP, health 9.0, revealed 5 new cells, explored 571/2304 cells
+[explore_until] Goal (39, 8) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (42, 4) with path cost 5 (42 frontier cells available)
+[explore_until] Step 52/200: LEFT - moving to (42, 8) towards goal (42, 4)
+[explore_until] Step 52/200: position (42, 8), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 580/2304 cells
+[explore_until] Goal (42, 4) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (38, 7) with path cost 5 (43 frontier cells available)
+[explore_until] Step 53/200: UP - moving to (41, 8) towards goal (38, 7)
+[explore_until] Step 53/200: position (41, 8), floor 0, facing UP, health 9.0, revealed 6 new cells, explored 586/2304 cells
+[explore_until] Goal (38, 7) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (41, 3) with path cost 5 (42 frontier cells available)
+[explore_until] Step 54/200: LEFT - moving to (41, 7) towards goal (41, 3)
+[explore_until] Step 54/200: position (41, 7), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 595/2304 cells
+[explore_until] Goal (41, 3) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (41, 2) with path cost 5 (43 frontier cells available)
+[explore_until] Step 55/200: LEFT - moving to (41, 6) towards goal (41, 2)
+[explore_until] Step 55/200: position (41, 6), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 604/2304 cells
+[explore_until] Goal (41, 2) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (40, 1) with path cost 6 (45 frontier cells available)
+[explore_until] Step 56/200: UP - moving to (40, 6) towards goal (40, 1)
+[explore_until] Step 56/200: position (40, 6), floor 0, facing UP, health 9.0, revealed 8 new cells, explored 612/2304 cells
+[explore_until] Step 57/200: LEFT - moving to (40, 5) towards goal (40, 1)
+[explore_until] Step 57/200: position (40, 5), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 621/2304 cells
+[explore_until] Goal (40, 1) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (36, 3) with path cost 6 (39 frontier cells available)
+[explore_until] Step 58/200: LEFT - moving to (40, 4) towards goal (36, 3)
+[explore_until] Step 58/200: position (40, 4), floor 0, facing LEFT, health 9.0, revealed 0 new cells, explored 621/2304 cells
+[explore_until] Step 59/200: LEFT - moving to (40, 3) towards goal (36, 3)
+[explore_until] Step 59/200: position (40, 3), floor 0, facing LEFT, health 9.0, revealed 0 new cells, explored 621/2304 cells
+[explore_until] Step 60/200: UP - moving to (39, 3) towards goal (36, 3)
+[explore_until] Step 60/200: position (39, 3), floor 0, facing UP, health 9.0, revealed 9 new cells, explored 630/2304 cells
+[explore_until] Goal (36, 3) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (35, 3) with path cost 4 (39 frontier cells available)
+[explore_until] Step 61/200: UP - moving to (38, 3) towards goal (35, 3)
+[explore_until] Step 61/200: position (38, 3), floor 0, facing UP, health 9.0, revealed 9 new cells, explored 639/2304 cells
+[explore_until] Goal (35, 3) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (34, 3) with path cost 4 (38 frontier cells available)
+[explore_until] Step 62/200: UP - moving to (37, 3) towards goal (34, 3)
+[explore_until] Step 62/200: position (37, 3), floor 0, facing UP, health 9.0, revealed 9 new cells, explored 648/2304 cells
+[explore_until] Goal (34, 3) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (33, 3) with path cost 4 (38 frontier cells available)
+[explore_until] Step 63/200: UP - moving to (36, 3) towards goal (33, 3)
+[explore_until] Step 63/200: position (36, 3), floor 0, facing UP, health 9.0, revealed 9 new cells, explored 657/2304 cells
+[explore_until] Goal (33, 3) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (32, 2) with path cost 5 (37 frontier cells available)
+[explore_until] Step 64/200: UP - moving to (35, 3) towards goal (32, 2)
+[explore_until] Step 64/200: position (35, 3), floor 0, facing UP, health 9.0, revealed 9 new cells, explored 666/2304 cells
+[explore_until] Goal (32, 2) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (31, 2) with path cost 5 (37 frontier cells available)
+[explore_until] Step 65/200: UP - moving to (34, 3) towards goal (31, 2)
+[explore_until] Step 65/200: position (34, 3), floor 0, facing UP, health 9.0, revealed 9 new cells, explored 675/2304 cells
+[explore_until] Goal (31, 2) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (30, 2) with path cost 5 (36 frontier cells available)
+[explore_until] Step 66/200: UP - moving to (33, 3) towards goal (30, 2)
+[explore_until] Step 66/200: position (33, 3), floor 0, facing UP, health 9.0, revealed 9 new cells, explored 684/2304 cells
+[explore_until] Goal (30, 2) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (45, 2) with path cost 13 (34 frontier cells available)
+[explore_until] Step 67/200: LEFT - moving to (33, 2) towards goal (45, 2)
+[explore_until] Step 67/200: position (33, 2), floor 0, facing LEFT, health 9.0, revealed 0 new cells, explored 684/2304 cells
+[explore_until] Step 68/200: DOWN - moving to (34, 2) towards goal (45, 2)
+[explore_until] Step 68/200: position (34, 2), floor 0, facing DOWN, health 9.0, revealed 0 new cells, explored 684/2304 cells
+[explore_until] Step 69/200: DOWN - moving to (35, 2) towards goal (45, 2)
+[explore_until] Step 69/200: position (35, 2), floor 0, facing DOWN, health 9.0, revealed 0 new cells, explored 684/2304 cells
+[explore_until] Step 70/200: DOWN - moving to (36, 2) towards goal (45, 2)
+[explore_until] Step 70/200: position (36, 2), floor 0, facing DOWN, health 9.0, revealed 0 new cells, explored 684/2304 cells
+[explore_until] Step 71/200: DOWN - moving to (37, 2) towards goal (45, 2)
+[explore_until] Step 71/200: position (37, 2), floor 0, facing DOWN, health 9.0, revealed 0 new cells, explored 684/2304 cells
+[explore_until] Step 72/200: DOWN - moving to (38, 2) towards goal (45, 2)
+[explore_until] Step 72/200: position (38, 2), floor 0, facing DOWN, health 9.0, revealed 0 new cells, explored 684/2304 cells
+[explore_until] Step 73/200: DOWN - moving to (39, 2) towards goal (45, 2)
+[explore_until] Step 73/200: position (39, 2), floor 0, facing DOWN, health 9.0, revealed 0 new cells, explored 684/2304 cells
+[explore_until] Step 74/200: DOWN - moving to (40, 2) towards goal (45, 2)
+[explore_until] Step 74/200: position (40, 2), floor 0, facing DOWN, health 9.0, revealed 0 new cells, explored 684/2304 cells
+[explore_until] Step 75/200: DOWN - moving to (41, 2) towards goal (45, 2)
+[explore_until] Step 75/200: position (41, 2), floor 0, facing DOWN, health 9.0, revealed 1 new cells, explored 685/2304 cells
+[explore_until] Step 76/200: DOWN - moving to (42, 2) towards goal (45, 2)
+[explore_until] Step 76/200: position (42, 2), floor 0, facing DOWN, health 9.0, revealed 3 new cells, explored 688/2304 cells
+[explore_until] Goal (45, 2) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (46, 2) with path cost 4 (34 frontier cells available)
+[explore_until] Step 77/200: DOWN - moving to (43, 2) towards goal (46, 2)
+[explore_until] Step 77/200: position (43, 2), floor 0, facing DOWN, health 9.0, revealed 4 new cells, explored 692/2304 cells
+[explore_until] Goal (46, 2) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (41, 19) with path cost 19 (29 frontier cells available)
+[explore_until] Step 78/200: RIGHT - moving to (43, 3) towards goal (41, 19)
+[explore_until] Step 78/200: position (43, 3), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 692/2304 cells
+[explore_until] Step 79/200: RIGHT - moving to (43, 4) towards goal (41, 19)
+[explore_until] Step 79/200: position (43, 4), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 692/2304 cells
+[explore_until] Step 80/200: RIGHT - moving to (43, 5) towards goal (41, 19)
+[explore_until] Step 80/200: position (43, 5), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 692/2304 cells
+[explore_until] Step 81/200: RIGHT - moving to (43, 6) towards goal (41, 19)
+[explore_until] Step 81/200: position (43, 6), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 692/2304 cells
+[explore_until] Step 82/200: RIGHT - moving to (43, 7) towards goal (41, 19)
+[explore_until] Step 82/200: position (43, 7), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 692/2304 cells
+[explore_until] Step 83/200: RIGHT - moving to (43, 8) towards goal (41, 19)
+[explore_until] Step 83/200: position (43, 8), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 692/2304 cells
+[explore_until] Step 84/200: RIGHT - moving to (43, 9) towards goal (41, 19)
+[explore_until] Step 84/200: position (43, 9), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 692/2304 cells
+[explore_until] Step 85/200: RIGHT - moving to (43, 10) towards goal (41, 19)
+[explore_until] Step 85/200: position (43, 10), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 692/2304 cells
+[explore_until] Step 86/200: RIGHT - moving to (43, 11) towards goal (41, 19)
+[explore_until] Step 86/200: position (43, 11), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 692/2304 cells
+[explore_until] Step 87/200: RIGHT - moving to (43, 12) towards goal (41, 19)
+[explore_until] Step 87/200: position (43, 12), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 692/2304 cells
+[explore_until] Step 88/200: RIGHT - moving to (43, 13) towards goal (41, 19)
+[explore_until] Step 88/200: position (43, 13), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 692/2304 cells
+[explore_until] Step 89/200: RIGHT - moving to (43, 14) towards goal (41, 19)
+[explore_until] Warning: health dropped from 9.0 to 7.0
+[explore_until] Step 89/200: position (43, 14), floor 0, facing RIGHT, health 7.0, revealed 0 new cells, explored 692/2304 cells
+[explore_until] Step 90/200: RIGHT - moving to (43, 15) towards goal (41, 19)
+[explore_until] Step 90/200: position (43, 15), floor 0, facing RIGHT, health 7.0, revealed 9 new cells, explored 701/2304 cells
+[explore_until] Goal (41, 19) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (45, 20) with path cost 7 (29 frontier cells available)
+[explore_until] Step 91/200: RIGHT - moving to (43, 16) towards goal (45, 20)
+[explore_until] Step 91/200: position (43, 16), floor 0, facing RIGHT, health 7.0, revealed 9 new cells, explored 710/2304 cells
+[explore_until] Goal (45, 20) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (45, 21) with path cost 7 (30 frontier cells available)
+[explore_until] Step 92/200: RIGHT - moving to (43, 17) towards goal (45, 21)
+[explore_until] Step 92/200: position (43, 17), floor 0, facing RIGHT, health 7.0, revealed 9 new cells, explored 719/2304 cells
+[explore_until] Goal (45, 21) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (38, 19) with path cost 7 (31 frontier cells available)
+[explore_until] Step 93/200: UP - moving to (42, 17) towards goal (38, 19)
+[explore_until] Step 93/200: position (42, 17), floor 0, facing UP, health 7.0, revealed 3 new cells, explored 722/2304 cells
+[explore_until] Goal (38, 19) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (37, 19) with path cost 7 (31 frontier cells available)
+[explore_until] Step 94/200: UP - moving to (41, 17) towards goal (37, 19)
+[explore_until] Step 94/200: position (41, 17), floor 0, facing UP, health 7.0, revealed 3 new cells, explored 725/2304 cells
+[explore_until] Goal (37, 19) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (36, 19) with path cost 7 (31 frontier cells available)
+[explore_until] Step 95/200: UP - moving to (40, 17) towards goal (36, 19)
+[explore_until] Step 95/200: position (40, 17), floor 0, facing UP, health 7.0, revealed 3 new cells, explored 728/2304 cells
+[explore_until] Goal (36, 19) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (39, 22) with path cost 6 (30 frontier cells available)
+[explore_until] Step 96/200: UP - moving to (39, 17) towards goal (39, 22)
+[explore_until] Step 96/200: position (39, 17), floor 0, facing UP, health 7.0, revealed 3 new cells, explored 731/2304 cells
+[explore_until] Step 97/200: RIGHT - moving to (39, 18) towards goal (39, 22)
+[explore_until] Step 97/200: position (39, 18), floor 0, facing RIGHT, health 7.0, revealed 9 new cells, explored 740/2304 cells
+[explore_until] Goal (39, 22) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (39, 23) with path cost 5 (28 frontier cells available)
+[explore_until] Step 98/200: RIGHT - moving to (39, 19) towards goal (39, 23)
+[explore_until] Step 98/200: position (39, 19), floor 0, facing RIGHT, health 7.0, revealed 9 new cells, explored 749/2304 cells
+[explore_until] Goal (39, 23) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (34, 19) with path cost 5 (26 frontier cells available)
+[explore_until] Step 99/200: UP - moving to (38, 19) towards goal (34, 19)
+[explore_until] Step 99/200: position (38, 19), floor 0, facing UP, health 7.0, revealed 5 new cells, explored 754/2304 cells
+[explore_until] Goal (34, 19) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (33, 19) with path cost 5 (22 frontier cells available)
+[explore_until] Step 100/200: UP - moving to (37, 19) towards goal (33, 19)
+[explore_until] Step 100/200: position (37, 19), floor 0, facing UP, health 7.0, revealed 5 new cells, explored 759/2304 cells
+[explore_until] Goal (33, 19) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (32, 19) with path cost 5 (21 frontier cells available)
+[explore_until] Step 101/200: UP - moving to (36, 19) towards goal (32, 19)
+[explore_until] Step 101/200: position (36, 19), floor 0, facing UP, health 7.0, revealed 5 new cells, explored 764/2304 cells
+[explore_until] Goal (32, 19) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (31, 19) with path cost 5 (20 frontier cells available)
+[explore_until] Step 102/200: UP - moving to (35, 19) towards goal (31, 19)
+[explore_until] Step 102/200: position (35, 19), floor 0, facing UP, health 7.0, revealed 5 new cells, explored 769/2304 cells
+[explore_until] Goal (31, 19) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (30, 19) with path cost 5 (19 frontier cells available)
+[explore_until] Step 103/200: UP - moving to (34, 19) towards goal (30, 19)
+[explore_until] Step 103/200: position (34, 19), floor 0, facing UP, health 7.0, revealed 5 new cells, explored 774/2304 cells
+[explore_until] Goal (30, 19) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (42, 24) with path cost 13 (17 frontier cells available)
+[explore_until] Step 104/200: DOWN - moving to (35, 19) towards goal (42, 24)
+[explore_until] Step 104/200: position (35, 19), floor 0, facing DOWN, health 8.0, revealed 0 new cells, explored 774/2304 cells
+[explore_until] Step 105/200: RIGHT - moving to (35, 20) towards goal (42, 24)
+[explore_until] Step 105/200: position (35, 20), floor 0, facing RIGHT, health 8.0, revealed 9 new cells, explored 783/2304 cells
+[explore_until] Step 106/200: RIGHT - moving to (35, 21) towards goal (42, 24)
+[explore_until] Step 106/200: position (35, 21), floor 0, facing RIGHT, health 8.0, revealed 9 new cells, explored 792/2304 cells
+[explore_until] Step 107/200: DOWN - moving to (36, 21) towards goal (42, 24)
+[explore_until] Step 107/200: position (36, 21), floor 0, facing DOWN, health 8.0, revealed 2 new cells, explored 794/2304 cells
+[explore_until] Step 108/200: DOWN - moving to (37, 21) towards goal (42, 24)
+[explore_until] Step 108/200: position (37, 21), floor 0, facing DOWN, health 8.0, revealed 2 new cells, explored 796/2304 cells
+[explore_until] Step 109/200: DOWN - moving to (38, 21) towards goal (42, 24)
+[explore_until] Step 109/200: position (38, 21), floor 0, facing DOWN, health 8.0, revealed 2 new cells, explored 798/2304 cells
+[explore_until] Goal (42, 24) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (43, 23) with path cost 7 (16 frontier cells available)
+[explore_until] Step 110/200: DOWN - moving to (39, 21) towards goal (43, 23)
+[explore_until] Step 110/200: position (39, 21), floor 0, facing DOWN, health 8.0, revealed 2 new cells, explored 800/2304 cells
+[explore_until] Step 111/200: DOWN - moving to (40, 21) towards goal (43, 23)
+[explore_until] Step 111/200: position (40, 21), floor 0, facing DOWN, health 8.0, revealed 4 new cells, explored 804/2304 cells
+[explore_until] Goal (43, 23) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (44, 23) with path cost 6 (15 frontier cells available)
+[explore_until] Step 112/200: DOWN - moving to (41, 21) towards goal (44, 23)
+[explore_until] Step 112/200: position (41, 21), floor 0, facing DOWN, health 8.0, revealed 4 new cells, explored 808/2304 cells
+[explore_until] Goal (44, 23) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (45, 23) with path cost 6 (16 frontier cells available)
+[explore_until] Step 113/200: RIGHT - moving to (41, 22) towards goal (45, 23)
+[explore_until] Step 113/200: position (41, 22), floor 0, facing RIGHT, health 8.0, revealed 9 new cells, explored 817/2304 cells
+[explore_until] Step 114/200: DOWN - moving to (42, 22) towards goal (45, 23)
+[explore_until] Step 114/200: position (42, 22), floor 0, facing DOWN, health 8.0, revealed 5 new cells, explored 822/2304 cells
+[explore_until] Goal (45, 23) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (46, 23) with path cost 5 (14 frontier cells available)
+[explore_until] Step 115/200: RIGHT - moving to (42, 23) towards goal (46, 23)
+[explore_until] Step 115/200: position (42, 23), floor 0, facing RIGHT, health 8.0, revealed 9 new cells, explored 831/2304 cells
+[explore_until] Step 116/200: DOWN - moving to (43, 23) towards goal (46, 23)
+[explore_until] Step 116/200: position (43, 23), floor 0, facing DOWN, health 8.0, revealed 6 new cells, explored 837/2304 cells
+[explore_until] Goal (46, 23) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (26, 9) with path cost 31 (10 frontier cells available)
+[explore_until] Step 117/200: UP - moving to (42, 23) towards goal (26, 9)
+[explore_until] Step 117/200: position (42, 23), floor 0, facing UP, health 8.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 118/200: DOWN - moving to (43, 23) towards goal (26, 9)
+[explore_until] Step 118/200: position (43, 23), floor 0, facing DOWN, health 8.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 119/200: UP - moving to (42, 23) towards goal (26, 9)
+[explore_until] Step 119/200: position (42, 23), floor 0, facing UP, health 8.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 120/200: LEFT - moving to (42, 22) towards goal (26, 9)
+[explore_until] Step 120/200: position (42, 22), floor 0, facing LEFT, health 8.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 121/200: UP - moving to (41, 22) towards goal (26, 9)
+[explore_until] Step 121/200: position (41, 22), floor 0, facing UP, health 8.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 122/200: LEFT - moving to (41, 21) towards goal (26, 9)
+[explore_until] Step 122/200: position (41, 21), floor 0, facing LEFT, health 8.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 123/200: UP - moving to (40, 21) towards goal (26, 9)
+[explore_until] Step 123/200: position (40, 21), floor 0, facing UP, health 8.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 124/200: UP - moving to (39, 21) towards goal (26, 9)
+[explore_until] Step 124/200: position (39, 21), floor 0, facing UP, health 8.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 125/200: UP - moving to (38, 21) towards goal (26, 9)
+[explore_until] Step 125/200: position (38, 21), floor 0, facing UP, health 8.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 126/200: UP - moving to (37, 21) towards goal (26, 9)
+[explore_until] Step 126/200: position (37, 21), floor 0, facing UP, health 8.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 127/200: UP - moving to (36, 21) towards goal (26, 9)
+[explore_until] Step 127/200: position (36, 21), floor 0, facing UP, health 8.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 128/200: UP - moving to (35, 21) towards goal (26, 9)
+[explore_until] Step 128/200: position (35, 21), floor 0, facing UP, health 8.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 129/200: LEFT - moving to (35, 20) towards goal (26, 9)
+[explore_until] Step 129/200: position (35, 20), floor 0, facing LEFT, health 8.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 130/200: LEFT - moving to (35, 19) towards goal (26, 9)
+[explore_until] Step 130/200: position (35, 19), floor 0, facing LEFT, health 9.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 131/200: UP - moving to (34, 19) towards goal (26, 9)
+[explore_until] Step 131/200: position (34, 19), floor 0, facing UP, health 9.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 132/200: UP - moving to (33, 19) towards goal (26, 9)
+[explore_until] Step 132/200: position (33, 19), floor 0, facing UP, health 9.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 133/200: LEFT - moving to (33, 18) towards goal (26, 9)
+[explore_until] Step 133/200: position (33, 18), floor 0, facing LEFT, health 9.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 134/200: LEFT - moving to (33, 17) towards goal (26, 9)
+[explore_until] Step 134/200: position (33, 17), floor 0, facing LEFT, health 9.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 135/200: UP - moving to (32, 17) towards goal (26, 9)
+[explore_until] Step 135/200: position (32, 17), floor 0, facing UP, health 9.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 136/200: UP - moving to (31, 17) towards goal (26, 9)
+[explore_until] Step 136/200: position (31, 17), floor 0, facing UP, health 9.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 137/200: LEFT - moving to (31, 16) towards goal (26, 9)
+[explore_until] Step 137/200: position (31, 16), floor 0, facing LEFT, health 9.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 138/200: UP - moving to (30, 16) towards goal (26, 9)
+[explore_until] Step 138/200: position (30, 16), floor 0, facing UP, health 9.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 139/200: UP - moving to (29, 16) towards goal (26, 9)
+[explore_until] Step 139/200: position (29, 16), floor 0, facing UP, health 9.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 140/200: UP - moving to (28, 16) towards goal (26, 9)
+[explore_until] Step 140/200: position (28, 16), floor 0, facing UP, health 9.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 141/200: UP - moving to (27, 16) towards goal (26, 9)
+[explore_until] Step 141/200: position (27, 16), floor 0, facing UP, health 9.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 142/200: UP - moving to (26, 16) towards goal (26, 9)
+[explore_until] Step 142/200: position (26, 16), floor 0, facing UP, health 9.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 143/200: LEFT - moving to (26, 15) towards goal (26, 9)
+[explore_until] Step 143/200: position (26, 15), floor 0, facing LEFT, health 9.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 144/200: LEFT - moving to (26, 14) towards goal (26, 9)
+[explore_until] Step 144/200: position (26, 14), floor 0, facing LEFT, health 9.0, revealed 0 new cells, explored 837/2304 cells
+[explore_until] Step 145/200: LEFT - moving to (26, 13) towards goal (26, 9)
+[explore_until] Step 145/200: position (26, 13), floor 0, facing LEFT, health 9.0, revealed 7 new cells, explored 844/2304 cells
+[explore_until] Goal (26, 9) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (25, 8) with path cost 6 (8 frontier cells available)
+[explore_until] Step 146/200: UP - moving to (25, 13) towards goal (25, 8)
+[explore_until] Step 146/200: position (25, 13), floor 0, facing UP, health 9.0, revealed 1 new cells, explored 845/2304 cells
+[explore_until] Step 147/200: LEFT - moving to (25, 12) towards goal (25, 8)
+[explore_until] Step 147/200: position (25, 12), floor 0, facing LEFT, health 9.0, revealed 8 new cells, explored 853/2304 cells
+[explore_until] Goal (25, 8) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (25, 7) with path cost 5 (5 frontier cells available)
+[explore_until] Step 148/200: LEFT - moving to (25, 11) towards goal (25, 7)
+[explore_until] Step 148/200: position (25, 11), floor 0, facing LEFT, health 9.0, revealed 8 new cells, explored 861/2304 cells
+[explore_until] Goal (25, 7) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (20, 9) with path cost 7 (4 frontier cells available)
+[explore_until] Step 149/200: UP - moving to (24, 11) towards goal (20, 9)
+[explore_until] Step 149/200: position (24, 11), floor 0, facing UP, health 9.0, revealed 3 new cells, explored 864/2304 cells
+[explore_until] Goal (20, 9) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (19, 9) with path cost 7 (3 frontier cells available)
+[explore_until] Step 150/200: LEFT - moving to (24, 10) towards goal (19, 9)
+[explore_until] Step 150/200: position (24, 10), floor 0, facing LEFT, health 9.0, revealed 9 new cells, explored 873/2304 cells
+[explore_until] Step 151/200: UP - moving to (23, 10) towards goal (19, 9)
+[explore_until] Step 151/200: position (23, 10), floor 0, facing UP, health 9.0, revealed 4 new cells, explored 877/2304 cells
+[explore_until] Goal (19, 9) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (19, 8) with path cost 6 (3 frontier cells available)
+[explore_until] Step 152/200: UP - moving to (22, 10) towards goal (19, 8)
+[explore_until] Step 152/200: position (22, 10), floor 0, facing UP, health 9.0, revealed 4 new cells, explored 881/2304 cells
+[explore_until] Goal (19, 8) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (29, 25) with path cost 22 (2 frontier cells available)
+[explore_until] Step 153/200: RIGHT - moving to (22, 11) towards goal (29, 25)
+[explore_until] Step 153/200: position (22, 11), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 881/2304 cells
+[explore_until] Step 154/200: RIGHT - moving to (22, 12) towards goal (29, 25)
+[explore_until] Step 154/200: position (22, 12), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 881/2304 cells
+[explore_until] Step 155/200: RIGHT - moving to (22, 13) towards goal (29, 25)
+[explore_until] Step 155/200: position (22, 13), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 881/2304 cells
+[explore_until] Step 156/200: RIGHT - moving to (22, 14) towards goal (29, 25)
+[explore_until] Step 156/200: position (22, 14), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 881/2304 cells
+[explore_until] Step 157/200: RIGHT - moving to (22, 15) towards goal (29, 25)
+[explore_until] Step 157/200: position (22, 15), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 881/2304 cells
+[explore_until] Step 158/200: RIGHT - moving to (22, 16) towards goal (29, 25)
+[explore_until] Step 158/200: position (22, 16), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 881/2304 cells
+[explore_until] Step 159/200: RIGHT - moving to (22, 17) towards goal (29, 25)
+[explore_until] Step 159/200: position (22, 17), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 881/2304 cells
+[explore_until] Step 160/200: DOWN - moving to (23, 17) towards goal (29, 25)
+[explore_until] Step 160/200: position (23, 17), floor 0, facing DOWN, health 9.0, revealed 0 new cells, explored 881/2304 cells
+[explore_until] Step 161/200: RIGHT - moving to (23, 18) towards goal (29, 25)
+[explore_until] Step 161/200: position (23, 18), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 881/2304 cells
+[explore_until] Step 162/200: RIGHT - moving to (23, 19) towards goal (29, 25)
+[explore_until] Step 162/200: position (23, 19), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 881/2304 cells
+[explore_until] Step 163/200: RIGHT - moving to (23, 20) towards goal (29, 25)
+[explore_until] Step 163/200: position (23, 20), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 881/2304 cells
+[explore_until] Step 164/200: DOWN - moving to (24, 20) towards goal (29, 25)
+[explore_until] Step 164/200: position (24, 20), floor 0, facing DOWN, health 9.0, revealed 0 new cells, explored 881/2304 cells
+[explore_until] Step 165/200: DOWN - moving to (25, 20) towards goal (29, 25)
+[explore_until] Step 165/200: position (25, 20), floor 0, facing DOWN, health 9.0, revealed 0 new cells, explored 881/2304 cells
+[explore_until] Step 166/200: RIGHT - moving to (25, 21) towards goal (29, 25)
+[explore_until] Step 166/200: position (25, 21), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 881/2304 cells
+[explore_until] Step 167/200: RIGHT - moving to (25, 22) towards goal (29, 25)
+[explore_until] Step 167/200: position (25, 22), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 881/2304 cells
+[explore_until] Step 168/200: RIGHT - moving to (25, 23) towards goal (29, 25)
+[explore_until] Step 168/200: position (25, 23), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 881/2304 cells
+[explore_until] Step 169/200: RIGHT - moving to (25, 24) towards goal (29, 25)
+[explore_until] Step 169/200: position (25, 24), floor 0, facing RIGHT, health 9.0, revealed 0 new cells, explored 881/2304 cells
+[explore_until] Step 170/200: RIGHT - moving to (25, 25) towards goal (29, 25)
+[explore_until] Step 170/200: position (25, 25), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 890/2304 cells
+[explore_until] Step 171/200: DOWN - moving to (26, 25) towards goal (29, 25)
+[explore_until] Step 171/200: position (26, 25), floor 0, facing DOWN, health 9.0, revealed 6 new cells, explored 896/2304 cells
+[explore_until] Goal (29, 25) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (30, 27) with path cost 6 (3 frontier cells available)
+[explore_until] Step 172/200: RIGHT - moving to (26, 26) towards goal (30, 27)
+[explore_until] Step 172/200: position (26, 26), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 905/2304 cells
+[explore_until] Step 173/200: DOWN - moving to (27, 26) towards goal (30, 27)
+[explore_until] Step 173/200: position (27, 26), floor 0, facing DOWN, health 9.0, revealed 5 new cells, explored 910/2304 cells
+[explore_until] Goal (30, 27) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (31, 27) with path cost 5 (6 frontier cells available)
+[explore_until] Step 174/200: DOWN - moving to (28, 26) towards goal (31, 27)
+[explore_until] Step 174/200: position (28, 26), floor 0, facing DOWN, health 9.0, revealed 5 new cells, explored 915/2304 cells
+[explore_until] Goal (31, 27) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (32, 27) with path cost 5 (7 frontier cells available)
+[explore_until] Step 175/200: DOWN - moving to (29, 26) towards goal (32, 27)
+[explore_until] Step 175/200: position (29, 26), floor 0, facing DOWN, health 9.0, revealed 5 new cells, explored 920/2304 cells
+[explore_until] Goal (32, 27) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (31, 31) with path cost 7 (7 frontier cells available)
+[explore_until] Step 176/200: DOWN - moving to (30, 26) towards goal (31, 31)
+[explore_until] Step 176/200: position (30, 26), floor 0, facing DOWN, health 9.0, revealed 5 new cells, explored 925/2304 cells
+[explore_until] Step 177/200: RIGHT - moving to (30, 27) towards goal (31, 31)
+[explore_until] Step 177/200: position (30, 27), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 934/2304 cells
+[explore_until] Goal (31, 31) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (31, 32) with path cost 6 (5 frontier cells available)
+[explore_until] Step 178/200: RIGHT - moving to (30, 28) towards goal (31, 32)
+[explore_until] Step 178/200: position (30, 28), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 943/2304 cells
+[explore_until] Goal (31, 32) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (31, 33) with path cost 6 (6 frontier cells available)
+[explore_until] Step 179/200: DOWN - moving to (31, 28) towards goal (31, 33)
+[explore_until] Step 179/200: position (31, 28), floor 0, facing DOWN, health 9.0, revealed 7 new cells, explored 950/2304 cells
+[explore_until] Step 180/200: RIGHT - moving to (31, 29) towards goal (31, 33)
+[explore_until] Step 180/200: position (31, 29), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 959/2304 cells
+[explore_until] Goal (31, 33) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (31, 34) with path cost 5 (7 frontier cells available)
+[explore_until] Step 181/200: RIGHT - moving to (31, 30) towards goal (31, 34)
+[explore_until] Step 181/200: position (31, 30), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 968/2304 cells
+[explore_until] Goal (31, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (31, 35) with path cost 5 (8 frontier cells available)
+[explore_until] Step 182/200: RIGHT - moving to (31, 31) towards goal (31, 35)
+[explore_until] Step 182/200: position (31, 31), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 977/2304 cells
+[explore_until] Goal (31, 35) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (31, 36) with path cost 5 (8 frontier cells available)
+[explore_until] Step 183/200: RIGHT - moving to (31, 32) towards goal (31, 36)
+[explore_until] Step 183/200: position (31, 32), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 986/2304 cells
+[explore_until] Goal (31, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (31, 37) with path cost 5 (9 frontier cells available)
+[explore_until] Step 184/200: RIGHT - moving to (31, 33) towards goal (31, 37)
+[explore_until] Step 184/200: position (31, 33), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 995/2304 cells
+[explore_until] Goal (31, 37) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (27, 34) with path cost 5 (9 frontier cells available)
+[explore_until] Step 185/200: UP - moving to (30, 33) towards goal (27, 34)
+[explore_until] Step 185/200: position (30, 33), floor 0, facing UP, health 9.0, revealed 5 new cells, explored 1000/2304 cells
+[explore_until] Goal (27, 34) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (30, 38) with path cost 5 (9 frontier cells available)
+[explore_until] Step 186/200: RIGHT - moving to (30, 34) towards goal (30, 38)
+[explore_until] Step 186/200: position (30, 34), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 1009/2304 cells
+[explore_until] Goal (30, 38) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (26, 35) with path cost 5 (10 frontier cells available)
+[explore_until] Step 187/200: UP - moving to (29, 34) towards goal (26, 35)
+[explore_until] Step 187/200: position (29, 34), floor 0, facing UP, health 9.0, revealed 8 new cells, explored 1017/2304 cells
+[explore_until] Goal (26, 35) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (25, 35) with path cost 5 (11 frontier cells available)
+[explore_until] Step 188/200: UP - moving to (28, 34) towards goal (25, 35)
+[explore_until] Step 188/200: position (28, 34), floor 0, facing UP, health 9.0, revealed 8 new cells, explored 1025/2304 cells
+[explore_until] Goal (25, 35) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (28, 39) with path cost 5 (11 frontier cells available)
+[explore_until] Step 189/200: RIGHT - moving to (28, 35) towards goal (28, 39)
+[explore_until] Step 189/200: position (28, 35), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 1034/2304 cells
+[explore_until] Goal (28, 39) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (24, 36) with path cost 5 (12 frontier cells available)
+[explore_until] Step 190/200: UP - moving to (27, 35) towards goal (24, 36)
+[explore_until] Step 190/200: position (27, 35), floor 0, facing UP, health 9.0, revealed 9 new cells, explored 1043/2304 cells
+[explore_until] Goal (24, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (23, 36) with path cost 5 (14 frontier cells available)
+[explore_until] Step 191/200: UP - moving to (26, 35) towards goal (23, 36)
+[explore_until] Step 191/200: position (26, 35), floor 0, facing UP, health 9.0, revealed 9 new cells, explored 1052/2304 cells
+[explore_until] Goal (23, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (22, 36) with path cost 5 (15 frontier cells available)
+[explore_until] Step 192/200: UP - moving to (25, 35) towards goal (22, 36)
+[explore_until] Step 192/200: position (25, 35), floor 0, facing UP, health 9.0, revealed 10 new cells, explored 1062/2304 cells
+[explore_until] Goal (22, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (21, 36) with path cost 5 (17 frontier cells available)
+[explore_until] Step 193/200: RIGHT - moving to (25, 36) towards goal (21, 36)
+[explore_until] Step 193/200: position (25, 36), floor 0, facing RIGHT, health 9.0, revealed 9 new cells, explored 1071/2304 cells
+[explore_until] Step 194/200: UP - moving to (24, 36) towards goal (21, 36)
+[explore_until] Step 194/200: position (24, 36), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 1082/2304 cells
+[explore_until] Goal (21, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (20, 36) with path cost 4 (20 frontier cells available)
+[explore_until] Step 195/200: UP - moving to (23, 36) towards goal (20, 36)
+[explore_until] Step 195/200: position (23, 36), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 1093/2304 cells
+[explore_until] Goal (20, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (19, 36) with path cost 4 (22 frontier cells available)
+[explore_until] Step 196/200: UP - moving to (22, 36) towards goal (19, 36)
+[explore_until] Step 196/200: position (22, 36), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 1104/2304 cells
+[explore_until] Goal (19, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (18, 36) with path cost 4 (24 frontier cells available)
+[explore_until] Step 197/200: UP - moving to (21, 36) towards goal (18, 36)
+[explore_until] Step 197/200: position (21, 36), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 1115/2304 cells
+[explore_until] Goal (18, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (17, 36) with path cost 4 (26 frontier cells available)
+[explore_until] Step 198/200: UP - moving to (20, 36) towards goal (17, 36)
+[explore_until] Step 198/200: position (20, 36), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 1126/2304 cells
+[explore_until] Goal (17, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (16, 36) with path cost 4 (27 frontier cells available)
+[explore_until] Step 199/200: UP - moving to (19, 36) towards goal (16, 36)
+[explore_until] Step 199/200: position (19, 36), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 1137/2304 cells
+[explore_until] Goal (16, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (15, 36) with path cost 4 (25 frontier cells available)
+[explore_until] Step 200/200: UP - moving to (18, 36) towards goal (15, 36)
+[explore_until] Step 200/200: position (18, 36), floor 0, facing UP, health 9.0, revealed 11 new cells, explored 1148/2304 cells
+[explore_until] Max steps (200) reached without finding item LADDER_DOWN
+Error: Exploration failed: max steps (200) reached without finding item LADDER_DOWN
+[explore_until] Start exploring for item LADDER_DOWN with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (18, 36), floor 0, facing UP, health 9.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] New exploration goal (22, 36) with path cost 4 (17 frontier cells available)
+[explore_until] Step 1/200: DOWN - moving to (19, 36) towards goal (22, 36)
+[explore_until] Step 1/200: position (19, 36), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 110/2304 cells
+[explore_until] Goal (22, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (23, 36) with path cost 4 (18 frontier cells available)
+[explore_until] Step 2/200: DOWN - moving to (20, 36) towards goal (23, 36)
+[explore_until] Step 2/200: position (20, 36), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 121/2304 cells
+[explore_until] Goal (23, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (24, 36) with path cost 4 (18 frontier cells available)
+[explore_until] Step 3/200: DOWN - moving to (21, 36) towards goal (24, 36)
+[explore_until] Step 3/200: position (21, 36), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 132/2304 cells
+[explore_until] Goal (24, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (25, 36) with path cost 4 (20 frontier cells available)
+[explore_until] Step 4/200: DOWN - moving to (22, 36) towards goal (25, 36)
+[explore_until] Step 4/200: position (22, 36), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 143/2304 cells
+[explore_until] Goal (25, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (26, 36) with path cost 4 (21 frontier cells available)
+[explore_until] Step 5/200: DOWN - moving to (23, 36) towards goal (26, 36)
+[explore_until] Step 5/200: position (23, 36), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 154/2304 cells
+[explore_until] Goal (26, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (27, 36) with path cost 4 (23 frontier cells available)
+[explore_until] Step 6/200: DOWN - moving to (24, 36) towards goal (27, 36)
+[explore_until] Step 6/200: position (24, 36), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 165/2304 cells
+[explore_until] Goal (27, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (28, 36) with path cost 4 (25 frontier cells available)
+[explore_until] Step 7/200: DOWN - moving to (25, 36) towards goal (28, 36)
+[explore_until] Step 7/200: position (25, 36), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 176/2304 cells
+[explore_until] Goal (28, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (29, 36) with path cost 4 (27 frontier cells available)
+[explore_until] Step 8/200: DOWN - moving to (26, 36) towards goal (29, 36)
+[explore_until] Step 8/200: position (26, 36), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 187/2304 cells
+[explore_until] Goal (29, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (30, 36) with path cost 4 (29 frontier cells available)
+[explore_until] Step 9/200: DOWN - moving to (27, 36) towards goal (30, 36)
+[explore_until] Step 9/200: position (27, 36), floor 0, facing DOWN, health 9.0, revealed 11 new cells, explored 198/2304 cells
+[explore_until] Goal (30, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (31, 36) with path cost 4 (31 frontier cells available)
+[explore_until] Step 10/200: DOWN - moving to (28, 36) towards goal (31, 36)
+[explore_until] Warning: health dropped from 9.0 to 8.0
+[explore_until] Step 10/200: position (28, 36), floor 0, facing DOWN, health 8.0, revealed 11 new cells, explored 209/2304 cells
+[explore_until] Goal (31, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (32, 36) with path cost 4 (29 frontier cells available)
+[explore_until] Step 11/200: DOWN - moving to (29, 36) towards goal (32, 36)
+[explore_until] Step 11/200: position (29, 36), floor 0, facing DOWN, health 8.0, revealed 11 new cells, explored 220/2304 cells
+[explore_until] Goal (32, 36) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (29, 41) with path cost 5 (28 frontier cells available)
+[explore_until] Step 12/200: RIGHT - moving to (29, 37) towards goal (29, 41)
+[explore_until] Step 12/200: position (29, 37), floor 0, facing RIGHT, health 8.0, revealed 9 new cells, explored 229/2304 cells
+[explore_until] Goal (29, 41) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (29, 42) with path cost 5 (28 frontier cells available)
+[explore_until] Step 13/200: RIGHT - moving to (29, 38) towards goal (29, 42)
+[explore_until] Step 13/200: position (29, 38), floor 0, facing RIGHT, health 8.0, revealed 9 new cells, explored 238/2304 cells
+[explore_until] Goal (29, 42) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (29, 43) with path cost 5 (29 frontier cells available)
+[explore_until] Step 14/200: RIGHT - moving to (29, 39) towards goal (29, 43)
+[explore_until] Step 14/200: position (29, 39), floor 0, facing RIGHT, health 8.0, revealed 9 new cells, explored 247/2304 cells
+[explore_until] Goal (29, 43) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (29, 44) with path cost 5 (30 frontier cells available)
+[explore_until] Step 15/200: RIGHT - moving to (29, 40) towards goal (29, 44)
+[explore_until] Step 15/200: position (29, 40), floor 0, facing RIGHT, health 8.0, revealed 9 new cells, explored 256/2304 cells
+[explore_until] Goal (29, 44) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (29, 45) with path cost 5 (33 frontier cells available)
+[explore_until] Step 16/200: RIGHT - moving to (29, 41) towards goal (29, 45)
+[explore_until] Step 16/200: position (29, 41), floor 0, facing RIGHT, health 8.0, revealed 9 new cells, explored 265/2304 cells
+[explore_until] Goal (29, 45) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (25, 42) with path cost 5 (34 frontier cells available)
+[explore_until] Step 17/200: UP - moving to (28, 41) towards goal (25, 42)
+[explore_until] Step 17/200: position (28, 41), floor 0, facing UP, health 8.0, revealed 5 new cells, explored 270/2304 cells
+[explore_until] Goal (25, 42) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (28, 46) with path cost 5 (34 frontier cells available)
+[explore_until] Step 18/200: RIGHT - moving to (28, 42) towards goal (28, 46)
+[explore_until] Step 18/200: position (28, 42), floor 0, facing RIGHT, health 8.0, revealed 9 new cells, explored 279/2304 cells
+[explore_until] Goal (28, 46) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (24, 44) with path cost 6 (28 frontier cells available)
+[explore_until] Step 19/200: UP - moving to (27, 42) towards goal (24, 44)
+[explore_until] Step 19/200: position (27, 42), floor 0, facing UP, health 8.0, revealed 6 new cells, explored 285/2304 cells
+[explore_until] Goal (24, 44) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (23, 44) with path cost 6 (27 frontier cells available)
+[explore_until] Step 20/200: UP - moving to (26, 42) towards goal (23, 44)
+[explore_until] Step 20/200: position (26, 42), floor 0, facing UP, health 8.0, revealed 6 new cells, explored 291/2304 cells
+[explore_until] Goal (23, 44) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (22, 44) with path cost 6 (26 frontier cells available)
+[explore_until] Step 21/200: UP - moving to (25, 42) towards goal (22, 44)
+[explore_until] Step 21/200: position (25, 42), floor 0, facing UP, health 8.0, revealed 6 new cells, explored 297/2304 cells
+[explore_until] Goal (22, 44) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (21, 44) with path cost 6 (25 frontier cells available)
+[explore_until] Step 22/200: RIGHT - moving to (25, 43) towards goal (21, 44)
+[explore_until] Step 22/200: position (25, 43), floor 0, facing RIGHT, health 8.0, revealed 0 new cells, explored 297/2304 cells
+[explore_until] Step 23/200: RIGHT - moving to (25, 44) towards goal (21, 44)
+[explore_until] Step 23/200: position (25, 44), floor 0, facing RIGHT, health 8.0, revealed 0 new cells, explored 297/2304 cells
+[explore_until] Step 24/200: UP - moving to (24, 44) towards goal (21, 44)
+[explore_until] Step 24/200: position (24, 44), floor 0, facing UP, health 8.0, revealed 6 new cells, explored 303/2304 cells
+[explore_until] Goal (21, 44) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (20, 44) with path cost 4 (24 frontier cells available)
+[explore_until] Step 25/200: UP - moving to (23, 44) towards goal (20, 44)
+[explore_until] Step 25/200: position (23, 44), floor 0, facing UP, health 8.0, revealed 6 new cells, explored 309/2304 cells
+[explore_until] Goal (20, 44) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (19, 44) with path cost 4 (23 frontier cells available)
+[explore_until] Step 26/200: UP - moving to (22, 44) towards goal (19, 44)
+[explore_until] Warning: health dropped from 8.0 to 7.0
+[explore_until] Step 26/200: position (22, 44), floor 0, facing UP, health 7.0, revealed 6 new cells, explored 315/2304 cells
+[explore_until] Goal (19, 44) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (18, 44) with path cost 4 (22 frontier cells available)
+[explore_until] Step 27/200: UP - moving to (21, 44) towards goal (18, 44)
+[explore_until] Step 27/200: position (21, 44), floor 0, facing UP, health 7.0, revealed 6 new cells, explored 321/2304 cells
+[explore_until] Goal (18, 44) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (17, 44) with path cost 4 (21 frontier cells available)
+[explore_until] Step 28/200: UP - moving to (20, 44) towards goal (17, 44)
+[explore_until] Step 28/200: position (20, 44), floor 0, facing UP, health 7.0, revealed 6 new cells, explored 327/2304 cells
+[explore_until] Goal (17, 44) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (16, 44) with path cost 4 (20 frontier cells available)
+[explore_until] Step 29/200: UP - moving to (19, 44) towards goal (16, 44)
+[explore_until] Step 29/200: position (19, 44), floor 0, facing UP, health 7.0, revealed 6 new cells, explored 333/2304 cells
+[explore_until] Goal (16, 44) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (15, 47) with path cost 7 (16 frontier cells available)
+[explore_until] Step 30/200: UP - moving to (18, 44) towards goal (15, 47)
+[explore_until] Step 30/200: position (18, 44), floor 0, facing UP, health 7.0, revealed 6 new cells, explored 339/2304 cells
+[explore_until] Goal (15, 47) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (14, 35) with path cost 15 (15 frontier cells available)
+[explore_until] Step 31/200: LEFT - moving to (18, 43) towards goal (14, 35)
+[explore_until] Step 31/200: position (18, 43), floor 0, facing LEFT, health 7.0, revealed 0 new cells, explored 339/2304 cells
+[explore_until] Step 32/200: LEFT - moving to (18, 42) towards goal (14, 35)
+[explore_until] Step 32/200: position (18, 42), floor 0, facing LEFT, health 7.0, revealed 0 new cells, explored 339/2304 cells
+[explore_until] Step 33/200: DOWN - moving to (19, 42) towards goal (14, 35)
+[explore_until] Step 33/200: position (19, 42), floor 0, facing DOWN, health 7.0, revealed 0 new cells, explored 339/2304 cells
+[explore_until] Step 34/200: LEFT - moving to (19, 41) towards goal (14, 35)
+[explore_until] Step 34/200: position (19, 41), floor 0, facing LEFT, health 7.0, revealed 0 new cells, explored 339/2304 cells
+[explore_until] Step 35/200: LEFT - moving to (19, 40) towards goal (14, 35)
+[explore_until] Step 35/200: position (19, 40), floor 0, facing LEFT, health 7.0, revealed 0 new cells, explored 339/2304 cells
+[explore_until] Step 36/200: UP - moving to (18, 40) towards goal (14, 35)
+[explore_until] Step 36/200: position (18, 40), floor 0, facing UP, health 7.0, revealed 0 new cells, explored 339/2304 cells
+[explore_until] Step 37/200: UP - moving to (17, 40) towards goal (14, 35)
+[explore_until] Step 37/200: position (17, 40), floor 0, facing UP, health 7.0, revealed 11 new cells, explored 350/2304 cells
+[explore_until] Goal (14, 35) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (15, 31) with path cost 11 (14 frontier cells available)
+[explore_until] Step 38/200: UP - moving to (16, 40) towards goal (15, 31)
+[explore_until] Step 38/200: position (16, 40), floor 0, facing UP, health 7.0, revealed 11 new cells, explored 361/2304 cells
+[explore_until] Step 39/200: LEFT - moving to (16, 39) towards goal (15, 31)
+[explore_until] Step 39/200: position (16, 39), floor 0, facing LEFT, health 7.0, revealed 2 new cells, explored 363/2304 cells
+[explore_until] Step 40/200: LEFT - moving to (16, 38) towards goal (15, 31)
+[explore_until] Step 40/200: position (16, 38), floor 0, facing LEFT, health 7.0, revealed 2 new cells, explored 365/2304 cells
+[explore_until] Step 41/200: LEFT - moving to (16, 37) towards goal (15, 31)
+[explore_until] Step 41/200: position (16, 37), floor 0, facing LEFT, health 7.0, revealed 2 new cells, explored 367/2304 cells
+[explore_until] Step 42/200: UP - moving to (15, 37) towards goal (15, 31)
+[explore_until] Warning: health dropped from 7.0 to 6.0
+[explore_until] Step 42/200: position (15, 37), floor 0, facing UP, health 6.0, revealed 11 new cells, explored 378/2304 cells
+[explore_until] Step 43/200: LEFT - moving to (15, 36) towards goal (15, 31)
+[explore_until] Step 43/200: position (15, 36), floor 0, facing LEFT, health 6.0, revealed 3 new cells, explored 381/2304 cells
+[explore_until] Step 44/200: LEFT - moving to (15, 35) towards goal (15, 31)
+[explore_until] Step 44/200: position (15, 35), floor 0, facing LEFT, health 6.0, revealed 9 new cells, explored 390/2304 cells
+[explore_until] Goal (15, 31) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (15, 30) with path cost 5 (13 frontier cells available)
+[explore_until] Step 45/200: LEFT - moving to (15, 34) towards goal (15, 30)
+[explore_until] Step 45/200: position (15, 34), floor 0, facing LEFT, health 6.0, revealed 9 new cells, explored 399/2304 cells
+[explore_until] Goal (15, 30) is no longer a reachable frontier, choosing a new one
+[explore_until] New exploration goal (16, 29) with path cost 6 (12 frontier cells available)
+[explore_until] Step 46/200: LEFT - moving to (15, 33) towards goal (16, 29)
+[explore_until] Step 46/200: position (15, 33), floor 0, facing LEFT, health 6.0, revealed 9 new cells, explored 408/2304 cells
+[explore_until] Found item LADDER_DOWN (open) at (12, 28), distance 8, after 46 steps
+[explore_until] Start exploring for item LADDER_DOWN with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (15, 33), floor 0, facing LEFT, health 6.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found item LADDER_DOWN (open) at (12, 28), distance 8, after 0 steps
+[explore_until] Start exploring for item LADDER_DOWN with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (15, 33), floor 0, facing LEFT, health 6.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found item LADDER_DOWN (open) at (12, 28), distance 8, after 0 steps
+[explore_until] Start exploring for item LADDER_DOWN with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (15, 33), floor 0, facing LEFT, health 6.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found item LADDER_DOWN (open) at (12, 28), distance 8, after 0 steps
+[explore_until] Start exploring for item LADDER_DOWN with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (15, 33), floor 0, facing LEFT, health 6.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found item LADDER_DOWN (open) at (12, 28), distance 8, after 0 steps
+[explore_until] Start exploring for item LADDER_DOWN with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (15, 33), floor 0, facing LEFT, health 6.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found item LADDER_DOWN (open) at (12, 28), distance 8, after 0 steps
+[explore_until] Start exploring for item LADDER_DOWN with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (15, 33), floor 0, facing LEFT, health 6.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found item LADDER_DOWN (open) at (12, 28), distance 8, after 0 steps
+[explore_until] Start exploring for item LADDER_DOWN with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (15, 33), floor 0, facing LEFT, health 6.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found item LADDER_DOWN (open) at (12, 28), distance 8, after 0 steps
+[explore_until] Start exploring for item LADDER_DOWN with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (15, 33), floor 0, facing LEFT, health 6.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found item LADDER_DOWN (open) at (12, 28), distance 8, after 0 steps
+[explore_until] Start exploring for item LADDER_DOWN with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (15, 33), floor 0, facing LEFT, health 6.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found item LADDER_DOWN (open) at (12, 28), distance 8, after 0 steps
+[explore_until] Start exploring for item LADDER_DOWN with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (15, 33), floor 0, facing LEFT, health 6.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found item LADDER_DOWN (open) at (12, 28), distance 8, after 0 steps
+[explore_until] Start exploring for item LADDER_DOWN with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (15, 33), floor 0, facing LEFT, health 6.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found item LADDER_DOWN (open) at (12, 28), distance 8, after 0 steps
+[explore_until] Start exploring for item LADDER_DOWN with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (15, 33), floor 0, facing LEFT, health 6.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found item LADDER_DOWN (open) at (12, 28), distance 8, after 0 steps
+[explore_until] Start exploring for item LADDER_DOWN with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (15, 33), floor 0, facing LEFT, health 6.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found item LADDER_DOWN (open) at (12, 28), distance 8, after 0 steps
+[explore_until] Start exploring for item LADDER_DOWN with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (15, 33), floor 0, facing LEFT, health 6.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found item LADDER_DOWN (open) at (12, 28), distance 8, after 0 steps
+[explore_until] Start exploring for item LADDER_DOWN with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (15, 33), floor 0, facing LEFT, health 6.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found item LADDER_DOWN (open) at (12, 28), distance 8, after 0 steps
+[explore_until] Start exploring for item LADDER_DOWN with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (15, 33), floor 0, facing LEFT, health 6.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found item LADDER_DOWN (open) at (12, 28), distance 8, after 0 steps
+[explore_until] Start exploring for item LADDER_DOWN with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (15, 33), floor 0, facing LEFT, health 6.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found item LADDER_DOWN (open) at (12, 28), distance 8, after 0 steps
+[explore_until] Start exploring for item LADDER_DOWN with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration memory
+[explore_until] Step 0/200: position (15, 33), floor 0, facing LEFT, health 6.0, revealed 99 new cells, explored 99/2304 cells
+[explore_until] Found item LADDER_DOWN (open) at (12, 28), distance 8, after 0 steps

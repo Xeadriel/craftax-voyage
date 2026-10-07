@@ -1,0 +1,13820 @@
+
+Map:
+-5, -4: path
+-4, -4: stone
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: tree
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: stone
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: tree
+3, -3: tree
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: stone
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: tree
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: grass
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: grass
+-3, 0: grass
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: coal
+-3, 1: grass
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: sand
+-5, 2: stone
+-4, 2: stone
+-3, 2: grass
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: sand
+5, 2: sand
+-5, 3: stone
+-4, 3: grass
+-3, 3: grass
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: sand
+4, 3: sand
+5, 3: sand
+-5, 4: grass
+-4, 4: grass
+-3, 4: grass
+-2, 4: tree
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: sand
+5, 4: sand
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 9
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.8056125640869141
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: path
+-4, -4: path
+-3, -4: stone
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: tree
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: stone
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: tree
+4, -3: tree
+5, -3: grass
+-5, -2: lava
+-4, -2: path
+-3, -2: stone
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: tree
+4, -2: grass
+5, -2: grass
+-5, -1: lava
+-4, -1: path
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: lava
+-4, 0: path
+-3, 0: grass
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: coal
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: stone
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: sand
+-5, 3: stone
+-4, 3: stone
+-3, 3: grass
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: sand
+5, 3: sand
+-5, 4: stone
+-4, 4: grass
+-3, 4: grass
+-2, 4: grass
+-1, 4: tree
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: sand
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 9
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.8141106367111206
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: path
+-4, -4: path
+-3, -4: path
+-2, -4: stone
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: tree
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: stone
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: tree
+5, -3: tree
+-5, -2: path
+-4, -2: lava
+-3, -2: path
+-2, -2: stone
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: tree
+5, -2: grass
+-5, -1: path
+-4, -1: lava
+-3, -1: path
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: lava
+-3, 0: path
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: path
+-2, 1: coal
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: stone
+-3, 2: stone
+-2, 2: stone
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: stone
+-3, 3: stone
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: sand
+-5, 4: path
+-4, 4: stone
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: tree
+1, 4: grass
+2, 4: grass
+3, 4: Cow on grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 9
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.8224166631698608
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: path
+-4, -4: path
+-3, -4: path
+-2, -4: path
+-1, -4: stone
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: tree
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: path
+-1, -3: stone
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: tree
+-5, -2: path
+-4, -2: path
+-3, -2: lava
+-2, -2: path
+-1, -2: stone
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: tree
+-5, -1: path
+-4, -1: path
+-3, -1: lava
+-2, -1: path
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: lava
+-2, 0: path
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: stone
+-4, 1: path
+-3, 1: path
+-2, 1: path
+-1, 1: coal
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: path
+-3, 2: stone
+-2, 2: stone
+-1, 2: stone
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: path
+-3, 3: stone
+-2, 3: stone
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: path
+-3, 4: stone
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: tree
+2, 4: grass
+3, 4: grass
+4, 4: Cow on grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 9
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.830528199672699
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: path
+-4, -4: path
+-3, -4: path
+-2, -4: stone
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: tree
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: stone
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: tree
+5, -3: tree
+-5, -2: path
+-4, -2: lava
+-3, -2: path
+-2, -2: stone
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: tree
+5, -2: grass
+-5, -1: path
+-4, -1: lava
+-3, -1: path
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: lava
+-3, 0: path
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: path
+-2, 1: coal
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: stone
+-3, 2: stone
+-2, 2: stone
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: stone
+-3, 3: stone
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: sand
+-5, 4: path
+-4, 4: stone
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: tree
+1, 4: grass
+2, 4: grass
+3, 4: Cow on grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 9
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: right
+Light: 0.8384429216384888
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: stone
+-4, -4: stone
+-3, -4: stone
+-2, -4: stone
+-1, -4: stone
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: stone
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: tree
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: stone
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: tree
+5, -2: tree
+-5, -1: path
+-4, -1: lava
+-3, -1: path
+-2, -1: stone
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: tree
+5, -1: grass
+-5, 0: path
+-4, 0: lava
+-3, 0: path
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: lava
+-3, 1: path
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: path
+-3, 2: path
+-2, 2: coal
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: stone
+-3, 3: stone
+-2, 3: stone
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: stone
+-3, 4: stone
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: sand
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 9
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.8461586236953735
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: stone
+-4, -4: stone
+-3, -4: stone
+-2, -4: stone
+-1, -4: sand
+0, -4: sand
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: tree
+-5, -3: stone
+-4, -3: stone
+-3, -3: stone
+-2, -3: stone
+-1, -3: stone
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: stone
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: tree
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: stone
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: tree
+5, -1: tree
+-5, 0: path
+-4, 0: lava
+-3, 0: path
+-2, 0: stone
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: tree
+5, 0: grass
+-5, 1: path
+-4, 1: lava
+-3, 1: path
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: lava
+-3, 2: path
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: path
+-2, 3: coal
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: stone
+-3, 4: stone
+-2, 4: stone
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 9
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.8536737561225891
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: sand
+-4, -4: sand
+-3, -4: sand
+-2, -4: sand
+-1, -4: sand
+0, -4: sand
+1, -4: tree
+2, -4: grass
+3, -4: tree
+4, -4: grass
+5, -4: grass
+-5, -3: stone
+-4, -3: stone
+-3, -3: stone
+-2, -3: stone
+-1, -3: sand
+0, -3: sand
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: tree
+-5, -2: stone
+-4, -2: stone
+-3, -2: stone
+-2, -2: stone
+-1, -2: stone
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: stone
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: tree
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: path
+-2, 0: stone
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: tree
+5, 0: tree
+-5, 1: path
+-4, 1: lava
+-3, 1: path
+-2, 1: stone
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: tree
+5, 1: grass
+-5, 2: path
+-4, 2: lava
+-3, 2: path
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: lava
+-3, 3: path
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: coal
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 9
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.8609864711761475
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: tree
+-4, -4: grass
+-3, -4: grass
+-2, -4: tree
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: sand
+-4, -3: sand
+-3, -3: sand
+-2, -3: sand
+-1, -3: sand
+0, -3: sand
+1, -3: tree
+2, -3: grass
+3, -3: tree
+4, -3: grass
+5, -3: grass
+-5, -2: stone
+-4, -2: stone
+-3, -2: stone
+-2, -2: stone
+-1, -2: sand
+0, -2: sand
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: tree
+-5, -1: stone
+-4, -1: stone
+-3, -1: stone
+-2, -1: stone
+-1, -1: stone
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: path
+-2, 0: stone
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: tree
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: path
+-2, 1: stone
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: tree
+5, 1: tree
+-5, 2: path
+-4, 2: lava
+-3, 2: path
+-2, 2: stone
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: tree
+5, 2: grass
+-5, 3: path
+-4, 3: lava
+-3, 3: path
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: lava
+-3, 4: path
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 9
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.8680956363677979
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: sand
+-4, -4: sand
+-3, -4: sand
+-2, -4: sand
+-1, -4: sand
+0, -4: sand
+1, -4: tree
+2, -4: grass
+3, -4: tree
+4, -4: grass
+5, -4: grass
+-5, -3: stone
+-4, -3: stone
+-3, -3: stone
+-2, -3: stone
+-1, -3: sand
+0, -3: sand
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: tree
+-5, -2: stone
+-4, -2: stone
+-3, -2: stone
+-2, -2: stone
+-1, -2: stone
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: stone
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: tree
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: path
+-2, 0: stone
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: tree
+5, 0: tree
+-5, 1: path
+-4, 1: lava
+-3, 1: path
+-2, 1: stone
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: tree
+5, 1: grass
+-5, 2: path
+-4, 2: lava
+-3, 2: path
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: lava
+-3, 3: path
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: coal
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 9
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.875
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: sand
+-4, -4: sand
+-3, -4: sand
+-2, -4: sand
+-1, -4: sand
+0, -4: sand
+1, -4: sand
+2, -4: tree
+3, -4: grass
+4, -4: tree
+5, -4: grass
+-5, -3: stone
+-4, -3: stone
+-3, -3: stone
+-2, -3: stone
+-1, -3: stone
+0, -3: sand
+1, -3: sand
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: stone
+-4, -2: stone
+-3, -2: stone
+-2, -2: stone
+-1, -2: stone
+0, -2: stone
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: path
+-1, -1: stone
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: tree
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: path
+-2, 0: path
+-1, 0: stone
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: tree
+-5, 1: path
+-4, 1: path
+-3, 1: lava
+-2, 1: path
+-1, 1: stone
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: tree
+-5, 2: path
+-4, 2: path
+-3, 2: lava
+-2, 2: path
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: lava
+-2, 3: path
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: path
+-3, 4: path
+-2, 4: path
+-1, 4: coal
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 9
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.8816988468170166
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: sand
+-4, -4: sand
+-3, -4: sand
+-2, -4: sand
+-1, -4: sand
+0, -4: sand
+1, -4: sand
+2, -4: tree
+3, -4: grass
+4, -4: tree
+5, -4: grass
+-5, -3: stone
+-4, -3: stone
+-3, -3: stone
+-2, -3: stone
+-1, -3: stone
+0, -3: sand
+1, -3: sand
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: stone
+-4, -2: stone
+-3, -2: stone
+-2, -2: stone
+-1, -2: stone
+0, -2: stone
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: path
+-1, -1: stone
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: tree
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: path
+-2, 0: path
+-1, 0: stone
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: tree
+-5, 1: path
+-4, 1: path
+-3, 1: lava
+-2, 1: path
+-1, 1: stone
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: tree
+-5, 2: path
+-4, 2: path
+-3, 2: lava
+-2, 2: path
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: lava
+-2, 3: path
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: path
+-3, 4: path
+-2, 4: path
+-1, 4: coal
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 9
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.8881914615631104
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: sand
+-4, -4: sand
+-3, -4: sand
+-2, -4: sand
+-1, -4: sand
+0, -4: sand
+1, -4: sand
+2, -4: tree
+3, -4: grass
+4, -4: tree
+5, -4: grass
+-5, -3: stone
+-4, -3: stone
+-3, -3: stone
+-2, -3: stone
+-1, -3: stone
+0, -3: sand
+1, -3: sand
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: stone
+-4, -2: stone
+-3, -2: stone
+-2, -2: stone
+-1, -2: stone
+0, -2: stone
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: path
+-1, -1: stone
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: tree
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: path
+-2, 0: path
+-1, 0: stone
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: tree
+-5, 1: path
+-4, 1: path
+-3, 1: lava
+-2, 1: path
+-1, 1: stone
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: tree
+-5, 2: path
+-4, 2: path
+-3, 2: lava
+-2, 2: path
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: lava
+-2, 3: path
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: path
+-3, 4: path
+-2, 4: path
+-1, 4: coal
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 9
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.8944774270057678
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: stone
+-4, -4: stone
+-3, -4: stone
+-2, -4: stone
+-1, -4: stone
+0, -4: sand
+1, -4: sand
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: stone
+-4, -3: stone
+-3, -3: stone
+-2, -3: stone
+-1, -3: stone
+0, -3: stone
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: path
+-1, -2: stone
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: tree
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: path
+-1, -1: stone
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: tree
+-5, 0: path
+-4, 0: path
+-3, 0: lava
+-2, 0: path
+-1, 0: stone
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: tree
+-5, 1: path
+-4, 1: path
+-3, 1: lava
+-2, 1: path
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: path
+-3, 2: lava
+-2, 2: path
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: path
+-3, 3: path
+-2, 3: path
+-1, 3: coal
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: path
+-3, 4: stone
+-2, 4: stone
+-1, 4: stone
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 9
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.9005566835403442
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: stone
+-4, -4: stone
+-3, -4: stone
+-2, -4: stone
+-1, -4: stone
+0, -4: stone
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: path
+-1, -3: stone
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: tree
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: path
+-1, -2: stone
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: tree
+-5, -1: path
+-4, -1: path
+-3, -1: lava
+-2, -1: path
+-1, -1: stone
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: tree
+-5, 0: path
+-4, 0: path
+-3, 0: lava
+-2, 0: path
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: lava
+-2, 1: path
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: path
+-3, 2: path
+-2, 2: path
+-1, 2: coal
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: path
+-3, 3: stone
+-2, 3: stone
+-1, 3: stone
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: path
+-3, 4: stone
+-2, 4: stone
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 9
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.9064292311668396
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: path
+-4, -4: stone
+-3, -4: stone
+-2, -4: stone
+-1, -4: stone
+0, -4: stone
+1, -4: stone
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: path
+-1, -3: path
+0, -3: stone
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: tree
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: path
+-1, -2: path
+0, -2: stone
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: lava
+-1, -1: path
+0, -1: stone
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: path
+-2, 0: lava
+-1, 0: path
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: path
+-2, 1: lava
+-1, 1: path
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: path
+-2, 2: path
+-1, 2: path
+0, 2: coal
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: stone
+-3, 3: path
+-2, 3: stone
+-1, 3: stone
+0, 3: stone
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: stone
+-3, 4: path
+-2, 4: stone
+-1, 4: stone
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 9
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9120954275131226
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: stone
+-4, -4: path
+-3, -4: stone
+-2, -4: stone
+-1, -4: stone
+0, -4: stone
+1, -4: stone
+2, -4: stone
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: path
+-1, -3: path
+0, -3: path
+1, -3: stone
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: path
+-1, -2: path
+0, -2: path
+1, -2: stone
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: path
+-1, -1: lava
+0, -1: path
+1, -1: stone
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: path
+-2, 0: path
+-1, 0: lava
+0, 0: path
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: path
+-2, 1: path
+-1, 1: lava
+0, 1: path
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: stone
+-3, 2: stone
+-2, 2: path
+-1, 2: path
+0, 2: path
+1, 2: coal
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: stone
+-3, 3: stone
+-2, 3: path
+-1, 3: stone
+0, 3: stone
+1, 3: stone
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: stone
+-3, 4: stone
+-2, 4: path
+-1, 4: stone
+0, 4: stone
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 9
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9175559282302856
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: stone
+-4, -4: path
+-3, -4: stone
+-2, -4: stone
+-1, -4: stone
+0, -4: stone
+1, -4: stone
+2, -4: stone
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: path
+-1, -3: path
+0, -3: path
+1, -3: stone
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: path
+-1, -2: path
+0, -2: path
+1, -2: stone
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: path
+-1, -1: lava
+0, -1: path
+1, -1: stone
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: path
+-2, 0: path
+-1, 0: lava
+0, 0: path
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: path
+-2, 1: path
+-1, 1: lava
+0, 1: path
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: stone
+-3, 2: stone
+-2, 2: path
+-1, 2: path
+0, 2: path
+1, 2: coal
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: stone
+-3, 3: stone
+-2, 3: path
+-1, 3: stone
+0, 3: stone
+1, 3: stone
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: stone
+-3, 4: stone
+-2, 4: path
+-1, 4: stone
+0, 4: stone
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 9
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9228113889694214
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: stone
+-4, -4: path
+-3, -4: stone
+-2, -4: stone
+-1, -4: stone
+0, -4: stone
+1, -4: stone
+2, -4: stone
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: path
+-1, -3: path
+0, -3: path
+1, -3: stone
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: path
+-1, -2: path
+0, -2: path
+1, -2: stone
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: path
+-1, -1: lava
+0, -1: path
+1, -1: stone
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: path
+-2, 0: path
+-1, 0: lava
+0, 0: path
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: path
+-2, 1: path
+-1, 1: lava
+0, 1: path
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: stone
+-3, 2: stone
+-2, 2: path
+-1, 2: path
+0, 2: path
+1, 2: coal
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: stone
+-3, 3: stone
+-2, 3: path
+-1, 3: stone
+0, 3: stone
+1, 3: stone
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: stone
+-3, 4: stone
+-2, 4: path
+-1, 4: stone
+0, 4: stone
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 9
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9278628826141357
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: stone
+-4, -4: path
+-3, -4: stone
+-2, -4: stone
+-1, -4: stone
+0, -4: stone
+1, -4: stone
+2, -4: stone
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: path
+-1, -3: path
+0, -3: path
+1, -3: stone
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: path
+-1, -2: path
+0, -2: path
+1, -2: stone
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: path
+-1, -1: lava
+0, -1: path
+1, -1: stone
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: path
+-2, 0: path
+-1, 0: lava
+0, 0: path
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: path
+-2, 1: path
+-1, 1: lava
+0, 1: path
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: stone
+-3, 2: stone
+-2, 2: path
+-1, 2: path
+0, 2: path
+1, 2: coal
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: stone
+-3, 3: stone
+-2, 3: path
+-1, 3: stone
+0, 3: stone
+1, 3: stone
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: stone
+-3, 4: stone
+-2, 4: path
+-1, 4: stone
+0, 4: stone
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 9
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.932711660861969
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: stone
+-4, -4: path
+-3, -4: stone
+-2, -4: stone
+-1, -4: stone
+0, -4: stone
+1, -4: stone
+2, -4: stone
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: path
+-1, -3: path
+0, -3: path
+1, -3: stone
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: path
+-1, -2: path
+0, -2: path
+1, -2: stone
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: path
+-1, -1: lava
+0, -1: path
+1, -1: stone
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: path
+-2, 0: path
+-1, 0: lava
+0, 0: path
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: path
+-2, 1: path
+-1, 1: lava
+0, 1: path
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: stone
+-3, 2: stone
+-2, 2: path
+-1, 2: path
+0, 2: path
+1, 2: coal
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: stone
+-3, 3: stone
+-2, 3: path
+-1, 3: stone
+0, 3: stone
+1, 3: stone
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: stone
+-3, 4: stone
+-2, 4: path
+-1, 4: stone
+0, 4: stone
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 8
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9373592734336853
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: stone
+-4, -4: path
+-3, -4: stone
+-2, -4: stone
+-1, -4: stone
+0, -4: stone
+1, -4: stone
+2, -4: stone
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: path
+-1, -3: path
+0, -3: path
+1, -3: stone
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: path
+-1, -2: path
+0, -2: path
+1, -2: stone
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: path
+-1, -1: lava
+0, -1: path
+1, -1: stone
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: path
+-2, 0: path
+-1, 0: lava
+0, 0: path
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: path
+-2, 1: path
+-1, 1: lava
+0, 1: path
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: stone
+-3, 2: stone
+-2, 2: path
+-1, 2: path
+0, 2: path
+1, 2: coal
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: stone
+-3, 3: stone
+-2, 3: path
+-1, 3: stone
+0, 3: stone
+1, 3: stone
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: stone
+-3, 4: stone
+-2, 4: path
+-1, 4: stone
+0, 4: stone
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 8
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9418074488639832
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: path
+-4, -4: stone
+-3, -4: stone
+-2, -4: stone
+-1, -4: stone
+0, -4: stone
+1, -4: stone
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: path
+-1, -3: path
+0, -3: stone
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: tree
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: path
+-1, -2: path
+0, -2: stone
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: lava
+-1, -1: path
+0, -1: stone
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: path
+-2, 0: lava
+-1, 0: path
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: path
+-2, 1: lava
+-1, 1: path
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: path
+-2, 2: path
+-1, 2: path
+0, 2: coal
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: stone
+-3, 3: path
+-2, 3: stone
+-1, 3: stone
+0, 3: stone
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: stone
+-3, 4: path
+-2, 4: stone
+-1, 4: stone
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 8
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: right
+Light: 0.9460580945014954
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: path
+-4, -4: path
+-3, -4: path
+-2, -4: path
+-1, -4: path
+0, -4: stone
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: tree
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: path
+-1, -3: path
+0, -3: stone
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: lava
+-1, -2: path
+0, -2: stone
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: lava
+-1, -1: path
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: path
+-2, 0: lava
+-1, 0: path
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: stone
+-4, 1: stone
+-3, 1: path
+-2, 1: path
+-1, 1: path
+0, 1: coal
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: path
+-2, 2: stone
+-1, 2: stone
+0, 2: stone
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: stone
+-3, 3: path
+-2, 3: stone
+-1, 3: stone
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: stone
+-3, 4: path
+-2, 4: stone
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: tree
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 8
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.9501133561134338
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: path
+-4, -4: path
+-3, -4: path
+-2, -4: path
+-1, -4: path
+0, -4: path
+1, -4: stone
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: path
+-1, -3: path
+0, -3: path
+1, -3: stone
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: path
+-1, -2: lava
+0, -2: path
+1, -2: stone
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: path
+-1, -1: lava
+0, -1: path
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: path
+-2, 0: path
+-1, 0: lava
+0, 0: path
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: stone
+-3, 1: stone
+-2, 1: path
+-1, 1: path
+0, 1: path
+1, 1: coal
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: stone
+-2, 2: path
+-1, 2: stone
+0, 2: stone
+1, 2: stone
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: stone
+-3, 3: stone
+-2, 3: path
+-1, 3: stone
+0, 3: stone
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: stone
+-3, 4: stone
+-2, 4: path
+-1, 4: stone
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: tree
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 9
+Drink: 8
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9539756774902344
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: path
+-4, -4: path
+-3, -4: path
+-2, -4: path
+-1, -4: path
+0, -4: stone
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: tree
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: path
+-1, -3: path
+0, -3: stone
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: lava
+-1, -2: path
+0, -2: stone
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: lava
+-1, -1: path
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: path
+-2, 0: lava
+-1, 0: path
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: stone
+-4, 1: stone
+-3, 1: path
+-2, 1: path
+-1, 1: path
+0, 1: coal
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: path
+-2, 2: stone
+-1, 2: stone
+0, 2: stone
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: stone
+-3, 3: path
+-2, 3: stone
+-1, 3: stone
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: stone
+-3, 4: path
+-2, 4: stone
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: tree
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 8
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: right
+Light: 0.9576476812362671
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: path
+-4, -4: path
+-3, -4: path
+-2, -4: path
+-1, -4: stone
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: tree
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: path
+-1, -3: stone
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: tree
+-5, -2: path
+-4, -2: path
+-3, -2: lava
+-2, -2: path
+-1, -2: stone
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: tree
+-5, -1: path
+-4, -1: path
+-3, -1: lava
+-2, -1: path
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: lava
+-2, 0: path
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: stone
+-4, 1: path
+-3, 1: path
+-2, 1: path
+-1, 1: coal
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: path
+-3, 2: stone
+-2, 2: stone
+-1, 2: stone
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: path
+-3, 3: stone
+-2, 3: stone
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: path
+-3, 4: stone
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: tree
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 8
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: right
+Light: 0.9611321091651917
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: path
+-4, -4: path
+-3, -4: path
+-2, -4: path
+-1, -4: stone
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: tree
+-5, -3: path
+-4, -3: path
+-3, -3: lava
+-2, -3: path
+-1, -3: stone
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: Cow on grass
+4, -3: grass
+5, -3: tree
+-5, -2: path
+-4, -2: path
+-3, -2: lava
+-2, -2: path
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: lava
+-2, -1: path
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: stone
+-4, 0: path
+-3, 0: path
+-2, 0: path
+-1, 0: coal
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: stone
+-4, 1: path
+-3, 1: stone
+-2, 1: stone
+-1, 1: stone
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: path
+-3, 2: stone
+-2, 2: stone
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: path
+-3, 3: stone
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: tree
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: grass
+-4, 4: grass
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: Cow on grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 8
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.9644320011138916
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: path
+-4, -4: path
+-3, -4: path
+-2, -4: stone
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: tree
+5, -4: tree
+-5, -3: path
+-4, -3: lava
+-3, -3: path
+-2, -3: stone
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: tree
+5, -3: grass
+-5, -2: path
+-4, -2: lava
+-3, -2: path
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: Cow on grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: lava
+-3, -1: path
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: path
+-2, 0: coal
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: stone
+-3, 1: stone
+-2, 1: stone
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: stone
+-3, 2: stone
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: sand
+-5, 3: path
+-4, 3: stone
+-3, 3: grass
+-2, 3: grass
+-1, 3: grass
+0, 3: tree
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: grass
+-4, 4: grass
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: Cow on grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: tree
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 8
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: right
+Light: 0.9675506949424744
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: path
+-4, -4: path
+-3, -4: path
+-2, -4: path
+-1, -4: stone
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: tree
+-5, -3: path
+-4, -3: path
+-3, -3: lava
+-2, -3: path
+-1, -3: stone
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: tree
+-5, -2: path
+-4, -2: path
+-3, -2: lava
+-2, -2: path
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: Cow on grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: lava
+-2, -1: path
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: stone
+-4, 0: path
+-3, 0: path
+-2, 0: path
+-1, 0: coal
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: stone
+-4, 1: path
+-3, 1: stone
+-2, 1: stone
+-1, 1: stone
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: path
+-3, 2: stone
+-2, 2: stone
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: path
+-3, 3: stone
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: tree
+2, 3: Cow on grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: grass
+-4, 4: grass
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 8
+Energy: 9
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9704915285110474
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: path
+-4, -4: path
+-3, -4: path
+-2, -4: stone
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: tree
+5, -4: tree
+-5, -3: path
+-4, -3: lava
+-3, -3: path
+-2, -3: stone
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: tree
+5, -3: grass
+-5, -2: path
+-4, -2: lava
+-3, -2: path
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: Cow on grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: lava
+-3, -1: path
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: path
+-2, 0: coal
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: stone
+-3, 1: stone
+-2, 1: stone
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: stone
+-3, 2: stone
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: sand
+-5, 3: path
+-4, 3: stone
+-3, 3: grass
+-2, 3: grass
+-1, 3: grass
+0, 3: tree
+1, 3: Cow on grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: grass
+-4, 4: grass
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: tree
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 8
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: right
+Light: 0.9732581377029419
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: path
+-4, -4: path
+-3, -4: path
+-2, -4: stone
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: tree
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: stone
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: tree
+5, -3: tree
+-5, -2: path
+-4, -2: lava
+-3, -2: path
+-2, -2: stone
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: Cow on grass
+3, -2: grass
+4, -2: tree
+5, -2: grass
+-5, -1: path
+-4, -1: lava
+-3, -1: path
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: lava
+-3, 0: path
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: path
+-2, 1: coal
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: stone
+-3, 2: stone
+-2, 2: stone
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: stone
+-3, 3: stone
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: sand
+-5, 4: path
+-4, 4: stone
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: tree
+1, 4: Cow on grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 8
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.9758544564247131
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: stone
+-4, -4: stone
+-3, -4: stone
+-2, -4: stone
+-1, -4: stone
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: stone
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: tree
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: stone
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: tree
+5, -2: tree
+-5, -1: path
+-4, -1: lava
+-3, -1: path
+-2, -1: stone
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: Cow on grass
+3, -1: grass
+4, -1: tree
+5, -1: grass
+-5, 0: path
+-4, 0: lava
+-3, 0: path
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: lava
+-3, 1: path
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: path
+-3, 2: path
+-2, 2: coal
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: stone
+-3, 3: stone
+-2, 3: stone
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: stone
+-3, 4: stone
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: Cow on grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: sand
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 8
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.978284478187561
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: stone
+-4, -4: stone
+-3, -4: stone
+-2, -4: stone
+-1, -4: sand
+0, -4: sand
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: tree
+-5, -3: stone
+-4, -3: stone
+-3, -3: stone
+-2, -3: stone
+-1, -3: stone
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: stone
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: tree
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: stone
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: tree
+5, -1: tree
+-5, 0: path
+-4, 0: lava
+-3, 0: path
+-2, 0: stone
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: Cow on grass
+4, 0: tree
+5, 0: grass
+-5, 1: path
+-4, 1: lava
+-3, 1: path
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: lava
+-3, 2: path
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: path
+-2, 3: coal
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: stone
+-3, 4: stone
+-2, 4: stone
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 8
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.9805523157119751
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: stone
+-4, -4: stone
+-3, -4: stone
+-2, -4: stone
+-1, -4: stone
+0, -4: sand
+1, -4: sand
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: stone
+-4, -3: stone
+-3, -3: stone
+-2, -3: stone
+-1, -3: stone
+0, -3: stone
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: path
+-1, -2: stone
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: tree
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: path
+-1, -1: stone
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: tree
+-5, 0: path
+-4, 0: path
+-3, 0: lava
+-2, 0: path
+-1, 0: stone
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: Cow on grass
+4, 0: grass
+5, 0: tree
+-5, 1: path
+-4, 1: path
+-3, 1: lava
+-2, 1: path
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: path
+-3, 2: lava
+-2, 2: path
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: path
+-3, 3: path
+-2, 3: path
+-1, 3: coal
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: path
+-3, 4: stone
+-2, 4: stone
+-1, 4: stone
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 8
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9826624393463135
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: stone
+-4, -4: stone
+-3, -4: stone
+-2, -4: stone
+-1, -4: stone
+0, -4: sand
+1, -4: sand
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: stone
+-4, -3: stone
+-3, -3: stone
+-2, -3: stone
+-1, -3: stone
+0, -3: stone
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: path
+-1, -2: stone
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: tree
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: path
+-1, -1: stone
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: Cow on grass
+4, -1: grass
+5, -1: tree
+-5, 0: path
+-4, 0: path
+-3, 0: lava
+-2, 0: path
+-1, 0: stone
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: tree
+-5, 1: path
+-4, 1: path
+-3, 1: lava
+-2, 1: path
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: path
+-3, 2: lava
+-2, 2: path
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: path
+-3, 3: path
+-2, 3: path
+-1, 3: coal
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: path
+-3, 4: stone
+-2, 4: stone
+-1, 4: stone
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 8
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9846193790435791
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: stone
+-4, -4: stone
+-3, -4: stone
+-2, -4: stone
+-1, -4: sand
+0, -4: sand
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: tree
+-5, -3: stone
+-4, -3: stone
+-3, -3: stone
+-2, -3: stone
+-1, -3: stone
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: stone
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: tree
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: stone
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: tree
+5, -1: tree
+-5, 0: path
+-4, 0: lava
+-3, 0: path
+-2, 0: stone
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: Cow on grass
+3, 0: grass
+4, 0: tree
+5, 0: grass
+-5, 1: path
+-4, 1: lava
+-3, 1: path
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: lava
+-3, 2: path
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: path
+-2, 3: coal
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: stone
+-3, 4: stone
+-2, 4: stone
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 8
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: right
+Light: 0.986427903175354
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: stone
+-4, -4: stone
+-3, -4: stone
+-2, -4: stone
+-1, -4: stone
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: stone
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: tree
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: stone
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: tree
+5, -2: tree
+-5, -1: path
+-4, -1: lava
+-3, -1: path
+-2, -1: stone
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: tree
+5, -1: grass
+-5, 0: path
+-4, 0: lava
+-3, 0: path
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: Cow on grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: lava
+-3, 1: path
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: path
+-3, 2: path
+-2, 2: coal
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: stone
+-3, 3: stone
+-2, 3: stone
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: stone
+-3, 4: stone
+-2, 4: grass
+-1, 4: grass
+0, 4: Cow on grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: sand
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 8
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.988092839717865
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: path
+-4, -4: path
+-3, -4: path
+-2, -4: stone
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: tree
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: stone
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: tree
+5, -3: tree
+-5, -2: path
+-4, -2: lava
+-3, -2: path
+-2, -2: stone
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: tree
+5, -2: grass
+-5, -1: path
+-4, -1: lava
+-3, -1: path
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: Cow on grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: lava
+-3, 0: path
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: path
+-2, 1: coal
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: stone
+-3, 2: stone
+-2, 2: stone
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: stone
+-3, 3: stone
+-2, 3: grass
+-1, 3: Cow on grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: sand
+-5, 4: path
+-4, 4: stone
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: tree
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 8
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.9896193146705627
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: path
+-4, -4: path
+-3, -4: path
+-2, -4: path
+-1, -4: stone
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: tree
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: path
+-1, -3: stone
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: tree
+-5, -2: Cow on path
+-4, -2: path
+-3, -2: lava
+-2, -2: path
+-1, -2: stone
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: tree
+-5, -1: path
+-4, -1: path
+-3, -1: lava
+-2, -1: path
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: Cow on grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: lava
+-2, 0: path
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: stone
+-4, 1: path
+-3, 1: path
+-2, 1: path
+-1, 1: coal
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: path
+-3, 2: stone
+-2, 2: stone
+-1, 2: stone
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: path
+-3, 3: stone
+-2, 3: stone
+-1, 3: grass
+0, 3: Cow on grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: path
+-3, 4: stone
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: tree
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 8
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9910125732421875
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: stone
+-4, -4: stone
+-3, -4: stone
+-2, -4: stone
+-1, -4: stone
+0, -4: stone
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: path
+-1, -3: stone
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: tree
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: path
+-1, -2: stone
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: tree
+-5, -1: path
+-4, -1: path
+-3, -1: lava
+-2, -1: path
+-1, -1: stone
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: tree
+-5, 0: path
+-4, 0: path
+-3, 0: lava
+-2, 0: path
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: Cow on grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: lava
+-2, 1: path
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: path
+-3, 2: path
+-2, 2: path
+-1, 2: coal
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: path
+-3, 3: stone
+-2, 3: stone
+-1, 3: stone
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: path
+-3, 4: stone
+-2, 4: stone
+-1, 4: grass
+0, 4: Cow on grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 8
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.9922778606414795
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: stone
+-4, -4: stone
+-3, -4: stone
+-2, -4: stone
+-1, -4: stone
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: stone
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: tree
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: stone
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: tree
+5, -2: tree
+-5, -1: path
+-4, -1: lava
+-3, -1: path
+-2, -1: stone
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: tree
+5, -1: grass
+-5, 0: path
+-4, 0: lava
+-3, 0: path
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: Cow on grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: lava
+-3, 1: path
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: path
+-3, 2: path
+-2, 2: coal
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: stone
+-3, 3: stone
+-2, 3: stone
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: stone
+-3, 4: stone
+-2, 4: grass
+-1, 4: Cow on grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: sand
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 7
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: right
+Light: 0.9934207201004028
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: stone
+-4, -4: stone
+-3, -4: stone
+-2, -4: stone
+-1, -4: sand
+0, -4: sand
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: tree
+-5, -3: stone
+-4, -3: stone
+-3, -3: stone
+-2, -3: stone
+-1, -3: stone
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: stone
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: tree
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: stone
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: tree
+5, -1: tree
+-5, 0: path
+-4, 0: lava
+-3, 0: path
+-2, 0: stone
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: tree
+5, 0: grass
+-5, 1: path
+-4, 1: lava
+-3, 1: path
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: Cow on grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: lava
+-3, 2: path
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: path
+-2, 3: coal
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: stone
+-3, 4: stone
+-2, 4: stone
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 7
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.9944468140602112
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: stone
+-4, -4: stone
+-3, -4: stone
+-2, -4: stone
+-1, -4: stone
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: path
+-4, -3: path
+-3, -3: path
+-2, -3: stone
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: tree
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: stone
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: tree
+5, -2: tree
+-5, -1: path
+-4, -1: lava
+-3, -1: path
+-2, -1: stone
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: tree
+5, -1: grass
+-5, 0: path
+-4, 0: lava
+-3, 0: path
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: Cow on grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: lava
+-3, 1: path
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: path
+-3, 2: path
+-2, 2: coal
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: stone
+-3, 3: stone
+-2, 3: stone
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: stone
+-3, 4: stone
+-2, 4: grass
+-1, 4: Cow on grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: sand
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 7
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.995361864566803
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: stone
+-4, -4: stone
+-3, -4: stone
+-2, -4: stone
+-1, -4: sand
+0, -4: sand
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: tree
+-5, -3: stone
+-4, -3: stone
+-3, -3: stone
+-2, -3: stone
+-1, -3: stone
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: path
+-4, -2: path
+-3, -2: path
+-2, -2: stone
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: tree
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: stone
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: tree
+5, -1: tree
+-5, 0: path
+-4, 0: lava
+-3, 0: path
+-2, 0: stone
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: Cow on grass
+4, 0: tree
+5, 0: grass
+-5, 1: path
+-4, 1: lava
+-3, 1: path
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: lava
+-3, 2: path
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: path
+-2, 3: coal
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: stone
+-3, 4: stone
+-2, 4: stone
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 7
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.996171772480011
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: sand
+-4, -4: sand
+-3, -4: sand
+-2, -4: sand
+-1, -4: sand
+0, -4: sand
+1, -4: tree
+2, -4: grass
+3, -4: tree
+4, -4: grass
+5, -4: grass
+-5, -3: stone
+-4, -3: stone
+-3, -3: stone
+-2, -3: stone
+-1, -3: sand
+0, -3: sand
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: tree
+-5, -2: stone
+-4, -2: stone
+-3, -2: stone
+-2, -2: stone
+-1, -2: stone
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: path
+-4, -1: path
+-3, -1: path
+-2, -1: stone
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: tree
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: path
+-2, 0: stone
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: tree
+5, 0: tree
+-5, 1: path
+-4, 1: lava
+-3, 1: path
+-2, 1: stone
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: Cow on grass
+4, 1: tree
+5, 1: grass
+-5, 2: path
+-4, 2: lava
+-3, 2: path
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: lava
+-3, 3: path
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: coal
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 7
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.9968825578689575
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: tree
+-4, -4: grass
+-3, -4: grass
+-2, -4: tree
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: sand
+-4, -3: sand
+-3, -3: sand
+-2, -3: sand
+-1, -3: sand
+0, -3: sand
+1, -3: tree
+2, -3: grass
+3, -3: tree
+4, -3: grass
+5, -3: grass
+-5, -2: stone
+-4, -2: stone
+-3, -2: stone
+-2, -2: stone
+-1, -2: sand
+0, -2: sand
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: tree
+-5, -1: stone
+-4, -1: stone
+-3, -1: stone
+-2, -1: stone
+-1, -1: stone
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: path
+-2, 0: stone
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: tree
+4, 0: grass
+5, 0: grass
+-5, 1: Cow on path
+-4, 1: path
+-3, 1: path
+-2, 1: stone
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: tree
+5, 1: tree
+-5, 2: path
+-4, 2: lava
+-3, 2: path
+-2, 2: stone
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: Cow on grass
+3, 2: grass
+4, 2: tree
+5, 2: grass
+-5, 3: path
+-4, 3: lava
+-3, 3: path
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: lava
+-3, 4: path
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 7
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.9975003004074097
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: tree
+-4, -3: grass
+-3, -3: grass
+-2, -3: tree
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: sand
+-4, -2: sand
+-3, -2: sand
+-2, -2: sand
+-1, -2: sand
+0, -2: sand
+1, -2: tree
+2, -2: grass
+3, -2: tree
+4, -2: grass
+5, -2: grass
+-5, -1: stone
+-4, -1: stone
+-3, -1: stone
+-2, -1: stone
+-1, -1: sand
+0, -1: sand
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: tree
+-5, 0: stone
+-4, 0: stone
+-3, 0: stone
+-2, 0: stone
+-1, 0: stone
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: path
+-2, 1: stone
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: tree
+4, 1: grass
+5, 1: grass
+-5, 2: Cow on path
+-4, 2: path
+-3, 2: path
+-2, 2: stone
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: tree
+5, 2: tree
+-5, 3: path
+-4, 3: lava
+-3, 3: path
+-2, 3: stone
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: Cow on grass
+3, 3: grass
+4, 3: tree
+5, 3: grass
+-5, 4: path
+-4, 4: lava
+-3, 4: path
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 7
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.9980311989784241
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: grass
+-4, -3: grass
+-3, -3: tree
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: sand
+-4, -2: sand
+-3, -2: sand
+-2, -2: sand
+-1, -2: sand
+0, -2: tree
+1, -2: grass
+2, -2: tree
+3, -2: grass
+4, -2: grass
+5, -2: tree
+-5, -1: stone
+-4, -1: stone
+-3, -1: stone
+-2, -1: sand
+-1, -1: sand
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: tree
+5, -1: tree
+-5, 0: stone
+-4, 0: stone
+-3, 0: stone
+-2, 0: stone
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: stone
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: tree
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: path
+-3, 2: stone
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: tree
+4, 2: tree
+5, 2: grass
+-5, 3: lava
+-4, 3: path
+-3, 3: stone
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: Cow on grass
+3, 3: tree
+4, 3: grass
+5, 3: grass
+-5, 4: lava
+-4, 4: path
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 7
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: right
+Light: 0.9984816312789917
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: grass
+-3, -2: tree
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: sand
+-4, -1: sand
+-3, -1: sand
+-2, -1: sand
+-1, -1: sand
+0, -1: tree
+1, -1: grass
+2, -1: tree
+3, -1: grass
+4, -1: grass
+5, -1: tree
+-5, 0: stone
+-4, 0: stone
+-3, 0: stone
+-2, 0: sand
+-1, 0: sand
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: tree
+5, 0: tree
+-5, 1: stone
+-4, 1: stone
+-3, 1: stone
+-2, 1: stone
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: path
+-3, 2: stone
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: tree
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: stone
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: tree
+4, 3: tree
+5, 3: grass
+-5, 4: lava
+-4, 4: path
+-3, 4: stone
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: Cow on grass
+3, 4: tree
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 7
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.9988579154014587
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: tree
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: sand
+-4, -1: sand
+-3, -1: sand
+-2, -1: sand
+-1, -1: tree
+0, -1: grass
+1, -1: tree
+2, -1: grass
+3, -1: grass
+4, -1: tree
+5, -1: grass
+-5, 0: stone
+-4, 0: stone
+-3, 0: sand
+-2, 0: sand
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: tree
+4, 0: tree
+5, 0: grass
+-5, 1: stone
+-4, 1: stone
+-3, 1: stone
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: stone
+-3, 2: grass
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: tree
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: stone
+-3, 3: grass
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: tree
+3, 3: tree
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: stone
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: Cow on grass
+2, 4: tree
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 8
+Drink: 7
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: right
+Light: 0.9991665482521057
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: tree
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: tree
+2, -4: sand
+3, -4: sand
+4, -4: sand
+5, -4: sand
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: tree
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: sand
+-4, 0: sand
+-3, 0: sand
+-2, 0: sand
+-1, 0: tree
+0, 0: grass
+1, 0: tree
+2, 0: grass
+3, 0: grass
+4, 0: tree
+5, 0: grass
+-5, 1: stone
+-4, 1: stone
+-3, 1: sand
+-2, 1: sand
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: tree
+4, 1: tree
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: stone
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: stone
+-3, 3: grass
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: tree
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: stone
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: tree
+3, 4: tree
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 7
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.9994140863418579
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: tree
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: tree
+2, -4: sand
+3, -4: sand
+4, -4: Skeleton on sand
+5, -4: sand
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: tree
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: sand
+-4, 0: sand
+-3, 0: sand
+-2, 0: sand
+-1, 0: tree
+0, 0: grass
+1, 0: tree
+2, 0: grass
+3, 0: grass
+4, 0: tree
+5, 0: grass
+-5, 1: stone
+-4, 1: stone
+-3, 1: sand
+-2, 1: sand
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: tree
+4, 1: tree
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: stone
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: stone
+-3, 3: grass
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: tree
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: stone
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: tree
+3, 4: tree
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 7
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9996071457862854
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: tree
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: tree
+2, -4: sand
+3, -4: Skeleton on sand
+4, -4: sand
+5, -4: sand
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: tree
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: sand
+-4, 0: sand
+-3, 0: sand
+-2, 0: sand
+-1, 0: tree
+0, 0: grass
+1, 0: tree
+2, 0: grass
+3, 0: grass
+4, 0: tree
+5, 0: grass
+-5, 1: stone
+-4, 1: stone
+-3, 1: sand
+-2, 1: sand
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: tree
+4, 1: tree
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: stone
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: stone
+-3, 3: grass
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: tree
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: stone
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: tree
+3, 4: tree
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 7
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9997524619102478
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: tree
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: sand
+-4, -1: sand
+-3, -1: sand
+-2, -1: sand
+-1, -1: tree
+0, -1: grass
+1, -1: tree
+2, -1: grass
+3, -1: grass
+4, -1: tree
+5, -1: grass
+-5, 0: stone
+-4, 0: stone
+-3, 0: sand
+-2, 0: sand
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: tree
+4, 0: tree
+5, 0: grass
+-5, 1: stone
+-4, 1: stone
+-3, 1: stone
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: stone
+-3, 2: grass
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: tree
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: stone
+-3, 3: grass
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: tree
+3, 3: tree
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: stone
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: Cow on grass
+2, 4: tree
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 7
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.9998566508293152
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: tree
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: tree
+2, -4: sand
+3, -4: sand
+4, -4: sand
+5, -4: sand
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: Skeleton on grass
+5, -3: grass
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: tree
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: sand
+-4, 0: sand
+-3, 0: sand
+-2, 0: sand
+-1, 0: tree
+0, 0: grass
+1, 0: tree
+2, 0: grass
+3, 0: grass
+4, 0: tree
+5, 0: grass
+-5, 1: stone
+-4, 1: stone
+-3, 1: sand
+-2, 1: sand
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: tree
+4, 1: tree
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: stone
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: stone
+-3, 3: grass
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: tree
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: stone
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: tree
+3, 4: tree
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 7
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.9999265670776367
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: tree
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: tree
+2, -4: sand
+3, -4: sand
+4, -4: sand
+5, -4: sand
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: Skeleton on grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: tree
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: sand
+-4, 0: sand
+-3, 0: sand
+-2, 0: sand
+-1, 0: tree
+0, 0: grass
+1, 0: tree
+2, 0: grass
+3, 0: grass
+4, 0: tree
+5, 0: grass
+-5, 1: stone
+-4, 1: stone
+-3, 1: sand
+-2, 1: sand
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: tree
+4, 1: tree
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: stone
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: stone
+-3, 3: grass
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: tree
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: stone
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: tree
+3, 4: tree
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 7
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9999690055847168
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: Skeleton on grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: tree
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: sand
+-4, -1: sand
+-3, -1: sand
+-2, -1: sand
+-1, -1: tree
+0, -1: grass
+1, -1: tree
+2, -1: grass
+3, -1: grass
+4, -1: tree
+5, -1: grass
+-5, 0: stone
+-4, 0: stone
+-3, 0: sand
+-2, 0: sand
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: tree
+4, 0: tree
+5, 0: grass
+-5, 1: stone
+-4, 1: stone
+-3, 1: stone
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: stone
+-3, 2: grass
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: tree
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: stone
+-3, 3: grass
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: Cow on grass
+2, 3: tree
+3, 3: tree
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: stone
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: tree
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 7
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.9999908208847046
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: grass
+-4, -3: tree
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: Skeleton on grass
+4, -3: grass
+5, -3: grass
+-5, -2: sand
+-4, -2: sand
+-3, -2: sand
+-2, -2: sand
+-1, -2: tree
+0, -2: grass
+1, -2: tree
+2, -2: grass
+3, -2: grass
+4, -2: tree
+5, -2: grass
+-5, -1: stone
+-4, -1: stone
+-3, -1: sand
+-2, -1: sand
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: tree
+4, -1: tree
+5, -1: grass
+-5, 0: stone
+-4, 0: stone
+-3, 0: stone
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: stone
+-3, 1: grass
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: tree
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: stone
+-3, 2: grass
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: Cow on grass
+2, 2: tree
+3, 2: tree
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: stone
+-3, 3: grass
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: tree
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: grass
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 7
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.9999988675117493
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: tree
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: sand
+-4, -3: sand
+-3, -3: sand
+-2, -3: sand
+-1, -3: tree
+0, -3: grass
+1, -3: tree
+2, -3: grass
+3, -3: Skeleton on grass
+4, -3: tree
+5, -3: grass
+-5, -2: stone
+-4, -2: stone
+-3, -2: sand
+-2, -2: sand
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: tree
+4, -2: tree
+5, -2: grass
+-5, -1: stone
+-4, -1: stone
+-3, -1: stone
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: stone
+-3, 0: grass
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: tree
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: stone
+-3, 1: grass
+-2, 1: grass
+-1, 1: grass
+0, 1: Cow on grass
+1, 1: grass
+2, 1: tree
+3, 1: tree
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: stone
+-3, 2: grass
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: tree
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: grass
+-3, 3: grass
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: grass
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 7
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 1.0
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: tree
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: sand
+-4, -3: sand
+-3, -3: sand
+-2, -3: sand
+-1, -3: tree
+0, -3: grass
+1, -3: tree
+2, -3: Skeleton on grass
+3, -3: grass
+4, -3: tree
+5, -3: grass
+-5, -2: stone
+-4, -2: stone
+-3, -2: sand
+-2, -2: sand
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: tree
+4, -2: tree
+5, -2: grass
+-5, -1: stone
+-4, -1: stone
+-3, -1: stone
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: stone
+-3, 0: grass
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: tree
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: stone
+-3, 1: grass
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: Cow on grass
+2, 1: tree
+3, 1: tree
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: stone
+-3, 2: grass
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: tree
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: grass
+-3, 3: grass
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: grass
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 7
+Energy: 8
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: right
+Light: 0.9999988675117493
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: grass
+-4, -3: tree
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: sand
+-4, -2: sand
+-3, -2: sand
+-2, -2: sand
+-1, -2: tree
+0, -2: grass
+1, -2: tree
+2, -2: Skeleton on grass
+3, -2: grass
+4, -2: tree
+5, -2: grass
+-5, -1: stone
+-4, -1: stone
+-3, -1: sand
+-2, -1: sand
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: Arrow on grass
+3, -1: tree
+4, -1: tree
+5, -1: grass
+-5, 0: stone
+-4, 0: stone
+-3, 0: stone
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: stone
+-3, 1: grass
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: tree
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: stone
+-3, 2: grass
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: Cow on grass
+2, 2: tree
+3, 2: tree
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: stone
+-3, 3: grass
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: tree
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: grass
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 7
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.9999908208847046
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: grass
+-4, -3: grass
+-3, -3: tree
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: sand
+-4, -2: sand
+-3, -2: sand
+-2, -2: sand
+-1, -2: sand
+0, -2: tree
+1, -2: grass
+2, -2: tree
+3, -2: Skeleton on grass
+4, -2: grass
+5, -2: tree
+-5, -1: stone
+-4, -1: stone
+-3, -1: stone
+-2, -1: sand
+-1, -1: sand
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: tree
+5, -1: tree
+-5, 0: stone
+-4, 0: stone
+-3, 0: stone
+-2, 0: stone
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: Arrow on grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: stone
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: tree
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: path
+-3, 2: stone
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: Cow on grass
+3, 2: tree
+4, 2: tree
+5, 2: grass
+-5, 3: lava
+-4, 3: path
+-3, 3: stone
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: tree
+4, 3: grass
+5, 3: grass
+-5, 4: lava
+-4, 4: path
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 6
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9999690055847168
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: tree
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: sand
+-4, -3: sand
+-3, -3: sand
+-2, -3: sand
+-1, -3: sand
+0, -3: tree
+1, -3: grass
+2, -3: tree
+3, -3: grass
+4, -3: Skeleton on grass
+5, -3: tree
+-5, -2: stone
+-4, -2: stone
+-3, -2: stone
+-2, -2: sand
+-1, -2: sand
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: tree
+5, -2: tree
+-5, -1: stone
+-4, -1: stone
+-3, -1: stone
+-2, -1: stone
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: stone
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: tree
+3, 0: Arrow on grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: stone
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: Cow on grass
+3, 1: tree
+4, 1: tree
+5, 1: grass
+-5, 2: lava
+-4, 2: path
+-3, 2: stone
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: tree
+4, 2: grass
+5, 2: grass
+-5, 3: lava
+-4, 3: path
+-3, 3: grass
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: lava
+-4, 4: path
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 6
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.9999265670776367
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: grass
+-4, -3: grass
+-3, -3: tree
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: sand
+-4, -2: sand
+-3, -2: sand
+-2, -2: sand
+-1, -2: sand
+0, -2: tree
+1, -2: grass
+2, -2: tree
+3, -2: Skeleton on grass
+4, -2: grass
+5, -2: tree
+-5, -1: stone
+-4, -1: stone
+-3, -1: stone
+-2, -1: sand
+-1, -1: sand
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: tree
+5, -1: tree
+-5, 0: stone
+-4, 0: stone
+-3, 0: stone
+-2, 0: stone
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: stone
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: tree
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: path
+-3, 2: stone
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: Cow on grass
+3, 2: tree
+4, 2: tree
+5, 2: grass
+-5, 3: lava
+-4, 3: path
+-3, 3: stone
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: tree
+4, 3: grass
+5, 3: grass
+-5, 4: lava
+-4, 4: path
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 6
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.9998566508293152
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: tree
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: sand
+-4, -3: sand
+-3, -3: sand
+-2, -3: sand
+-1, -3: sand
+0, -3: tree
+1, -3: grass
+2, -3: tree
+3, -3: Skeleton on grass
+4, -3: grass
+5, -3: tree
+-5, -2: stone
+-4, -2: stone
+-3, -2: stone
+-2, -2: sand
+-1, -2: sand
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: tree
+5, -2: tree
+-5, -1: stone
+-4, -1: stone
+-3, -1: stone
+-2, -1: stone
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: path
+-4, 0: path
+-3, 0: stone
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: tree
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: stone
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: Cow on grass
+3, 1: tree
+4, 1: tree
+5, 1: grass
+-5, 2: lava
+-4, 2: path
+-3, 2: stone
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: tree
+4, 2: grass
+5, 2: grass
+-5, 3: lava
+-4, 3: path
+-3, 3: grass
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: lava
+-4, 4: path
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 6
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.9997524619102478
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: grass
+-4, -3: grass
+-3, -3: tree
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: sand
+-4, -2: sand
+-3, -2: sand
+-2, -2: sand
+-1, -2: sand
+0, -2: tree
+1, -2: grass
+2, -2: tree
+3, -2: Skeleton on grass
+4, -2: grass
+5, -2: tree
+-5, -1: stone
+-4, -1: stone
+-3, -1: stone
+-2, -1: sand
+-1, -1: sand
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: tree
+5, -1: tree
+-5, 0: stone
+-4, 0: stone
+-3, 0: stone
+-2, 0: stone
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: stone
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: tree
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: path
+-3, 2: stone
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: Cow on grass
+3, 2: tree
+4, 2: tree
+5, 2: grass
+-5, 3: lava
+-4, 3: path
+-3, 3: stone
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: tree
+4, 3: grass
+5, 3: grass
+-5, 4: lava
+-4, 4: path
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 6
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.9996071457862854
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: tree
+-4, -3: grass
+-3, -3: grass
+-2, -3: tree
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: Skeleton on grass
+5, -3: grass
+-5, -2: sand
+-4, -2: sand
+-3, -2: sand
+-2, -2: sand
+-1, -2: sand
+0, -2: sand
+1, -2: tree
+2, -2: grass
+3, -2: tree
+4, -2: grass
+5, -2: grass
+-5, -1: stone
+-4, -1: stone
+-3, -1: stone
+-2, -1: stone
+-1, -1: sand
+0, -1: sand
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: tree
+-5, 0: stone
+-4, 0: stone
+-3, 0: stone
+-2, 0: stone
+-1, 0: stone
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: path
+-4, 1: path
+-3, 1: path
+-2, 1: stone
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: tree
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: path
+-3, 2: path
+-2, 2: stone
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: Cow on grass
+4, 2: tree
+5, 2: tree
+-5, 3: path
+-4, 3: lava
+-3, 3: path
+-2, 3: stone
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: tree
+5, 3: grass
+-5, 4: Cow on path
+-4, 4: lava
+-3, 4: path
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 6
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9994140863418579
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: tree
+-4, -2: grass
+-3, -2: grass
+-2, -2: tree
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: Skeleton on grass
+-5, -1: sand
+-4, -1: sand
+-3, -1: sand
+-2, -1: sand
+-1, -1: sand
+0, -1: sand
+1, -1: tree
+2, -1: grass
+3, -1: tree
+4, -1: grass
+5, -1: grass
+-5, 0: stone
+-4, 0: stone
+-3, 0: stone
+-2, 0: stone
+-1, 0: sand
+0, 0: sand
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: tree
+-5, 1: stone
+-4, 1: stone
+-3, 1: stone
+-2, 1: stone
+-1, 1: stone
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: path
+-3, 2: path
+-2, 2: stone
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: tree
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: path
+-2, 3: stone
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: Cow on grass
+4, 3: tree
+5, 3: tree
+-5, 4: path
+-4, 4: lava
+-3, 4: path
+-2, 4: stone
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: tree
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 6
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.9991665482521057
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: tree
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: tree
+4, -4: sand
+5, -4: sand
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: tree
+-4, -1: grass
+-3, -1: grass
+-2, -1: tree
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: sand
+-4, 0: sand
+-3, 0: sand
+-2, 0: sand
+-1, 0: sand
+0, 0: sand
+1, 0: tree
+2, 0: grass
+3, 0: tree
+4, 0: grass
+5, 0: Skeleton on grass
+-5, 1: stone
+-4, 1: stone
+-3, 1: stone
+-2, 1: stone
+-1, 1: sand
+0, 1: sand
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: tree
+-5, 2: stone
+-4, 2: stone
+-3, 2: stone
+-2, 2: stone
+-1, 2: stone
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: path
+-2, 3: stone
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: tree
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: stone
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: Cow on grass
+4, 4: tree
+5, 4: tree
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 6
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.9988579154014587
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: tree
+3, -4: grass
+4, -4: sand
+5, -4: sand
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: tree
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: tree
+4, -3: sand
+5, -3: sand
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: grass
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: tree
+-4, 0: grass
+-3, 0: grass
+-2, 0: tree
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: Skeleton on grass
+-5, 1: sand
+-4, 1: sand
+-3, 1: sand
+-2, 1: sand
+-1, 1: sand
+0, 1: sand
+1, 1: tree
+2, 1: grass
+3, 1: tree
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: stone
+-2, 2: stone
+-1, 2: sand
+0, 2: sand
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: tree
+-5, 3: stone
+-4, 3: stone
+-3, 3: stone
+-2, 3: stone
+-1, 3: stone
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: stone
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: tree
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 6
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.9984816312789917
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: tree
+2, -4: grass
+3, -4: sand
+4, -4: sand
+5, -4: sand
+-5, -3: grass
+-4, -3: grass
+-3, -3: tree
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: tree
+3, -3: sand
+4, -3: sand
+5, -3: sand
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: grass
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: grass
+-4, 0: grass
+-3, 0: tree
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: Arrow on grass
+4, 0: Skeleton on grass
+5, 0: grass
+-5, 1: sand
+-4, 1: sand
+-3, 1: sand
+-2, 1: sand
+-1, 1: sand
+0, 1: tree
+1, 1: grass
+2, 1: tree
+3, 1: grass
+4, 1: grass
+5, 1: tree
+-5, 2: stone
+-4, 2: stone
+-3, 2: stone
+-2, 2: sand
+-1, 2: sand
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: tree
+5, 2: tree
+-5, 3: stone
+-4, 3: stone
+-3, 3: stone
+-2, 3: stone
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: stone
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: tree
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 6
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: right
+Light: 0.9980311989784241
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: tree
+1, -4: grass
+2, -4: sand
+3, -4: sand
+4, -4: sand
+5, -4: stone
+-5, -3: grass
+-4, -3: tree
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: tree
+2, -3: sand
+3, -3: sand
+4, -3: sand
+5, -3: sand
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: grass
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: grass
+-4, 0: tree
+-3, 0: grass
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: Arrow on grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: sand
+-4, 1: sand
+-3, 1: sand
+-2, 1: sand
+-1, 1: tree
+0, 1: grass
+1, 1: tree
+2, 1: grass
+3, 1: Skeleton on grass
+4, 1: tree
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: sand
+-2, 2: sand
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: grass
+3, 2: tree
+4, 2: tree
+5, 2: grass
+-5, 3: stone
+-4, 3: stone
+-3, 3: stone
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: stone
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: tree
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 9.0
+Food: 7
+Drink: 6
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: right
+Light: 0.9975003004074097
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: tree
+0, -4: grass
+1, -4: sand
+2, -4: sand
+3, -4: sand
+4, -4: stone
+5, -4: stone
+-5, -3: tree
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: tree
+1, -3: sand
+2, -3: sand
+3, -3: sand
+4, -3: sand
+5, -3: sand
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: grass
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: tree
+-4, 0: grass
+-3, 0: grass
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: sand
+-4, 1: sand
+-3, 1: sand
+-2, 1: tree
+-1, 1: grass
+0, 1: tree
+1, 1: Skeleton on grass
+2, 1: grass
+3, 1: tree
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: sand
+-3, 2: sand
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: tree
+3, 2: tree
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: stone
+-3, 3: grass
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: grass
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: tree
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 7.0
+Food: 7
+Drink: 6
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: right
+Light: 0.9968825578689575
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: tree
+0, -4: grass
+1, -4: sand
+2, -4: sand
+3, -4: sand
+4, -4: stone
+5, -4: stone
+-5, -3: tree
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: tree
+1, -3: sand
+2, -3: sand
+3, -3: sand
+4, -3: sand
+5, -3: sand
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: grass
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: tree
+-4, 0: grass
+-3, 0: grass
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: Skeleton on grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: sand
+-4, 1: sand
+-3, 1: sand
+-2, 1: tree
+-1, 1: grass
+0, 1: tree
+1, 1: grass
+2, 1: grass
+3, 1: tree
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: sand
+-3, 2: sand
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: grass
+2, 2: tree
+3, 2: tree
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: stone
+-3, 3: grass
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: grass
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: tree
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 7.0
+Food: 7
+Drink: 6
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.996171772480011
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: sand
+3, -4: stone
+4, -4: stone
+5, -4: stone
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: tree
+0, -3: grass
+1, -3: sand
+2, -3: sand
+3, -3: sand
+4, -3: stone
+5, -3: stone
+-5, -2: tree
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: tree
+1, -2: sand
+2, -2: sand
+3, -2: sand
+4, -2: sand
+5, -2: sand
+-5, -1: grass
+-4, -1: grass
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: grass
+-4, 0: grass
+-3, 0: grass
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: tree
+-4, 1: grass
+-3, 1: grass
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: sand
+-4, 2: sand
+-3, 2: sand
+-2, 2: tree
+-1, 2: grass
+0, 2: tree
+1, 2: Skeleton on grass
+2, 2: grass
+3, 2: tree
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: sand
+-3, 3: sand
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: tree
+3, 3: tree
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: stone
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 7.0
+Food: 7
+Drink: 6
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.995361864566803
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: sand
+3, -4: stone
+4, -4: stone
+5, -4: stone
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: sand
+3, -3: stone
+4, -3: stone
+5, -3: stone
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: tree
+0, -2: grass
+1, -2: sand
+2, -2: sand
+3, -2: sand
+4, -2: stone
+5, -2: stone
+-5, -1: tree
+-4, -1: grass
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: tree
+1, -1: sand
+2, -1: sand
+3, -1: sand
+4, -1: sand
+5, -1: sand
+-5, 0: grass
+-4, 0: grass
+-3, 0: grass
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: grass
+-4, 1: grass
+-3, 1: grass
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: tree
+-4, 2: grass
+-3, 2: grass
+-2, 2: grass
+-1, 2: grass
+0, 2: grass
+1, 2: Arrow on grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: sand
+-4, 3: sand
+-3, 3: sand
+-2, 3: tree
+-1, 3: grass
+0, 3: tree
+1, 3: Skeleton on grass
+2, 3: grass
+3, 3: tree
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: sand
+-3, 4: sand
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: tree
+3, 4: tree
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 7.0
+Food: 7
+Drink: 6
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.9944468140602112
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: sand
+3, -4: stone
+4, -4: stone
+5, -4: stone
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: tree
+0, -3: grass
+1, -3: sand
+2, -3: sand
+3, -3: sand
+4, -3: stone
+5, -3: stone
+-5, -2: tree
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: tree
+1, -2: sand
+2, -2: sand
+3, -2: sand
+4, -2: sand
+5, -2: sand
+-5, -1: grass
+-4, -1: grass
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: grass
+-4, 0: grass
+-3, 0: grass
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: Arrow on grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: tree
+-4, 1: grass
+-3, 1: grass
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: sand
+-4, 2: sand
+-3, 2: sand
+-2, 2: tree
+-1, 2: grass
+0, 2: tree
+1, 2: grass
+2, 2: Skeleton on grass
+3, 2: tree
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: sand
+-3, 3: sand
+-2, 3: grass
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: tree
+3, 3: tree
+4, 3: grass
+5, 3: grass
+-5, 4: stone
+-4, 4: stone
+-3, 4: grass
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 6
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.9934207201004028
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: sand
+4, -4: stone
+5, -4: stone
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: tree
+1, -3: grass
+2, -3: sand
+3, -3: sand
+4, -3: sand
+5, -3: stone
+-5, -2: grass
+-4, -2: tree
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: tree
+2, -2: sand
+3, -2: sand
+4, -2: sand
+5, -2: sand
+-5, -1: grass
+-4, -1: grass
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: Arrow on grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: grass
+-4, 0: grass
+-3, 0: grass
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: grass
+-4, 1: tree
+-3, 1: grass
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: Skeleton on grass
+4, 1: grass
+5, 1: grass
+-5, 2: sand
+-4, 2: sand
+-3, 2: sand
+-2, 2: sand
+-1, 2: tree
+0, 2: grass
+1, 2: tree
+2, 2: grass
+3, 2: grass
+4, 2: tree
+5, 2: grass
+-5, 3: stone
+-4, 3: stone
+-3, 3: sand
+-2, 3: sand
+-1, 3: grass
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: tree
+4, 3: tree
+5, 3: grass
+-5, 4: stone
+-4, 4: stone
+-3, 4: stone
+-2, 4: grass
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 6
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9922778010368347
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: sand
+5, -4: stone
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: tree
+2, -3: grass
+3, -3: sand
+4, -3: sand
+5, -3: sand
+-5, -2: grass
+-4, -2: grass
+-3, -2: tree
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: tree
+3, -2: Arrow on sand
+4, -2: sand
+5, -2: sand
+-5, -1: grass
+-4, -1: grass
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: grass
+-4, 0: grass
+-3, 0: grass
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: Skeleton on grass
+5, 0: grass
+-5, 1: grass
+-4, 1: grass
+-3, 1: tree
+-2, 1: grass
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: sand
+-4, 2: sand
+-3, 2: sand
+-2, 2: sand
+-1, 2: sand
+0, 2: tree
+1, 2: grass
+2, 2: tree
+3, 2: grass
+4, 2: grass
+5, 2: tree
+-5, 3: stone
+-4, 3: stone
+-3, 3: stone
+-2, 3: sand
+-1, 3: sand
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: tree
+5, 3: tree
+-5, 4: stone
+-4, 4: stone
+-3, 4: stone
+-2, 4: stone
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 6
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9910125136375427
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: sand
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: tree
+3, -3: grass
+4, -3: Arrow on sand
+5, -3: sand
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: tree
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: tree
+4, -2: sand
+5, -2: sand
+-5, -1: grass
+-4, -1: grass
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: grass
+-4, 0: grass
+-3, 0: grass
+-2, 0: grass
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: Skeleton on grass
+5, 0: grass
+-5, 1: tree
+-4, 1: grass
+-3, 1: grass
+-2, 1: tree
+-1, 1: grass
+0, 1: grass
+1, 1: grass
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: sand
+-4, 2: sand
+-3, 2: sand
+-2, 2: sand
+-1, 2: sand
+0, 2: sand
+1, 2: tree
+2, 2: grass
+3, 2: tree
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: stone
+-3, 3: stone
+-2, 3: stone
+-1, 3: sand
+0, 3: sand
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: tree
+-5, 4: stone
+-4, 4: stone
+-3, 4: stone
+-2, 4: stone
+-1, 4: stone
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 6
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9896193146705627
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: tree
+3, -4: grass
+4, -4: sand
+5, -4: sand
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: tree
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: tree
+4, -3: sand
+5, -3: sand
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: grass
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: Arrow on grass
+4, -1: Skeleton on grass
+5, -1: grass
+-5, 0: tree
+-4, 0: grass
+-3, 0: grass
+-2, 0: tree
+-1, 0: grass
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: sand
+-4, 1: sand
+-3, 1: sand
+-2, 1: sand
+-1, 1: sand
+0, 1: sand
+1, 1: tree
+2, 1: grass
+3, 1: tree
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: stone
+-2, 2: stone
+-1, 2: sand
+0, 2: sand
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: tree
+-5, 3: stone
+-4, 3: stone
+-3, 3: stone
+-2, 3: stone
+-1, 3: stone
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: stone
+-1, 4: grass
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: tree
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 6
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.988092839717865
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: tree
+4, -4: grass
+5, -4: sand
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: tree
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: tree
+5, -3: sand
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: grass
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: Arrow on grass
+4, -1: Skeleton on grass
+5, -1: grass
+-5, 0: tree
+-4, 0: tree
+-3, 0: grass
+-2, 0: grass
+-1, 0: tree
+0, 0: grass
+1, 0: grass
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: sand
+-4, 1: sand
+-3, 1: sand
+-2, 1: sand
+-1, 1: sand
+0, 1: sand
+1, 1: sand
+2, 1: tree
+3, 1: grass
+4, 1: tree
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: stone
+-2, 2: stone
+-1, 2: stone
+0, 2: sand
+1, 2: sand
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: stone
+-3, 3: stone
+-2, 3: stone
+-1, 3: stone
+0, 3: stone
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: path
+-1, 4: stone
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: tree
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 6
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9864278435707092
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: tree
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: tree
+5, -4: sand
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: Arrow on grass
+3, -2: Skeleton on grass
+4, -2: grass
+5, -2: grass
+-5, -1: tree
+-4, -1: tree
+-3, -1: grass
+-2, -1: grass
+-1, -1: tree
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: sand
+-4, 0: sand
+-3, 0: sand
+-2, 0: sand
+-1, 0: sand
+0, 0: sand
+1, 0: sand
+2, 0: tree
+3, 0: grass
+4, 0: tree
+5, 0: grass
+-5, 1: stone
+-4, 1: stone
+-3, 1: stone
+-2, 1: stone
+-1, 1: stone
+0, 1: sand
+1, 1: sand
+2, 1: grass
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: stone
+-2, 2: stone
+-1, 2: stone
+0, 2: stone
+1, 2: grass
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: path
+-2, 3: path
+-1, 3: stone
+0, 3: grass
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: tree
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: path
+-1, 4: stone
+0, 4: grass
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: tree
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 5
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.9846193194389343
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: tree
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: tree
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: Skeleton on grass
+5, -3: grass
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: Arrow on grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: tree
+-4, -1: tree
+-3, -1: tree
+-2, -1: grass
+-1, -1: grass
+0, -1: tree
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: grass
+-4, 0: sand
+-3, 0: sand
+-2, 0: sand
+-1, 0: sand
+0, 0: sand
+1, 0: sand
+2, 0: sand
+3, 0: tree
+4, 0: grass
+5, 0: tree
+-5, 1: stone
+-4, 1: stone
+-3, 1: stone
+-2, 1: stone
+-1, 1: stone
+0, 1: stone
+1, 1: sand
+2, 1: sand
+3, 1: grass
+4, 1: grass
+5, 1: grass
+-5, 2: path
+-4, 2: stone
+-3, 2: stone
+-2, 2: stone
+-1, 2: stone
+0, 2: stone
+1, 2: stone
+2, 2: grass
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: path
+-2, 3: path
+-1, 3: path
+0, 3: stone
+1, 3: grass
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: tree
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: path
+-1, 4: path
+0, 4: stone
+1, 4: grass
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 5
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9826623797416687
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: tree
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: Skeleton on grass
+5, -3: grass
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: Arrow on grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: tree
+-3, -1: tree
+-2, -1: tree
+-1, -1: grass
+0, -1: grass
+1, -1: tree
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: sand
+-4, 0: grass
+-3, 0: sand
+-2, 0: sand
+-1, 0: sand
+0, 0: sand
+1, 0: sand
+2, 0: sand
+3, 0: sand
+4, 0: tree
+5, 0: grass
+-5, 1: stone
+-4, 1: stone
+-3, 1: stone
+-2, 1: stone
+-1, 1: stone
+0, 1: stone
+1, 1: stone
+2, 1: sand
+3, 1: sand
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: path
+-3, 2: stone
+-2, 2: stone
+-1, 2: stone
+0, 2: stone
+1, 2: stone
+2, 2: stone
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: path
+-2, 3: path
+-1, 3: path
+0, 3: path
+1, 3: stone
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: path
+-1, 4: path
+0, 4: path
+1, 4: stone
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 5
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9805522561073303
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: tree
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: tree
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: grass
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: Arrow on grass
+2, -1: grass
+3, -1: grass
+4, -1: Skeleton on grass
+5, -1: grass
+-5, 0: grass
+-4, 0: tree
+-3, 0: tree
+-2, 0: tree
+-1, 0: grass
+0, 0: grass
+1, 0: tree
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: sand
+-4, 1: grass
+-3, 1: sand
+-2, 1: sand
+-1, 1: sand
+0, 1: sand
+1, 1: sand
+2, 1: sand
+3, 1: sand
+4, 1: tree
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: stone
+-2, 2: stone
+-1, 2: stone
+0, 2: stone
+1, 2: stone
+2, 2: sand
+3, 2: sand
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: path
+-3, 3: stone
+-2, 3: stone
+-1, 3: stone
+0, 3: stone
+1, 3: stone
+2, 3: stone
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: path
+-1, 4: path
+0, 4: path
+1, 4: stone
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 5
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.9782844185829163
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: tree
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: Arrow on grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: tree
+-3, -1: tree
+-2, -1: tree
+-1, -1: grass
+0, -1: grass
+1, -1: tree
+2, -1: grass
+3, -1: grass
+4, -1: Skeleton on grass
+5, -1: grass
+-5, 0: sand
+-4, 0: grass
+-3, 0: sand
+-2, 0: sand
+-1, 0: sand
+0, 0: sand
+1, 0: sand
+2, 0: sand
+3, 0: sand
+4, 0: tree
+5, 0: grass
+-5, 1: stone
+-4, 1: stone
+-3, 1: stone
+-2, 1: stone
+-1, 1: stone
+0, 1: stone
+1, 1: stone
+2, 1: sand
+3, 1: sand
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: path
+-3, 2: stone
+-2, 2: stone
+-1, 2: stone
+0, 2: stone
+1, 2: stone
+2, 2: stone
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: path
+-2, 3: path
+-1, 3: path
+0, 3: path
+1, 3: stone
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: path
+-1, 4: path
+0, 4: path
+1, 4: stone
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 5
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.9758544564247131
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: tree
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: tree
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: Arrow on grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: Skeleton on grass
+-5, -1: grass
+-4, -1: grass
+-3, -1: tree
+-2, -1: tree
+-1, -1: tree
+0, -1: grass
+1, -1: grass
+2, -1: tree
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: sand
+-4, 0: sand
+-3, 0: grass
+-2, 0: sand
+-1, 0: sand
+0, 0: sand
+1, 0: sand
+2, 0: sand
+3, 0: sand
+4, 0: sand
+5, 0: tree
+-5, 1: stone
+-4, 1: stone
+-3, 1: stone
+-2, 1: stone
+-1, 1: stone
+0, 1: stone
+1, 1: stone
+2, 1: stone
+3, 1: sand
+4, 1: sand
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: path
+-2, 2: stone
+-1, 2: stone
+0, 2: stone
+1, 2: stone
+2, 2: stone
+3, 2: stone
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: path
+-2, 3: path
+-1, 3: path
+0, 3: path
+1, 3: path
+2, 3: stone
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: path
+-1, 4: path
+0, 4: path
+1, 4: path
+2, 4: stone
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 5
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9732581377029419
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: tree
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: tree
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: Arrow on grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: grass
+-3, -1: tree
+-2, -1: tree
+-1, -1: tree
+0, -1: grass
+1, -1: grass
+2, -1: tree
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: sand
+-4, 0: sand
+-3, 0: grass
+-2, 0: sand
+-1, 0: sand
+0, 0: sand
+1, 0: sand
+2, 0: sand
+3, 0: sand
+4, 0: sand
+5, 0: tree
+-5, 1: stone
+-4, 1: stone
+-3, 1: stone
+-2, 1: stone
+-1, 1: stone
+0, 1: stone
+1, 1: stone
+2, 1: stone
+3, 1: sand
+4, 1: sand
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: path
+-2, 2: stone
+-1, 2: stone
+0, 2: stone
+1, 2: stone
+2, 2: stone
+3, 2: stone
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: path
+-2, 3: path
+-1, 3: path
+0, 3: path
+1, 3: path
+2, 3: stone
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: path
+-1, 4: path
+0, 4: path
+1, 4: path
+2, 4: stone
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 5
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.9704914689064026
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: tree
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: tree
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: grass
+-3, -1: grass
+-2, -1: Arrow on grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: Skeleton on grass
+-5, 0: grass
+-4, 0: grass
+-3, 0: tree
+-2, 0: tree
+-1, 0: tree
+0, 0: grass
+1, 0: grass
+2, 0: tree
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: sand
+-4, 1: sand
+-3, 1: grass
+-2, 1: sand
+-1, 1: sand
+0, 1: sand
+1, 1: sand
+2, 1: sand
+3, 1: sand
+4, 1: sand
+5, 1: tree
+-5, 2: stone
+-4, 2: stone
+-3, 2: stone
+-2, 2: stone
+-1, 2: stone
+0, 2: stone
+1, 2: stone
+2, 2: stone
+3, 2: sand
+4, 2: sand
+5, 2: grass
+-5, 3: stone
+-4, 3: stone
+-3, 3: path
+-2, 3: stone
+-1, 3: stone
+0, 3: stone
+1, 3: stone
+2, 3: stone
+3, 3: stone
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: path
+-1, 4: path
+0, 4: path
+1, 4: path
+2, 4: stone
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 5
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.9675506353378296
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: tree
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: tree
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: Arrow on grass
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: grass
+2, -1: grass
+3, -1: Arrow on grass
+4, -1: Skeleton on grass
+5, -1: grass
+-5, 0: grass
+-4, 0: tree
+-3, 0: tree
+-2, 0: tree
+-1, 0: grass
+0, 0: grass
+1, 0: tree
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: sand
+-4, 1: grass
+-3, 1: sand
+-2, 1: sand
+-1, 1: sand
+0, 1: sand
+1, 1: sand
+2, 1: sand
+3, 1: sand
+4, 1: tree
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: stone
+-2, 2: stone
+-1, 2: stone
+0, 2: stone
+1, 2: stone
+2, 2: sand
+3, 2: sand
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: path
+-3, 3: stone
+-2, 3: stone
+-1, 3: stone
+0, 3: stone
+1, 3: stone
+2, 3: stone
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: path
+-1, 4: path
+0, 4: path
+1, 4: stone
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 5
+Energy: 7
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: right
+Light: 0.9644319415092468
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: tree
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: Arrow on grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: Arrow on grass
+3, -2: Skeleton on grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: tree
+-3, -1: tree
+-2, -1: tree
+-1, -1: grass
+0, -1: grass
+1, -1: tree
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: sand
+-4, 0: grass
+-3, 0: sand
+-2, 0: sand
+-1, 0: sand
+0, 0: sand
+1, 0: sand
+2, 0: sand
+3, 0: sand
+4, 0: tree
+5, 0: grass
+-5, 1: stone
+-4, 1: stone
+-3, 1: stone
+-2, 1: stone
+-1, 1: stone
+0, 1: stone
+1, 1: stone
+2, 1: sand
+3, 1: sand
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: path
+-3, 2: stone
+-2, 2: stone
+-1, 2: stone
+0, 2: stone
+1, 2: stone
+2, 2: stone
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: path
+-2, 3: path
+-1, 3: path
+0, 3: path
+1, 3: stone
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: path
+-1, 4: path
+0, 4: path
+1, 4: stone
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 5
+Energy: 6
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.9611320495605469
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: tree
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: tree
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: grass
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: Arrow on grass
+2, -1: Skeleton on grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: grass
+-4, 0: tree
+-3, 0: tree
+-2, 0: tree
+-1, 0: grass
+0, 0: grass
+1, 0: tree
+2, 0: grass
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: sand
+-4, 1: grass
+-3, 1: sand
+-2, 1: sand
+-1, 1: sand
+0, 1: sand
+1, 1: sand
+2, 1: sand
+3, 1: sand
+4, 1: tree
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: stone
+-2, 2: stone
+-1, 2: stone
+0, 2: stone
+1, 2: stone
+2, 2: sand
+3, 2: sand
+4, 2: grass
+5, 2: grass
+-5, 3: stone
+-4, 3: path
+-3, 3: stone
+-2, 3: stone
+-1, 3: stone
+0, 3: stone
+1, 3: stone
+2, 3: stone
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: path
+-1, 4: path
+0, 4: path
+1, 4: stone
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 5
+Energy: 6
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: up
+Light: 0.9576476216316223
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: tree
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: tree
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: Skeleton on grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: grass
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: grass
+1, -1: Arrow on grass
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: grass
+-4, 0: grass
+-3, 0: tree
+-2, 0: tree
+-1, 0: tree
+0, 0: grass
+1, 0: grass
+2, 0: tree
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: sand
+-4, 1: sand
+-3, 1: grass
+-2, 1: sand
+-1, 1: sand
+0, 1: sand
+1, 1: sand
+2, 1: sand
+3, 1: sand
+4, 1: sand
+5, 1: tree
+-5, 2: stone
+-4, 2: stone
+-3, 2: stone
+-2, 2: stone
+-1, 2: stone
+0, 2: stone
+1, 2: stone
+2, 2: stone
+3, 2: sand
+4, 2: sand
+5, 2: grass
+-5, 3: stone
+-4, 3: stone
+-3, 3: path
+-2, 3: stone
+-1, 3: stone
+0, 3: stone
+1, 3: stone
+2, 3: stone
+3, 3: stone
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: path
+-1, 4: path
+0, 4: path
+1, 4: path
+2, 4: stone
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 5
+Energy: 6
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9539756178855896
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: tree
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: tree
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: grass
+-3, -1: grass
+-2, -1: grass
+-1, -1: grass
+0, -1: Arrow on grass
+1, -1: grass
+2, -1: grass
+3, -1: Skeleton on grass
+4, -1: grass
+5, -1: grass
+-5, 0: grass
+-4, 0: grass
+-3, 0: tree
+-2, 0: tree
+-1, 0: tree
+0, 0: grass
+1, 0: grass
+2, 0: tree
+3, 0: grass
+4, 0: grass
+5, 0: grass
+-5, 1: sand
+-4, 1: sand
+-3, 1: grass
+-2, 1: sand
+-1, 1: sand
+0, 1: sand
+1, 1: sand
+2, 1: sand
+3, 1: sand
+4, 1: sand
+5, 1: tree
+-5, 2: stone
+-4, 2: stone
+-3, 2: stone
+-2, 2: stone
+-1, 2: stone
+0, 2: stone
+1, 2: stone
+2, 2: stone
+3, 2: sand
+4, 2: sand
+5, 2: grass
+-5, 3: stone
+-4, 3: stone
+-3, 3: path
+-2, 3: stone
+-1, 3: stone
+0, 3: stone
+1, 3: stone
+2, 3: stone
+3, 3: stone
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: path
+-1, 4: path
+0, 4: path
+1, 4: path
+2, 4: stone
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 5
+Energy: 6
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: left
+Light: 0.9501132965087891
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: tree
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: grass
+2, -4: tree
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: Arrow on grass
+0, -2: grass
+1, -2: grass
+2, -2: Arrow on grass
+3, -2: Skeleton on grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: grass
+-3, -1: tree
+-2, -1: tree
+-1, -1: tree
+0, -1: grass
+1, -1: grass
+2, -1: tree
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: sand
+-4, 0: sand
+-3, 0: grass
+-2, 0: sand
+-1, 0: sand
+0, 0: sand
+1, 0: sand
+2, 0: sand
+3, 0: sand
+4, 0: sand
+5, 0: tree
+-5, 1: stone
+-4, 1: stone
+-3, 1: stone
+-2, 1: stone
+-1, 1: stone
+0, 1: stone
+1, 1: stone
+2, 1: stone
+3, 1: sand
+4, 1: sand
+5, 1: grass
+-5, 2: stone
+-4, 2: stone
+-3, 2: path
+-2, 2: stone
+-1, 2: stone
+0, 2: stone
+1, 2: stone
+2, 2: stone
+3, 2: stone
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: path
+-2, 3: path
+-1, 3: path
+0, 3: path
+1, 3: path
+2, 3: stone
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: path
+-1, 4: path
+0, 4: path
+1, 4: path
+2, 4: stone
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 5
+Energy: 6
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.9460580348968506
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: tree
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: grass
+-3, -2: Arrow on grass
+-2, -2: grass
+-1, -2: grass
+0, -2: Arrow on grass
+1, -2: grass
+2, -2: grass
+3, -2: Skeleton on grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: tree
+-3, -1: tree
+-2, -1: tree
+-1, -1: grass
+0, -1: grass
+1, -1: tree
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: sand
+-4, 0: grass
+-3, 0: sand
+-2, 0: sand
+-1, 0: sand
+0, 0: sand
+1, 0: sand
+2, 0: sand
+3, 0: sand
+4, 0: tree
+5, 0: grass
+-5, 1: stone
+-4, 1: stone
+-3, 1: stone
+-2, 1: stone
+-1, 1: stone
+0, 1: stone
+1, 1: stone
+2, 1: sand
+3, 1: sand
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: path
+-3, 2: stone
+-2, 2: stone
+-1, 2: stone
+0, 2: stone
+1, 2: stone
+2, 2: stone
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: path
+-2, 3: path
+-1, 3: path
+0, 3: path
+1, 3: stone
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: path
+-1, 4: path
+0, 4: path
+1, 4: stone
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 5
+Energy: 6
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: right
+Light: 0.9418074488639832
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: tree
+2, -4: grass
+3, -4: grass
+4, -4: grass
+5, -4: grass
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: Skeleton on grass
+4, -3: grass
+5, -3: grass
+-5, -2: grass
+-4, -2: Arrow on grass
+-3, -2: grass
+-2, -2: grass
+-1, -2: Arrow on grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: tree
+-3, -1: tree
+-2, -1: tree
+-1, -1: grass
+0, -1: grass
+1, -1: tree
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: sand
+-4, 0: grass
+-3, 0: sand
+-2, 0: sand
+-1, 0: sand
+0, 0: sand
+1, 0: sand
+2, 0: sand
+3, 0: sand
+4, 0: tree
+5, 0: grass
+-5, 1: stone
+-4, 1: stone
+-3, 1: stone
+-2, 1: stone
+-1, 1: stone
+0, 1: stone
+1, 1: stone
+2, 1: sand
+3, 1: sand
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: path
+-3, 2: stone
+-2, 2: stone
+-1, 2: stone
+0, 2: stone
+1, 2: stone
+2, 2: stone
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: path
+-2, 3: path
+-1, 3: path
+0, 3: path
+1, 3: stone
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: path
+-1, 4: path
+0, 4: path
+1, 4: stone
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 5
+Energy: 6
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.9373592138290405
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Map:
+-5, -4: grass
+-4, -4: grass
+-3, -4: grass
+-2, -4: grass
+-1, -4: grass
+0, -4: grass
+1, -4: tree
+2, -4: grass
+3, -4: Skeleton on grass
+4, -4: grass
+5, -4: grass
+-5, -3: grass
+-4, -3: grass
+-3, -3: grass
+-2, -3: grass
+-1, -3: grass
+0, -3: grass
+1, -3: grass
+2, -3: grass
+3, -3: grass
+4, -3: grass
+5, -3: grass
+-5, -2: Arrow on grass
+-4, -2: grass
+-3, -2: grass
+-2, -2: Arrow on grass
+-1, -2: grass
+0, -2: grass
+1, -2: grass
+2, -2: grass
+3, -2: grass
+4, -2: grass
+5, -2: grass
+-5, -1: grass
+-4, -1: tree
+-3, -1: tree
+-2, -1: tree
+-1, -1: grass
+0, -1: grass
+1, -1: tree
+2, -1: grass
+3, -1: grass
+4, -1: grass
+5, -1: grass
+-5, 0: sand
+-4, 0: grass
+-3, 0: sand
+-2, 0: sand
+-1, 0: sand
+0, 0: sand
+1, 0: sand
+2, 0: sand
+3, 0: sand
+4, 0: tree
+5, 0: grass
+-5, 1: stone
+-4, 1: stone
+-3, 1: stone
+-2, 1: stone
+-1, 1: stone
+0, 1: stone
+1, 1: stone
+2, 1: sand
+3, 1: sand
+4, 1: grass
+5, 1: grass
+-5, 2: stone
+-4, 2: path
+-3, 2: stone
+-2, 2: stone
+-1, 2: stone
+0, 2: stone
+1, 2: stone
+2, 2: stone
+3, 2: grass
+4, 2: grass
+5, 2: grass
+-5, 3: path
+-4, 3: path
+-3, 3: path
+-2, 3: path
+-1, 3: path
+0, 3: path
+1, 3: stone
+2, 3: grass
+3, 3: grass
+4, 3: grass
+5, 3: grass
+-5, 4: path
+-4, 4: path
+-3, 4: path
+-2, 4: path
+-1, 4: path
+0, 4: path
+1, 4: stone
+2, 4: grass
+3, 4: grass
+4, 4: grass
+5, 4: grass
+
+Inventory:
+Wood: 0
+Stone: 0
+Coal: 0
+Iron: 0
+Diamond: 0
+Sapphire: 0
+Ruby: 0
+Sapling: 0
+Torch: 0
+Arrow: 0
+Book: 0
+Red potion: 0
+Green potion: 0
+Blue potion: 0
+Pink potion: 0
+Cyan potion: 0
+Yellow potion: 0
+Health: 8.0
+Food: 6
+Drink: 5
+Energy: 6
+Mana: 9
+XP: 0
+Dexterity: 1
+Strength: 1
+Intelligence: 1
+Direction: down
+Light: 0.9327116012573242
+Is Sleeping: False
+Is Resting: False
+Learned Fireball: False
+Learned Iceball: False
+Floor: 0
+Ladder Open: True
+Is Boss Vulnerable: False
+
+Error: Max steps (100 steps) reached before finding target.
+Target found at position [19 19]
+Successfully found target after 0 steps.
+Target found at position [19 19]
+Successfully found target after 0 steps.
+Target found at position [19 19]
+Successfully found target after 0 steps.
+Target found at position [19 19]
+Successfully found target after 0 steps.
+Target found at position [19 19]
+Successfully found target after 0 steps.
+Target found at position [19 19]
+Successfully found target after 0 steps.
+Target found at position [19 19]
+Successfully found target after 0 steps.
+Target found at position [19 19]
+Successfully found target after 0 steps.
+Target found at position [19 19]
+Successfully found target after 0 steps.

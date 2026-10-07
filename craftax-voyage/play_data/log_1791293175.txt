@@ -1,0 +1,11 @@
+
+Error: Player hunger is too low (0.0). Cannot explore.
+Error: Player hunger is too low (0.0). Cannot explore.
+Error: Player hunger is too low (0.0). Cannot explore.
+Error: Player hunger is too low (0.0). Cannot explore.
+Error: Player hunger is too low (0.0). Cannot explore.
+Error: Player hunger is too low (0.0). Cannot explore.
+Error: Player hunger is too low (0.0). Cannot explore.
+Error: Player hunger is too low (0.0). Cannot explore.
+Error: Player hunger is too low (0.0). Cannot explore.
+Error: Player hunger is too low (0.0). Cannot explore.
