@@ -35,22 +35,20 @@ class CriticAgent:
         self,
         *,
         task,
-        context,
-        textual_state_before,
-        textual_state,
-        new_achievements,
-        log,
+        report_before,
+        report_after,
+        diff,
+        events,
         error,
     ):
+        events_text = "\n".join(events) if events else "None"
         observation = (
-            f"State before execution:\n{textual_state_before}\n\n"
-            f"State after execution:\n{textual_state}\n\n"
-            f"Achievements unlocked during execution: "
-            f"{', '.join(new_achievements) if new_achievements else 'None'}\n\n"
-            f"Execution log:\n{log if log else 'None'}\n\n"
+            f"State before execution:\n{report_before}\n\n"
+            f"State after execution:\n{report_after}\n\n"
+            f"What changed:\n{diff}\n\n"
+            f"Primitive events:\n{events_text}\n\n"
             f"Skill execution error: {error if error else 'None'}\n\n"
-            f"Task: {task}\n\n"
-            f"Context: {context if context else 'None'}\n"
+            f"Task: {task}\n"
         )
 
         print(
@@ -118,11 +116,10 @@ class CriticAgent:
         self,
         *,
         task,
-        context,
-        textual_state_before,
-        textual_state,
-        new_achievements=None,
-        log="",
+        report_before,
+        report_after,
+        diff,
+        events,
         error="",
         max_retries=5,
     ):
@@ -134,11 +131,10 @@ class CriticAgent:
                 self.render_system_message(),
                 self.render_human_message(
                     task=task,
-                    context=context,
-                    textual_state_before=textual_state_before,
-                    textual_state=textual_state,
-                    new_achievements=new_achievements or [],
-                    log=log,
+                    report_before=report_before,
+                    report_after=report_after,
+                    diff=diff,
+                    events=events,
                     error=error,
                 ),
             ]
