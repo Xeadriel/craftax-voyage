@@ -7,6 +7,7 @@ from pathlib import Path
 import utils as U
 from prompts import load_prompt
 from utils.json_utils import fix_and_parse_json
+from utils.situation_report import FLOOR_NAMES, situation_report
 from langchain.chat_models import ChatOpenAI
 from langchain.schema import HumanMessage, SystemMessage
 
@@ -15,17 +16,12 @@ TUTORIAL_PATH = Path(__file__).resolve().parent.parent / "tutorial_detailed.md"
 
 
 class CurriculumAgent:
-    FLOOR_NAMES = [
-        "Overworld",
-        "Dungeon",
-        "Gnomish Mines",
-        "Sewers",
-        "Vaults",
-        "Troll Mines",
-        "Fire Realm",
-        "Ice Realm",
-        "Graveyard",
-    ]
+    FLOOR_NAMES = FLOOR_NAMES
+
+    DEATH_NOTICE = (
+        "You died during the last task. The world was reset: inventory, equipment "
+        "and floor progress are gone. Learned skills remain."
+    )
 
     def __init__(
         self,
@@ -39,6 +35,7 @@ class CurriculumAgent:
         resume=False,
         mode="auto",
         warm_up=None,
+        use_qa=False,
     ):
         self.llm = ChatOpenAI(
             model_name=model_name,
@@ -70,11 +67,18 @@ class CurriculumAgent:
 
         self.mode = mode
         self.ckpt_dir = ckpt_dir
+        # The QA answers of a small model were wrong often and stay cached forever;
+        # the tutorial is in every system prompt anyway
+        self.use_qa = use_qa
 
         U.f_mkdir(f"{ckpt_dir}/curriculum")
 
         self.completed_tasks = []
         self.failed_tasks = []
+        # Tasks completed in the current world, cleared when the player dies
+        self.world_progress = []
+        # Recap of the last task, shown to the curriculum in its next turn
+        self.last_turn = None
         self.qa_cache = {}
 
         if resume:
@@ -91,6 +95,11 @@ class CurriculumAgent:
             if U.f_exists(f"{ckpt_dir}/curriculum/failed_tasks.json"):
                 self.failed_tasks = U.load_json(
                     f"{ckpt_dir}/curriculum/failed_tasks.json"
+                )
+
+            if U.f_exists(f"{ckpt_dir}/curriculum/world_progress.json"):
+                self.world_progress = U.load_json(
+                    f"{ckpt_dir}/curriculum/world_progress.json"
                 )
 
             if U.f_exists(f"{ckpt_dir}/curriculum/qa_cache.json"):
@@ -115,22 +124,24 @@ class CurriculumAgent:
     @property
     def default_warmup(self):
         return {
-            "floor": 0,
+            "recap": 0,
             "state": 0,
+            "context": 0,
             "skills": 0,
             "completed_tasks": 0,
+            "world_progress": 0,
             "failed_tasks": 0,
-            "context": 0,
         }
 
     @property
     def curriculum_observations(self):
         return [
-            "floor",
+            "recap",
             "state",
             "context",
             "skills",
             "completed_tasks",
+            "world_progress",
             "failed_tasks",
         ]
 
@@ -150,32 +161,60 @@ class CurriculumAgent:
 
         return system_message
 
+    def render_recap(self):
+        if self.last_turn is None:
+            return ""
+
+        turn = self.last_turn
+        recap = ""
+
+        if turn["died"]:
+            recap += f"{self.DEATH_NOTICE}\n"
+
+        outcome = "succeeded" if turn["success"] else "failed"
+        attempts = turn["attempts"]
+        recap += (
+            f'Last turn: "{turn["task"]}" -> {outcome} after '
+            f'{attempts} attempt{"" if attempts == 1 else "s"}'
+        )
+
+        if turn["critique"]:
+            recap += f"; critique: {turn['critique']}"
+
+        if turn["vitals_before"] and turn["vitals_after"]:
+            changes = ", ".join(
+                f"{name} {before[0]:g}/{before[1]} -> "
+                f"{turn['vitals_after'][name][0]:g}/{turn['vitals_after'][name][1]}"
+                for name, before in turn["vitals_before"].items()
+                if name in ("health", "food", "drink", "energy")
+            )
+            recap += f"; {changes}"
+
+        return recap + "\n\n"
+
     def render_observation(
         self,
         *,
         env_state,
-        textual_state,
         skills="None",
     ):
-        floor = int(env_state.player_level)
-
-        if 0 <= floor < len(self.FLOOR_NAMES):
-            floor_name = self.FLOOR_NAMES[floor]
-        else:
-            floor_name = f"Unknown floor ({floor})"
-
         completed_tasks = (
             ", ".join(self.completed_tasks) if self.completed_tasks else "None"
+        )
+
+        world_progress = (
+            ", ".join(self.world_progress) if self.world_progress else "None"
         )
 
         failed_tasks = ", ".join(self.failed_tasks) if self.failed_tasks else "None"
 
         observation = {
-            "floor": (f"Current floor: {floor} ({floor_name})\n\n"),
-            "state": (f"Current Craftax state:\n" f"{textual_state}\n\n"),
+            "recap": self.render_recap(),
+            "state": (f"Current situation:\n" f"{situation_report(env_state)}\n\n"),
             "context": "",
             "skills": (f"Learned skills:\n" f"{skills}\n\n"),
-            "completed_tasks":(f"Completed tasks so far: " f"{completed_tasks}\n\n"),
+            "completed_tasks": (f"Completed tasks so far (all worlds): " f"{completed_tasks}\n\n"),
+            "world_progress": (f"Completed in the current world: " f"{world_progress}\n\n"),
             "failed_tasks": (f"Failed tasks that are too hard: " f"{failed_tasks}\n\n"),
         }
 
@@ -185,21 +224,18 @@ class CurriculumAgent:
         self,
         *,
         env_state,
-        textual_state,
         skills="None",
     ):
         content = ""
 
         observation = self.render_observation(
             env_state=env_state,
-            textual_state=textual_state,
             skills=skills,
         )
 
-        if self.progress >= self.warm_up["context"]:
+        if self.use_qa and self.progress >= self.warm_up["context"]:
             questions, answers = self.run_qa(
                 env_state=env_state,
-                textual_state=textual_state,
                 skills=skills,
             )
 
@@ -236,7 +272,6 @@ class CurriculumAgent:
         self,
         *,
         env_state,
-        textual_state,
         skills="None",
         max_retries=5,
     ):
@@ -250,7 +285,6 @@ class CurriculumAgent:
             self.render_system_message(),
             self.render_human_message(
                 env_state=env_state,
-                textual_state=textual_state,
                 skills=skills,
             ),
         ]
@@ -327,11 +361,13 @@ class CurriculumAgent:
 
     def update_exploration_progress(self, info):
         task = info["task"]
+        died = info.get("died", False)
 
         if info["success"]:
             print(f"\033[35mCompleted task {task}.\033[0m", flush=True)
 
             self.completed_tasks.append(task)
+            self.world_progress.append(task)
 
         else:
             print(
@@ -341,26 +377,51 @@ class CurriculumAgent:
 
             self.failed_tasks.append(task)
 
+        if died:
+            # A new world: nothing done in the old one counts anymore
+            self.world_progress = []
+
+        self.last_turn = {
+            "task": task,
+            "success": info["success"],
+            "critique": info.get("critique", ""),
+            "attempts": info.get("attempts", 1),
+            "died": died,
+            "vitals_before": info.get("vitals_before"),
+            "vitals_after": info.get("vitals_after"),
+        }
+
         self.clean_up_tasks()
 
     def clean_up_tasks(self):
         updated_completed_tasks = []
+        updated_world_progress = []
         updated_failed_tasks = self.failed_tasks
 
         for task in self.completed_tasks:
             if task not in updated_completed_tasks:
                 updated_completed_tasks.append(task)
 
+        for task in self.world_progress:
+            if task not in updated_world_progress:
+                updated_world_progress.append(task)
+
         for task in updated_completed_tasks:
             while task in updated_failed_tasks:
                 updated_failed_tasks.remove(task)
 
         self.completed_tasks = updated_completed_tasks
+        self.world_progress = updated_world_progress
         self.failed_tasks = updated_failed_tasks
 
         U.dump_json(
             self.completed_tasks,
             f"{self.ckpt_dir}/curriculum/" "completed_tasks.json",
+        )
+
+        U.dump_json(
+            self.world_progress,
+            f"{self.ckpt_dir}/curriculum/" "world_progress.json",
         )
 
         U.dump_json(
@@ -372,7 +433,6 @@ class CurriculumAgent:
         self,
         task,
         env_state,
-        textual_state,
         skills="None",
         max_retries=5,
     ):
@@ -382,7 +442,6 @@ class CurriculumAgent:
             ),
             self.render_human_message(
                 env_state=env_state,
-                textual_state=textual_state,
                 skills=skills,
             ),
             HumanMessage(content=f"Final task: {task}"),
@@ -431,7 +490,6 @@ class CurriculumAgent:
         self,
         *,
         env_state,
-        textual_state,
         skills="None",
     ):
         """
@@ -447,7 +505,6 @@ class CurriculumAgent:
 
         questions_new, _ = self.run_qa_step1_ask_questions(
             env_state=env_state,
-            textual_state=textual_state,
             skills=skills,
         )
 
@@ -466,7 +523,6 @@ class CurriculumAgent:
         self,
         *,
         env_state,
-        textual_state,
         skills="None",
     ):
         """
@@ -504,8 +560,7 @@ class CurriculumAgent:
             self.render_system_message_qa_step1_ask_questions(),
             self.render_human_message_qa_step1_ask_questions(
                 env_state=env_state,
-                textual_state=textual_state,
-                skills=skills,
+                    skills=skills,
             ),
         ]
 
@@ -554,12 +609,10 @@ class CurriculumAgent:
         self,
         *,
         env_state,
-        textual_state,
         skills="None",
     ):
         observation = self.render_observation(
             env_state=env_state,
-            textual_state=textual_state,
             skills=skills,
         )
 
@@ -607,6 +660,9 @@ class CurriculumAgent:
         return answer
 
     def get_task_context(self, task):
+        if not self.use_qa:
+            return ""
+
         # Normalised like Voyager so the cache hits regardless of case
         task_phrase = task.replace("_", " ").replace(".", "").strip().lower()
         question = f"How to {task_phrase} in Craftax?"
