@@ -16,6 +16,15 @@ from .curriculum import TUTORIAL_PATH
 
 
 class ActionAgent:
+    ADDITIVE_AMOUNTS_NOTE = (
+        "Amounts in the task are added on top of what you have now "
+        "(the state above is the starting point)."
+    )
+
+    # Extra LLM calls when a response cannot be parsed or validated. They cost
+    # no attempt and no game steps, since the code never ran.
+    MAX_FIX_ATTEMPTS = 2
+
     def __init__(
         self,
         model_name="Qwen/Qwen3.5-4B",
@@ -86,7 +95,7 @@ class ActionAgent:
             observation += "Log: None\n\n"
 
         observation += f"{textual_state}\n\n"
-        observation += f"Task: {task}\n\n"
+        observation += f"Task: {task}\n{self.ADDITIVE_AMOUNTS_NOTE}\n\n"
 
         if context:
             observation += f"Context: {context}\n\n"
@@ -113,11 +122,12 @@ class ActionAgent:
         critique="",
     ):
         """
-        Generate and validate an action skill with a single LLM call.
+        Generate and validate an action skill.
 
-        Like Voyager, every call is one iteration: a response that cannot be
-        parsed or validated is not retried here. The caller feeds the error
-        back in the next iteration instead.
+        A response that cannot be parsed or validated is sent back with the
+        error, up to MAX_FIX_ATTEMPTS times, before the iteration counts as a
+        failed generation. The caller then feeds the error back in the next
+        iteration, like Voyager.
 
         Always returns a dictionary.
 
@@ -153,38 +163,46 @@ class ActionAgent:
             ),
         ]
 
-        content = ""
+        for fix_attempt in range(self.MAX_FIX_ATTEMPTS + 1):
+            content = ""
 
-        try:
-            response = self.llm(messages)
-            content = response.content
+            try:
+                response = self.llm(messages)
+                content = response.content
 
+                print(
+                    "\033[31m"
+                    "****Action Agent AI message****\n"
+                    f"{content}"
+                    "\033[0m",
+                    flush=True
+                )
+
+                result = self.process_ai_message(response)
+
+            except Exception as e:
+                result = (
+                    "Error while generating the action skill: "
+                    f"{type(e).__name__}: {e}"
+                )
+
+            if isinstance(result, dict):
+                return result
+
+            # process_ai_message() returns a string when parsing or
+            # validation failed.
             print(
-                "\033[31m"
-                "****Action Agent AI message****\n"
-                f"{content}"
-                "\033[0m",
-                flush=True
+                "\033[35m"
+                f"{result}"
+                "\033[0m", flush=True
             )
 
-            result = self.process_ai_message(response)
-
-        except Exception as e:
-            result = (
-                "Error while generating the action skill: "
-                f"{type(e).__name__}: {e}"
-            )
-
-        if isinstance(result, dict):
-            return result
-
-        # process_ai_message() returns a string when parsing or
-        # validation failed.
-        print(
-            "\033[35m"
-            f"{result}"
-            "\033[0m", flush=True
-        )
+            messages = messages + [
+                AIMessage(content=content),
+                HumanMessage(
+                    content=f"{result}\n\nFix this and answer again in the response format."
+                ),
+            ]
 
         return {
             "program_code": self.extract_code(content),
