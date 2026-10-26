@@ -8,9 +8,10 @@ from langchain.prompts import SystemMessagePromptTemplate
 from langchain.schema import AIMessage, HumanMessage, SystemMessage
 
 import utils as U
-from control_primitives import load_control_primitives_context
+from control_primitives import control_primitive_names, load_control_primitives_context
 from prompts import load_prompt
 
+from .code_check import check_skill_code
 from .curriculum import TUTORIAL_PATH
 
 
@@ -315,6 +316,15 @@ class ActionAgent:
                     f"It currently has arguments: "
                     f"{argument_names}."
                 )
+
+            errors = check_skill_code(
+                program_code,
+                program_name,
+                control_primitive_names() | {"UNKNOWN"},
+            )
+
+            if errors:
+                raise ValueError("; ".join(errors))
 
             return {
                 "program_code": program_code,
