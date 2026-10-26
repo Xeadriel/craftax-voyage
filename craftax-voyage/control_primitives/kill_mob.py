@@ -13,6 +13,22 @@
 # whenever it is vulnerable until the game is won. Returns the final state on success,
 # raises otherwise.
 
+from craftax.craftax.constants import MobType
+
+# Mob class -> names indexed by type id
+MOB_NAMES = {
+    MobType.PASSIVE: ["Cow", "Bat", "Snail"],
+    MobType.MELEE: [
+        "Zombie", "Gnome warrior", "Orc soldier", "Lizard",
+        "Knight", "Troll", "Pigman", "Frost troll",
+    ],
+    MobType.RANGED: [
+        "Skeleton", "Gnome archer", "Orc mage", "Kobold",
+        "Knight archer", "Deep thing", "Fire elemental", "Ice elemental",
+    ],
+}
+
+
 def kill_mob(state, log_func, step_func, target, max_steps=20):
     """
     Hunts and kills a target in sight on the current floor with melee, arrows and spells.
@@ -67,17 +83,7 @@ def kill_mob(state, log_func, step_func, target, max_steps=20):
     )
     from craftax.craftax.util.game_logic_utils import get_player_damage_vector
 
-    mob_names = {
-        MobType.PASSIVE: ["Cow", "Bat", "Snail"],
-        MobType.MELEE: [
-            "Zombie", "Gnome warrior", "Orc soldier", "Lizard",
-            "Knight", "Troll", "Pigman", "Frost troll",
-        ],
-        MobType.RANGED: [
-            "Skeleton", "Gnome archer", "Orc mage", "Kobold",
-            "Knight archer", "Deep thing", "Fire elemental", "Ice elemental",
-        ],
-    }
+    mob_names = MOB_NAMES
 
     # Resolve and validate the target
     boss_mode = False

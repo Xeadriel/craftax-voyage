@@ -9,6 +9,34 @@
 # before raising.
 # Returns True when `number` items were crafted, raises an Exception otherwise.
 
+from craftax.craftax.constants import Action
+
+# name -> (action, materials per craft, stations, kind, attribute, level or yield)
+RECIPES = {
+    "wood_pickaxe": (Action.MAKE_WOOD_PICKAXE.value, {"wood": 1}, ["crafting_table"], "tool", "pickaxe", 1),
+    "stone_pickaxe": (Action.MAKE_STONE_PICKAXE.value, {"wood": 1, "stone": 1}, ["crafting_table"], "tool", "pickaxe", 2),
+    "iron_pickaxe": (
+        Action.MAKE_IRON_PICKAXE.value, {"wood": 1, "stone": 1, "iron": 1, "coal": 1},
+        ["crafting_table", "furnace"], "tool", "pickaxe", 3,
+    ),
+    "diamond_pickaxe": (Action.MAKE_DIAMOND_PICKAXE.value, {"wood": 1, "diamond": 3}, ["crafting_table"], "tool", "pickaxe", 4),
+    "wood_sword": (Action.MAKE_WOOD_SWORD.value, {"wood": 1}, ["crafting_table"], "tool", "sword", 1),
+    "stone_sword": (Action.MAKE_STONE_SWORD.value, {"wood": 1, "stone": 1}, ["crafting_table"], "tool", "sword", 2),
+    "iron_sword": (
+        Action.MAKE_IRON_SWORD.value, {"wood": 1, "stone": 1, "iron": 1, "coal": 1},
+        ["crafting_table", "furnace"], "tool", "sword", 3,
+    ),
+    "diamond_sword": (Action.MAKE_DIAMOND_SWORD.value, {"wood": 1, "diamond": 2}, ["crafting_table"], "tool", "sword", 4),
+    "iron_armour": (
+        Action.MAKE_IRON_ARMOUR.value, {"iron": 3, "coal": 3},
+        ["crafting_table", "furnace"], "armour", "armour", 1,
+    ),
+    "diamond_armour": (Action.MAKE_DIAMOND_ARMOUR.value, {"diamond": 3}, ["crafting_table"], "armour", "armour", 2),
+    "arrow": (Action.MAKE_ARROW.value, {"wood": 1, "stone": 1}, ["crafting_table"], "stack", "arrows", 2),
+    "torch": (Action.MAKE_TORCH.value, {"wood": 1, "coal": 1}, ["crafting_table"], "stack", "torches", 4),
+}
+
+
 def craft(state, log_func, step_func, craftable, number=1, max_steps=20):
     """
     Crafts `number` items of the craftable at the required crafting station(s).
@@ -55,30 +83,7 @@ def craft(state, log_func, step_func, craftable, number=1, max_steps=20):
         ItemType,
     )
 
-    # name -> (action, materials per craft, stations, kind, attribute, level or yield)
-    recipes = {
-        "wood_pickaxe": (Action.MAKE_WOOD_PICKAXE.value, {"wood": 1}, ["crafting_table"], "tool", "pickaxe", 1),
-        "stone_pickaxe": (Action.MAKE_STONE_PICKAXE.value, {"wood": 1, "stone": 1}, ["crafting_table"], "tool", "pickaxe", 2),
-        "iron_pickaxe": (
-            Action.MAKE_IRON_PICKAXE.value, {"wood": 1, "stone": 1, "iron": 1, "coal": 1},
-            ["crafting_table", "furnace"], "tool", "pickaxe", 3,
-        ),
-        "diamond_pickaxe": (Action.MAKE_DIAMOND_PICKAXE.value, {"wood": 1, "diamond": 3}, ["crafting_table"], "tool", "pickaxe", 4),
-        "wood_sword": (Action.MAKE_WOOD_SWORD.value, {"wood": 1}, ["crafting_table"], "tool", "sword", 1),
-        "stone_sword": (Action.MAKE_STONE_SWORD.value, {"wood": 1, "stone": 1}, ["crafting_table"], "tool", "sword", 2),
-        "iron_sword": (
-            Action.MAKE_IRON_SWORD.value, {"wood": 1, "stone": 1, "iron": 1, "coal": 1},
-            ["crafting_table", "furnace"], "tool", "sword", 3,
-        ),
-        "diamond_sword": (Action.MAKE_DIAMOND_SWORD.value, {"wood": 1, "diamond": 2}, ["crafting_table"], "tool", "sword", 4),
-        "iron_armour": (
-            Action.MAKE_IRON_ARMOUR.value, {"iron": 3, "coal": 3},
-            ["crafting_table", "furnace"], "armour", "armour", 1,
-        ),
-        "diamond_armour": (Action.MAKE_DIAMOND_ARMOUR.value, {"diamond": 3}, ["crafting_table"], "armour", "armour", 2),
-        "arrow": (Action.MAKE_ARROW.value, {"wood": 1, "stone": 1}, ["crafting_table"], "stack", "arrows", 2),
-        "torch": (Action.MAKE_TORCH.value, {"wood": 1, "coal": 1}, ["crafting_table"], "stack", "torches", 4),
-    }
+    recipes = RECIPES
     aliases: dict = {name: name for name in recipes}
     aliases.update({"arrows": "arrow", "torches": "torch", "iron_armor": "iron_armour", "diamond_armor": "diamond_armour"})
     for name, recipe in recipes.items():

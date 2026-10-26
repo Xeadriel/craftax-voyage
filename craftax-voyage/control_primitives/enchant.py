@@ -10,6 +10,21 @@
 # are never the next step.
 # Returns True when the enchantment succeeded, raises an Exception otherwise.
 
+from craftax.craftax.constants import Action, BlockType
+
+ENCHANT_ACTIONS = {
+    "sword": Action.ENCHANT_SWORD.value,
+    "bow": Action.ENCHANT_BOW.value,
+    "armour": Action.ENCHANT_ARMOUR.value,
+}
+# element -> (enchantment value, table block, gem inventory field)
+ENCHANT_ELEMENTS = {
+    "fire": (1, BlockType.ENCHANTMENT_TABLE_FIRE.value, "ruby"),
+    "ice": (2, BlockType.ENCHANTMENT_TABLE_ICE.value, "sapphire"),
+}
+ENCHANT_MANA_COST = 9
+
+
 def enchant(state, log_func, step_func, equipment, element, max_steps=20):
     """
     Enchants one piece of equipment with fire or ice at a matching enchantment table in view.
@@ -59,18 +74,10 @@ def enchant(state, log_func, step_func, equipment, element, max_steps=20):
         BlockType.ENCHANTMENT_TABLE_FIRE: "fire",
         BlockType.ENCHANTMENT_TABLE_ICE: "ice",
     }
-    enchant_actions = {
-        "sword": Action.ENCHANT_SWORD.value,
-        "bow": Action.ENCHANT_BOW.value,
-        "armour": Action.ENCHANT_ARMOUR.value,
-    }
-    # element -> (enchantment value, table block, gem inventory field)
-    elements = {
-        "fire": (1, BlockType.ENCHANTMENT_TABLE_FIRE.value, "ruby"),
-        "ice": (2, BlockType.ENCHANTMENT_TABLE_ICE.value, "sapphire"),
-    }
+    enchant_actions = ENCHANT_ACTIONS
+    elements = ENCHANT_ELEMENTS
     enchantment_names = {0: "none", 1: "fire", 2: "ice"}
-    mana_cost = 9
+    mana_cost = ENCHANT_MANA_COST
     armour_slots = 4
 
     # Resolve and validate the arguments

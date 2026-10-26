@@ -45,6 +45,20 @@ def load_control_primitives(primitive_names=None):
     return primitives
 
 
+def control_primitive_names():
+    """
+    Names of every control primitive and knowledge function, i.e. every public
+    top-level function of the primitive files (the names a skill must not reuse).
+    """
+
+    return {
+        node.name
+        for source in load_control_primitives()
+        for node in ast.parse(source).body
+        if isinstance(node, ast.FunctionDef) and not node.name.startswith("_")
+    }
+
+
 def load_control_primitives_context(primitive_names=None):
     """
     Return the signature and docstring of every control primitive and of

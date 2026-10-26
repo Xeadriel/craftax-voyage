@@ -7,6 +7,25 @@
 # block and mines it with DO, counting every target block that gets removed. Returns the final
 # state once enough blocks are mined, raises otherwise.
 
+from craftax.craftax.constants import BlockType
+
+# Blocks DO removes, with the required pickaxe level and the inventory item they give
+MINEABLE_BLOCKS = {
+    BlockType.TREE.value: (0, "wood"),
+    BlockType.FIRE_TREE.value: (0, "wood"),
+    BlockType.ICE_SHRUB.value: (0, "wood"),
+    BlockType.STONE.value: (1, "stone"),
+    BlockType.COAL.value: (1, "coal"),
+    BlockType.STALAGMITE.value: (1, "stone"),
+    BlockType.IRON.value: (2, "iron"),
+    BlockType.DIAMOND.value: (3, "diamond"),
+    BlockType.SAPPHIRE.value: (4, "sapphire"),
+    BlockType.RUBY.value: (4, "ruby"),
+    BlockType.CRAFTING_TABLE.value: (0, None),
+    BlockType.FURNACE.value: (0, None),
+}
+
+
 def mine_block(state, log_func, step_func, target, number=1, max_steps=20):
     """
     Mines `number` blocks of the target type that are visible to the player.
@@ -49,21 +68,7 @@ def mine_block(state, log_func, step_func, target, number=1, max_steps=20):
 
     pickaxe_names = ["no pickaxe", "wood pickaxe", "stone pickaxe", "iron pickaxe", "diamond pickaxe"]
 
-    # Blocks DO removes, with the required pickaxe level and the inventory item they give
-    mineable_blocks = {
-        BlockType.TREE.value: (0, "wood"),
-        BlockType.FIRE_TREE.value: (0, "wood"),
-        BlockType.ICE_SHRUB.value: (0, "wood"),
-        BlockType.STONE.value: (1, "stone"),
-        BlockType.COAL.value: (1, "coal"),
-        BlockType.STALAGMITE.value: (1, "stone"),
-        BlockType.IRON.value: (2, "iron"),
-        BlockType.DIAMOND.value: (3, "diamond"),
-        BlockType.SAPPHIRE.value: (4, "sapphire"),
-        BlockType.RUBY.value: (4, "ruby"),
-        BlockType.CRAFTING_TABLE.value: (0, None),
-        BlockType.FURNACE.value: (0, None),
-    }
+    mineable_blocks = MINEABLE_BLOCKS
 
     # Validate the arguments
     if not isinstance(target, BlockType) or target.value not in mineable_blocks:
