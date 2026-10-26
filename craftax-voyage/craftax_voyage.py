@@ -39,10 +39,13 @@ from agents.action import ActionAgent
 from agents.critic import CriticAgent
 from agents.skill import SkillManager
 from control_primitives import *
+from control_primitives import control_primitive_names
 # The memory instance (the star import above only brings the module of the same name)
 from control_primitives.knowledge import knowledge
 
 import utils as U
+from utils.execution_summary import death_critique, primitive_events, state_diff
+from utils.situation_report import situation_report, vitals
 
 
 def save_compressed_pickle(title: str, data: Any):
@@ -222,9 +225,6 @@ def time_limit(seconds: float, message: str):
 
 
 class CraftaxVoyage:
-    # Only the end of a skill's log is shown to the action and critic agents
-    MAX_SKILL_LOG_LINES = 60
-
     def __init__(self, args):
         self.args = args
 
@@ -314,6 +314,7 @@ class CraftaxVoyage:
             ckpt_dir=args.ckpt_dir,
             resume=args.resume,
             mode=args.curriculum_mode,
+            use_qa=args.use_qa,
         )
 
         self.action_agent = ActionAgent(
@@ -339,10 +340,20 @@ class CraftaxVoyage:
             resume=args.resume or bool(args.skill_library_dir),
         )
 
-        # Per skill execution: step budget and log buffer
+        # Skills run in this module's namespace: every program the prompt names
+        # has to be callable there
+        missing = sorted((control_primitive_names() | {"UNKNOWN"}) - globals().keys())
+        if missing:
+            raise RuntimeError(
+                f"Programs missing from the skill namespace: {', '.join(missing)}"
+            )
+
+        # Per skill execution: step budget, log buffer and the state before the
+        # last step (the state the player died in, if the episode ends)
         self.skill_steps_taken = 0
         self.skill_step_budget = None
         self.skill_log = []
+        self.pre_step_state = None
 
         self.log = ""
         self.clock = pygame.time.Clock()
@@ -363,6 +374,7 @@ class CraftaxVoyage:
 
         self.rng, step_rng = jax.random.split(self.rng)
         old_achievements = self.env_state.achievements
+        self.pre_step_state = self.env_state
 
         (
             self.obs,
@@ -415,13 +427,16 @@ class CraftaxVoyage:
         """
         Run a generated skill in the environment.
 
-        Returns a dict with the textual state before execution, the
-        execution error ("" if none), the end of the execution log and the
-        achievements unlocked during execution.
+        Returns a dict with the state before execution, the execution error
+        ("" if none), whether the player died (and the state it died in), the
+        whole execution log, the primitives' events in it and the achievements
+        unlocked during execution.
         """
 
-        textual_state_before = render_craftax_text(self.env_state)
+        state_before = self.env_state
         achievements_before = np.asarray(self.env_state.achievements)
+        self.pre_step_state = None
+        died = False
 
         namespace = {
             name: value
@@ -473,6 +488,7 @@ class CraftaxVoyage:
                 )
         except (Exception, SkillAborted) as e:
             error = f"{type(e).__name__}: {e}"
+            died = isinstance(e, EpisodeEnded)
             print(f"\nGenerated skill failed: {error}", flush=True)
         finally:
             self.skill_step_budget = None
@@ -484,18 +500,13 @@ class CraftaxVoyage:
             if not achievements_before[i] and achievements_after[i]
         ]
 
-        log_lines = self.skill_log[-self.MAX_SKILL_LOG_LINES:]
-        if len(self.skill_log) > self.MAX_SKILL_LOG_LINES:
-            log_lines.insert(
-                0,
-                f"... ({len(self.skill_log) - self.MAX_SKILL_LOG_LINES} "
-                f"earlier lines omitted)",
-            )
-
         return {
-            "textual_state_before": textual_state_before,
+            "state_before": state_before,
             "error": error,
-            "log": "\n".join(log_lines),
+            "died": died,
+            "death_state": self.pre_step_state if self.pre_step_state is not None else state_before,
+            "log": "\n".join(self.skill_log),
+            "events": primitive_events(self.skill_log),
             "new_achievements": new_achievements,
         }
 
@@ -507,6 +518,14 @@ class CraftaxVoyage:
 
         resume is the rollout state of a checkpoint, to continue an
         interrupted rollout at its next attempt.
+
+        If the player dies, the task fails without asking the critic and the
+        rollout ends: retrying in a new, empty world makes no sense, the
+        curriculum has to decide again.
+
+        Returns the recap of the task for the curriculum: task, success,
+        critique, attempts, died, vitals_before, vitals_after (plus the
+        program on success).
         """
 
         resume = resume or {}
@@ -514,6 +533,9 @@ class CraftaxVoyage:
         error = resume.get("error", "")
         log = resume.get("log", "")
         critique = resume.get("critique", "")
+        # Checkpoints written before the recap existed have no vitals
+        vitals_before = resume.get("vitals_before") or vitals(self.env_state)
+        attempts = 0
 
         def checkpoint(next_attempt):
             self.save_checkpoint(rollout={
@@ -524,12 +546,26 @@ class CraftaxVoyage:
                 "error": error,
                 "log": log,
                 "critique": critique,
+                "vitals_before": vitals_before,
             })
+
+        def recap(success, died=False, final_state=None, **program):
+            return {
+                "task": task,
+                "success": success,
+                "critique": critique,
+                "attempts": attempts,
+                "died": died,
+                "vitals_before": vitals_before,
+                "vitals_after": vitals(final_state if final_state is not None else self.env_state),
+                **program,
+            }
 
         for attempt in range(resume.get("next_attempt", 0), self.args.action_max_retries):
             # Every attempt counts as one iteration, including attempts whose
             # code could not be parsed (Voyager records those too)
             self.iteration += 1
+            attempts = attempt + 1
 
             print(
                 f"\n========== ITERATION {self.iteration}: ACTION AGENT "
@@ -564,15 +600,27 @@ class CraftaxVoyage:
 
             execution = self.execute_skill(skill)
 
+            if execution["died"]:
+                critique = death_critique(execution["death_state"], execution["events"])
+
+                print("\n========== PLAYER DIED ==========", flush=True)
+                print("Success: False", flush=True)
+                print(f"Critique: {critique}", flush=True)
+
+                return recap(False, died=True, final_state=execution["death_state"])
+
             print("\n========== CRITIC AGENT ==========", flush=True)
 
             success, critique = self.critic_agent.check_task_success(
                 task=task,
-                context=context,
-                textual_state_before=execution["textual_state_before"],
-                textual_state=render_craftax_text(self.env_state),
-                new_achievements=execution["new_achievements"],
-                log=execution["log"],
+                report_before=situation_report(execution["state_before"]),
+                report_after=situation_report(self.env_state),
+                diff=state_diff(
+                    execution["state_before"],
+                    self.env_state,
+                    execution["new_achievements"],
+                ),
+                events=execution["events"],
                 error=execution["error"],
             )
 
@@ -580,22 +628,18 @@ class CraftaxVoyage:
             print(f"Critique: {critique}", flush=True)
 
             if success:
-                return {
-                    "task": task,
-                    "success": True,
-                    "program_name": skill["program_name"],
-                    "program_code": skill["program_code"],
-                }
+                return recap(
+                    True,
+                    program_name=skill["program_name"],
+                    program_code=skill["program_code"],
+                )
 
             code = skill["program_code"]
             error = execution["error"]
             log = execution["log"]
             checkpoint(attempt + 1)
 
-        return {
-            "task": task,
-            "success": False,
-        }
+        return recap(False)
 
     @staticmethod
     def traj_chunk_index(chunk_path):
@@ -680,7 +724,6 @@ class CraftaxVoyage:
                 try:
                     task, context = self.curriculum_agent.propose_next_task(
                         env_state=self.env_state,
-                        textual_state=render_craftax_text(self.env_state),
                         skills=self.skill_manager.skill_summaries(),
                     )
                     curriculum_failures = 0
@@ -726,7 +769,6 @@ class CraftaxVoyage:
         return self.curriculum_agent.decompose_task(
             task,
             env_state=self.env_state,
-            textual_state=render_craftax_text(self.env_state),
             skills=self.skill_manager.skill_summaries(),
         )
 
@@ -919,6 +961,11 @@ def parse_args():
         "--qa_temperature",
         type=float,
         default=0.2,
+    )
+    parser.add_argument(
+        "--use_qa",
+        action="store_true",
+        help="Let the curriculum ask and answer knowledge questions (off by default)",
     )
 
     parser.add_argument(
