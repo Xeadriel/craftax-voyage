@@ -59,6 +59,29 @@ def test_critic_gets_report_diff_and_events(voyage):
     assert "note" not in seen["events"] and info["vitals_before"]["health"][1] == 9
 
 
+def test_report_before_is_taken_before_the_skill_runs(voyage):
+    from craftax.craftax.constants import BlockType
+    from utils.situation_report import situation_report
+
+    # A diamond just out of view to the right; the skill walks until it sees it
+    s = voyage.env_state
+    row, col = int(s.player_position[0]), int(s.player_position[1])
+    level = int(s.player_level)
+    voyage.env_state = s.replace(map=s.map.at[level, row, col + 7].set(BlockType.DIAMOND.value)
+                                 .at[level, row, col + 1:col + 7].set(BlockType.GRASS.value))
+    expected = situation_report(voyage.env_state)
+    assert "diamond not seen" in expected
+    voyage.action_agent.generate_skill = counting_stub(skill(
+        "def f(state, log_fn, step_func):\n"
+        "    for _ in range(3):\n"
+        "        state = step_func(Action.RIGHT.value)\n"
+        "    return state\n"))
+    seen = {}
+    voyage.critic_agent.check_task_success = lambda **kw: (seen.update(kw), (True, ""))[1]
+    voyage.rollout("Walk", "")
+    assert seen["report_before"] == expected
+
+
 def test_resume_without_vitals_before(voyage):                         # Review Focus 5
     voyage.critic_agent.check_task_success = lambda **kw: (True, "")
     voyage.action_agent.generate_skill = counting_stub(skill("def f(state, log_fn, step_func):\n    return state\n"))

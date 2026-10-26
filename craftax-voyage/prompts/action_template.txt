@@ -25,9 +25,9 @@ def mine_3_coal(state, log_fn, step_func):
     # Amounts are added on top of what the player has now
     target = state.inventory.coal + 3
     if state.inventory.pickaxe < 1:
-        log_fn("Need a wood pickaxe to mine coal")
+        log_fn("Need a wood pickaxe to mine coal (2 wood for a crafting table, 1 for the pickaxe)")
         state = explore_until(state, log_fn, step_func, BlockType.TREE, max_steps=40)
-        state = mine_block(state, log_fn, step_func, BlockType.TREE, 1, max_steps=30)
+        state = mine_block(state, log_fn, step_func, BlockType.TREE, 3, max_steps=40)
         state = craft(state, log_fn, step_func, Action.MAKE_WOOD_PICKAXE)
     for _ in range(3):
         if state.inventory.coal >= target:
@@ -195,7 +195,7 @@ Code:
     13) Your function must return the final state. Do not check at the end whether the task succeeded (e.g. comparing the inventory with the goal, or raising "Failed to ..."): a critic checks the result after your function returns. Only check what you need before an action (rule 3).
     14) Don't place Crafting Tables or Furnaces. The craft function already places them if needed.
     15) Amounts in the task are always added on top of what you have now. "Mine 3 coal" means 3 more coal than you have at the start, "Drink 6 water" means drinking 6 times, "Kill 2 zombies" means killing 2 zombies now. It never means "until you have 3". Compute the target from the starting state, as in the example above.
-    16) The critique is final. If there is one, fix what it reports. Never argue that the task was already done.
+    16) The critique is final. If there is one, fix what it reports, but your new skill must still do the whole task from its own start (the state shown above), not only what the last attempt missed. Never argue that the task was already done.
 
 You should only respond in the format as described below:
 RESPONSE FORMAT:

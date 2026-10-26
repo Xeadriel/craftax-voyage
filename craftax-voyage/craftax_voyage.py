@@ -434,6 +434,9 @@ class CraftaxVoyage:
         """
 
         state_before = self.env_state
+        # Rendered now: the report reads the player's memory, which the skill
+        # is about to extend
+        report_before = situation_report(state_before)
         achievements_before = np.asarray(self.env_state.achievements)
         self.pre_step_state = None
         died = False
@@ -502,6 +505,7 @@ class CraftaxVoyage:
 
         return {
             "state_before": state_before,
+            "report_before": report_before,
             "error": error,
             "died": died,
             "death_state": self.pre_step_state if self.pre_step_state is not None else state_before,
@@ -613,7 +617,7 @@ class CraftaxVoyage:
 
             success, critique = self.critic_agent.check_task_success(
                 task=task,
-                report_before=situation_report(execution["state_before"]),
+                report_before=execution["report_before"],
                 report_after=situation_report(self.env_state),
                 diff=state_diff(
                     execution["state_before"],
