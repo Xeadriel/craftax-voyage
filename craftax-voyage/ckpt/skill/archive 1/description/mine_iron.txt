@@ -1,0 +1,1 @@
+The function mines 1 iron block after verifying the player has a stone pickaxe or better. It first explores until an iron block is found, then mines 1 iron block within the current state. If the player lacks the required pickaxe, an exception is raised. The function returns the final state after successfully mining the iron.

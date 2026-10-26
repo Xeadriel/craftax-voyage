@@ -1,12 +1,14 @@
 # Description:
 # Deterministically walks to the nearest water source (water or fountain) in sight and
-# drinks from it a given number of times. Plans with Dijkstra, tunnelling through
-# mineable blocks (trees, stone, ores, ...) when the pickaxe allows it. Mobs are treated
-# as obstacles; if mobs block every path and no path can be mined around them, it waits a
-# few steps for them to move and then raises. Drinking is verified through the drink
-# intrinsic. Returns True after `number` drinks, raises an Exception otherwise.
+# drinks from it a given number of times. Plans with Dijkstra over the player's memory of
+# the floor (never-seen cells are assumed walkable at an extra cost but are never stepped
+# into directly), tunnelling through mineable blocks (trees, stone, ores, ...) when the
+# pickaxe allows it. Mobs in view are treated as obstacles; if they block every path and no
+# path can be mined around them, it waits a few steps for them to move and then raises.
+# Drinking is verified through the drink intrinsic. Returns the final state after `number`
+# drinks, raises an Exception otherwise.
 
-def drink(state, log_func, step_func, number=1, max_steps=100):
+def drink(state, log_func, step_func, number=1, max_steps=20):
     """
     Drinks `number` times from the nearest water source in sight.
 
@@ -18,13 +20,13 @@ def drink(state, log_func, step_func, number=1, max_steps=100):
         max_steps: Maximum number of calls to step_func before giving up
 
     Returns:
-        True if the player drank `number` times
+        The final EnvState (after the last step) if the player drank `number` times
 
     Raises:
-        Exception: If the arguments are invalid, no water source is in sight, no water
-            source is reachable (even by tunnelling), mobs keep blocking every path,
-            drinking keeps failing, the player died, the player left the floor, or
-            max_steps was reached
+        Exception: If the arguments are invalid, no water source is in sight (explore
+            first), no water source in sight is reachable over the known map (even by
+            tunnelling), mobs in view keep blocking every path, drinking keeps failing,
+            the player died, the player left the floor, or max_steps was reached
     """
     import heapq
 
@@ -32,12 +34,18 @@ def drink(state, log_func, step_func, number=1, max_steps=100):
 
     from craftax.craftax.constants import (
         DIRECTIONS,
-        OBS_DIM,
         SOLID_BLOCKS,
         Action,
         BlockType,
     )
     from craftax.craftax.util.game_logic_utils import get_max_drink
+    from control_primitives.knowledge import (
+        UNKNOWN,
+        is_visible,
+        known_blocks,
+        visible_mask,
+        visible_mobs,
+    )
 
     # Validate the arguments
     if isinstance(number, bool) or not isinstance(number, (int, np.integer)):
@@ -82,10 +90,9 @@ def drink(state, log_func, step_func, number=1, max_steps=100):
 
     walk_cost = 1
     tunnel_cost = 4
+    unknown_cost = 2
     max_failed_attempts = 3
     max_mob_wait_steps = 3
-    half_rows = OBS_DIM[0] // 2
-    half_cols = OBS_DIM[1] // 2
 
     start_level = int(state.player_level)
     drinks = 0
@@ -102,7 +109,7 @@ def drink(state, log_func, step_func, number=1, max_steps=100):
 
     if number == 0:
         log_func("[drink] Nothing to drink")
-        return True
+        return state
 
     for steps_taken in range(max_steps + 1):
         # ---------- Observe ----------
@@ -125,7 +132,7 @@ def drink(state, log_func, step_func, number=1, max_steps=100):
 
         if drinks >= number:
             log_func(f"[drink] Successfully drank {drinks} time(s) in {steps_taken} steps")
-            return True
+            return state
 
         if steps_taken >= max_steps:
             log_func(f"[drink] Max steps ({max_steps}) reached after drinking {drinks}/{number} time(s)")
@@ -133,31 +140,28 @@ def drink(state, log_func, step_func, number=1, max_steps=100):
                 f"Drinking failed: max steps ({max_steps}) reached after drinking {drinks}/{number} time(s)"
             )
 
-        block_map = np.asarray(state.map[current_level])
-        light_visible = np.asarray(state.light_map[current_level]) > 0.05
-        mob_occupied = np.asarray(state.mob_map[current_level]).astype(bool)
+        # The player's memory of the floor, what it sees right now and the mobs in view
+        block_map = known_blocks(state)
+        visible = visible_mask(state)
         map_rows, map_cols = block_map.shape
+        mob_occupied = np.zeros((map_rows, map_cols), dtype=bool)
+        for _, _, mob_row, mob_col, _ in visible_mobs(state):
+            mob_occupied[mob_row, mob_col] = True
         pickaxe_level = int(state.inventory.pickaxe)
 
         # Water sources in the (lit) view window
-        row_start = max(0, player_row - half_rows)
-        row_end = min(map_rows, player_row + half_rows + 1)
-        col_start = max(0, player_col - half_cols)
-        col_end = min(map_cols, player_col + half_cols + 1)
         visible_sources = [
-            (int(cell[0]) + row_start, int(cell[1]) + col_start)
-            for cell in np.argwhere(
-                np.isin(block_map[row_start:row_end, col_start:col_end], list(water_blocks))
-                & light_visible[row_start:row_end, col_start:col_end]
-            )
+            (int(cell[0]), int(cell[1]))
+            for cell in np.argwhere(np.isin(block_map, list(water_blocks)) & visible)
         ]
         if current_source is not None and int(block_map[current_source]) not in water_blocks:
-            log_func(f"[drink] Water source {current_source} is gone")
+            log_func(f"[drink] Water source {current_source} is no longer known as water")
             current_source = None
         if current_source is None and len(visible_sources) == 0:
             log_func("[drink] No water source is in sight")
             raise Exception(
-                f"Drinking failed: no water source in sight after drinking {drinks}/{number} time(s)"
+                f"Drinking failed: no water source in sight after drinking {drinks}/{number} time(s), "
+                f"explore first"
             )
 
         # ---------- Decide on an action ----------
@@ -170,8 +174,9 @@ def drink(state, log_func, step_func, number=1, max_steps=100):
         if bool(state.is_sleeping) or bool(state.is_resting):
             action_reason = "player is sleeping/resting, actions are ignored until it wakes up"
         else:
-            # Dijkstra twice: first treating mobs as walls, then ignoring them to tell whether
-            # mobs are what blocks the way
+            # Dijkstra over the known floor twice: first treating mobs in view as walls, then
+            # ignoring them to tell whether mobs are what blocks the way. Never-seen cells are
+            # assumed walkable at an extra cost, but never as the next step
             plans = {}
             for mobs_block in (True, False):
                 distance = np.full((map_rows, map_cols), np.inf)
@@ -183,7 +188,8 @@ def drink(state, log_func, step_func, number=1, max_steps=100):
                     if cost_so_far > distance[row, col]:
                         continue
                     # Water sources are path end points, never walked through
-                    if (row, col) != (player_row, player_col) and int(block_map[row, col]) in water_blocks:
+                    is_start = (row, col) == (player_row, player_col)
+                    if not is_start and int(block_map[row, col]) in water_blocks:
                         continue
                     for _, d_row, d_col in moves:
                         next_row = row + d_row
@@ -195,7 +201,11 @@ def drink(state, log_func, step_func, number=1, max_steps=100):
                         if mobs_block and mob_occupied[next_row, next_col]:
                             continue
                         block = int(block_map[next_row, next_col])
-                        if block in water_blocks:
+                        if block == UNKNOWN:
+                            if is_start:
+                                continue
+                            move_cost = walk_cost + unknown_cost
+                        elif block in water_blocks:
                             move_cost = walk_cost
                         elif block in tunnel_pickaxe_requirement:
                             if pickaxe_level < tunnel_pickaxe_requirement[block]:
@@ -249,7 +259,8 @@ def drink(state, log_func, step_func, number=1, max_steps=100):
                         )
                     else:
                         log_func(
-                            f"[drink] None of the {len(visible_sources)} water source(s) in sight is reachable, "
+                            f"[drink] None of the {len(visible_sources)} water source(s) in sight is reachable "
+                            f"over the known map, "
                             f"even by tunnelling with {['no pickaxe', 'a wood pickaxe', 'a stone pickaxe', 'an iron pickaxe', 'a diamond pickaxe'][min(pickaxe_level, 4)]}"
                         )
                         raise Exception(
@@ -302,8 +313,8 @@ def drink(state, log_func, step_func, number=1, max_steps=100):
         if new_state is None:
             raise Exception(f"Drinking failed: step function returned no state for action {action_names[action]}")
 
-        if float(new_state.player_health) <= 0 or int(new_state.timestep) <= int(state.timestep):
-            log_func("[drink] The player died or the episode ended")
+        if float(new_state.player_health) <= 0:
+            log_func("[drink] The player died")
             raise Exception(f"Drinking failed: the player died after drinking {drinks}/{number} time(s)")
 
         if float(new_state.player_health) < float(state.player_health):
@@ -339,15 +350,18 @@ def drink(state, log_func, step_func, number=1, max_steps=100):
                     log_func(f"[drink] Giving up on water source {drinking_cell}")
 
         if mining_cell is not None:
+            # Only trust the mined cell's new block type if it can be seen
             old_block = int(block_map[mining_cell])
-            new_block = int(new_state.map[current_level, mining_cell[0], mining_cell[1]])
+            new_block = old_block
+            if is_visible(new_state, mining_cell[0], mining_cell[1]):
+                new_block = int(known_blocks(new_state)[mining_cell])
             if new_block != old_block:
                 failed_mines.pop(mining_cell, None)
                 log_func(f"[drink] Mined {BlockType(old_block).name} at {mining_cell}, it is now {BlockType(new_block).name}")
             else:
                 failed_mines[mining_cell] = failed_mines.get(mining_cell, 0) + 1
                 log_func(
-                    f"[drink] Mining {BlockType(old_block).name} at {mining_cell} had no effect "
+                    f"[drink] Mining {BlockType(old_block).name} at {mining_cell} had no visible effect "
                     f"({failed_mines[mining_cell]}/{max_failed_attempts})"
                 )
                 if failed_mines[mining_cell] >= max_failed_attempts:

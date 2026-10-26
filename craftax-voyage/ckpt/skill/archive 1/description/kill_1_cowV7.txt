@@ -1,0 +1,1 @@
+The function is about killing 1 cow on the current floor. First, it checks if a sword is in the inventory; if not, it crafts a wood sword. Then, it explores until a cow is found in sight. Once the cow is located, it kills the cow within up to 20 steps. Finally, it returns the resulting state with the cow killed and food increased by 6.

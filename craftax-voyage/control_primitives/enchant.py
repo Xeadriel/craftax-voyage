@@ -3,12 +3,14 @@
 # enchantment table that is in view (enchantment tables cannot be placed, so it never
 # explores and fails when no matching table is in sight). Each enchantment costs 9 mana
 # and one gem (ruby for fire, sapphire for ice). Plans the shortest sequence of
-# movement/turn actions until the player faces the table (breadth-first search over
+# movement/turn actions until the player faces the table (shortest-path search over
 # position and facing direction), then enchants exactly once: the sword, the bow, or one
-# armour slot that does not have the element yet (the game picks the slot).
+# armour slot that does not have the element yet (the game picks the slot). Paths are
+# planned on the known map: never-seen cells count as walkable but more expensive and
+# are never the next step.
 # Returns True when the enchantment succeeded, raises an Exception otherwise.
 
-def enchant(state, log_func, step_func, equipment, element, max_steps=50):
+def enchant(state, log_func, step_func, equipment, element, max_steps=20):
     """
     Enchants one piece of equipment with fire or ice at a matching enchantment table in view.
 
@@ -21,7 +23,7 @@ def enchant(state, log_func, step_func, equipment, element, max_steps=50):
         max_steps: Maximum number of calls to step_func before giving up
 
     Returns:
-        True if the enchantment succeeded (or the sword/bow, or all armour slots, already
+        The final EnvState (after the last step) if the enchantment succeeded (or the sword/bow, or all armour slots, already
         have the element)
 
     Raises:
@@ -30,13 +32,13 @@ def enchant(state, log_func, step_func, equipment, element, max_steps=50):
             the enchanting keeps failing, the player died, the player left the floor, or
             max_steps was reached
     """
-    from collections import deque
+    import heapq
 
     import numpy as np
 
+    from control_primitives.knowledge import UNKNOWN, known_blocks, visible_mask, visible_mobs
     from craftax.craftax.constants import (
         DIRECTIONS,
-        OBS_DIM,
         SOLID_BLOCKS,
         Action,
         BlockType,
@@ -105,9 +107,47 @@ def enchant(state, log_func, step_func, equipment, element, max_steps=50):
         BlockType.DARKNESS.value,
         BlockType.NECROMANCER_VULNERABLE.value,
     }
-    half_rows = OBS_DIM[0] // 2
-    half_cols = OBS_DIM[1] // 2
     max_failed_attempts = 3
+    # Extra cost of walking through a never-seen cell (assumed walkable)
+    unknown_cost = 2
+
+    def plan_path(start_state, walkable, unknown, is_goal):
+        # Dijkstra over (row, col, facing): pressing a direction moves the player onto a
+        # walkable cell, or only turns it when that cell is blocked. Unknown cells are
+        # assumed walkable at an extra cost but are never entered from the player's cell
+        rows, cols = walkable.shape
+        start_cell = start_state[:2]
+        best_cost = {start_state: 0}
+        first_action = {}
+        heap = [(0, 0, start_state)]
+        counter = 1
+        while heap:
+            cost, _, node = heapq.heappop(heap)
+            if cost > best_cost[node]:
+                continue
+            if is_goal(node):
+                return node, first_action
+            row, col, _ = node
+            for a, d_row, d_col in moves:
+                next_row = row + d_row
+                next_col = col + d_col
+                inside = 0 <= next_row < rows and 0 <= next_col < cols
+                if inside and unknown[next_row, next_col]:
+                    if (row, col) == start_cell:
+                        continue
+                    next_state, step_cost = (next_row, next_col, a), 1 + unknown_cost
+                elif inside and walkable[next_row, next_col]:
+                    next_state, step_cost = (next_row, next_col, a), 1
+                else:
+                    next_state, step_cost = (row, col, a), 1
+                next_cost = cost + step_cost
+                if next_cost >= best_cost.get(next_state, next_cost + 1):
+                    continue
+                best_cost[next_state] = next_cost
+                first_action[next_state] = first_action.get(node, a)
+                heapq.heappush(heap, (next_cost, counter, next_state))
+                counter += 1
+        return None, first_action
 
     start_level = int(state.player_level)
     enchanted = False
@@ -149,16 +189,16 @@ def enchant(state, log_func, step_func, equipment, element, max_steps=50):
         # Goal reached?
         if equipment_name == "sword" and int(state.sword_enchantment) == enchantment_value:
             log_func(f"[enchant] The sword is enchanted with {element_name} after {steps_taken} steps")
-            return True
+            return state
         if equipment_name == "bow" and int(state.bow_enchantment) == enchantment_value:
             log_func(f"[enchant] The bow is enchanted with {element_name} after {steps_taken} steps")
-            return True
+            return state
         if equipment_name == "armour" and enchanted:
             log_func(f"[enchant] Enchanted one armour slot with {element_name} after {steps_taken} steps")
-            return True
+            return state
         if equipment_name == "armour" and int(np.sum(armour_enchantments == enchantment_value)) >= armour_slots:
             log_func(f"[enchant] All {armour_slots} armour slots already have {element_name}, nothing to enchant")
-            return True
+            return state
 
         # Requirements for one more enchantment
         if equipment_name == "sword" and int(state.inventory.sword) <= 0:
@@ -181,21 +221,19 @@ def enchant(state, log_func, step_func, equipment, element, max_steps=50):
             log_func(f"[enchant] Max steps ({max_steps}) reached")
             raise Exception(f"Enchanting failed: max steps ({max_steps}) reached")
 
-        block_map = np.asarray(state.map[current_level])
-        light_visible = np.asarray(state.light_map[current_level]) > 0.05
-        mob_occupied = np.asarray(state.mob_map[current_level]).astype(bool)
+        # What the player knows: remembered blocks, the current view and visible mobs
+        block_map = known_blocks(state)
         map_rows, map_cols = block_map.shape
+        unknown = block_map == UNKNOWN
+        unknown[player_row, player_col] = False
+        mob_occupied = np.zeros((map_rows, map_cols), dtype=bool)
+        for _, _, mob_row, mob_col, _ in visible_mobs(state):
+            mob_occupied[mob_row, mob_col] = True
+        walkable_cells = ~unknown & ~np.isin(block_map, list(impassable_blocks)) & ~mob_occupied
+        walkable_cells[player_row, player_col] = True
 
-        # Matching enchantment tables in the (lit) view window
-        tables = np.zeros((map_rows, map_cols), dtype=bool)
-        row_start = max(0, player_row - half_rows)
-        row_end = min(map_rows, player_row + half_rows + 1)
-        col_start = max(0, player_col - half_cols)
-        col_end = min(map_cols, player_col + half_cols + 1)
-        tables[row_start:row_end, col_start:col_end] = (
-            (block_map[row_start:row_end, col_start:col_end] == table_block)
-            & light_visible[row_start:row_end, col_start:col_end]
-        )
+        # Matching enchantment tables in view
+        tables = (block_map == table_block) & visible_mask(state)
         if not np.any(tables):
             log_func(f"[enchant] No {element_name} enchantment table is in view")
             raise Exception(f"Enchanting failed: no {element_name} enchantment table is in view")
@@ -208,37 +246,17 @@ def enchant(state, log_func, step_func, equipment, element, max_steps=50):
         if bool(state.is_sleeping) or bool(state.is_resting):
             action_reason = "player is sleeping/resting, actions are ignored until it wakes up"
         else:
-            # Breadth-first search over (row, col, facing): pressing a direction moves the player
-            # onto a walkable cell, or only turns it when that cell is blocked
-            visited = np.zeros((map_rows, map_cols, len(moves)), dtype=bool)
-            first_action = {}
-            goal_state = None
+            # Shortest path over (row, col, facing) until the player faces a table in view
             start_facing = facing if facing in action_index else moves[0][0]
             start_state = (player_row, player_col, start_facing)
-            visited[player_row, player_col, action_index[start_facing]] = True
-            queue = deque([start_state])
-            while queue:
-                row, col, state_facing = queue.popleft()
+
+            def is_goal(node):
+                row, col, state_facing = node
                 ahead_row = row + move_offsets[state_facing][0]
                 ahead_col = col + move_offsets[state_facing][1]
-                if 0 <= ahead_row < map_rows and 0 <= ahead_col < map_cols and tables[ahead_row, ahead_col]:
-                    goal_state = (row, col, state_facing)
-                    break
-                for a, d_row, d_col in moves:
-                    next_row = row + d_row
-                    next_col = col + d_col
-                    walkable = (
-                        0 <= next_row < map_rows
-                        and 0 <= next_col < map_cols
-                        and int(block_map[next_row, next_col]) not in impassable_blocks
-                        and not mob_occupied[next_row, next_col]
-                    )
-                    next_state = (next_row, next_col, a) if walkable else (row, col, a)
-                    if visited[next_state[0], next_state[1], action_index[a]]:
-                        continue
-                    visited[next_state[0], next_state[1], action_index[a]] = True
-                    first_action[next_state] = first_action.get((row, col, state_facing), a)
-                    queue.append(next_state)
+                return 0 <= ahead_row < map_rows and 0 <= ahead_col < map_cols and bool(tables[ahead_row, ahead_col])
+
+            goal_state, first_action = plan_path(start_state, walkable_cells, unknown, is_goal)
 
             if goal_state is None:
                 log_func(f"[enchant] The {element_name} enchantment table in view cannot be reached")
@@ -261,8 +279,7 @@ def enchant(state, log_func, step_func, equipment, element, max_steps=50):
                 will_move = (
                     0 <= next_cell[0] < map_rows
                     and 0 <= next_cell[1] < map_cols
-                    and int(block_map[next_cell]) not in impassable_blocks
-                    and not mob_occupied[next_cell]
+                    and bool(walkable_cells[next_cell])
                 )
                 action_reason = (
                     f"{'moving to' if will_move else 'turning towards'} {next_cell} to face the "
@@ -275,8 +292,8 @@ def enchant(state, log_func, step_func, equipment, element, max_steps=50):
         if new_state is None:
             raise Exception(f"Enchanting failed: step function returned no state for action {action_names[action]}")
 
-        if float(new_state.player_health) <= 0 or int(new_state.timestep) <= int(state.timestep):
-            log_func("[enchant] The player died or the episode ended")
+        if float(new_state.player_health) <= 0:
+            log_func("[enchant] The player died")
             raise Exception("Enchanting failed: the player died")
 
         if float(new_state.player_health) < float(state.player_health):

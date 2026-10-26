@@ -8,12 +8,14 @@
 # A and B are tunnelled out of rock when the pickaxe allows it, the far end behind B is
 # sealed from inside B, and finally O is sealed from A. Walls are stone (or crafting
 # tables when out of stone). The pocket needing the fewest placements and steps is
-# chosen; if no shelter can be built the player sleeps where it stands. max_steps only
+# chosen; if no shelter can be built the player sleeps where it stands. The shelter is
+# planned only from remembered cells and visible mobs (never-seen cells count as open,
+# and paths may cross them at an extra cost but never as the next step). max_steps only
 # limits the steps before sleeping starts; once asleep the function keeps stepping
 # until the player wakes up.
 # Returns True when the player woke up with full energy, raises an Exception otherwise.
 
-def sleep(state, log_func, step_func, max_steps=100):
+def sleep(state, log_func, step_func, max_steps=50):
     """
     Walls the player in (if possible) and sleeps until the energy is full.
 
@@ -25,17 +27,26 @@ def sleep(state, log_func, step_func, max_steps=100):
             ignored once the player is asleep
 
     Returns:
-        True if the player slept until its energy was full
+        The final EnvState (after the last step) if the player slept until its energy was full
 
     Raises:
         Exception: If the energy is already full, sleeping could not be started, the
-            player was woken up early (e.g. by an attack), the player died, the player
-            left the floor, or max_steps was reached before falling asleep
+            player was woken up early (e.g. by an attack), the player died (health
+            dropped to 0), the player left the floor, or max_steps was reached before
+            falling asleep
     """
+    import heapq
     from collections import deque
 
     import numpy as np
 
+    from control_primitives.knowledge import (
+        UNKNOWN,
+        is_visible,
+        known_blocks,
+        known_items,
+        visible_mobs,
+    )
     from craftax.craftax.constants import (
         DIRECTIONS,
         SOLID_BLOCKS,
@@ -83,6 +94,56 @@ def sleep(state, log_func, step_func, max_steps=100):
     max_mob_wait_steps = 5
     placement_cost = 3
     mining_cost = 3
+    # Extra cost of walking through a never-seen cell (assumed walkable)
+    unknown_cost = 2
+
+    def plan_path(start_state, walkable, unknown, is_goal):
+        # Dijkstra over (row, col, facing): pressing a direction moves the player onto a
+        # walkable cell, or only turns it when that cell is blocked. Unknown cells are
+        # assumed walkable at an extra cost but are never entered from the player's cell
+        rows, cols = walkable.shape
+        start_cell = start_state[:2]
+        best_cost = {start_state: 0}
+        first_action = {}
+        heap = [(0, 0, start_state)]
+        counter = 1
+        while heap:
+            cost, _, node = heapq.heappop(heap)
+            if cost > best_cost[node]:
+                continue
+            if is_goal(node):
+                return node, first_action
+            row, col, _ = node
+            for a, d_row, d_col in moves:
+                next_row = row + d_row
+                next_col = col + d_col
+                inside = 0 <= next_row < rows and 0 <= next_col < cols
+                if inside and unknown[next_row, next_col]:
+                    if (row, col) == start_cell:
+                        continue
+                    next_state, step_cost = (next_row, next_col, a), 1 + unknown_cost
+                elif inside and walkable[next_row, next_col]:
+                    next_state, step_cost = (next_row, next_col, a), 1
+                else:
+                    next_state, step_cost = (row, col, a), 1
+                next_cost = cost + step_cost
+                if next_cost >= best_cost.get(next_state, next_cost + 1):
+                    continue
+                best_cost[next_state] = next_cost
+                first_action[next_state] = first_action.get(node, a)
+                heapq.heappush(heap, (next_cost, counter, next_state))
+                counter += 1
+        return None, first_action
+
+    def block_name(value):
+        value = int(value)
+        return "UNKNOWN" if value == UNKNOWN else BlockType(value).name
+
+    def material_counts(env_state):
+        return tuple(
+            int(getattr(env_state.inventory, name))
+            for name in ("stone", "wood", "coal", "iron", "diamond", "sapphire", "ruby")
+        )
 
     start_level = int(state.player_level)
     plan = None
@@ -127,13 +188,19 @@ def sleep(state, log_func, step_func, max_steps=100):
             log_func(f"[sleep] Player moved from floor {start_level} to floor {current_level}")
             raise Exception(f"Sleeping failed: player left floor {start_level}")
 
-        block_map = np.asarray(state.map[current_level])
-        item_map = np.asarray(state.item_map[current_level])
-        mob_occupied = np.asarray(state.mob_map[current_level]).astype(bool)
+        # What the player knows: remembered blocks/items and visible mobs
+        block_map = known_blocks(state)
+        item_memory = known_items(state)
         map_rows, map_cols = block_map.shape
+        unknown = block_map == UNKNOWN
+        unknown[player_row, player_col] = False
+        mob_occupied = np.zeros((map_rows, map_cols), dtype=bool)
+        for _, _, mob_row, mob_col, _ in visible_mobs(state):
+            mob_occupied[mob_row, mob_col] = True
 
+        # Never-seen cells count as not solid (they might be open) and as not walkable here
         solid = np.isin(block_map, list(solid_blocks))
-        walkable = ~np.isin(block_map, list(impassable_blocks)) & ~mob_occupied
+        walkable = ~unknown & ~np.isin(block_map, list(impassable_blocks)) & ~mob_occupied
         walkable[player_row, player_col] = True
 
         # Region of non-solid cells connected to the player (mobs, flying mobs and projectiles
@@ -181,24 +248,37 @@ def sleep(state, log_func, step_func, max_steps=100):
                 else "going to sleep without shelter (no shelter could be built)"
             )
         else:
-            # Walking distances from the player
+            # Walking costs from the player (Dijkstra; never-seen cells cost extra and are
+            # never the first step)
             walk_distance = np.full((map_rows, map_cols), -1, dtype=np.int64)
             walk_distance[player_row, player_col] = 0
-            frontier = deque([(player_row, player_col)])
-            while frontier:
-                row, col = frontier.popleft()
+            heap = [(0, player_row, player_col)]
+            while heap:
+                distance, row, col = heapq.heappop(heap)
+                if distance > walk_distance[row, col]:
+                    continue
                 for _, d_row, d_col in moves:
                     next_row = row + d_row
                     next_col = col + d_col
-                    if 0 <= next_row < map_rows and 0 <= next_col < map_cols and walkable[next_row, next_col] \
-                            and walk_distance[next_row, next_col] < 0:
-                        walk_distance[next_row, next_col] = walk_distance[row, col] + 1
-                        frontier.append((next_row, next_col))
+                    if not (0 <= next_row < map_rows and 0 <= next_col < map_cols):
+                        continue
+                    if unknown[next_row, next_col]:
+                        if (row, col) == (player_row, player_col):
+                            continue
+                        next_distance = distance + 1 + unknown_cost
+                    elif walkable[next_row, next_col]:
+                        next_distance = distance + 1
+                    else:
+                        continue
+                    if walk_distance[next_row, next_col] < 0 or next_distance < walk_distance[next_row, next_col]:
+                        walk_distance[next_row, next_col] = next_distance
+                        heapq.heappush(heap, (next_distance, next_row, next_col))
 
-            # Validate the current plan (or choose a new one): pocket A-B, entrance O, walls around
+            # Validate the current plan (or choose a new one) from memory: pocket A-B, entrance O,
+            # walls around, all of them known cells
             candidate_cells = [plan[:2]] if plan is not None else [
                 (int(r), int(c), a)
-                for r, c in np.argwhere(walk_distance >= 0)
+                for r, c in np.argwhere((walk_distance >= 0) & ~unknown)
                 for a, _, _ in moves
             ]
             if plan is None:
@@ -223,8 +303,10 @@ def sleep(state, log_func, step_func, max_steps=100):
                     0 <= cell[0] < map_rows and 0 <= cell[1] < map_cols for cell in (a_cell, b_cell, o_cell)
                 ):
                     continue
+                if any(unknown[cell] for cell in (a_cell, b_cell, o_cell)):
+                    continue
                 # The entrance must be reachable, walkable and placeable
-                if walk_distance[o_cell] < 0 or int(item_map[o_cell]) != ItemType.NONE.value:
+                if walk_distance[o_cell] < 0 or int(item_memory[o_cell]) != ItemType.NONE.value:
                     continue
                 pocket_ok = True
                 mines = 0
@@ -255,7 +337,7 @@ def sleep(state, log_func, step_func, max_steps=100):
                 for cell in walls:
                     if not (0 <= cell[0] < map_rows and 0 <= cell[1] < map_cols) or solid[cell]:
                         continue
-                    if int(item_map[cell]) != ItemType.NONE.value:
+                    if unknown[cell] or int(item_memory[cell]) != ItemType.NONE.value:
                         pocket_ok = False
                         break
                     open_walls.append(cell)
@@ -313,32 +395,16 @@ def sleep(state, log_func, step_func, max_steps=100):
 
                 task_kind, target_cell, required_state, label = task
 
-                # Breadth-first search over (row, col, facing) until the player faces the target
-                visited = np.zeros((map_rows, map_cols, len(moves)), dtype=bool)
-                first_action = {}
-                goal_state = None
+                # Shortest path over (row, col, facing) until the player faces the target
                 start_facing = facing if facing in action_index else moves[0][0]
                 start_state = (player_row, player_col, start_facing)
-                visited[player_row, player_col, action_index[start_facing]] = True
-                queue = deque([start_state])
-                while queue:
-                    row, col, state_facing = queue.popleft()
+
+                def is_goal(node, target_cell=target_cell, required_state=required_state):
+                    row, col, state_facing = node
                     ahead = (row + move_offsets[state_facing][0], col + move_offsets[state_facing][1])
-                    if ahead == target_cell and (required_state is None or (row, col, state_facing) == required_state):
-                        goal_state = (row, col, state_facing)
-                        break
-                    for a, d_row, d_col in moves:
-                        next_row = row + d_row
-                        next_col = col + d_col
-                        can_walk = (
-                            0 <= next_row < map_rows and 0 <= next_col < map_cols and walkable[next_row, next_col]
-                        )
-                        next_state = (next_row, next_col, a) if can_walk else (row, col, a)
-                        if visited[next_state[0], next_state[1], action_index[a]]:
-                            continue
-                        visited[next_state[0], next_state[1], action_index[a]] = True
-                        first_action[next_state] = first_action.get((row, col, state_facing), a)
-                        queue.append(next_state)
+                    return ahead == target_cell and (required_state is None or node == required_state)
+
+                goal_state, first_action = plan_path(start_state, walkable, unknown, is_goal)
 
                 if goal_state is None:
                     log_func(f"[sleep] Cannot get into position to work on the {label} at {target_cell}, re-planning")
@@ -365,7 +431,7 @@ def sleep(state, log_func, step_func, max_steps=100):
                     mob_wait_steps = 0
                     action = Action.DO.value
                     mining_cell = target_cell
-                    action_reason = f"tunnelling the {label}: mining {BlockType(int(block_map[target_cell])).name} at {target_cell}"
+                    action_reason = f"tunnelling the {label}: mining {block_name(block_map[target_cell])} at {target_cell}"
                 else:
                     mob_wait_steps = 0
                     if stone > 0:
@@ -385,7 +451,7 @@ def sleep(state, log_func, step_func, max_steps=100):
                         placing_cell = target_cell
                         action_reason = (
                             f"placing a {material} as the {label} on "
-                            f"{BlockType(int(block_map[target_cell])).name} at {target_cell}"
+                            f"{block_name(block_map[target_cell])} at {target_cell}"
                         )
 
         # ---------- Act ----------
@@ -394,8 +460,8 @@ def sleep(state, log_func, step_func, max_steps=100):
         if new_state is None:
             raise Exception(f"Sleeping failed: step function returned no state for action {action_names[action]}")
 
-        if float(new_state.player_health) <= 0 or int(new_state.timestep) <= int(state.timestep):
-            log_func("[sleep] The player died or the episode ended")
+        if float(new_state.player_health) <= 0:
+            log_func("[sleep] The player died")
             raise Exception("Sleeping failed: the player died before falling asleep")
 
         if float(new_state.player_health) < float(state.player_health):
@@ -407,12 +473,19 @@ def sleep(state, log_func, step_func, max_steps=100):
         if placing_cell is not None or mining_cell is not None:
             cell = placing_cell if placing_cell is not None else mining_cell
             old_block = int(block_map[cell])
-            new_block = int(new_state.map[current_level, cell[0], cell[1]])
-            if new_block != old_block:
+            # Trust the memory only if the cell is in view, otherwise the inventory tells
+            if is_visible(new_state, cell[0], cell[1]):
+                new_block = int(known_blocks(new_state)[cell])
+                changed = new_block != old_block
+                change_text = f"{block_name(old_block)} -> {block_name(new_block)}"
+            else:
+                changed = material_counts(new_state) != material_counts(state)
+                change_text = f"{block_name(old_block)} -> (not in view)"
+            if changed:
                 failed_attempts = 0
                 log_func(
                     f"[sleep] {'Placed' if placing_cell is not None else 'Mined'} at {cell}: "
-                    f"{BlockType(old_block).name} -> {BlockType(new_block).name}, "
+                    f"{change_text}, "
                     f"stone {stone} -> {int(new_state.inventory.stone)}, wood {wood} -> {int(new_state.inventory.wood)}"
                 )
             else:
@@ -454,7 +527,7 @@ def sleep(state, log_func, step_func, max_steps=100):
         if not bool(state.is_sleeping):
             if energy >= max_energy:
                 log_func(f"[sleep] Woke up rested with energy {energy}/{max_energy} after {sleep_step} sleeping steps")
-                return True
+                return state
             log_func(
                 f"[sleep] Woke up early with energy {energy}/{max_energy} after {sleep_step} sleeping steps "
                 f"(health {float(state.player_health):.1f}), probably attacked"
@@ -472,8 +545,8 @@ def sleep(state, log_func, step_func, max_steps=100):
         new_state = step_func(Action.NOOP.value)
         if new_state is None:
             raise Exception("Sleeping failed: step function returned no state while sleeping")
-        if float(new_state.player_health) <= 0 or int(new_state.timestep) <= int(state.timestep):
-            log_func("[sleep] The player died or the episode ended while sleeping")
+        if float(new_state.player_health) <= 0:
+            log_func("[sleep] The player died while sleeping")
             raise Exception("Sleeping failed: the player died while sleeping")
         if float(new_state.player_health) < float(state.player_health):
             log_func(

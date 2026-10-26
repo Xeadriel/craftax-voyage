@@ -1,0 +1,1 @@
+The function is about killing 1 zombie on the current floor. First, place a crafting table. Then craft a wood sword. Finally, kill the zombie within up to 20 steps and return the resulting state.

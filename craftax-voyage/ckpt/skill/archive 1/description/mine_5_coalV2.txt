@@ -1,0 +1,1 @@
+The function mines 5 coal blocks by first ensuring the player has a crafting table and a stone pickaxe. If the player lacks wood, it explores and mines a tree to craft the necessary tools. Once equipped, the function explores and mines coal blocks until the inventory contains 5 coal blocks.

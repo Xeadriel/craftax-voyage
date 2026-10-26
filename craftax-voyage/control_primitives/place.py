@@ -1,12 +1,14 @@
 # Description:
 # Deterministically places one placeable (crafting table, furnace, stone, sapling/plant
 # or torch) on the map. Checks the required material first, then either uses the given
-# position or picks the nearest valid cell (not water or lava), plans the shortest
-# sequence of movement/turn actions until the player faces that cell (breadth-first
-# search over position and facing direction), and places it with the matching action.
+# (already seen) position or picks the nearest valid known cell (not water or lava),
+# plans the shortest sequence of movement/turn actions until the player faces that cell
+# (shortest-path search over position and facing direction on the known map, where
+# never-seen cells count as walkable but more expensive and are never the next step),
+# and places it with the matching action.
 # Returns True when the placement is verified, raises an Exception otherwise.
 
-def place(state, log_func, step_func, placeable, max_steps=50, position=None):
+def place(state, log_func, step_func, placeable, max_steps=20, position=None):
     """
     Places one placeable on the cell in front of the player.
 
@@ -18,22 +20,29 @@ def place(state, log_func, step_func, placeable, max_steps=50, position=None):
             BlockType.FURNACE, BlockType.STONE, BlockType.PLANT, ItemType.TORCH, or one of
             the strings "crafting_table"/"table", "furnace", "stone", "plant"/"sapling", "torch"
         max_steps: Maximum number of calls to step_func before giving up
-        position: Optional (row, col) cell to place on; if None the nearest valid cell
-            is chosen automatically
+        position: Optional (row, col) cell to place on, which the player must have seen
+            already; if None the nearest valid known cell is chosen automatically
 
     Returns:
-        True if the placeable was placed
+        The final EnvState (after the last step) if the placeable was placed
 
     Raises:
         Exception: If the placeable is invalid, the required material is missing, the
-            chosen position is invalid or unreachable, no valid cell is reachable, the
-            placement keeps failing, the player died, the player left the floor, or
-            max_steps was reached
+            chosen position was never seen, is invalid or unreachable, no known valid
+            cell is reachable, the placement keeps failing, the player died, the player
+            left the floor, or max_steps was reached
     """
-    from collections import deque
+    import heapq
 
     import numpy as np
 
+    from control_primitives.knowledge import (
+        UNKNOWN,
+        is_visible,
+        known_blocks,
+        known_items,
+        visible_mobs,
+    )
     from craftax.craftax.constants import (
         CAN_PLACE_ITEM_BLOCKS,
         DIRECTIONS,
@@ -129,6 +138,46 @@ def place(state, log_func, step_func, placeable, max_steps=50, position=None):
 
     max_place_attempts = 3
     max_mob_wait_steps = 10
+    # Extra cost of walking through a never-seen cell (assumed walkable)
+    unknown_cost = 2
+
+    def plan_path(start_state, walkable, unknown, is_goal):
+        # Dijkstra over (row, col, facing): pressing a direction moves the player onto a
+        # walkable cell, or only turns it when that cell is blocked. Unknown cells are
+        # assumed walkable at an extra cost but are never entered from the player's cell
+        rows, cols = walkable.shape
+        start_cell = start_state[:2]
+        best_cost = {start_state: 0}
+        first_action = {}
+        heap = [(0, 0, start_state)]
+        counter = 1
+        while heap:
+            cost, _, node = heapq.heappop(heap)
+            if cost > best_cost[node]:
+                continue
+            if is_goal(node):
+                return node, first_action
+            row, col, _ = node
+            for a, d_row, d_col in moves:
+                next_row = row + d_row
+                next_col = col + d_col
+                inside = 0 <= next_row < rows and 0 <= next_col < cols
+                if inside and unknown[next_row, next_col]:
+                    if (row, col) == start_cell:
+                        continue
+                    next_state, step_cost = (next_row, next_col, a), 1 + unknown_cost
+                elif inside and walkable[next_row, next_col]:
+                    next_state, step_cost = (next_row, next_col, a), 1
+                else:
+                    next_state, step_cost = (row, col, a), 1
+                next_cost = cost + step_cost
+                if next_cost >= best_cost.get(next_state, next_cost + 1):
+                    continue
+                best_cost[next_state] = next_cost
+                first_action[next_state] = first_action.get(node, a)
+                heapq.heappush(heap, (next_cost, counter, next_state))
+                counter += 1
+        return None, first_action
 
     start_level = int(state.player_level)
     place_attempts = 0
@@ -159,34 +208,45 @@ def place(state, log_func, step_func, placeable, max_steps=50, position=None):
                 f"but the player has {material_owned}"
             )
 
-        block_map = np.asarray(state.map[current_level])
-        item_map = np.asarray(state.item_map[current_level])
-        mob_occupied = np.asarray(state.mob_map[current_level]).astype(bool)
+        # What the player knows: remembered blocks/items and visible mobs
+        block_map = known_blocks(state)
+        item_memory = known_items(state)
+        unknown = block_map == UNKNOWN
+        unknown[player_row, player_col] = False
+        mob_occupied = np.zeros((map_rows, map_cols), dtype=bool)
+        for _, _, mob_row, mob_col, _ in visible_mobs(state):
+            mob_occupied[mob_row, mob_col] = True
 
-        # Game rules for the cell the placeable goes on (mobs are handled separately)
+        # Game rules for the cell the placeable goes on (mobs are handled separately), known cells only
         if placeable_name in ("crafting_table", "furnace"):
-            valid_cells = ~np.isin(block_map, list(solid_blocks)) & (item_map == ItemType.NONE.value)
+            valid_cells = ~np.isin(block_map, list(solid_blocks)) & (item_memory == ItemType.NONE.value)
             rule = "a non-solid cell without an item"
         elif placeable_name == "stone":
             valid_cells = (block_map == BlockType.WATER.value) | (
-                ~np.isin(block_map, list(solid_blocks)) & (item_map == ItemType.NONE.value)
+                ~np.isin(block_map, list(solid_blocks)) & (item_memory == ItemType.NONE.value)
             )
             rule = "water or a non-solid cell without an item"
         elif placeable_name == "torch":
-            valid_cells = np.isin(block_map, list(item_placeable_blocks)) & (item_map == ItemType.NONE.value)
+            valid_cells = np.isin(block_map, list(item_placeable_blocks)) & (item_memory == ItemType.NONE.value)
             rule = "grass, sand, path, fire grass or ice grass without an item"
         else:
-            valid_cells = (block_map == BlockType.GRASS.value) & (item_map == ItemType.NONE.value)
+            valid_cells = (block_map == BlockType.GRASS.value) & (item_memory == ItemType.NONE.value)
             rule = "grass without an item"
+        valid_cells &= ~unknown
         valid_cells[player_row, player_col] = False
 
         if position is not None:
             if position == (player_row, player_col):
                 log_func(f"[place] Position {position} is the player's own cell")
                 raise Exception(f"Placing failed: cannot place a {placeable_name} on the player's own cell {position}")
+            if unknown[position]:
+                log_func(f"[place] Position {position} has never been seen")
+                raise Exception(
+                    f"Placing failed: position {position} has never been seen, explore it first"
+                )
             if not valid_cells[position]:
                 position_block = BlockType(int(block_map[position])).name
-                position_item = ItemType(int(item_map[position])).name
+                position_item = ItemType(int(item_memory[position])).name
                 log_func(
                     f"[place] Position {position} ({position_block}, item {position_item}) is not valid, "
                     f"a {placeable_name} needs {rule}"
@@ -219,46 +279,29 @@ def place(state, log_func, step_func, placeable, max_steps=50, position=None):
         if bool(state.is_sleeping) or bool(state.is_resting):
             action_reason = "player is sleeping/resting, actions are ignored until it wakes up"
         else:
-            # Breadth-first search over (row, col, facing): pressing a direction moves the player
-            # onto a walkable cell, or only turns it when that cell is blocked
-            visited = np.zeros((map_rows, map_cols, len(moves)), dtype=bool)
-            first_action = {}
-            goal_state = None
+            # Shortest path over (row, col, facing) until the player faces a goal cell
+            walkable_cells = ~unknown & ~np.isin(block_map, list(impassable_blocks)) & ~mob_occupied
+            walkable_cells[player_row, player_col] = True
+            if position is not None:
+                walkable_cells[position] = False
             start_facing = facing if facing in action_index else moves[0][0]
             start_state = (player_row, player_col, start_facing)
-            visited[player_row, player_col, action_index[start_facing]] = True
-            queue = deque([start_state])
-            while queue:
-                row, col, state_facing = queue.popleft()
+
+            def is_goal(node):
+                row, col, state_facing = node
                 ahead_row = row + move_offsets[state_facing][0]
                 ahead_col = col + move_offsets[state_facing][1]
-                if 0 <= ahead_row < map_rows and 0 <= ahead_col < map_cols and goal_cells[ahead_row, ahead_col]:
-                    goal_state = (row, col, state_facing)
-                    break
-                for a, d_row, d_col in moves:
-                    next_row = row + d_row
-                    next_col = col + d_col
-                    walkable = (
-                        0 <= next_row < map_rows
-                        and 0 <= next_col < map_cols
-                        and int(block_map[next_row, next_col]) not in impassable_blocks
-                        and not mob_occupied[next_row, next_col]
-                        and not (position is not None and (next_row, next_col) == position)
-                    )
-                    next_state = (next_row, next_col, a) if walkable else (row, col, a)
-                    if visited[next_state[0], next_state[1], action_index[a]]:
-                        continue
-                    visited[next_state[0], next_state[1], action_index[a]] = True
-                    first_action[next_state] = first_action.get((row, col, state_facing), a)
-                    queue.append(next_state)
+                return 0 <= ahead_row < map_rows and 0 <= ahead_col < map_cols and bool(goal_cells[ahead_row, ahead_col])
+
+            goal_state, first_action = plan_path(start_state, walkable_cells, unknown, is_goal)
 
             if goal_state is None:
                 if position is not None:
                     log_func(f"[place] Position {position} cannot be faced from any reachable cell")
                     raise Exception(f"Placing failed: position {position} is unreachable")
-                log_func(f"[place] No valid cell for a {placeable_name} is reachable ({rule})")
+                log_func(f"[place] No known valid cell for a {placeable_name} is reachable ({rule})")
                 raise Exception(
-                    f"Placing failed: no reachable valid cell for a {placeable_name} on floor {current_level}"
+                    f"Placing failed: no known reachable valid cell for a {placeable_name} ({rule}), explore first"
                 )
 
             target_cell = (
@@ -291,9 +334,7 @@ def place(state, log_func, step_func, placeable, max_steps=50, position=None):
                 will_move = (
                     0 <= next_row < map_rows
                     and 0 <= next_col < map_cols
-                    and int(block_map[next_row, next_col]) not in impassable_blocks
-                    and not mob_occupied[next_row, next_col]
-                    and not (position is not None and (next_row, next_col) == position)
+                    and bool(walkable_cells[next_row, next_col])
                 )
                 action_reason = (
                     f"{'moving to' if will_move else 'turning towards'} ({next_row}, {next_col}) "
@@ -306,8 +347,8 @@ def place(state, log_func, step_func, placeable, max_steps=50, position=None):
         if new_state is None:
             raise Exception(f"Placing failed: step function returned no state for action {action_names[action]}")
 
-        if float(new_state.player_health) <= 0 or int(new_state.timestep) <= int(state.timestep):
-            log_func("[place] The player died or the episode ended")
+        if float(new_state.player_health) <= 0:
+            log_func("[place] The player died")
             raise Exception(f"Placing failed: the player died before placing a {placeable_name}")
 
         if float(new_state.player_health) < float(state.player_health):
@@ -318,8 +359,11 @@ def place(state, log_func, step_func, placeable, max_steps=50, position=None):
 
         if placing_cell is not None:
             new_material = int(getattr(new_state.inventory, material))
-            if placeable_name == "torch":
-                placed = int(new_state.item_map[current_level, placing_cell[0], placing_cell[1]]) == ItemType.TORCH.value
+            if not is_visible(new_state, placing_cell[0], placing_cell[1]):
+                # The cell cannot be seen: only the spent material tells
+                placed = True
+            elif placeable_name == "torch":
+                placed = int(known_items(new_state)[placing_cell]) == ItemType.TORCH.value
             else:
                 expected_block = {
                     "crafting_table": BlockType.CRAFTING_TABLE.value,
@@ -327,14 +371,14 @@ def place(state, log_func, step_func, placeable, max_steps=50, position=None):
                     "stone": BlockType.STONE.value,
                     "plant": BlockType.PLANT.value,
                 }[placeable_name]
-                placed = int(new_state.map[current_level, placing_cell[0], placing_cell[1]]) == expected_block
+                placed = int(known_blocks(new_state)[placing_cell]) == expected_block
             if placed and new_material < material_owned:
                 log_func(
                     f"[place] Placed a {placeable_name} at {placing_cell}, {material} "
                     f"{material_owned} -> {new_material}"
                 )
                 log_func(f"[place] Successfully placed a {placeable_name} after {steps_taken + 1} steps")
-                return True
+                return new_state
             place_attempts += 1
             log_func(
                 f"[place] Placing the {placeable_name} at {placing_cell} had no effect "

@@ -1,0 +1,1 @@
+The function attempts to craft a stone sword by first checking for sufficient wood and stone resources. If wood is missing, it explores and mines one tree. If stone is missing, it explores and mines one stone block. Once all required materials are gathered, it crafts the stone sword and returns the updated state.

@@ -61,24 +61,72 @@ Floor: ...
 Ladder Open: ...
 Is Boss Vulnerable: ...
 
+Learned skills:
+skill_name: what the skill does
+...
+
 Completed tasks so far: ...
 Failed tasks that are too hard: ...
+
+Learned skills are programs I can already execute. Use them to judge what I am already able to do and which harder task builds on them next.
+
+Here is the game's tutorial:
+<Craftax tutorial.md file>
+{Craftax tutorial.md file}
+</Craftax tutorial.md file>
 
 You must follow the following criteria:
 1) You should act as a mentor and guide me to the next task based on my current learning progress.
 2) Please be very specific about what resources I need to collect, what I need to craft, or what mobs I need to kill.
-3) The next task should follow a concise format, such as "Mine [quantity] [block]", "Craft [quantity] [item]", "Smelt [quantity] [item]", "Kill [quantity] [mob]", "Cook [quantity] [food]", "Equip [item]" etc. It should be a single phrase. Do not propose multiple tasks at the same time. Do not mention anything else.
-4) The next task should not be too hard since I may not have the necessary resources or have learned enough skills to complete it yet.
+3) The next task should follow a concise format, such as "Mine [quantity] [block]", "Craft [quantity] [item]", "Place [item]", "Kill [quantity] [mob]", "Drink [quantity] water", "Sleep", "Enchant [equipment] with [element]", "Descend to floor [number]" etc. It should be a single phrase. Do not propose multiple tasks at the same time. Do not mention anything else.
+4) The next task should not be too hard or too long since I may not have the necessary resources or have learned enough skills to complete it yet or may die from hunger/thirst if it's too long.
 5) The next task should be novel and interesting. I should look for rare resources, upgrade my equipment and tools using better materials, and discover new things. I should not be doing the same thing over and over again.
 6) I may sometimes need to repeat some tasks if I need to collect more resources to complete more difficult tasks, especially in preparations for later floors in the game. However, only repeat tasks if necessary.
 7) Do not ask me to build or dig shelter even if it's at night unless you want me to rest up or sleep. I want to explore the world and discover new things. I don't want to stay in one place.
 8) Tasks that require information beyond the given status to verify should be avoided. For instance, "Placing 4 torches" and "Dig a 2x1 hole" are not ideal since they require visual confirmation from the screen.
+9) All times look at your intrinsics (Health, Food, Drink, Energy, Mana, XP). Make sure to not let Health, Food, Drink and Energy to drop too low or else you will take damage/die and the run will reset. If you have XP spend it as soon as possible.
+10) Always make all preparations possible in each floor before you go to the next. Make them as safely and as fast as possible.
+11) If intrinsics are suddenly all full, inventory is completely empty and the player is in the overworld again, the player has likely died in the previous iteration and the world has reset.
+12) To raise food, you need to use search for a passive mob or ripe fruit and kill the passive mob or mine the fruit.
+13) To raise drink you need to find a water source then drink it.
+14) For energy you need to sleep.
+15) Health regenerates as long as the intrinsics are above 0.
 
 You should only respond in the format as described below:
 RESPONSE FORMAT:
 Reasoning: Based on the information I listed above, do reasoning about what the next task should be.
 Task: The next task.
 
-Here's an example response:
+Here are some example responses:
 Reasoning: The inventory is empty now, chop down a tree to get some wood.
-Task: Obtain 1 wood
+Task: Obtain 10 wood
+
+Reasoning: You have a lot of wood but no tool or weapon yet now, craft a wooden pickaxe.
+Task: Craft 1 wooden pickaxe
+
+Reasoning: You have a wooden pickaxe and there is stone on the map. Stone is needed for a stone pickaxe, a furnace and arrows, and you have not collected any yet.
+Task: Mine 10 stone
+
+Reasoning: I have 5 wood and 10 stone. A stone pickaxe costs 1 wood and 1 stone and is required to mine iron.
+Task: Craft 1 stone pickaxe
+
+Reasoning: My drink is down to 3 and there is water on the map. I should drink before it reaches 0 and I start losing health.
+Task: Drink 6 water
+
+Reasoning: You have a stone pickaxe but have not found iron yet. Look for iron and mine some.
+Task: Mine 3 iron
+
+Reasoning: Your food is low. Search for and kill a passive mob.
+Task: Kill 1 passive mob
+
+Reasoning: You do not have a sword yet. Craft a wooden sword.
+Task: Craft 1 wooden sword
+
+Reasoning: You do not have a stone sword yet. Craft a stone sword.
+Task: Craft 1 stone sword
+
+Reasoning: You do not have a iron sword yet. Craft a iron sword.
+Task: Craft 1 iron sword
+
+Reasoning: You need to kill enemies to proceed to the next floor. Kill enemies.
+Task: Kill 1 melee enemy

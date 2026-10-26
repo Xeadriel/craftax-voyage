@@ -1,0 +1,1 @@
+The function is about drinking 6 times from the nearest water source on the current floor. First, explore until a water source is visible. Once a water source is found, drink 6 times from it. Finally, return the resulting state.

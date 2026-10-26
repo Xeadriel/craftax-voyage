@@ -1123,7 +1123,7 @@ def load_all_textures():
     if os.path.exists(TEXTURE_CACHE_FILE) and not os.environ.get(
         "CRAFTAX_RELOAD_TEXTURES", False
     ):
-        print("Loading Craftax textures from cache.")
+        print("Loading Craftax textures from cache.", flush=True)
         all_textures = load_compressed_pickle(TEXTURE_CACHE_FILE)
         # Check validity of texture cache
         for ts in (
@@ -1139,15 +1139,15 @@ def load_all_textures():
                 or tex_shape[3] != 3
             ):
                 load_cached_textures_success = False
-                print("Invalid texture cache, going to reload textures.")
+                print("Invalid texture cache, going to reload textures.", flush=True)
                 break
-        print("Textures successfully loaded from cache.")
+        print("Textures successfully loaded from cache.", flush=True)
     else:
         load_cached_textures_success = False
 
     if not load_cached_textures_success:
         print(
-            "Processing Craftax textures. This will take a minute but will be cached for future use."
+            "Processing Craftax textures. This will take a minute but will be cached for future use.", flush=True
         )
         all_textures = {
             BLOCK_PIXEL_SIZE_AGENT: load_all_textures_given_size(
@@ -1160,6 +1160,6 @@ def load_all_textures():
         }
 
         save_compressed_pickle(TEXTURE_CACHE_FILE, all_textures)
-        print("Textures loaded and saved to cache.")
+        print("Textures loaded and saved to cache.", flush=True)
 
     return all_textures

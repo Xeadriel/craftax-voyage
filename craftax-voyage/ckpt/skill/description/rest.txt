@@ -1,0 +1,1 @@
+The function checks if the player's current health is below their maximum, which is calculated based on their strength attribute. If health is already full, it logs a message and returns the state unchanged. Otherwise, it logs that resting is necessary and executes the REST action to begin healing. Finally, it returns the updated state after the action has been performed.

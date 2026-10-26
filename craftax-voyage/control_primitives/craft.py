@@ -1,13 +1,15 @@
 # Description:
 # Deterministically crafts a craftable (pickaxes, swords, armour, arrows, torches).
-# Uses a crafting table / furnace that is in view, or places the missing station next
-# to the player when none is in view (it never explores). Walks with a breadth-first
-# search over position and facing direction until it stands next to every required
-# station, then crafts until `number` items were produced. If the materials (or the
-# inventory limits) run out, it crafts as many as possible before raising.
+# Uses a crafting table / furnace that is in view, or places the missing station on a
+# known free cell near the player when none is in view (it never explores). Walks with a
+# shortest-path search over position and facing direction on the known map (never-seen
+# cells count as walkable but more expensive, and are never the next step) until it
+# stands next to every required station, then crafts until `number` items were produced.
+# If the materials (or the inventory limits) run out, it crafts as many as possible
+# before raising.
 # Returns True when `number` items were crafted, raises an Exception otherwise.
 
-def craft(state, log_func, step_func, craftable, number=1, max_steps=50):
+def craft(state, log_func, step_func, craftable, number=1, max_steps=20):
     """
     Crafts `number` items of the craftable at the required crafting station(s).
 
@@ -24,21 +26,29 @@ def craft(state, log_func, step_func, craftable, number=1, max_steps=50):
         max_steps: Maximum number of calls to step_func before giving up
 
     Returns:
-        True if `number` items were crafted
+        The final EnvState (after the last step) if `number` items were crafted
 
     Raises:
         Exception: If the craftable or number is invalid, the player already has an
             equal or better tool, the materials or inventory limits do not allow
-            (further) crafting, a needed station cannot be reached or placed, the
-            player died, the player left the floor, or max_steps was reached
+            (further) crafting, a needed station in view cannot be reached or no known
+            reachable cell is free to place a missing one, the player died, the player
+            left the floor, or max_steps was reached
     """
-    from collections import deque
+    import heapq
 
     import numpy as np
 
+    from control_primitives.knowledge import (
+        UNKNOWN,
+        is_visible,
+        known_blocks,
+        known_items,
+        visible_mask,
+        visible_mobs,
+    )
     from craftax.craftax.constants import (
         DIRECTIONS,
-        OBS_DIM,
         SOLID_BLOCKS,
         Action,
         BlockType,
@@ -125,9 +135,47 @@ def craft(state, log_func, step_func, craftable, number=1, max_steps=50):
         BlockType.DARKNESS.value,
         BlockType.NECROMANCER_VULNERABLE.value,
     }
-    half_rows = OBS_DIM[0] // 2
-    half_cols = OBS_DIM[1] // 2
     max_failed_attempts = 3
+    # Extra cost of walking through a never-seen cell (assumed walkable)
+    unknown_cost = 2
+
+    def plan_path(start_state, walkable, unknown, is_goal):
+        # Dijkstra over (row, col, facing): pressing a direction moves the player onto a
+        # walkable cell, or only turns it when that cell is blocked. Unknown cells are
+        # assumed walkable at an extra cost but are never entered from the player's cell
+        rows, cols = walkable.shape
+        start_cell = start_state[:2]
+        best_cost = {start_state: 0}
+        first_action = {}
+        heap = [(0, 0, start_state)]
+        counter = 1
+        while heap:
+            cost, _, node = heapq.heappop(heap)
+            if cost > best_cost[node]:
+                continue
+            if is_goal(node):
+                return node, first_action
+            row, col, _ = node
+            for a, d_row, d_col in moves:
+                next_row = row + d_row
+                next_col = col + d_col
+                inside = 0 <= next_row < rows and 0 <= next_col < cols
+                if inside and unknown[next_row, next_col]:
+                    if (row, col) == start_cell:
+                        continue
+                    next_state, step_cost = (next_row, next_col, a), 1 + unknown_cost
+                elif inside and walkable[next_row, next_col]:
+                    next_state, step_cost = (next_row, next_col, a), 1
+                else:
+                    next_state, step_cost = (row, col, a), 1
+                next_cost = cost + step_cost
+                if next_cost >= best_cost.get(next_state, next_cost + 1):
+                    continue
+                best_cost[next_state] = next_cost
+                first_action[next_state] = first_action.get(node, a)
+                heapq.heappush(heap, (next_cost, counter, next_state))
+                counter += 1
+        return None, first_action
 
     start_level = int(state.player_level)
     start_armour = np.asarray(state.inventory.armour).copy()
@@ -144,7 +192,7 @@ def craft(state, log_func, step_func, craftable, number=1, max_steps=50):
 
     if number == 0:
         log_func("[craft] Nothing to craft")
-        return True
+        return state
 
     for steps_taken in range(max_steps + 1):
         # ---------- Observe ----------
@@ -173,7 +221,7 @@ def craft(state, log_func, step_func, craftable, number=1, max_steps=50):
                 f"[craft] Successfully crafted {produced} {craft_name} with {crafts_done} craft(s) "
                 f"in {steps_taken} steps"
             )
-            return True
+            return state
 
         # Inventory limits for one more craft
         if kind == "tool":
@@ -208,19 +256,18 @@ def craft(state, log_func, step_func, craftable, number=1, max_steps=50):
                 f"Crafting failed: max steps ({max_steps}) reached after crafting {produced}/{number} {craft_name}"
             )
 
-        block_map = np.asarray(state.map[current_level])
-        item_map = np.asarray(state.item_map[current_level])
-        light_visible = np.asarray(state.light_map[current_level]) > 0.05
-        mob_occupied = np.asarray(state.mob_map[current_level]).astype(bool)
+        # What the player knows: remembered blocks/items, the current view and visible mobs
+        block_map = known_blocks(state)
+        item_memory = known_items(state)
+        in_view = visible_mask(state)
         map_rows, map_cols = block_map.shape
+        unknown = block_map == UNKNOWN
+        unknown[player_row, player_col] = False
+        mob_occupied = np.zeros((map_rows, map_cols), dtype=bool)
+        for _, _, mob_row, mob_col, _ in visible_mobs(state):
+            mob_occupied[mob_row, mob_col] = True
 
-        # Stations in the (lit) view window and the cells next to them (8-neighbourhood)
-        in_view = np.zeros((map_rows, map_cols), dtype=bool)
-        in_view[
-            max(0, player_row - half_rows):min(map_rows, player_row + half_rows + 1),
-            max(0, player_col - half_cols):min(map_cols, player_col + half_cols + 1),
-        ] = True
-        in_view &= light_visible
+        # Stations in view and the cells next to them (8-neighbourhood)
         station_visible = {}
         station_near = {}
         for station in required_stations:
@@ -242,7 +289,7 @@ def craft(state, log_func, step_func, craftable, number=1, max_steps=50):
             station_visible[station] = visible
             station_near[station] = near
 
-        # The game's own nearness check (8 cells around the player)
+        # The game's own nearness check (8 cells around the player), on the remembered cells
         player_near = {
             station: any(
                 0 <= player_row + d_row < map_rows
@@ -253,11 +300,13 @@ def craft(state, log_func, step_func, craftable, number=1, max_steps=50):
             for station in required_stations
         }
 
-        standable = ~np.isin(block_map, list(impassable_blocks)) & ~mob_occupied
+        # Known cells only; unknown cells are handled by the path search
+        standable = ~unknown & ~np.isin(block_map, list(impassable_blocks)) & ~mob_occupied
         standable[player_row, player_col] = True
         placeable_cells = (
-            ~np.isin(block_map, list(solid_blocks | liquid_blocks))
-            & (item_map == ItemType.NONE.value)
+            ~unknown
+            & ~np.isin(block_map, list(solid_blocks | liquid_blocks))
+            & (item_memory == ItemType.NONE.value)
             & ~mob_occupied
         )
         placeable_cells[player_row, player_col] = False
@@ -296,36 +345,20 @@ def craft(state, log_func, step_func, craftable, number=1, max_steps=50):
             plans.append(("place", place_station, anchor_goal, placeable_cells))
 
             chosen = None
+            start_facing = facing if facing in action_index else moves[0][0]
+            start_state = (player_row, player_col, start_facing)
             for plan_kind, plan_station, stand_goal, face_goal in plans:
-                # Breadth-first search over (row, col, facing): pressing a direction moves the player
-                # onto a walkable cell, or only turns it when that cell is blocked
-                visited = np.zeros((map_rows, map_cols, len(moves)), dtype=bool)
-                first_action = {}
-                goal_state = None
-                start_facing = facing if facing in action_index else moves[0][0]
-                start_state = (player_row, player_col, start_facing)
-                visited[player_row, player_col, action_index[start_facing]] = True
-                queue = deque([start_state])
-                while queue:
-                    row, col, state_facing = queue.popleft()
+
+                def is_goal(node, stand_goal=stand_goal, face_goal=face_goal):
+                    row, col, state_facing = node
                     ahead_row = row + move_offsets[state_facing][0]
                     ahead_col = col + move_offsets[state_facing][1]
-                    if stand_goal[row, col] and (
+                    return bool(stand_goal[row, col]) and (
                         face_goal is None
                         or (0 <= ahead_row < map_rows and 0 <= ahead_col < map_cols and face_goal[ahead_row, ahead_col])
-                    ):
-                        goal_state = (row, col, state_facing)
-                        break
-                    for a, d_row, d_col in moves:
-                        next_row = row + d_row
-                        next_col = col + d_col
-                        walkable = 0 <= next_row < map_rows and 0 <= next_col < map_cols and standable[next_row, next_col]
-                        next_state = (next_row, next_col, a) if walkable else (row, col, a)
-                        if visited[next_state[0], next_state[1], action_index[a]]:
-                            continue
-                        visited[next_state[0], next_state[1], action_index[a]] = True
-                        first_action[next_state] = first_action.get((row, col, state_facing), a)
-                        queue.append(next_state)
+                    )
+
+                goal_state, first_action = plan_path(start_state, standable, unknown, is_goal)
                 if goal_state is not None:
                     chosen = (plan_kind, plan_station, goal_state, start_state, first_action)
                     break
@@ -338,8 +371,8 @@ def craft(state, log_func, step_func, craftable, number=1, max_steps=50):
             if chosen is None:
                 log_func(f"[craft] Cannot get next to {' and '.join(required_stations)}")
                 raise Exception(
-                    f"Crafting failed: cannot reach or place {' and '.join(required_stations)} "
-                    f"after crafting {produced}/{number} {craft_name}"
+                    f"Crafting failed: cannot reach {' and '.join(required_stations)} in view or a known free "
+                    f"cell to place one after crafting {produced}/{number} {craft_name}, explore first"
                 )
 
             plan_kind, plan_station, goal_state, start_state, first_action = chosen
@@ -395,8 +428,8 @@ def craft(state, log_func, step_func, craftable, number=1, max_steps=50):
         if new_state is None:
             raise Exception(f"Crafting failed: step function returned no state for action {action_names[action]}")
 
-        if float(new_state.player_health) <= 0 or int(new_state.timestep) <= int(state.timestep):
-            log_func("[craft] The player died or the episode ended")
+        if float(new_state.player_health) <= 0:
+            log_func("[craft] The player died")
             raise Exception(f"Crafting failed: the player died after crafting {produced}/{number} {craft_name}")
 
         if float(new_state.player_health) < float(state.player_health):
@@ -407,7 +440,15 @@ def craft(state, log_func, step_func, craftable, number=1, max_steps=50):
 
         if placing is not None:
             station_name, cell = placing
-            if int(new_state.map[current_level, cell[0], cell[1]]) == stations[station_name][0]:
+            # Trust the memory only if the cell is in view, otherwise the spent material tells
+            if is_visible(new_state, cell[0], cell[1]):
+                placed = int(known_blocks(new_state)[cell]) == stations[station_name][0]
+            else:
+                placed = all(
+                    int(getattr(new_state.inventory, material)) < inventory[material]
+                    for material in stations[station_name][2]
+                )
+            if placed:
                 failed_placements = 0
                 log_func(
                     f"[craft] Placed a {station_name} at {cell}, "

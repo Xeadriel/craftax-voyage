@@ -2,10 +2,12 @@
 # Deterministically mines a given number of blocks of one type that are in sight.
 # Picks the cheapest visible target block with Dijkstra path planning, tunnels through
 # mineable blocks on the way and bridges water and lava by placing a stone and mining
-# it again. Faces each target block and mines it with DO, counting every target block
-# that gets removed. Returns True once enough blocks are mined, raises otherwise.
+# it again. Plans over the player's memory of the floor: never-seen cells are assumed walkable
+# at an extra cost but are never stepped, tunnelled or bridged into directly. Faces each target
+# block and mines it with DO, counting every target block that gets removed. Returns the final
+# state once enough blocks are mined, raises otherwise.
 
-def mine_block(state, log_func, step_func, target, number=1, max_steps=200):
+def mine_block(state, log_func, step_func, target, number=1, max_steps=20):
     """
     Mines `number` blocks of the target type that are visible to the player.
 
@@ -19,13 +21,13 @@ def mine_block(state, log_func, step_func, target, number=1, max_steps=200):
         max_steps: Maximum number of calls to step_func before giving up
 
     Returns:
-        True if `number` target blocks were mined
+        The final EnvState (after the last step) if `number` target blocks were mined
 
     Raises:
         Exception: If the target is invalid, the required pickaxe is missing, no target
-            block is in sight, no more target blocks are in sight while more are needed,
-            no visible target block is reachable, the player died, the player left the
-            floor, or max_steps was reached
+            block is in sight (explore first), no more target blocks are in sight while
+            more are needed, no target block in sight is reachable over the known map,
+            the player died, the player left the floor, or max_steps was reached
     """
     import heapq
 
@@ -33,10 +35,16 @@ def mine_block(state, log_func, step_func, target, number=1, max_steps=200):
 
     from craftax.craftax.constants import (
         DIRECTIONS,
-        OBS_DIM,
         SOLID_BLOCKS,
         Action,
         BlockType,
+    )
+    from control_primitives.knowledge import (
+        UNKNOWN,
+        is_visible,
+        known_blocks,
+        visible_mask,
+        visible_mobs,
     )
 
     pickaxe_names = ["no pickaxe", "wood pickaxe", "stone pickaxe", "iron pickaxe", "diamond pickaxe"]
@@ -110,11 +118,10 @@ def mine_block(state, log_func, step_func, target, number=1, max_steps=200):
     walk_cost = 1
     tunnel_cost = 4
     bridge_cost = 5
+    unknown_cost = 2
     mob_extra_cost = 6
     max_failed_attempts = 3
     max_mob_wait_steps = 2
-    half_rows = OBS_DIM[0] // 2
-    half_cols = OBS_DIM[1] // 2
 
     start_level = int(state.player_level)
     mined_count = 0
@@ -131,7 +138,7 @@ def mine_block(state, log_func, step_func, target, number=1, max_steps=200):
 
     if number == 0:
         log_func("[mine_block] Nothing to mine")
-        return True
+        return state
 
     for steps_taken in range(max_steps + 1):
         # ---------- Observe ----------
@@ -144,25 +151,21 @@ def mine_block(state, log_func, step_func, target, number=1, max_steps=200):
             log_func(f"[mine_block] Player moved from floor {start_level} to floor {current_level}")
             raise Exception(f"Mining failed: player left floor {start_level}")
 
-        block_map = np.asarray(state.map[current_level])
-        light_visible = np.asarray(state.light_map[current_level]) > 0.05
-        mob_occupied = np.asarray(state.mob_map[current_level]).astype(bool)
+        # The player's memory of the floor, what it sees right now and the mobs in view
+        block_map = known_blocks(state)
+        visible = visible_mask(state)
         map_rows, map_cols = block_map.shape
+        mob_occupied = np.zeros((map_rows, map_cols), dtype=bool)
+        for _, _, mob_row, mob_col, _ in visible_mobs(state):
+            mob_occupied[mob_row, mob_col] = True
         pickaxe_level = int(state.inventory.pickaxe)
         stone_count = int(state.inventory.stone)
         can_bridge = pickaxe_level >= 1 and stone_count >= 1
 
         # Target blocks in the (lit) view window
-        row_start = max(0, player_row - half_rows)
-        row_end = min(map_rows, player_row + half_rows + 1)
-        col_start = max(0, player_col - half_cols)
-        col_end = min(map_cols, player_col + half_cols + 1)
         visible_targets = [
-            (int(cell[0]) + row_start, int(cell[1]) + col_start)
-            for cell in np.argwhere(
-                (block_map[row_start:row_end, col_start:col_end] == target.value)
-                & light_visible[row_start:row_end, col_start:col_end]
-            )
+            (int(cell[0]), int(cell[1]))
+            for cell in np.argwhere((block_map == target.value) & visible)
         ]
         visible_targets = [
             cell for cell in visible_targets
@@ -172,7 +175,7 @@ def mine_block(state, log_func, step_func, target, number=1, max_steps=200):
         if current_target is not None and (
             int(block_map[current_target]) != target.value or current_target in blocked_cells
         ):
-            log_func(f"[mine_block] Target block {current_target} is no longer a {target.name}")
+            log_func(f"[mine_block] Target block {current_target} is no longer known as a {target.name}")
             current_target = None
 
         log_func(
@@ -185,7 +188,7 @@ def mine_block(state, log_func, step_func, target, number=1, max_steps=200):
         if current_target is None and len(visible_targets) == 0:
             if mined_count == 0:
                 log_func(f"[mine_block] No {target.name} block is in sight")
-                raise Exception(f"Mining failed: no {target.name} block is in sight")
+                raise Exception(f"Mining failed: no {target.name} block is in sight, explore first")
             log_func(
                 f"[mine_block] No more {target.name} blocks in sight, mined {mined_count}/{number}"
             )
@@ -209,7 +212,8 @@ def mine_block(state, log_func, step_func, target, number=1, max_steps=200):
         if bool(state.is_sleeping) or bool(state.is_resting):
             action_reason = "player is sleeping/resting, actions are ignored until it wakes up"
         else:
-            # Dijkstra over the floor; tunnelling, bridging and passing mobs cost extra
+            # Dijkstra over the known floor; never-seen cells are assumed walkable at an extra
+            # cost (but never as the next step), tunnelling, bridging and passing mobs cost extra
             distance = np.full((map_rows, map_cols), np.inf)
             previous = {}
             distance[player_row, player_col] = 0
@@ -219,7 +223,8 @@ def mine_block(state, log_func, step_func, target, number=1, max_steps=200):
                 if cost_so_far > distance[row, col]:
                     continue
                 # Target blocks are path end points, never walked through
-                if (row, col) != (player_row, player_col) and int(block_map[row, col]) == target.value and (row, col) not in placed_stone_cells:
+                is_start = (row, col) == (player_row, player_col)
+                if not is_start and int(block_map[row, col]) == target.value and (row, col) not in placed_stone_cells:
                     continue
                 for _, d_row, d_col in moves:
                     next_row = row + d_row
@@ -229,7 +234,11 @@ def mine_block(state, log_func, step_func, target, number=1, max_steps=200):
                     if (next_row, next_col) in blocked_cells:
                         continue
                     block = int(block_map[next_row, next_col])
-                    if block in tunnel_blocks and pickaxe_level >= mineable_blocks[block][0]:
+                    if block == UNKNOWN:
+                        if is_start:
+                            continue
+                        move_cost = walk_cost + unknown_cost
+                    elif block in tunnel_blocks and pickaxe_level >= mineable_blocks[block][0]:
                         move_cost = tunnel_cost
                     elif block in bridge_blocks and can_bridge:
                         move_cost = bridge_cost
@@ -256,7 +265,8 @@ def mine_block(state, log_func, step_func, target, number=1, max_steps=200):
                 ]
                 if len(reachable) == 0:
                     log_func(
-                        f"[mine_block] None of the {len(visible_targets)} {target.name} block(s) in sight is reachable"
+                        f"[mine_block] None of the {len(visible_targets)} {target.name} block(s) in sight is reachable "
+                        f"over the known map"
                     )
                     raise Exception(
                         f"Mining failed: no {target.name} block in sight is reachable "
@@ -337,8 +347,8 @@ def mine_block(state, log_func, step_func, target, number=1, max_steps=200):
         if new_state is None:
             raise Exception(f"Mining failed: step function returned no state for action {action_names[action]}")
 
-        if float(new_state.player_health) <= 0 or int(new_state.timestep) <= int(state.timestep):
-            log_func("[mine_block] The player died or the episode ended")
+        if float(new_state.player_health) <= 0:
+            log_func("[mine_block] The player died")
             raise Exception(
                 f"Mining failed: the player died after mining {mined_count}/{number} {target.name}"
             )
@@ -357,8 +367,9 @@ def mine_block(state, log_func, step_func, target, number=1, max_steps=200):
                 )
 
         if placing_cell is not None:
-            new_block = int(new_state.map[current_level, placing_cell[0], placing_cell[1]])
-            if new_block == BlockType.STONE.value:
+            # Only trust the cell's new block type if it can be seen
+            placed_visible = is_visible(new_state, placing_cell[0], placing_cell[1])
+            if placed_visible and int(known_blocks(new_state)[placing_cell]) == BlockType.STONE.value:
                 placed_stone_cells.add(placing_cell)
                 failed_attempts.pop(placing_cell, None)
                 log_func(
@@ -368,7 +379,7 @@ def mine_block(state, log_func, step_func, target, number=1, max_steps=200):
             else:
                 failed_attempts[placing_cell] = failed_attempts.get(placing_cell, 0) + 1
                 log_func(
-                    f"[mine_block] Placing stone at {placing_cell} had no effect "
+                    f"[mine_block] Placing stone at {placing_cell} had no visible effect "
                     f"({failed_attempts[placing_cell]}/{max_failed_attempts})"
                 )
                 if failed_attempts[placing_cell] >= max_failed_attempts:
@@ -376,8 +387,11 @@ def mine_block(state, log_func, step_func, target, number=1, max_steps=200):
                     log_func(f"[mine_block] Treating {placing_cell} as impassable from now on")
 
         if mining_cell is not None:
+            # Only trust the mined cell's new block type if it can be seen
             old_block = int(block_map[mining_cell])
-            new_block = int(new_state.map[current_level, mining_cell[0], mining_cell[1]])
+            new_block = old_block
+            if is_visible(new_state, mining_cell[0], mining_cell[1]):
+                new_block = int(known_blocks(new_state)[mining_cell])
             if new_block != old_block:
                 failed_attempts.pop(mining_cell, None)
                 was_placed = mining_cell in placed_stone_cells
@@ -403,11 +417,11 @@ def mine_block(state, log_func, step_func, target, number=1, max_steps=200):
                             f"[mine_block] Successfully mined {mined_count} {target.name} block(s) "
                             f"after {steps_taken + 1} steps"
                         )
-                        return True
+                        return new_state
             else:
                 failed_attempts[mining_cell] = failed_attempts.get(mining_cell, 0) + 1
                 log_func(
-                    f"[mine_block] Mining {BlockType(old_block).name} at {mining_cell} had no effect "
+                    f"[mine_block] Mining {BlockType(old_block).name} at {mining_cell} had no visible effect "
                     f"({failed_attempts[mining_cell]}/{max_failed_attempts})"
                 )
                 if failed_attempts[mining_cell] >= max_failed_attempts:

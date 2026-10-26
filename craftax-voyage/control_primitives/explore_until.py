@@ -1,12 +1,15 @@
 # Description:
 # Deterministically explores the current floor until a specific block type, item
-# (torch or ladder) or mob becomes visible in the player's (lit) view window. Uses frontier-based exploration:
-# it repeatedly walks to the cheapest reachable cell bordering unexplored territory,
-# tunnelling through mineable blocks (trees, stone, ores, ...) when the equipped
-# pickaxe allows it and waiting for / attacking mobs that block the path.
-# Returns True when the target is seen, raises an Exception otherwise.
+# (torch or ladder) or mob becomes visible in the player's (lit) view window. If a block or item target was
+# seen before but is out of view, it walks back towards the nearest remembered one, so it also works on a
+# fully explored floor. Otherwise it uses frontier-based exploration over the player's memory of the floor:
+# it repeatedly walks to the cheapest reachable known cell bordering never-seen territory, tunnelling
+# through mineable blocks (trees, stone, ores, ...) when the equipped pickaxe allows it and waiting for /
+# attacking mobs that block the path. Dark cells cannot be seen and are not explored. Mobs are not
+# remembered, so mob targets are always explored for.
+# Returns the final state when the target is seen, raises an Exception otherwise.
 
-def explore_until(state, log_func, step_func, target, max_steps=200):
+def explore_until(state, log_func, step_func, target, max_steps=20):
     """
     Explores the current floor until the target is visible to the player.
 
@@ -18,17 +21,20 @@ def explore_until(state, log_func, step_func, target, max_steps=200):
             LADDER_DOWN or LADDER_DOWN_BLOCKED), MobType to look for (any mob of
             that class), or a tuple (MobType, type_id) to look for one specific mob
             type (e.g. (MobType.PASSIVE, 0) is a cow on the overworld).
+            RIPE_PLANT only matches ripe plants, PLANT only young plants.
             LADDER_DOWN matches the down ladder whether it is open or blocked;
-            LADDER_DOWN_BLOCKED only matches it while it is still blocked (fewer
-            than MONSTERS_KILLED_TO_CLEAR_LEVEL monsters killed on the floor)
+            LADDER_DOWN_BLOCKED only matches it while it is still blocked
+            (the ladder is not open yet)
         max_steps: Maximum number of calls to step_func before giving up
 
     Returns:
-        True if the target became visible
+        The final EnvState (after the last step) if the target became visible
 
     Raises:
-        Exception: If the target is invalid, the block does not exist on the floor,
-            the floor is already cleared (LADDER_DOWN_BLOCKED), the player died, the reachable area is exhausted, or max_steps was reached
+        Exception: If the target is invalid, the down ladder is already open
+            (LADDER_DOWN_BLOCKED), the player died, the target is neither in sight
+            nor remembered at a reachable place and no reachable unexplored area
+            is left, or max_steps was reached
     """
     import heapq
 
@@ -36,13 +42,21 @@ def explore_until(state, log_func, step_func, target, max_steps=200):
 
     from craftax.craftax.constants import (
         DIRECTIONS,
-        MONSTERS_KILLED_TO_CLEAR_LEVEL,
         OBS_DIM,
         SOLID_BLOCKS,
         Action,
         BlockType,
         ItemType,
         MobType,
+    )
+    from control_primitives.knowledge import (
+        UNKNOWN,
+        is_visible,
+        known_blocks,
+        known_items,
+        ladder_open,
+        visible_mask,
+        visible_mobs,
     )
 
     # Resolve and validate the target
@@ -86,7 +100,7 @@ def explore_until(state, log_func, step_func, target, max_steps=200):
         raise Exception("Invalid target: ItemType.NONE is not a real item")
 
     # Blocked down ladders are stored as LADDER_DOWN in the item map; whether they are
-    # blocked depends on the number of monsters killed on the floor
+    # blocked is shown by the "Ladder Open" indicator
     if target_kind == "item" and target in (ItemType.LADDER_DOWN, ItemType.LADDER_DOWN_BLOCKED):
         target_item_value = ItemType.LADDER_DOWN.value
     elif target_kind == "item":
@@ -131,6 +145,7 @@ def explore_until(state, log_func, step_func, target, max_steps=200):
 
     walk_cost = 1
     tunnel_cost = 4
+    unknown_cost = 2
     mob_extra_cost = 6
     max_mine_attempts = 3
     max_mob_wait_steps = 2
@@ -138,7 +153,8 @@ def explore_until(state, log_func, step_func, target, max_steps=200):
     half_cols = OBS_DIM[1] // 2
 
     level = None
-    seen = None
+    dark_cells = None
+    known_count = 0
     current_goal = None
     failed_mine_attempts = {}
     unminable_cells = set()
@@ -154,41 +170,27 @@ def explore_until(state, log_func, step_func, target, max_steps=200):
         player_col = int(state.player_position[1])
         current_level = int(state.player_level)
 
-        block_map = np.asarray(state.map[current_level])
-        light_visible = np.asarray(state.light_map[current_level]) > 0.05
-        mob_occupied = np.asarray(state.mob_map[current_level]).astype(bool)
+        block_map = known_blocks(state)
+        visible = visible_mask(state)
         map_rows, map_cols = block_map.shape
+        mobs_in_view = visible_mobs(state)
+        mob_occupied = np.zeros((map_rows, map_cols), dtype=bool)
+        for _, _, mob_row, mob_col, _ in mobs_in_view:
+            mob_occupied[mob_row, mob_col] = True
 
         if current_level != level:
-            log_func(f"[explore_until] Now on floor {current_level}, resetting exploration memory")
+            log_func(f"[explore_until] Now on floor {current_level}, resetting exploration goal")
             level = current_level
-            seen = np.zeros((map_rows, map_cols), dtype=bool)
+            # Cells that were in view but dark: they cannot be seen, so they are not explored
+            dark_cells = np.zeros((map_rows, map_cols), dtype=bool)
+            known_count = int(np.sum(block_map != UNKNOWN))
             current_goal = None
             failed_mine_attempts = {}
             unminable_cells = set()
             mob_block_steps = 0
-            if target_kind == "block":
-                exists = bool(np.any(block_map == target.value))
-                if not exists and target == BlockType.RIPE_PLANT:
-                    exists = bool(np.any(block_map == BlockType.PLANT.value))
-                if not exists:
-                    raise Exception(
-                        f"Exploration failed: no {target_name} exists on floor {current_level}"
-                    )
-            if target_kind == "item":
-                if not bool(np.any(np.asarray(state.item_map[current_level]) == target_item_value)):
-                    raise Exception(
-                        f"Exploration failed: no {target_name} exists on floor {current_level}"
-                    )
 
-        floor_cleared = (
-            int(state.monsters_killed[current_level]) >= MONSTERS_KILLED_TO_CLEAR_LEVEL
-        )
-        if target_kind == "item" and target == ItemType.LADDER_DOWN_BLOCKED and floor_cleared:
-            log_func(
-                f"[explore_until] Floor {current_level} is cleared "
-                f"({int(state.monsters_killed[current_level])} monsters killed), the down ladder is open"
-            )
+        if target_kind == "item" and target == ItemType.LADDER_DOWN_BLOCKED and ladder_open(state):
+            log_func(f"[explore_until] The down ladder on floor {current_level} is open")
             raise Exception(
                 f"Exploration failed: the down ladder on floor {current_level} is not blocked anymore"
             )
@@ -197,91 +199,55 @@ def explore_until(state, log_func, step_func, target, max_steps=200):
         row_end = min(map_rows, player_row + half_rows + 1)
         col_start = max(0, player_col - half_cols)
         col_end = min(map_cols, player_col + half_cols + 1)
-        newly_seen = int(np.sum(~seen[row_start:row_end, col_start:col_end]))
-        seen[row_start:row_end, col_start:col_end] = True
+        dark_cells[row_start:row_end, col_start:col_end] |= ~visible[row_start:row_end, col_start:col_end]
+        unknown = block_map == UNKNOWN
+        dark_cells &= unknown
+
+        new_known_count = int(np.sum(~unknown))
+        newly_seen = new_known_count - known_count
+        known_count = new_known_count
 
         log_func(
             f"[explore_until] Step {steps_taken}/{max_steps}: position ({player_row}, {player_col}), "
             f"floor {current_level}, facing {action_names.get(int(state.player_direction), state.player_direction)}, "
             f"health {float(state.player_health):.1f}, revealed {newly_seen} new cells, "
-            f"explored {int(np.sum(seen))}/{map_rows * map_cols} cells"
+            f"known {known_count}/{map_rows * map_cols} cells"
         )
 
         # Check whether the target is visible
-        if target_kind == "block":
-            matches = np.argwhere(
-                (block_map[row_start:row_end, col_start:col_end] == target.value)
-                & light_visible[row_start:row_end, col_start:col_end]
-            )
+        if target_kind in ("block", "item"):
+            if target_kind == "block":
+                matches = np.argwhere((block_map == target.value) & visible)
+            else:
+                matches = np.argwhere((known_items(state) == target_item_value) & visible)
             if len(matches) > 0:
                 found = min(
                     (
-                        abs(int(m[0]) + row_start - player_row) + abs(int(m[1]) + col_start - player_col),
-                        int(m[0]) + row_start,
-                        int(m[1]) + col_start,
-                    )
-                    for m in matches
-                )
-                log_func(
-                    f"[explore_until] Found {target_name} at ({found[1]}, {found[2]}), "
-                    f"distance {found[0]}, after {steps_taken} steps"
-                )
-                return True
-        elif target_kind == "item":
-            item_map = np.asarray(state.item_map[current_level])
-            matches = np.argwhere(
-                (item_map[row_start:row_end, col_start:col_end] == target_item_value)
-                & light_visible[row_start:row_end, col_start:col_end]
-            )
-            if len(matches) > 0:
-                found = min(
-                    (
-                        abs(int(m[0]) + row_start - player_row) + abs(int(m[1]) + col_start - player_col),
-                        int(m[0]) + row_start,
-                        int(m[1]) + col_start,
+                        abs(int(m[0]) - player_row) + abs(int(m[1]) - player_col),
+                        int(m[0]),
+                        int(m[1]),
                     )
                     for m in matches
                 )
                 ladder_state = ""
                 if target_item_value == ItemType.LADDER_DOWN.value:
-                    ladder_state = (
-                        " (open)" if floor_cleared else
-                        f" (blocked, {int(state.monsters_killed[current_level])}/"
-                        f"{MONSTERS_KILLED_TO_CLEAR_LEVEL} monsters killed)"
-                    )
+                    ladder_state = " (open)" if ladder_open(state) else " (blocked)"
                 log_func(
                     f"[explore_until] Found {target_name}{ladder_state} at ({found[1]}, {found[2]}), "
                     f"distance {found[0]}, after {steps_taken} steps"
                 )
-                return True
+                return state
         else:
-            mobs = {
-                MobType.PASSIVE: state.passive_mobs,
-                MobType.MELEE: state.melee_mobs,
-                MobType.RANGED: state.ranged_mobs,
-            }[target_mob_class]
-            mob_mask = np.asarray(mobs.mask[current_level])
-            mob_positions = np.asarray(mobs.position[current_level])
-            mob_type_ids = np.asarray(mobs.type_id[current_level])
-            for mob_index in range(len(mob_mask)):
-                if not mob_mask[mob_index]:
+            for mob_class, mob_type_id, mob_row, mob_col, _ in mobs_in_view:
+                if mob_class != target_mob_class:
                     continue
-                if target_mob_type_id is not None and int(mob_type_ids[mob_index]) != target_mob_type_id:
+                if target_mob_type_id is not None and mob_type_id != target_mob_type_id:
                     continue
-                mob_row = int(mob_positions[mob_index][0])
-                mob_col = int(mob_positions[mob_index][1])
-                if (
-                    abs(mob_row - player_row) <= half_rows
-                    and abs(mob_col - player_col) <= half_cols
-                    and 0 <= mob_row < map_rows
-                    and 0 <= mob_col < map_cols
-                    and light_visible[mob_row, mob_col]
-                ):
-                    log_func(
-                        f"[explore_until] Found {target_mob_class.name} mob (type_id {int(mob_type_ids[mob_index])}) "
-                        f"at ({mob_row}, {mob_col}) after {steps_taken} steps"
-                    )
-                    return True
+                log_func(
+                    f"[explore_until] Found {target_mob_class.name} mob (type_id {mob_type_id}) "
+                    f"at ({mob_row}, {mob_col}) after {steps_taken} steps"
+                )
+                return state
 
         if steps_taken >= max_steps:
             log_func(f"[explore_until] Max steps ({max_steps}) reached without finding {target_name}")
@@ -300,7 +266,8 @@ def explore_until(state, log_func, step_func, target, max_steps=200):
         else:
             pickaxe_level = int(state.inventory.pickaxe)
 
-            # Dijkstra over explored cells; tunnelling and passing mobs cost extra
+            # Dijkstra over the known floor; never-seen cells are assumed walkable at an extra
+            # cost (but never as the next step), tunnelling and passing mobs cost extra
             distance = np.full((map_rows, map_cols), np.inf)
             previous = {}
             distance[player_row, player_col] = 0
@@ -309,15 +276,20 @@ def explore_until(state, log_func, step_func, target, max_steps=200):
                 cost_so_far, row, col = heapq.heappop(heap)
                 if cost_so_far > distance[row, col]:
                     continue
+                is_start = (row, col) == (player_row, player_col)
                 for _, d_row, d_col in moves:
                     next_row = row + d_row
                     next_col = col + d_col
                     if not (0 <= next_row < map_rows and 0 <= next_col < map_cols):
                         continue
-                    if not seen[next_row, next_col] or (next_row, next_col) in unminable_cells:
+                    if (next_row, next_col) in unminable_cells:
                         continue
                     block = int(block_map[next_row, next_col])
-                    if block in tunnel_pickaxe_requirement:
+                    if block == UNKNOWN:
+                        if is_start or dark_cells[next_row, next_col]:
+                            continue
+                        move_cost = walk_cost + unknown_cost
+                    elif block in tunnel_pickaxe_requirement:
                         if pickaxe_level < tunnel_pickaxe_requirement[block]:
                             continue
                         move_cost = tunnel_cost
@@ -333,94 +305,126 @@ def explore_until(state, log_func, step_func, target, max_steps=200):
                         previous[(next_row, next_col)] = (row, col)
                         heapq.heappush(heap, (new_cost, next_row, next_col))
 
-            # Frontier: reachable cells with at least one unexplored 4-neighbour
-            unseen = ~seen
-            borders_unseen = np.zeros_like(seen)
-            borders_unseen[1:, :] |= unseen[:-1, :]
-            borders_unseen[:-1, :] |= unseen[1:, :]
-            borders_unseen[:, 1:] |= unseen[:, :-1]
-            borders_unseen[:, :-1] |= unseen[:, 1:]
-            frontier = np.isfinite(distance) & borders_unseen
+            # Frontier: reachable known cells with at least one never-seen (and not dark) 4-neighbour
+            explorable = unknown & ~dark_cells
+            borders_unknown = np.zeros_like(explorable)
+            borders_unknown[1:, :] |= explorable[:-1, :]
+            borders_unknown[:-1, :] |= explorable[1:, :]
+            borders_unknown[:, 1:] |= explorable[:, :-1]
+            borders_unknown[:, :-1] |= explorable[:, 1:]
+            frontier = np.isfinite(distance) & ~unknown & borders_unknown
             frontier[player_row, player_col] = False
 
-            if current_goal is not None and not frontier[current_goal]:
-                log_func(f"[explore_until] Goal {current_goal} is no longer a reachable frontier, choosing a new one")
+            # Targets remembered from earlier but out of view: walking back towards the nearest
+            # one brings it into view, which beats exploring (the floor may be fully explored).
+            # Remembered targets inside the view window are dark and cannot be confirmed
+            remembered_count = 0
+            approach = np.zeros_like(frontier)
+            if target_kind in ("block", "item"):
+                if target_kind == "block":
+                    remembered = block_map == target.value
+                else:
+                    remembered = known_items(state) == target_item_value
+                in_window = np.zeros_like(remembered)
+                in_window[row_start:row_end, col_start:col_end] = True
+                remembered &= ~in_window
+                remembered_count = int(np.sum(remembered))
+                # Stand on the target or next to it (blocks like water cannot be stood on)
+                approach |= remembered
+                approach[1:, :] |= remembered[:-1, :]
+                approach[:-1, :] |= remembered[1:, :]
+                approach[:, 1:] |= remembered[:, :-1]
+                approach[:, :-1] |= remembered[:, 1:]
+                approach &= np.isfinite(distance) & ~unknown
+                approach[player_row, player_col] = False
+
+            if approach.any():
+                goal_cells, goal_kind = approach, "remembered"
+            else:
+                goal_cells, goal_kind = frontier, "frontier"
+
+            if current_goal is not None and not goal_cells[current_goal]:
+                log_func(f"[explore_until] Goal {current_goal} is no longer a reachable {goal_kind} goal, choosing a new one")
                 current_goal = None
 
             if current_goal is None:
-                frontier_cells = np.argwhere(frontier)
-                if len(frontier_cells) > 0:
+                candidates = np.argwhere(goal_cells)
+                if len(candidates) > 0:
                     best = min(
                         (float(distance[int(c[0]), int(c[1])]), int(c[0]), int(c[1]))
-                        for c in frontier_cells
+                        for c in candidates
                     )
                     current_goal = (best[1], best[2])
-                    log_func(
-                        f"[explore_until] New exploration goal {current_goal} with path cost {best[0]:.0f} "
-                        f"({len(frontier_cells)} frontier cells available)"
-                    )
+                    if goal_kind == "remembered":
+                        log_func(
+                            f"[explore_until] {target_name} was seen before but is out of view, heading back "
+                            f"to {current_goal} with path cost {best[0]:.0f} ({remembered_count} remembered)"
+                        )
+                    else:
+                        log_func(
+                            f"[explore_until] New exploration goal {current_goal} with path cost {best[0]:.0f} "
+                            f"({len(candidates)} frontier cells available)"
+                        )
 
             if current_goal is None:
-                if target_kind == "block":
-                    log_func(f"[explore_until] No reachable unexplored area left on floor {current_level}")
+                log_func(f"[explore_until] No reachable unexplored area left on floor {current_level}")
+                if remembered_count > 0:
                     raise Exception(
-                        f"Exploration failed: explored all reachable area on floor {current_level} "
-                        f"without finding {target_name}"
+                        f"Exploration failed: {remembered_count} remembered {target_name} cell(s) on floor "
+                        f"{current_level} cannot be reached, even by tunnelling, and no reachable "
+                        f"unexplored area is left"
                     )
-                # Mobs move and spawn, so forget the explored area and sweep again
-                seen[:, :] = False
-                seen[row_start:row_end, col_start:col_end] = True
-                action_reason = (
-                    "all reachable area explored without seeing the mob, "
-                    "resetting exploration memory and waiting for mobs to move/spawn"
+                raise Exception(
+                    f"Exploration failed: no reachable unexplored area left on floor {current_level} "
+                    f"and no {target_name} in sight or remembered"
                 )
-            else:
-                # Reconstruct the first step of the path towards the goal
-                cell = current_goal
-                for _ in range(map_rows * map_cols):
-                    if previous[cell] == (player_row, player_col):
-                        break
-                    cell = previous[cell]
-                next_row, next_col = cell
-                move_action = next(
-                    a for a, d_row, d_col in moves
-                    if player_row + d_row == next_row and player_col + d_col == next_col
-                )
-                next_block = int(block_map[next_row, next_col])
-                facing_next = int(state.player_direction) == move_action
 
-                if mob_occupied[next_row, next_col]:
-                    mob_block_steps += 1
-                    if mob_block_steps <= max_mob_wait_steps:
-                        action_reason = (
-                            f"mob blocks next cell ({next_row}, {next_col}), waiting "
-                            f"({mob_block_steps}/{max_mob_wait_steps})"
-                        )
-                    elif not facing_next:
+            # Reconstruct the first step of the path towards the goal
+            cell = current_goal
+            for _ in range(map_rows * map_cols):
+                if previous[cell] == (player_row, player_col):
+                    break
+                cell = previous[cell]
+            next_row, next_col = cell
+            move_action = next(
+                a for a, d_row, d_col in moves
+                if player_row + d_row == next_row and player_col + d_col == next_col
+            )
+            next_block = int(block_map[next_row, next_col])
+            facing_next = int(state.player_direction) == move_action
+
+            if mob_occupied[next_row, next_col]:
+                mob_block_steps += 1
+                if mob_block_steps <= max_mob_wait_steps:
+                    action_reason = (
+                        f"mob blocks next cell ({next_row}, {next_col}), waiting "
+                        f"({mob_block_steps}/{max_mob_wait_steps})"
+                    )
+                elif not facing_next:
+                    action = move_action
+                    action_reason = f"turning towards blocking mob at ({next_row}, {next_col})"
+                else:
+                    action = Action.DO.value
+                    action_reason = f"attacking blocking mob at ({next_row}, {next_col})"
+            else:
+                mob_block_steps = 0
+                if next_block in tunnel_pickaxe_requirement:
+                    if not facing_next:
                         action = move_action
-                        action_reason = f"turning towards blocking mob at ({next_row}, {next_col})"
+                        action_reason = (
+                            f"turning towards {BlockType(next_block).name} at ({next_row}, {next_col}) to tunnel"
+                        )
                     else:
                         action = Action.DO.value
-                        action_reason = f"attacking blocking mob at ({next_row}, {next_col})"
+                        mining_cell = (next_row, next_col)
+                        action_reason = (
+                            f"mining {BlockType(next_block).name} at ({next_row}, {next_col}) "
+                            f"to tunnel towards goal {current_goal}"
+                        )
                 else:
-                    mob_block_steps = 0
-                    if next_block in tunnel_pickaxe_requirement:
-                        if not facing_next:
-                            action = move_action
-                            action_reason = (
-                                f"turning towards {BlockType(next_block).name} at ({next_row}, {next_col}) to tunnel"
-                            )
-                        else:
-                            action = Action.DO.value
-                            mining_cell = (next_row, next_col)
-                            action_reason = (
-                                f"mining {BlockType(next_block).name} at ({next_row}, {next_col}) "
-                                f"to tunnel towards goal {current_goal}"
-                            )
-                    else:
-                        action = move_action
-                        expected_cell = (next_row, next_col)
-                        action_reason = f"moving to ({next_row}, {next_col}) towards goal {current_goal}"
+                    action = move_action
+                    expected_cell = (next_row, next_col)
+                    action_reason = f"moving to ({next_row}, {next_col}) towards goal {current_goal}"
 
         # ---------- Act ----------
         log_func(f"[explore_until] Step {steps_taken + 1}/{max_steps}: {action_names[action]} - {action_reason}")
@@ -428,7 +432,7 @@ def explore_until(state, log_func, step_func, target, max_steps=200):
         if new_state is None:
             raise Exception(f"Exploration failed: step function returned no state for action {action_names[action]}")
 
-        if float(new_state.player_health) <= 0 or int(new_state.timestep) <= int(state.timestep):
+        if float(new_state.player_health) <= 0:
             log_func("[explore_until] The player died during exploration")
             raise Exception(f"Exploration failed: the player died while exploring for {target_name}")
 
@@ -446,11 +450,14 @@ def explore_until(state, log_func, step_func, target, max_steps=200):
                 )
 
         if mining_cell is not None and int(new_state.player_level) == current_level:
-            new_block = int(new_state.map[current_level, mining_cell[0], mining_cell[1]])
+            # Only trust the mined cell's new block type if it can be seen
+            new_block = int(block_map[mining_cell])
+            if is_visible(new_state, mining_cell[0], mining_cell[1]):
+                new_block = int(known_blocks(new_state)[mining_cell])
             if new_block == int(block_map[mining_cell]):
                 failed_mine_attempts[mining_cell] = failed_mine_attempts.get(mining_cell, 0) + 1
                 log_func(
-                    f"[explore_until] Mining {mining_cell} had no effect "
+                    f"[explore_until] Mining {mining_cell} had no visible effect "
                     f"({failed_mine_attempts[mining_cell]}/{max_mine_attempts})"
                 )
                 if failed_mine_attempts[mining_cell] >= max_mine_attempts:

@@ -1,0 +1,1 @@
+The function crafts and places 2 torches by first checking for required resources. If wood is missing, it explores and mines a tree; if coal is missing, it explores and mines coal. It then crafts 1 torch to obtain 4 torches and places 2 of them in the environment. The function returns the final state after completing all crafting and placement steps.

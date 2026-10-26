@@ -231,7 +231,7 @@ def f_remove(*fpath, verbose=False, dry_run=False):
     assert isinstance(verbose, bool)
     fpath = f_join(fpath)
     if dry_run:
-        print("Dry run, delete:", fpath)
+        print("Dry run, delete:", fpath, flush=True)
         return
     for f in glob.glob(fpath):
         try:
@@ -243,7 +243,7 @@ def f_remove(*fpath, verbose=False, dry_run=False):
                 except:  # final resort safeguard
                     pass
     if verbose:
-        print(f'Deleted "{fpath}"')
+        print(f'Deleted "{fpath}"', flush=True)
 
 
 def f_copy(fsrc, fdst, ignore=None, include=None, exists_ok=True, verbose=False):
@@ -260,7 +260,7 @@ def f_copy(fsrc, fdst, ignore=None, include=None, exists_ok=True, verbose=False)
             else:
                 raise
     if verbose:
-        print(f'Copied "{fsrc}" to "{fdst}"')
+        print(f'Copied "{fsrc}" to "{fdst}"', flush=True)
 
 
 def _f_copytree(
@@ -554,7 +554,7 @@ def dump_text(s, *fpaths):
 def dump_text_lines(lines: list[str], *fpaths, add_newline=True):
     with open(f_join(*fpaths), "w") as fp:
         for line in lines:
-            print(line, file=fp, end="\n" if add_newline else "")
+            print(line, file=fp, end="\n" if add_newline else "", flush=True)
 
 
 # aliases to be consistent with other load_* and dump_*

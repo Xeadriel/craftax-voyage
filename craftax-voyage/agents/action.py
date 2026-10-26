@@ -2,22 +2,23 @@ from __future__ import annotations
 import inspect
 
 import re
-import time
 
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import SystemMessagePromptTemplate
 from langchain.schema import AIMessage, HumanMessage, SystemMessage
 
-from control_primitives import load_control_primitives
-from craftax.craftax.renderer import render_craftax_text
+import utils as U
+from control_primitives import load_control_primitives_context
 from prompts import load_prompt
+
+from .curriculum import TUTORIAL_PATH
 
 
 class ActionAgent:
     def __init__(
         self,
         model_name="Qwen/Qwen3.5-4B",
-        temperature=0,
+        temperature=0.2,
         api_base="http://localhost:8000/v1",
         request_timeout=120,
     ):
@@ -27,6 +28,7 @@ class ActionAgent:
             request_timeout=request_timeout,
             openai_api_base=api_base,
             openai_api_key="EMPTY",
+            max_tokens=4096,
         )
 
     def render_system_message(self, skills=None):
@@ -35,7 +37,7 @@ class ActionAgent:
         system_template = load_prompt("action_template")
 
         programs = "\n\n".join(
-            skills
+            load_control_primitives_context() + skills
         )
 
         response_format = load_prompt("action_response_format")
@@ -44,6 +46,7 @@ class ActionAgent:
             system_template
         ).format(
             programs=programs,
+            tutorial=U.load_text(TUTORIAL_PATH),
             response_format=response_format,
         )
 
@@ -57,21 +60,31 @@ class ActionAgent:
         task,
         context,
         textual_state,
-        skills=None,
+        code="",
+        error="",
+        log="",
         critique="",
     ):
         observation = ""
 
-        if skills:
-            observation += (
-                "Retrieved skills:\n"
-                + "\n\n".join(skills)
-                + "\n\n"
-            )
+        if code:
+            observation += f"Code from the last round:\n{code}\n\n"
         else:
-            observation += "Retrieved skills: None\n\n"
+            observation += (
+                "Code from the last round: No code in the first round\n\n"
+            )
 
-        observation += f"Current state:\n{textual_state}\n\n"
+        if error:
+            observation += f"Execution error:\n{error}\n\n"
+        else:
+            observation += "Execution error: No error\n\n"
+
+        if log:
+            observation += f"Log:\n{log}\n\n"
+        else:
+            observation += "Log: None\n\n"
+
+        observation += f"{textual_state}\n\n"
         observation += f"Task: {task}\n\n"
 
         if context:
@@ -93,11 +106,17 @@ class ActionAgent:
         context,
         textual_state,
         skills=None,
+        code="",
+        error="",
+        log="",
         critique="",
-        max_retries=3,
     ):
         """
-        Generate and validate an action skill.
+        Generate and validate an action skill with a single LLM call.
+
+        Like Voyager, every call is one iteration: a response that cannot be
+        parsed or validated is not retried here. The caller feeds the error
+        back in the next iteration instead.
 
         Always returns a dictionary.
 
@@ -110,11 +129,11 @@ class ActionAgent:
                 "error": None,
             }
 
-        Failed result after all retries:
+        Failed result:
             {
-                "program_code": str,
-                "program_name": "failed_action_skill",
-                "description": str,
+                "program_code": str,   # the code that failed, "" if none
+                "program_name": None,
+                "description": "",
                 "generation_failed": True,
                 "error": str,
             }
@@ -126,134 +145,67 @@ class ActionAgent:
                 task=task,
                 context=context,
                 textual_state=textual_state,
-                skills=skills,
+                code=code,
+                error=error,
+                log=log,
                 critique=critique,
             ),
         ]
 
-        retry = max_retries
-        error = None
+        content = ""
 
-        while retry > 0:
-            # Important:
-            # Reset this every iteration so an old AI response cannot
-            # accidentally be appended if the next LLM call fails.
-            response = None
+        try:
+            response = self.llm(messages)
+            content = response.content
 
-            try:
-                response = self.llm(messages)
+            print(
+                "\033[31m"
+                "****Action Agent AI message****\n"
+                f"{content}"
+                "\033[0m",
+                flush=True
+            )
 
-                print(
-                    "\033[31m"
-                    "****Action Agent AI message****\n"
-                    f"{response.content}"
-                    "\033[0m",
-                    flush=True
-                )
+            result = self.process_ai_message(response)
 
-                result = self.process_ai_message(response)
+        except Exception as e:
+            result = (
+                "Error while generating the action skill: "
+                f"{type(e).__name__}: {e}"
+            )
 
-                # process_ai_message() returns a string when parsing
-                # or validation failed.
-                if isinstance(result, str):
-                    error = result
+        if isinstance(result, dict):
+            return result
 
-                    print(
-                        "\033[35m"
-                        f"{error}"
-                        "\033[0m"
-                    )
-
-                    # Preserve the failed AI response.
-                    messages.append(response)
-
-                    # Give the exact error back to the model so that
-                    # it can correct its generated skill.
-                    messages.append(
-                        HumanMessage(
-                            content=(
-                                f"{error}\n\n"
-                                "Fix the problem and generate the "
-                                "complete corrected skill again."
-                            )
-                        )
-                    )
-
-                    retry -= 1
-
-                    if retry > 0:
-                        time.sleep(1)
-
-                    continue
-
-                # Successful skill generation.
-                return result
-
-            except Exception as e:
-                error = (
-                    "Error while generating the action skill: "
-                    f"{type(e).__name__}: {e}"
-                )
-
-                print(
-                    "\033[35m"
-                    f"{error}"
-                    "\033[0m"
-                )
-
-                # Only append an AI response from this iteration.
-                if response is not None:
-                    messages.append(response)
-
-                messages.append(
-                    HumanMessage(
-                        content=(
-                            f"{error}\n\n"
-                            "Fix the problem and generate the "
-                            "complete corrected skill again."
-                        )
-                    )
-                )
-
-                retry -= 1
-
-                if retry > 0:
-                    time.sleep(1)
-
-        # ---------------------------------------------------------
-        # All retries failed.
-        #
-        # IMPORTANT:
-        # Never return a string here.
-        # generate_skill() ALWAYS returns a dictionary.
-        # ---------------------------------------------------------
-
-        error = error or "Unknown action-generation error."
-
+        # process_ai_message() returns a string when parsing or
+        # validation failed.
         print(
             "\033[35m"
-            "Action Agent failed after all retries.\n"
-            f"{error}"
-            "\033[0m"
+            f"{result}"
+            "\033[0m", flush=True
         )
 
-        fallback_code = f'''def failed_action_skill(state, step_func, log_fn):
-    """Fallback skill generated because ActionAgent failed."""
-    log_fn("ActionAgent failed to generate a valid skill.")
-    return False
-'''
-
         return {
-            "program_code": fallback_code,
-            "program_name": "failed_action_skill",
-            "description": (
-                "Fallback skill: ActionAgent failed to generate "
-                f"a valid skill after {max_retries} attempts. "
-                f"Error: {error}"
-            ),
+            "program_code": self.extract_code(content),
+            "program_name": None,
+            "description": "",
             "generation_failed": True,
-            "error": error,
+            "error": result,
         }
+
+    def extract_code(self, content):
+        code_pattern = re.compile(
+            r"```(?:python)?\s*(.*?)```",
+            re.DOTALL,
+        )
+
+        # Skip the reasoning: drafts in it would be executed as well
+        content = content.split("</think>")[-1]
+
+        return "\n\n".join(
+            block.strip()
+            for block in code_pattern.findall(content)
+        )
 
     def process_ai_message(self, message):
         """
@@ -271,24 +223,14 @@ class ActionAgent:
             )
 
         try:
-            code_pattern = re.compile(
-                r"```(?:python)?\s*(.*?)```",
-                re.DOTALL,
-            )
+            program_code = self.extract_code(message.content)
 
-            code_blocks = code_pattern.findall(message.content)
-
-            if not code_blocks:
+            if not program_code:
                 raise ValueError(
                     "No Python code block found. "
                     "Your response must contain the complete "
                     "skill inside a Python code block."
                 )
-
-            program_code = "\n\n".join(
-                block.strip()
-                for block in code_blocks
-            )
 
             # Use a separate namespace for generated code.
             #
@@ -314,12 +256,14 @@ class ActionAgent:
                     f"{type(e).__name__}: {e}"
                 ) from e
 
-            # Only functions defined by the generated code.
+            # Only functions defined by the generated code itself,
+            # not functions it imported (e.g. control primitives).
             functions = [
                 (name, value)
                 for name, value in namespace.items()
                 if inspect.isfunction(value)
                 and not name.startswith("__")
+                and value.__code__.co_filename == "<generated_skill>"
             ]
 
             if not functions:
@@ -350,7 +294,7 @@ class ActionAgent:
             if argcount != 3:
                 raise ValueError(
                     f"Main function '{program_name}' must take exactly "
-                    f"three arguments: state, step_func, and log_fn. "
+                    f"three arguments: state, log_fn, and step_func. "
                     f"It currently takes {argcount}."
                 )
 
@@ -358,8 +302,8 @@ class ActionAgent:
 
             expected_arguments = (
                 "state",
-                "step_func",
                 "log_fn",
+                "step_func",
             )
 
             if argument_names != expected_arguments:
@@ -367,7 +311,7 @@ class ActionAgent:
                     f"Main function '{program_name}' must have the "
                     f"exact signature:\n"
                     f"    def {program_name}"
-                    f"(state, step_func, log_fn)\n"
+                    f"(state, log_fn, step_func)\n"
                     f"It currently has arguments: "
                     f"{argument_names}."
                 )
@@ -401,6 +345,3 @@ class ActionAgent:
         ).strip()
 
         return description or "No description provided."
-
-    def render_current_state(self, env_state):
-        return render_craftax_text(env_state)

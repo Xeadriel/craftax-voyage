@@ -1,0 +1,1 @@
+The function mines 7 trees to gather wood, then places a crafting table and crafts a wood pickaxe. It proceeds to mine 1 stone block and craft a stone pickaxe. Finally, it mines 10 stone blocks using the stone pickaxe and returns the resulting state.

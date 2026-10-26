@@ -1,0 +1,1 @@
+The function mines 2 coal blocks sequentially. First, it checks if the player has a pickaxe of level 2 or higher, raising an exception if not. Then, for each of the two coal blocks, it explores until a coal block is found in sight and mines exactly one coal block. After successfully mining both blocks, it returns the final game state with the updated coal inventory.

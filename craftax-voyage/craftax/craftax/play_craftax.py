@@ -136,7 +136,7 @@ def print_new_achievements(old_achievements, new_achievements):
     for i in range(len(old_achievements)):
         if old_achievements[i] == 0 and new_achievements[i] == 1:
             print(
-                f"{Achievement(i).name} ({new_achievements.sum()}/{len(Achievement)})"
+                f"{Achievement(i).name} ({new_achievements.sum()}/{len(Achievement)})", flush=True
             )
 
 
@@ -144,9 +144,9 @@ def main(args):
     env = make_craftax_env_from_name("Craftax-Symbolic-v1", auto_reset=True)
     env_params = env.default_params
 
-    print("Controls")
+    print("Controls", flush=True)
     for k, v in KEY_MAPPING.items():
-        print(f"{pygame.key.name(k)}: {v.name.lower()}")
+        print(f"{pygame.key.name(k)}: {v.name.lower()}", flush=True)
 
     if args.god_mode:
         env_params = env_params.replace(god_mode=True)
@@ -179,7 +179,7 @@ def main(args):
             print_new_achievements(old_achievements, new_achievements)
 
             if reward > 0.8:
-                print(f"Reward: {reward}\n")
+                print(f"Reward: {reward}\n", flush=True)
 
             traj_history["state"].append(env_state)
             traj_history["action"].append(action)

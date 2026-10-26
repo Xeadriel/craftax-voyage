@@ -1,0 +1,1 @@
+The function is about finding and drinking water. First explore for up to an unspecified number of steps until a water source is visible. Once a water source is found, drink from it 6 times to restore health. Finally, return the resulting state with the updated drink level and health.

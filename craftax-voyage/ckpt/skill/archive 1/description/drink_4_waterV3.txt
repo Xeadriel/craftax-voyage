@@ -1,0 +1,1 @@
+The function explores the environment to locate a water source, such as a lake or water patch, by searching up to an unspecified number of steps. Once a water source is found, it drinks 4 units of water from that source within a maximum of 20 steps. The function returns the final environment state after completing the drinking action.

@@ -6,10 +6,9 @@ Plan:
 ...
 Code:
 ```python
-...
-// main function
-def function yourMainFunctionName(state, step_func, log_fn):
-  // nested helper functions (ONLY if needed, try to avoid them as best as possible)
-  // ...
-
+# main function
+def your_main_function_name(state, log_fn, step_func):
+    # nested helper functions (ONLY if needed, try to avoid them as best as possible)
+    # ...
+    return state
 ```

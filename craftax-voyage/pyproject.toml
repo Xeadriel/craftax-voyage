@@ -26,7 +26,6 @@ dependencies = [
     "imageio",
     "langchain==0.2.17",
     "langchain-community",
-    "chromadb",
     "vllm"
 ]
 

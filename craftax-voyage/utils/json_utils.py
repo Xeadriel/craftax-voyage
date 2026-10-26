@@ -146,18 +146,34 @@ from typing import Any, Dict, Union
 
 
 def extract_json_object(text: str) -> str:
-    """Extract the JSON object from an AI response containing extra text."""
-    start = text.find("{")
-    if start == -1:
-        raise ValueError("No JSON object found in AI response.")
+    """
+    Extract the JSON object or list from an AI response containing extra text.
 
-    # Find the last closing brace. This works for the expected
-    # top-level JSON object returned by the critic.
-    end = text.rfind("}")
-    if end == -1 or end < start:
-        raise ValueError("No complete JSON object found in AI response.")
+    The critic returns an object and the task decomposition returns a list,
+    so both {...} and [...] spans are considered. The longest span that
+    parses wins (so a stray "[1]" in reasoning text before the critic's
+    object is ignored); if none parses, the earliest span is returned for
+    repair.
+    """
+    candidates = []
 
-    return text[start:end + 1]
+    for open_char, close_char in (("{", "}"), ("[", "]")):
+        start = text.find(open_char)
+        end = text.rfind(close_char)
+        if start != -1 and end > start:
+            candidates.append((start, text[start:end + 1]))
+
+    if not candidates:
+        raise ValueError("No JSON object or list found in AI response.")
+
+    for _, candidate in sorted(candidates, key=lambda c: -len(c[1])):
+        try:
+            json.loads(candidate)
+            return candidate
+        except json.JSONDecodeError:
+            pass
+
+    return min(candidates, key=lambda c: c[0])[1]
 
 
 def fix_and_parse_json(

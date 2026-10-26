@@ -1,0 +1,1 @@
+The function explores the environment until a coal block is found, then mines exactly 1 coal block using a stone pickaxe. It logs the exploration and mining progress, and finally returns the updated state with the mined coal added to the inventory. If the coal cannot be located or mined within the search limits, an exception is raised.

@@ -1,0 +1,1 @@
+The function checks if there are at least 2 wood items in the inventory to place a crafting table. If the wood count is insufficient, it explores up to 100 steps to find a tree and mines 1 wood from it. Once the inventory requirement is met, the function places a crafting table at a suitable location and returns the updated state.

@@ -1,0 +1,15 @@
+def kill_1_passive_mob(state, log_fn, step_func):
+    from craftax.craftax.constants import MobType
+    
+    log_fn("Looking for a passive mob to kill")
+    
+    # Explore until we can see a passive mob
+    state = explore_until(state, log_fn, step_func, MobType.PASSIVE)
+    
+    # Kill the passive mob
+    log_fn("Killing a passive mob")
+    state = kill_mob(state, log_fn, step_func, MobType.PASSIVE)
+    
+    log_fn(f"Successfully killed a passive mob. Current food: {state.player_food}")
+    
+    return state

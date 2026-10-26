@@ -8,15 +8,19 @@ You are a helpful assistant that writes a description of the given function writ
 
 For example, if the function is:
 
-def mine_tree(state, step_func, log_fn):
-    log_fn("Exploring to find tree")
-    exploreUntil(state, step_func, target="tree", max_steps=10)
+def mine_tree(state, log_fn, step_func):
+    from craftax.craftax.constants import BlockType
+
+    log_fn("Exploring to find a tree")
+    state = explore_until(state, log_fn, step_func, BlockType.TREE, max_steps=100)
 
     log_fn("Mining a tree")
-    mine_block(state, step_func, block="tree", count=1, max_steps=10)
+    state = mine_block(state, log_fn, step_func, BlockType.TREE, 1, max_steps=50)
+
+    return state
 
 The main function is `mine_tree`.
 
 Then you would write:
 
-The function is about exploring and mining 1 tree. First check explore until you find a tree for up to 10 steps. Once a tree is found, mine a total of 1 tree for up to 1 step.
+The function is about exploring and mining 1 tree. First explore for up to 100 steps until a tree is visible. Once a tree is found, mine 1 tree within up to 50 steps and return the resulting state.

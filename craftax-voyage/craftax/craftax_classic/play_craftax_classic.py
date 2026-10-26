@@ -101,16 +101,16 @@ class CraftaxRenderer:
 def print_new_achievements(old_achievements, new_achievements):
     for i in range(len(old_achievements)):
         if old_achievements[i] == 0 and new_achievements[i] == 1:
-            print(f"{Achievement(i).name} ({new_achievements.sum()}/{22})")
+            print(f"{Achievement(i).name} ({new_achievements.sum()}/{22})", flush=True)
 
 
 def main(args):
     env = make_craftax_env_from_name("Craftax-Classic-Symbolic-v1", auto_reset=True)
     env_params = env.default_params
 
-    print("Controls")
+    print("Controls", flush=True)
     for k, v in KEY_MAPPING.items():
-        print(f"{pygame.key.name(k)}: {v.name.lower()}")
+        print(f"{pygame.key.name(k)}: {v.name.lower()}", flush=True)
 
     rng = jax.random.PRNGKey(np.random.randint(2**31))
     rng, _rng = jax.random.split(rng)
@@ -138,7 +138,7 @@ def main(args):
             print_new_achievements(old_achievements, new_achievements)
 
             if reward > 0.01 or reward < -0.01:
-                print(f"Reward: {reward}\n")
+                print(f"Reward: {reward}\n", flush=True)
 
             renderer.render(env_state)
 

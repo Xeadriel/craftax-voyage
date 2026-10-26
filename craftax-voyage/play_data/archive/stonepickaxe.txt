@@ -1,0 +1,196 @@
+
+Mining wood from a tree
+Mining wood from a tree
+[explore_until] Start exploring for block TREE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration goal
+[explore_until] Step 0/200: position (24, 24), floor 0, facing UP, health 9.0, revealed 0 new cells, known 99/2304 cells
+[explore_until] Found block TREE at (24, 22), distance 2, after 0 steps
+[mine_block] Start mining 1 TREE block(s) with a budget of 200 steps (no pickaxe, 0 stone)
+[mine_block] Step 0/200: position (24, 24), facing UP, mined 0/1, 9 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (24, 22) with path cost 5
+[mine_block] Step 1/200: LEFT - moving to (24, 23) towards TREE at (24, 22) (path cost 5)
+[mine_block] Step 1/200: position (24, 23), facing LEFT, mined 0/1, 9 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 2/200: DO - mining target TREE at (24, 22) (1/1)
+[mine_block] Mined TREE at (24, 22), it is now GRASS
+[mine_block] Mined TREE 1/1, wood 0 -> 1
+[mine_block] Successfully mined 1 TREE block(s) after 2 steps
+Mined tree
+Starting to mine 4 wood
+[mine_block] Start mining 1 TREE block(s) with a budget of 200 steps (no pickaxe, 0 stone)
+[mine_block] Step 0/200: position (24, 23), facing LEFT, mined 0/1, 8 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (21, 23) with path cost 6
+[mine_block] Step 1/200: UP - moving to (23, 23) towards TREE at (21, 23) (path cost 6)
+[mine_block] Step 1/200: position (23, 23), facing UP, mined 0/1, 8 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 2/200: UP - moving to (22, 23) towards TREE at (21, 23) (path cost 5)
+[mine_block] Step 2/200: position (22, 23), facing UP, mined 0/1, 9 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 3/200: DO - mining target TREE at (21, 23) (1/1)
+[mine_block] Mined TREE at (21, 23), it is now GRASS
+[mine_block] Mined TREE 1/1, wood 1 -> 2
+[mine_block] Successfully mined 1 TREE block(s) after 3 steps
+Mined tree, now have 2 wood
+Only have 2 wood, need more
+Starting to mine 4 wood blocks
+[explore_until] Start exploring for block TREE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration goal
+[explore_until] Step 0/200: position (22, 23), floor 0, facing UP, health 9.0, revealed 0 new cells, known 130/2304 cells
+[explore_until] Found block TREE at (21, 22), distance 2, after 0 steps
+[mine_block] Start mining 1 TREE block(s) with a budget of 200 steps (no pickaxe, 0 stone)
+[mine_block] Step 0/200: position (22, 23), facing UP, mined 0/1, 8 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (21, 22) with path cost 5
+[mine_block] Step 1/200: UP - moving to (21, 23) towards TREE at (21, 22) (path cost 5)
+[mine_block] Step 1/200: position (21, 23), facing UP, mined 0/1, 7 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 2/200: LEFT - turning towards TREE at (21, 22)
+[mine_block] Step 2/200: position (21, 23), facing LEFT, mined 0/1, 7 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 3/200: DO - mining target TREE at (21, 22) (1/1)
+[mine_block] Mined TREE at (21, 22), it is now GRASS
+[mine_block] Mined TREE 1/1, wood 2 -> 3
+[mine_block] Successfully mined 1 TREE block(s) after 3 steps
+Mined tree 1, now have 3 wood
+[explore_until] Start exploring for block TREE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration goal
+[explore_until] Step 0/200: position (21, 23), floor 0, facing LEFT, health 9.0, revealed 0 new cells, known 141/2304 cells
+[explore_until] Found block TREE at (21, 21), distance 2, after 0 steps
+[mine_block] Start mining 1 TREE block(s) with a budget of 200 steps (no pickaxe, 0 stone)
+[mine_block] Step 0/200: position (21, 23), facing LEFT, mined 0/1, 6 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (21, 21) with path cost 5
+[mine_block] Step 1/200: LEFT - moving to (21, 22) towards TREE at (21, 21) (path cost 5)
+[mine_block] Step 1/200: position (21, 22), facing LEFT, mined 0/1, 8 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 2/200: DO - mining target TREE at (21, 21) (1/1)
+[mine_block] Mined TREE at (21, 21), it is now GRASS
+[mine_block] Mined TREE 1/1, wood 3 -> 4
+[mine_block] Successfully mined 1 TREE block(s) after 2 steps
+Mined tree 2, now have 4 wood
+[explore_until] Start exploring for block TREE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration goal
+[explore_until] Step 0/200: position (21, 22), floor 0, facing LEFT, health 9.0, revealed 0 new cells, known 150/2304 cells
+[explore_until] Found block TREE at (18, 21), distance 4, after 0 steps
+[mine_block] Start mining 1 TREE block(s) with a budget of 200 steps (no pickaxe, 0 stone)
+[mine_block] Step 0/200: position (21, 22), facing LEFT, mined 0/1, 7 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (18, 21) with path cost 7
+[mine_block] Step 1/200: UP - moving to (20, 22) towards TREE at (18, 21) (path cost 7)
+[mine_block] Step 1/200: position (20, 22), facing UP, mined 0/1, 7 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 2/200: UP - moving to (19, 22) towards TREE at (18, 21) (path cost 6)
+[mine_block] Step 2/200: position (19, 22), facing UP, mined 0/1, 7 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 3/200: UP - moving to (18, 22) towards TREE at (18, 21) (path cost 5)
+[mine_block] Step 3/200: position (18, 22), facing UP, mined 0/1, 7 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 4/200: LEFT - turning towards TREE at (18, 21)
+[mine_block] Step 4/200: position (18, 22), facing LEFT, mined 0/1, 7 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 5/200: DO - mining target TREE at (18, 21) (1/1)
+[mine_block] Mined TREE at (18, 21), it is now GRASS
+[mine_block] Mined TREE 1/1, wood 4 -> 5
+[mine_block] Successfully mined 1 TREE block(s) after 5 steps
+Mined tree 3, now have 5 wood
+[explore_until] Start exploring for block TREE with a budget of 200 steps
+[explore_until] Now on floor 0, resetting exploration goal
+[explore_until] Step 0/200: position (18, 22), floor 0, facing LEFT, health 9.0, revealed 0 new cells, known 183/2304 cells
+[explore_until] Found block TREE at (15, 21), distance 4, after 0 steps
+[mine_block] Start mining 1 TREE block(s) with a budget of 200 steps (no pickaxe, 0 stone)
+[mine_block] Step 0/200: position (18, 22), facing LEFT, mined 0/1, 6 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] New target TREE at (15, 21) with path cost 7
+[mine_block] Step 1/200: UP - moving to (17, 22) towards TREE at (15, 21) (path cost 7)
+[mine_block] Step 1/200: position (17, 22), facing UP, mined 0/1, 7 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 2/200: UP - moving to (16, 22) towards TREE at (15, 21) (path cost 6)
+[mine_block] Step 2/200: position (16, 22), facing UP, mined 0/1, 7 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 3/200: UP - moving to (15, 22) towards TREE at (15, 21) (path cost 5)
+[mine_block] Step 3/200: position (15, 22), facing UP, mined 0/1, 7 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 4/200: LEFT - turning towards TREE at (15, 21)
+[mine_block] Step 4/200: position (15, 22), facing LEFT, mined 0/1, 7 TREE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 5/200: DO - mining target TREE at (15, 21) (1/1)
+[mine_block] Mined TREE at (15, 21), it is now GRASS
+[mine_block] Mined TREE 1/1, wood 5 -> 6
+[mine_block] Successfully mined 1 TREE block(s) after 5 steps
+Mined tree 4, now have 6 wood
+Successfully mined 4 wood blocks!
+Attempting to place a crafting table
+[place] Start placing a crafting_table at the nearest valid cell with a budget of 50 steps (wood 6, needs 2)
+[place] Step 0/50: position (15, 22), facing LEFT, wood 6, health 9.0
+[place] Step 1/50: PLACE_TABLE - placing a crafting_table on GRASS at (15, 21)
+[place] Placed a crafting_table at (15, 21), wood 6 -> 4
+[place] Successfully placed a crafting_table after 1 steps
+Crafting table placed successfully
+Starting to mine 5 stone blocks
+Crafting wooden pickaxe
+[craft] Start crafting 1 wood_pickaxe (cost per craft 1 wood, needs crafting_table) with a budget of 50 steps
+[craft] Step 0/50: position (15, 22), facing LEFT, produced 0/1 wood_pickaxe, inventory wood 4, stone 0, coal 0, iron 0, diamond 0
+[craft] Step 1/50: MAKE_WOOD_PICKAXE - crafting wood_pickaxe next to crafting_table (craft 1)
+[craft] Crafted 1 wood_pickaxe (1/1), wood 4 -> 3
+[craft] Step 1/50: position (15, 22), facing LEFT, produced 1/1 wood_pickaxe, inventory wood 3, stone 0, coal 0, iron 0, diamond 0
+[craft] Successfully crafted 1 wood_pickaxe with 1 craft(s) in 1 steps
+Mining 5 stone blocks
+[mine_block] Start mining 5 STONE block(s) with a budget of 200 steps (wood pickaxe, 0 stone)
+[mine_block] Step 0/200: position (15, 22), facing LEFT, mined 0/5, 5 STONE block(s) in sight, stone 0, health 9.0
+[mine_block] New target STONE at (17, 27) with path cost 10
+[mine_block] Step 1/200: RIGHT - moving to (15, 23) towards STONE at (17, 27) (path cost 10)
+[mine_block] Step 1/200: position (15, 23), facing RIGHT, mined 0/5, 8 STONE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 2/200: RIGHT - moving to (15, 24) towards STONE at (17, 27) (path cost 9)
+[mine_block] Step 2/200: position (15, 24), facing RIGHT, mined 0/5, 11 STONE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 3/200: RIGHT - moving to (15, 25) towards STONE at (17, 27) (path cost 8)
+[mine_block] Step 3/200: position (15, 25), facing RIGHT, mined 0/5, 13 STONE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 4/200: RIGHT - moving to (15, 26) towards STONE at (17, 27) (path cost 7)
+[mine_block] Step 4/200: position (15, 26), facing RIGHT, mined 0/5, 15 STONE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 5/200: RIGHT - moving to (15, 27) towards STONE at (17, 27) (path cost 6)
+[mine_block] Step 5/200: position (15, 27), facing RIGHT, mined 0/5, 17 STONE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 6/200: DOWN - moving to (16, 27) towards STONE at (17, 27) (path cost 5)
+[mine_block] Step 6/200: position (16, 27), facing DOWN, mined 0/5, 23 STONE block(s) in sight, stone 0, health 9.0
+[mine_block] Step 7/200: DO - mining target STONE at (17, 27) (1/5)
+[mine_block] Mined STONE at (17, 27), it is now PATH
+[mine_block] Mined STONE 1/5, stone 0 -> 1
+[mine_block] Step 7/200: position (16, 27), facing DOWN, mined 1/5, 22 STONE block(s) in sight, stone 1, health 9.0
+[mine_block] New target STONE at (17, 28) with path cost 5
+[mine_block] Step 8/200: DOWN - moving to (17, 27) towards STONE at (17, 28) (path cost 5)
+[mine_block] Step 8/200: position (17, 27), facing DOWN, mined 1/5, 24 STONE block(s) in sight, stone 1, health 9.0
+[mine_block] Step 9/200: RIGHT - turning towards STONE at (17, 28)
+[mine_block] Step 9/200: position (17, 27), facing RIGHT, mined 1/5, 24 STONE block(s) in sight, stone 1, health 9.0
+[mine_block] Step 10/200: DO - mining target STONE at (17, 28) (2/5)
+[mine_block] Mined STONE at (17, 28), it is now PATH
+[mine_block] Mined STONE 2/5, stone 1 -> 2
+[mine_block] Step 10/200: position (17, 27), facing RIGHT, mined 2/5, 23 STONE block(s) in sight, stone 2, health 9.0
+[mine_block] New target STONE at (18, 27) with path cost 4
+[mine_block] Step 11/200: DOWN - turning towards STONE at (18, 27)
+[mine_block] Step 11/200: position (17, 27), facing DOWN, mined 2/5, 23 STONE block(s) in sight, stone 2, health 9.0
+[mine_block] Step 12/200: DO - mining target STONE at (18, 27) (3/5)
+[mine_block] Mined STONE at (18, 27), it is now PATH
+[mine_block] Mined STONE 3/5, stone 2 -> 3
+[mine_block] Step 12/200: position (17, 27), facing DOWN, mined 3/5, 22 STONE block(s) in sight, stone 3, health 9.0
+[mine_block] New target STONE at (17, 29) with path cost 5
+[mine_block] Step 13/200: RIGHT - moving to (17, 28) towards STONE at (17, 29) (path cost 5)
+[mine_block] Step 13/200: position (17, 28), facing RIGHT, mined 3/5, 25 STONE block(s) in sight, stone 3, health 9.0
+[mine_block] Step 14/200: DO - mining target STONE at (17, 29) (4/5)
+[mine_block] Mined STONE at (17, 29), it is now PATH
+[mine_block] Mined STONE 4/5, stone 3 -> 4
+[mine_block] Step 14/200: position (17, 28), facing RIGHT, mined 4/5, 24 STONE block(s) in sight, stone 4, health 9.0
+[mine_block] New target STONE at (18, 28) with path cost 4
+[mine_block] Step 15/200: DOWN - turning towards STONE at (18, 28)
+[mine_block] Step 15/200: position (17, 28), facing DOWN, mined 4/5, 24 STONE block(s) in sight, stone 4, health 9.0
+[mine_block] Step 16/200: DO - mining target STONE at (18, 28) (5/5)
+[mine_block] Mined STONE at (18, 28), it is now PATH
+[mine_block] Mined STONE 5/5, stone 4 -> 5
+[mine_block] Successfully mined 5 STONE block(s) after 16 steps
+Successfully mined 5 stone blocks. Inventory: 5 stone
+Starting to craft stone pickaxe
+Placing crafting table
+[place] Start placing a crafting_table at the nearest valid cell with a budget of 50 steps (wood 3, needs 2)
+[place] Step 0/50: position (17, 28), facing DOWN, wood 3, health 9.0
+[place] Step 1/50: PLACE_TABLE - placing a crafting_table on PATH at (18, 28)
+[place] Placed a crafting_table at (18, 28), wood 3 -> 1
+[place] Successfully placed a crafting_table after 1 steps
+Crafting stone pickaxe
+[craft] Start crafting 1 stone_pickaxe (cost per craft 1 wood, 1 stone, needs crafting_table) with a budget of 50 steps
+[craft] Step 0/50: position (17, 28), facing DOWN, produced 0/1 stone_pickaxe, inventory wood 1, stone 5, coal 0, iron 0, diamond 0
+[craft] Step 1/50: MAKE_STONE_PICKAXE - crafting stone_pickaxe next to crafting_table (craft 1)
+[craft] Crafted 1 stone_pickaxe (1/1), wood 1 -> 0, stone 5 -> 4
+[craft] Step 1/50: position (17, 28), facing DOWN, produced 1/1 stone_pickaxe, inventory wood 0, stone 4, coal 0, iron 0, diamond 0
+[craft] Successfully crafted 1 stone_pickaxe with 1 craft(s) in 1 steps
+Successfully crafted stone pickaxe. Inventory: 0 wood, 4 stone, 2 pickaxe
+Starting to mine 3 iron blocks
+Need to craft stone pickaxe first
+[craft] The player already has a pickaxe of level 2
+Starting to mine 3 iron blocks
+Need to craft stone pickaxe first
+[craft] The player already has a pickaxe of level 2
+Starting to mine 3 iron blocks
+Need to craft stone pickaxe first
+[craft] The player already has a pickaxe of level 2
+Starting to mine 3 iron blocks
+Need to craft stone pickaxe first
+[craft] The player already has a pickaxe of level 2

@@ -1,13 +1,15 @@
 # Description:
 # Deterministically collects a given number of saplings. Saplings drop with a 10%
 # chance whenever the player hits a GRASS block with DO (the grass stays). Plans the
-# shortest sequence of movement/turn actions until the player faces a grass block
-# without a mob on it (breadth-first search over position and facing direction, since
-# pressing a direction moves the player onto walkable cells and only turns it towards
-# blocked ones), then hits the grass until enough saplings were collected.
+# shortest sequence of movement/turn actions until the player faces a known grass block
+# without a visible mob on it (shortest-path search over position and facing direction
+# on the known map, since pressing a direction moves the player onto walkable cells and
+# only turns it towards blocked ones; never-seen cells count as walkable but more
+# expensive and are never the next step), then hits the grass until enough saplings
+# were collected.
 # Returns True on success, raises an Exception otherwise.
 
-def collect_sapling(state, log_func, step_func, number=1, max_steps=100):
+def collect_sapling(state, log_func, step_func, number=1, max_steps=20):
     """
     Collects `number` saplings by hitting grass blocks.
 
@@ -20,17 +22,18 @@ def collect_sapling(state, log_func, step_func, number=1, max_steps=100):
             (each hit has a 10% drop chance, so plan roughly 10-30 steps per sapling)
 
     Returns:
-        True if `number` saplings were collected
+        The final EnvState (after the last step) if `number` saplings were collected
 
     Raises:
         Exception: If the arguments are invalid, the inventory cannot hold that many
-            saplings, no grass block is reachable on the floor, the player died, the
-            player left the floor, or max_steps was reached
+            saplings, no known grass block is reachable (explore first), the player
+            died, the player left the floor, or max_steps was reached
     """
-    from collections import deque
+    import heapq
 
     import numpy as np
 
+    from control_primitives.knowledge import UNKNOWN, known_blocks, visible_mobs
     from craftax.craftax.constants import (
         DIRECTIONS,
         SOLID_BLOCKS,
@@ -77,6 +80,47 @@ def collect_sapling(state, log_func, step_func, number=1, max_steps=100):
         BlockType.NECROMANCER_VULNERABLE.value,
     }
 
+    # Extra cost of walking through a never-seen cell (assumed walkable)
+    unknown_cost = 2
+
+    def plan_path(start_state, walkable, unknown, is_goal):
+        # Dijkstra over (row, col, facing): pressing a direction moves the player onto a
+        # walkable cell, or only turns it when that cell is blocked. Unknown cells are
+        # assumed walkable at an extra cost but are never entered from the player's cell
+        rows, cols = walkable.shape
+        start_cell = start_state[:2]
+        best_cost = {start_state: 0}
+        first_action = {}
+        heap = [(0, 0, start_state)]
+        counter = 1
+        while heap:
+            cost, _, node = heapq.heappop(heap)
+            if cost > best_cost[node]:
+                continue
+            if is_goal(node):
+                return node, first_action
+            row, col, _ = node
+            for a, d_row, d_col in moves:
+                next_row = row + d_row
+                next_col = col + d_col
+                inside = 0 <= next_row < rows and 0 <= next_col < cols
+                if inside and unknown[next_row, next_col]:
+                    if (row, col) == start_cell:
+                        continue
+                    next_state, step_cost = (next_row, next_col, a), 1 + unknown_cost
+                elif inside and walkable[next_row, next_col]:
+                    next_state, step_cost = (next_row, next_col, a), 1
+                else:
+                    next_state, step_cost = (row, col, a), 1
+                next_cost = cost + step_cost
+                if next_cost >= best_cost.get(next_state, next_cost + 1):
+                    continue
+                best_cost[next_state] = next_cost
+                first_action[next_state] = first_action.get(node, a)
+                heapq.heappush(heap, (next_cost, counter, next_state))
+                counter += 1
+        return None, first_action
+
     start_level = int(state.player_level)
     hits = 0
     hits_since_last_sapling = 0
@@ -88,7 +132,7 @@ def collect_sapling(state, log_func, step_func, number=1, max_steps=100):
 
     if number == 0:
         log_func("[collect_sapling] Nothing to collect")
-        return True
+        return state
 
     for steps_taken in range(max_steps + 1):
         # ---------- Observe ----------
@@ -113,7 +157,7 @@ def collect_sapling(state, log_func, step_func, number=1, max_steps=100):
                 f"[collect_sapling] Successfully collected {saplings - start_saplings} sapling(s) "
                 f"with {hits} hit(s) in {steps_taken} steps"
             )
-            return True
+            return state
 
         if steps_taken >= max_steps:
             log_func(
@@ -125,9 +169,18 @@ def collect_sapling(state, log_func, step_func, number=1, max_steps=100):
                 f"{saplings - start_saplings}/{number} sapling(s)"
             )
 
-        block_map = np.asarray(state.map[current_level])
-        mob_occupied = np.asarray(state.mob_map[current_level]).astype(bool)
+        # What the player knows: remembered blocks and visible mobs
+        block_map = known_blocks(state)
         map_rows, map_cols = block_map.shape
+        unknown = block_map == UNKNOWN
+        unknown[player_row, player_col] = False
+        mob_occupied = np.zeros((map_rows, map_cols), dtype=bool)
+        for _, _, mob_row, mob_col, _ in visible_mobs(state):
+            mob_occupied[mob_row, mob_col] = True
+        walkable_cells = ~unknown & ~np.isin(block_map, list(impassable_blocks)) & ~mob_occupied
+        walkable_cells[player_row, player_col] = True
+        # Known grass without a visible mob on it
+        grass_cells = (block_map == BlockType.GRASS.value) & ~mob_occupied
 
         # ---------- Decide on an action ----------
         action = Action.NOOP.value
@@ -137,48 +190,27 @@ def collect_sapling(state, log_func, step_func, number=1, max_steps=100):
         if bool(state.is_sleeping) or bool(state.is_resting):
             action_reason = "player is sleeping/resting, actions are ignored until it wakes up"
         else:
-            # Breadth-first search over (row, col, facing): pressing a direction moves the player
-            # onto a walkable cell, or only turns it when that cell is blocked
-            visited = np.zeros((map_rows, map_cols, len(moves)), dtype=bool)
-            first_action = {}
-            goal_state = None
+            # Shortest path over (row, col, facing) until the player faces known grass
             start_facing = facing if facing in action_index else moves[0][0]
             start_state = (player_row, player_col, start_facing)
-            visited[player_row, player_col, action_index[start_facing]] = True
-            queue = deque([start_state])
-            while queue:
-                row, col, state_facing = queue.popleft()
+
+            def is_goal(node):
+                row, col, state_facing = node
                 ahead_row = row + move_offsets[state_facing][0]
                 ahead_col = col + move_offsets[state_facing][1]
-                if (
+                return (
                     0 <= ahead_row < map_rows
                     and 0 <= ahead_col < map_cols
-                    and int(block_map[ahead_row, ahead_col]) == BlockType.GRASS.value
-                    and not mob_occupied[ahead_row, ahead_col]
-                ):
-                    goal_state = (row, col, state_facing)
-                    break
-                for a, d_row, d_col in moves:
-                    next_row = row + d_row
-                    next_col = col + d_col
-                    walkable = (
-                        0 <= next_row < map_rows
-                        and 0 <= next_col < map_cols
-                        and int(block_map[next_row, next_col]) not in impassable_blocks
-                        and not mob_occupied[next_row, next_col]
-                    )
-                    next_state = (next_row, next_col, a) if walkable else (row, col, a)
-                    if visited[next_state[0], next_state[1], action_index[a]]:
-                        continue
-                    visited[next_state[0], next_state[1], action_index[a]] = True
-                    first_action[next_state] = first_action.get((row, col, state_facing), a)
-                    queue.append(next_state)
+                    and bool(grass_cells[ahead_row, ahead_col])
+                )
+
+            goal_state, first_action = plan_path(start_state, walkable_cells, unknown, is_goal)
 
             if goal_state is None:
-                log_func(f"[collect_sapling] No grass block can be reached on floor {current_level}")
+                log_func("[collect_sapling] No known grass block can be reached")
                 raise Exception(
-                    f"Collecting saplings failed: no reachable grass block on floor {current_level} "
-                    f"after collecting {saplings - start_saplings}/{number} sapling(s)"
+                    f"Collecting saplings failed: no known reachable grass, explore first "
+                    f"(collected {saplings - start_saplings}/{number} sapling(s))"
                 )
 
             grass_cell = (
@@ -200,8 +232,7 @@ def collect_sapling(state, log_func, step_func, number=1, max_steps=100):
                 will_move = (
                     0 <= next_row < map_rows
                     and 0 <= next_col < map_cols
-                    and int(block_map[next_row, next_col]) not in impassable_blocks
-                    and not mob_occupied[next_row, next_col]
+                    and bool(walkable_cells[next_row, next_col])
                 )
                 action_reason = (
                     f"{'moving to' if will_move else 'turning towards'} ({next_row}, {next_col}) "
@@ -216,8 +247,8 @@ def collect_sapling(state, log_func, step_func, number=1, max_steps=100):
                 f"Collecting saplings failed: step function returned no state for action {action_names[action]}"
             )
 
-        if float(new_state.player_health) <= 0 or int(new_state.timestep) <= int(state.timestep):
-            log_func("[collect_sapling] The player died or the episode ended")
+        if float(new_state.player_health) <= 0:
+            log_func("[collect_sapling] The player died")
             raise Exception(
                 f"Collecting saplings failed: the player died after collecting "
                 f"{saplings - start_saplings}/{number} sapling(s)"

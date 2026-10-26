@@ -1,0 +1,31 @@
+def mine_3_coal(state, log_fn, step_func):
+    from craftax.craftax.constants import BlockType
+    
+    # Check if we already have 3 coal
+    if state.inventory.coal >= 3:
+        log_fn(f"Already have {state.inventory.coal} coal, task complete")
+        return state
+    
+    # Need to mine more coal
+    coal_needed = 3 - state.inventory.coal
+    
+    log_fn(f"Need to mine {coal_needed} more coal blocks")
+    
+    # Mine coal blocks until we have 3
+    for i in range(coal_needed):
+        log_fn(f"Mining coal {i+1}/{coal_needed}")
+        
+        # Explore until we can see a coal block
+        # Coal is rare (3% chance in stone), so we may need multiple attempts
+        state = explore_until(state, log_fn, step_func, BlockType.COAL, max_steps=50)
+        
+        # Mine the coal block
+        log_fn("Mining coal block")
+        state = mine_block(state, log_fn, step_func, BlockType.COAL, 1)
+        
+        # Check if we have enough coal now
+        if state.inventory.coal >= 3:
+            log_fn(f"Reached target: {state.inventory.coal} coal")
+            break
+    
+    return state

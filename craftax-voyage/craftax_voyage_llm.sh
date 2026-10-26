@@ -17,16 +17,13 @@ cd ~oasik/craftax-voyage/
 source .venv/bin/activate
 
 # uv pip install -e craftax-voyage
-# uv pip install vllm
+# uv pip install --upgrade transformers
+# uv pip install "vllm>=0.17"
 
 cd craftax-voyage
 
 #vllm serve Qwen/Qwen3.5-9B > logs/${SLURM_JOB_ID}_vllm.log 2>&1 &
 #vllm serve Qwen/Qwen3.5-9B --tensor-parallel-size 2 > logs/${SLURM_JOB_ID}_vllm.log 2>&1 &
 vllm serve Qwen/Qwen3.5-4B --port 8000 > logs/${SLURM_JOB_ID}_vllm.log 2>&1 &
-
-# vllm serve Qwen/Qwen3-Embedding-0.6B --runner pooling --max-model-len 2048 --port 8001 > logs/${SLURM_JOB_ID}_embedding.log 2>&1 &
-
-# vllm serve Qwen/Qwen3-Embedding-0.6B --task embed --port 8001 > logs/${SLURM_JOB_ID}_embedding.log 2>&1 &
 
 wait

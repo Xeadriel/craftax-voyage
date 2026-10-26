@@ -1,0 +1,1 @@
+The function is about ensuring the player has at least 5 units of water. It first checks the current water level and returns early if the target is already met. If more water is needed, it explores up to 150 steps to locate a water source. Once a water block is found, the function drinks the required amount within 50 steps and returns the updated state.

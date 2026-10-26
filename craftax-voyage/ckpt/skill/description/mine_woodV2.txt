@@ -1,0 +1,1 @@
+The function is about locating and mining a single wood block from a tree. It begins by exploring the environment until a tree becomes visible. Once found, it proceeds to mine exactly one block from that tree. The process concludes by returning the updated state after the mining action is complete.
