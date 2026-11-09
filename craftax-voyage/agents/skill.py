@@ -21,7 +21,6 @@ class SkillManager:
         request_timeout=120,
         api_base="http://localhost:8000/v1",
         ckpt_dir="ckpt",
-        resume=False,
     ):
         self.llm = ChatOpenAI(
             model_name=model_name,
@@ -44,7 +43,9 @@ class SkillManager:
 
         skills_path = f"{ckpt_dir}/skill/skills.json"
 
-        if resume and U.f_exists(skills_path):
+        # Learned skills are always kept, with or without --resume: a new
+        # world continues learning from the existing library
+        if U.f_exists(skills_path):
             print(
                 f"\033[33mLoading Skill Manager from "
                 f"{ckpt_dir}/skill\033[0m", flush=True

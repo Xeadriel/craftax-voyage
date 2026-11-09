@@ -1,0 +1,1 @@
+The function is about exploring and mining 1 wood. First, it explores for up to 40 steps until a tree becomes visible. Once a tree is found, it mines exactly 1 tree within a maximum of 30 steps. The process yields one unit of wood per tree mined. Finally, the function returns the updated state after completing the mining action.

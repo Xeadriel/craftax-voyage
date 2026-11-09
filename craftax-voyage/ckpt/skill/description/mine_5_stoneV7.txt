@@ -1,0 +1,1 @@
+The function is about mining 5 stone blocks. It first verifies that the player has at least one pickaxe, raising an error if not. Since the stone is already visible within the nearest 5 tiles, no exploration is performed. The function then attempts to mine 5 stone blocks within a maximum of 60 steps. Finally, it returns the updated state after the mining operation is complete.

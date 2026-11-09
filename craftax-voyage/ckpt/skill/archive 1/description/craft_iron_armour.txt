@@ -1,1 +1,0 @@
-The function crafts iron armour by first checking if any is already owned. It then mines two trees to obtain the necessary wood for a crafting table, places the table, and finds a stone block to place a furnace. Next, it mines any missing iron blocks required to craft the armour. Finally, it uses the craft action to create the iron armour and returns the updated state.

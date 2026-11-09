@@ -39,6 +39,11 @@ def test_report_sections_and_zero_inventory(base_state):
     assert "Map:" not in text
 
 
+def test_report_without_achievements(base_state):
+    text = situation_report(base_state, include_achievements=False)
+    assert "Missing achievements:" not in text and "Floor: 0 (Overworld)" in text
+
+
 def test_report_shows_threat_with_distance(base_state):
     m = base_state.melee_mobs
     s = base_state.replace(melee_mobs=m.replace(
@@ -46,6 +51,20 @@ def test_report_shows_threat_with_distance(base_state):
         mask=m.mask.at[0, 0].set(True), type_id=m.type_id.at[0, 0].set(0)))
     text = situation_report(s)
     assert "Zombie" in text and "2 tiles" in text
+
+
+def test_report_with_two_mobs_at_same_distance(base_state):
+    m = base_state.melee_mobs
+    p = base_state.passive_mobs
+    s = base_state.replace(
+        melee_mobs=m.replace(
+            position=m.position.at[0, 0].set(jnp.array([24, 26])),
+            mask=m.mask.at[0, 0].set(True), type_id=m.type_id.at[0, 0].set(0)),
+        passive_mobs=p.replace(
+            position=p.position.at[0, 0].set(jnp.array([24, 22])),
+            mask=p.mask.at[0, 0].set(True), type_id=p.type_id.at[0, 0].set(0)))
+    text = situation_report(s)
+    assert "Zombie" in text and "Cow" in text
 
 
 def test_report_at_map_corner_with_nothing_seen(base_state):          # Review Focus 3

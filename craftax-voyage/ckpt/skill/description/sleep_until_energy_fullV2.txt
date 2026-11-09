@@ -1,0 +1,1 @@
+The function is about waiting for energy to reach its maximum level. It initiates a sleep process with a limit of 50 steps to allow the energy to recharge. Once the sleep duration concludes or the step limit is reached, it returns the updated state.

@@ -1,1 +1,0 @@
-The function checks if the player has at least 2 wood in their inventory before attempting to place a crafting table. If the wood requirement is not met, it logs a message and returns the current state without changes. Otherwise, it places a crafting table in front of the player using the provided step function and returns the updated state.

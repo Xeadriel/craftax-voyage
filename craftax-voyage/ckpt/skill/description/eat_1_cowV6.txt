@@ -1,0 +1,1 @@
+The function is about hunting and killing a passive mob. First, it explores for up to 60 steps until a passive mob is found. Once located, it kills the mob within up to 40 steps and returns the resulting state.

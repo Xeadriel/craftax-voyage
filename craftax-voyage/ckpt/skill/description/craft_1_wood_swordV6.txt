@@ -1,0 +1,1 @@
+The function checks if there is at least 1 wood in the inventory, raising an error if not. If sufficient wood is available, it attempts to craft 1 wood sword directly within a maximum of 20 steps. The function returns the updated state after the crafting attempt.

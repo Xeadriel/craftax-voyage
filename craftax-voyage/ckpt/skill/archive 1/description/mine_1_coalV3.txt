@@ -1,1 +1,0 @@
-The function is about mining 1 coal block. First, it checks if the player has a stone pickaxe or better; if not, it crafts one. Then, it explores until a coal block is found. Once found, it mines 1 coal block and returns the resulting state.

@@ -1,0 +1,1 @@
+The function is about hunting and killing a single melee mob. It initiates a search for up to 40 steps to locate a target matching the melee mob type. Once found, the function executes the kill action and returns the updated state.

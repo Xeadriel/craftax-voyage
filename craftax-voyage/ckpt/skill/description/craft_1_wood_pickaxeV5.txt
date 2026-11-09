@@ -1,0 +1,1 @@
+The function is about crafting a single wood pickaxe. First, it explores up to 40 steps to find a tree, then mines exactly 1 wood block within 20 steps. It verifies that at least 1 wood is available in the inventory before proceeding. Finally, it crafts the wood pickaxe directly since the crafting table is assumed to be in view, completing the process within 20 steps.

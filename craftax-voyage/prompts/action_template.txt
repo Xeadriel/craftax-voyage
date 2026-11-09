@@ -142,24 +142,19 @@ Code from the last round: ...
 Execution error: ...
 Log: ...
 
-Map:
--5, -4: ...
--4, -4: ...
-[...]
-4, 4: ...
-5, 4: ...
-
-Inventory:
-Wood: ...
-[...]
-Health: ...
-Food: ...
-Drink: ...
-Energy: ...
-[...]
-Floor: ...
-Ladder Open: ...
-Is Boss Vulnerable: ...
+Current situation:
+Vitals: Health, Food, Drink, Energy and Mana as current/max. "can gain up to N" is how much more food, drink or energy fits.
+Sleeping / Resting
+Attributes: XP, dexterity, strength, intelligence
+Threats in view: hostile mobs I can see and how far away they are
+Equipment: pickaxe, sword, bow, armour slots, enchantments, learned spells
+Inventory: every item, including the ones I have 0 of
+In view now: resources, water, plants and passive mobs I can see right now, with the nearest distance
+Seen on this floor: what I remember of this floor, with the nearest distance; ores and chests I have not seen; the ladder down and whether it is open or how many more kills it needs
+Stations: crafting table, furnace and enchantment tables, in view, seen or none seen
+Craftable with a crafting table / with a crafting table + furnace: what the inventory allows to craft next to those stations
+Enchantable at a fire / ice enchantment table: what could be enchanted there right now
+Floor: the floor I am on
 
 Task: ...
 Amounts in the task are added on top of what you have now (the state above is the starting point).
@@ -169,13 +164,13 @@ Critique: ...
 
 You should then respond to me with
 Explain (if applicable): Are there any steps missing in your plan? Why does the code not complete the task? What do the log, the execution error and the critique imply?
-Plan: How to complete the task step by step. Pay attention to the Inventory, the Map and the intrinsics (Health, Food, Drink, Energy, Mana, XP), since they tell what you have.
+Plan: How to complete the task step by step. Use the current situation to see what you have and what is missing: the inventory and equipment for prerequisites, "In view now" and "Seen on this floor" for whether you must explore first and how far, and the vitals to keep max_steps safe.
 
 Code:
     1) Write a function taking the state, the logging function and the step function (in this order) as the only arguments.
     2) Reuse the above useful programs as much as possible. Call them with `state = program(state, log_fn, step_func, ...)`. Do not try to reinvent the wheel and use them whenever applicable. Do not replace them using the step function.
         - Use `mine_block(state, log_fn, step_func, block, number)` to mine and collect blocks. Do not press Action.DO at blocks yourself.
-        - Use `craft(state, log_fn, step_func, craftable, number)` to craft items. Do not step MAKE_* actions directly.
+        - Use `craft(state, log_fn, step_func, craftable, number)` to craft items. It will place a station or move to the needed station if it's in view. Do not step MAKE_* actions directly. If the needed station is not in view, but has been seen in this floor and is not too far away, you should use explore_until.
         - Use `place(state, log_fn, step_func, placeable)` to place blocks and items. Do not step PLACE_* actions directly. An optional parameter position will let you choose a location, otherwise it will be placed in the facing direction.
         - Use `kill_mob(state, log_fn, step_func, target)` to fight and hunt mobs. Do not attack with Action.DO, arrows or spells yourself.
         - Use `drink(...)`, `sleep(...)`, `collect_sapling(...)` and `enchant(...)` to drink water, sleep, collect saplings and enchant equipment.
@@ -186,7 +181,7 @@ Code:
     4) Functions in the "Code from the last round" section will not be saved or executed. Do not reuse functions listed there.
     5) Anything defined outside a function will be ignored, define all your variables inside your functions.
     6) Call `log_fn` only for progress notes. Never log whether the task succeeded or failed, and never start a log line with `[` (that is reserved for the programs). Judging the result is the critic's job, never yours.
-    7) Always use `explore_until(state, log_fn, step_func, target)` when you cannot see something. It will also memorize previously seen things in the same floor. You should always call it before mining blocks, crafting at a crafting table or furnace, or killing mobs.
+    7) Always use `explore_until(state, log_fn, step_func, target)` when you cannot see something. It will also memorize previously seen things in the same floor. You should always call it before mining blocks or killing mobs; it returns without a step if the target is already in view.
     8) Only use what the player can see or has seen: read the world only through the state fields listed above and the knowledge functions. Never read the hidden state fields. Do not cheat.
     9) Do not write infinite loops or recursive functions. Do not use `while` loops; if something must be repeated, use `for _ in range(n)` with a small fixed n. Do not catch exceptions (no try/except): the programs raise an Exception when they fail, let it propagate.
     10) Name your function in a meaningful way (can infer the task from the name). Never name your function, a helper or a variable after a program in the list above (e.g. `sleep`, `drink`, `craft`, `known_blocks`).

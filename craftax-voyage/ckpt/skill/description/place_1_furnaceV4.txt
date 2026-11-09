@@ -1,0 +1,1 @@
+The function checks if there is at least one stone in the inventory to place a furnace. If the stone count is insufficient, it raises an exception. Otherwise, it attempts to place a furnace on an available tile within a maximum of 20 steps. Finally, it returns the updated state after the placement attempt.

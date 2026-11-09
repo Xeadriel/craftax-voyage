@@ -1,1 +1,0 @@
-The function is about killing 1 zombie on the current floor using the player's melee attack. First, it searches for a zombie within up to 20 steps. Once found, it kills the zombie and updates the inventory food by adding 6. Finally, it returns the resulting state.

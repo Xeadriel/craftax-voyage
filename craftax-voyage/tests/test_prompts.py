@@ -21,3 +21,14 @@ def test_example_collects_enough_wood_for_table_and_pickaxe():
     text = (PROMPTS / "action_template.txt").read_text(encoding="utf-8")
     example = re.search(r"def mine_3_coal\(.*?return state", text, re.S).group(0)
     assert "BlockType.TREE, 3" in example
+
+
+def task_formats(prompt_name):
+    text = (PROMPTS / f"{prompt_name}.txt").read_text(encoding="utf-8")
+    line = next(l for l in text.splitlines() if "concise format, such as" in l)
+    return re.findall(r'"([^"]+)"', line)
+
+
+def test_decomposition_uses_the_curriculum_task_format():
+    # The action agent and critic are written for the curriculum's tasks
+    assert task_formats("curriculum_task_decomposition") == task_formats("curriculum")

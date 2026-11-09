@@ -1,1 +1,0 @@
-The function mines 4 wood from trees on the current floor. For each of the 4 trees, it first explores until a tree is visible and then mines 1 tree. After each mining operation, it logs the current total amount of wood in the inventory. The process repeats this cycle four times and returns the final state.

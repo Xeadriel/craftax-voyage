@@ -1,1 +1,0 @@
-The function mines 5 wood from trees on the current floor by calling a helper function that handles the mining process internally. It logs the start of the operation and the successful completion with the final wood count. The function takes the current state, a logging function, and a step function as inputs and returns the updated state after mining.

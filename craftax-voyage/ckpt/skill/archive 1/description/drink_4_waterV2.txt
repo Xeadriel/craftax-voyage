@@ -1,1 +1,0 @@
-The function is about drinking 4 water from the nearest water source on the current floor. First, it explores until a water source is visible. Once a water source is found, it drinks 4 times from that source and returns the resulting state.

@@ -1,0 +1,1 @@
+The function verifies that the player has at least one wood and one stone in their inventory, raising an error if materials are missing. It then attempts to craft one batch of arrows, which yields two arrows, by interacting with a crafting table within a maximum of 20 steps. Finally, it returns the updated state after the crafting process is complete.

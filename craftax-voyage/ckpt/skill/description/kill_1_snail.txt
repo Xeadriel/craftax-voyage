@@ -1,0 +1,1 @@
+The function is about hunting and killing a single snail. It assumes the snail is already visible within the nearest four tiles. The process involves using a kill command to target passive mobs for up to 30 steps. Once the snail is eliminated, the resulting state is returned.

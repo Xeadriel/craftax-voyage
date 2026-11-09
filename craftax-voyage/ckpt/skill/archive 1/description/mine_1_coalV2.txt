@@ -1,1 +1,0 @@
-The function mines 1 coal block on the current floor after verifying the agent has a pickaxe of level 1 or higher. It first checks the inventory and raises an exception if no suitable pickaxe is available. Then it explores until a coal block is visible in sight. Once found, it mines exactly 1 coal block and returns the updated state with the increased coal count.

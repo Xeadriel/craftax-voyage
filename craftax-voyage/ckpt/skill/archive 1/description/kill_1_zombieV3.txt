@@ -1,1 +1,0 @@
-The function is about killing 1 zombie on the current floor. First, it checks if a sword is in the inventory; if not, it crafts a wood sword. Then, it explores for up to 30 steps until a zombie is found in sight. Once located, it kills the zombie within up to 20 steps and returns the resulting state with increased food.

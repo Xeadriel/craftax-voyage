@@ -1,0 +1,1 @@
+The function is about drinking 4 units of water. Since water is already visible within the nearest 2 tiles, it directly attempts to drink 4 times. The process is limited to a maximum of 30 steps and returns the resulting state.

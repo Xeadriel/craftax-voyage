@@ -1,0 +1,1 @@
+The function is about spending 1 XP to increase the dexterity stat. It executes a single level-up action for dexterity and returns the updated state.

@@ -1,0 +1,1 @@
+The function is about crafting 1 stone pickaxe. It attempts to craft the item once, requiring 1 wood and 1 stone, within a maximum of 20 steps and returns the resulting state.

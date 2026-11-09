@@ -81,31 +81,34 @@ class CurriculumAgent:
         self.last_turn = None
         self.qa_cache = {}
 
-        if resume:
-            print(
-                f"\033[35mLoading Curriculum Agent from "
-                f"{ckpt_dir}/curriculum\033[0m", flush=True
+        # The learning history belongs to the skill library, which is always
+        # kept, so it is loaded with or without --resume
+        print(
+            f"\033[35mLoading Curriculum Agent from "
+            f"{ckpt_dir}/curriculum\033[0m", flush=True
+        )
+
+        if U.f_exists(f"{ckpt_dir}/curriculum/completed_tasks.json"):
+            self.completed_tasks = U.load_json(
+                f"{ckpt_dir}/curriculum/completed_tasks.json"
             )
 
-            if U.f_exists(f"{ckpt_dir}/curriculum/completed_tasks.json"):
-                self.completed_tasks = U.load_json(
-                    f"{ckpt_dir}/curriculum/completed_tasks.json"
-                )
+        if U.f_exists(f"{ckpt_dir}/curriculum/failed_tasks.json"):
+            self.failed_tasks = U.load_json(
+                f"{ckpt_dir}/curriculum/failed_tasks.json"
+            )
 
-            if U.f_exists(f"{ckpt_dir}/curriculum/failed_tasks.json"):
-                self.failed_tasks = U.load_json(
-                    f"{ckpt_dir}/curriculum/failed_tasks.json"
-                )
+        if U.f_exists(f"{ckpt_dir}/curriculum/qa_cache.json"):
+            self.qa_cache = U.load_json(
+                f"{ckpt_dir}/curriculum/qa_cache.json"
+            )
 
-            if U.f_exists(f"{ckpt_dir}/curriculum/world_progress.json"):
-                self.world_progress = U.load_json(
-                    f"{ckpt_dir}/curriculum/world_progress.json"
-                )
-
-            if U.f_exists(f"{ckpt_dir}/curriculum/qa_cache.json"):
-                self.qa_cache = U.load_json(
-                    f"{ckpt_dir}/curriculum/qa_cache.json"
-                )
+        # What was achieved in the current world only continues with the
+        # world itself (--resume); a new world starts empty
+        if resume and U.f_exists(f"{ckpt_dir}/curriculum/world_progress.json"):
+            self.world_progress = U.load_json(
+                f"{ckpt_dir}/curriculum/world_progress.json"
+            )
 
         if not warm_up:
             warm_up = self.default_warmup
@@ -149,12 +152,16 @@ class CurriculumAgent:
     def progress(self):
         return len(self.completed_tasks)
 
+    @staticmethod
+    def prompt_with_tutorial(prompt_name):
+        return load_prompt(prompt_name).replace(
+            "{Craftax tutorial.md file}",
+            U.load_text(TUTORIAL_PATH),
+        )
+
     def render_system_message(self):
         system_message = SystemMessage(
-            content=load_prompt("curriculum").replace(
-                "{Craftax tutorial.md file}",
-                U.load_text(TUTORIAL_PATH),
-            )
+            content=self.prompt_with_tutorial("curriculum")
         )
 
         assert isinstance(system_message, SystemMessage)
@@ -437,14 +444,12 @@ class CurriculumAgent:
         max_retries=5,
     ):
         messages = [
-            SystemMessage(
-                content=load_prompt("curriculum_task_decomposition"),
-            ),
-            self.render_human_message(
+            self.render_system_message_task_decomposition(),
+            self.render_human_message_task_decomposition(
                 env_state=env_state,
                 skills=skills,
+                task=task,
             ),
-            HumanMessage(content=f"Final task: {task}"),
         ]
 
         print(
@@ -463,7 +468,10 @@ class CurriculumAgent:
             )
 
             try:
-                sub_goals = fix_and_parse_json(response)
+                # Only the list after "Sub-goals:", so a "[quantity]" in the
+                # reasoning is not taken for it
+                _, _, sub_goals_text = response.rpartition("Sub-goals:")
+                sub_goals = fix_and_parse_json(sub_goals_text)
 
                 if not (
                     isinstance(sub_goals, list)
@@ -472,7 +480,7 @@ class CurriculumAgent:
                 ):
                     raise ValueError("Expected a non-empty JSON list of strings")
 
-                return sub_goals
+                return [goal.strip() for goal in sub_goals]
 
             except Exception as e:
                 print(
@@ -481,6 +489,28 @@ class CurriculumAgent:
                 )
 
         raise RuntimeError("Max retries reached, failed to decompose the task.")
+
+    def render_system_message_task_decomposition(self):
+        return SystemMessage(
+            content=self.prompt_with_tutorial("curriculum_task_decomposition")
+        )
+
+    def render_human_message_task_decomposition(
+        self,
+        *,
+        env_state,
+        task,
+        skills="None",
+    ):
+        # Only the situation now: the task lists and recap belong to the
+        # learning run, not to the world the task is solved in
+        return HumanMessage(
+            content=(
+                f"Current situation:\n{situation_report(env_state)}\n\n"
+                f"Learned skills:\n{skills}\n\n"
+                f"Final task: {task}"
+            )
+        )
 
     # ------------------------------------------------------------------
     # QA
@@ -672,12 +702,8 @@ class CurriculumAgent:
         return f"Question: {question}\n" f"{answer}"
 
     def render_system_message_qa_step2_answer_questions(self):
-        tutorial = U.load_text(TUTORIAL_PATH)
-
         return SystemMessage(
-            content=load_prompt(
-                "curriculum_qa_step2_answer_questions"
-            ).replace("{Craftax tutorial.md file}", tutorial)
+            content=self.prompt_with_tutorial("curriculum_qa_step2_answer_questions")
         )
 
     def render_human_message_qa_step2_answer_questions(

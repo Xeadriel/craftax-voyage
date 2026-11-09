@@ -1,0 +1,1 @@
+The function is about exploring and mining 4 trees to obtain wood. First, it explores for up to 40 steps until a tree becomes visible. Once a tree is found, it proceeds to mine 4 trees within a maximum of 40 steps. The process concludes by returning the updated state after the mining operation is complete.

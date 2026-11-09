@@ -1,0 +1,1 @@
+The function is about exploring and drinking from a water source. First, it explores for up to 50 steps until water becomes visible. Once water is found, it drinks from the source exactly once within a limit of 20 steps. Finally, it returns the updated state after completing these actions.

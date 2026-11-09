@@ -1,0 +1,1 @@
+The function is about exploring the environment to locate a passive mob. It searches for up to 60 steps until a passive mob comes into view. Once found, the exploration stops and the resulting state is returned.

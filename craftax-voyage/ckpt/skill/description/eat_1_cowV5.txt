@@ -1,0 +1,1 @@
+The function is about finding and killing one passive mob to gain food. First, it explores for up to 60 steps until a passive mob comes into view. Once found, it proceeds to kill the mob within a maximum of 30 steps. The process concludes by returning the updated state after the mob has been eliminated.

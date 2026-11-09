@@ -1,1 +1,0 @@
-The function is about drinking water five times. It first logs the action of drinking five waters. Then it calls the built-in drink function to consume water from the nearest source up to 50 steps. Afterward, it logs the current drink level of the player. Finally, it returns the updated state.

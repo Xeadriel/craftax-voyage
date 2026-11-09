@@ -32,7 +32,6 @@ from craftax.craftax.constants import (
 from craftax.craftax.envs.craftax_symbolic_env import CraftaxSymbolicEnv as CraftaxEnv
 from craftax.craftax.renderer import make_craftax_pixel_renderer
 from craftax.craftax_env import make_craftax_env_from_name
-from craftax.craftax.renderer import render_craftax_text
 
 from agents.curriculum import CurriculumAgent
 from agents.action import ActionAgent
@@ -60,6 +59,40 @@ def save_compressed_pickle(title: str, data: Any):
 def load_compressed_pickle(path: str):
     with bz2.BZ2File(path, "r") as f:
         return pickle.load(f)
+
+
+class Tee:
+    """
+    A stream that also writes everything to a log file, like piping the
+    output through `tee`. Every write is flushed, so the file is live.
+    """
+
+    def __init__(self, stream, log_file):
+        self.stream = stream
+        self.log_file = log_file
+
+    def write(self, text):
+        self.stream.write(text)
+        self.log_file.write(text)
+        self.log_file.flush()
+        return len(text)
+
+    def flush(self):
+        self.stream.flush()
+        self.log_file.flush()
+
+    def __getattr__(self, name):
+        return getattr(self.stream, name)
+
+
+def tee_output(log_path):
+    """Copy stdout and stderr to log_path from now on."""
+
+    Path(log_path).parent.mkdir(parents=True, exist_ok=True)
+    log_file = open(log_path, "a", encoding="utf-8", errors="replace")
+    sys.stdout = Tee(sys.stdout, log_file)
+    sys.stderr = Tee(sys.stderr, log_file)
+    print(f"Logging to {log_path}", flush=True)
 
 
 class CraftaxRenderer:
@@ -337,7 +370,6 @@ class CraftaxVoyage:
             temperature=args.skill_manager_temperature,
             api_base=args.api_base,
             ckpt_dir=args.skill_library_dir or args.ckpt_dir,
-            resume=args.resume or bool(args.skill_library_dir),
         )
 
         # Skills run in this module's namespace: every program the prompt names
@@ -579,7 +611,7 @@ class CraftaxVoyage:
             skill = self.action_agent.generate_skill(
                 task=task,
                 context=context,
-                textual_state=render_craftax_text(self.env_state),
+                situation=situation_report(self.env_state, include_achievements=False),
                 skills=self.skill_manager.skill_code_list(),
                 code=code,
                 error=error,
@@ -783,7 +815,13 @@ class CraftaxVoyage:
         order in a fresh world. No new skills are added to the library.
 
         max_iterations limits the number of action agent attempts, since a
-        sub-goal that keeps failing is retried.
+        sub-goal that keeps failing is retried. Inference stops after
+        --max_sub_goal_failures failures in a row, since the later sub-goals
+        build on the one that fails.
+
+        If the player dies, the game restarts in a new world with an empty
+        inventory: the task is decomposed again from there (given sub-goals
+        start over).
         """
 
         if not task and not sub_goals:
@@ -793,8 +831,8 @@ class CraftaxVoyage:
         knowledge.reset()
         knowledge.observe(self.env_state)
 
-        if not sub_goals:
-            sub_goals = self.decompose_task(task)
+        given_sub_goals = sub_goals
+        sub_goals = given_sub_goals or self.decompose_task(task)
 
         print(f"Sub-goals: {sub_goals}", flush=True)
 
@@ -804,6 +842,7 @@ class CraftaxVoyage:
         # An index instead of Voyager's len(completed_tasks): completed tasks
         # are deduplicated, so a repeated sub-goal would never be passed
         sub_goal_index = 0
+        failures = 0
         self.iteration = 0
 
         while sub_goal_index < len(sub_goals):
@@ -831,8 +870,24 @@ class CraftaxVoyage:
 
             if info["success"]:
                 sub_goal_index += 1
+                failures = 0
+            else:
+                failures += 1
 
             self.print_task_progress()
+
+            if failures >= self.args.max_sub_goal_failures:
+                print(
+                    f"Sub-goal '{next_task}' failed {failures} times in a row, "
+                    f"stopping inference", flush=True
+                )
+                break
+
+            if info.get("died"):
+                print("\n========== PLAYER DIED: PLANNING AGAIN ==========", flush=True)
+                sub_goals = given_sub_goals or self.decompose_task(task)
+                sub_goal_index = 0
+                print(f"Sub-goals: {sub_goals}", flush=True)
 
         print(
             f"Inference finished: {sub_goal_index}/{len(sub_goals)} sub-goals completed", flush=True
@@ -900,6 +955,14 @@ def parse_args():
     parser.add_argument("--fps", type=int, default=60)
     parser.add_argument("--max_iterations", type=int, default=-1)
 
+    parser.add_argument(
+        "--log_file",
+        type=str,
+        default=None,
+        help="File the whole output is copied to while running "
+        "(default: logs/run_<timestamp>.txt, 'none' to disable)",
+    )
+
     parser.add_argument("--ckpt_dir", type=str, default="ckpt")
     parser.add_argument("--resume", action="store_true")
 
@@ -921,6 +984,13 @@ def parse_args():
         type=json.loads,
         default=None,
         help='JSON list of sub-goals to solve instead of learning, e.g. \'["Mine 1 wood"]\'',
+    )
+
+    parser.add_argument(
+        "--max_sub_goal_failures",
+        type=int,
+        default=3,
+        help="Stop inference when a sub-goal fails this many times in a row",
     )
 
     parser.add_argument(
@@ -1039,6 +1109,9 @@ def main():
             args.render_delay,
         )
         return
+
+    if args.log_file != "none":
+        tee_output(args.log_file or f"logs/run_{int(time.time())}.txt")
 
     def run():
         craftax_voyage = CraftaxVoyage(args)

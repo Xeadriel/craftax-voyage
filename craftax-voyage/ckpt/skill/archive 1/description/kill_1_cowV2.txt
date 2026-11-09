@@ -1,1 +1,0 @@
-The function is about killing 1 cow on the current floor. First, it uses a helper function to kill the cow within up to 20 steps. Once the cow is killed, the food in the inventory increases by 6. The function then returns the resulting state.

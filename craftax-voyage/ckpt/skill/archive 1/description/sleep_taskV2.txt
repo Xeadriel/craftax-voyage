@@ -1,1 +1,0 @@
-The function attempts to sleep the player until their energy is fully restored. It first logs the current and maximum energy levels, then calls the sleep function with a maximum of 50 steps. After the sleep process completes, it logs the final energy level and returns the updated state.

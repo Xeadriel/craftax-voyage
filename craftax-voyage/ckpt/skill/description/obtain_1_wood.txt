@@ -1,1 +1,0 @@
-The function is about obtaining at least one piece of wood. First, it checks if the current inventory already contains the required amount. If the goal is met, it logs the completion and returns the state immediately. Otherwise, it proceeds to mine the necessary wood using a helper function. Finally, it logs the updated inventory count and returns the modified state.

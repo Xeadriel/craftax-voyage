@@ -1,0 +1,1 @@
+The function is about hunting and killing a passive mob, specifically a cow. It uses a kill_mob action with a maximum of 30 steps to locate and eliminate the target. The function assumes the cow is already within the nearest 5 tiles and returns the updated state upon completion.

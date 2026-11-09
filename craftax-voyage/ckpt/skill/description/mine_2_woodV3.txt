@@ -1,0 +1,1 @@
+The function is about exploring and mining 2 trees. First, it explores for up to 30 steps until a tree is visible. Once a tree is found, it mines 2 trees within up to 30 steps and returns the resulting state.

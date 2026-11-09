@@ -1,0 +1,1 @@
+The function is about exploring and mining 5 stone blocks. First, it explores for up to 40 steps until a stone block is visible. Once found, it mines 5 stone blocks within up to 60 steps and returns the resulting state.

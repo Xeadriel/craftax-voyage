@@ -1,0 +1,1 @@
+The function is about hunting and killing a single passive mob. It uses a kill action with a maximum of 30 steps to eliminate the target and returns the resulting state.

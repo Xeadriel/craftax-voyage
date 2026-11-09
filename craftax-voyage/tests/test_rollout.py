@@ -87,3 +87,36 @@ def test_resume_without_vitals_before(voyage):                         # Review 
     voyage.action_agent.generate_skill = counting_stub(skill("def f(state, log_fn, step_func):\n    return state\n"))
     info = voyage.rollout("Wait", "", resume={"next_attempt": 1, "code": "", "error": "", "log": "", "critique": ""})
     assert info["vitals_before"] is not None
+
+
+def test_inference_plans_again_after_death_and_stops_after_failures(voyage, monkeypatch):
+    plans = iter([["Mine 1 wood", "Craft 1 wood pickaxe"], ["Mine 2 wood"]])
+    decompositions = []
+    monkeypatch.setattr(voyage, "decompose_task", lambda task: decompositions.append(task) or next(plans))
+    results = iter([
+        {"task": "Mine 1 wood", "success": True},
+        {"task": "Craft 1 wood pickaxe", "success": False, "died": True},
+        {"task": "Mine 2 wood", "success": False},
+        {"task": "Mine 2 wood", "success": False},
+    ])
+    ran = []
+    monkeypatch.setattr(voyage, "rollout", lambda task, context: ran.append(task) or next(results))
+    voyage.inference(task="Craft 1 wood pickaxe")
+    assert decompositions == ["Craft 1 wood pickaxe"] * 2
+    assert ran == ["Mine 1 wood", "Craft 1 wood pickaxe", "Mine 2 wood", "Mine 2 wood"]
+
+
+def test_tee_output_writes_the_log_live(tmp_path, monkeypatch):
+    import io
+    import craftax_voyage
+
+    out, err = io.StringIO(), io.StringIO()
+    monkeypatch.setattr(sys, "stdout", out)
+    monkeypatch.setattr(sys, "stderr", err)
+    log_path = tmp_path / "logs" / "run.txt"
+    craftax_voyage.tee_output(str(log_path))
+    print("hello ✓")
+    sys.stderr.write("oops\n")
+    # Readable before anything is closed or flushed explicitly
+    assert log_path.read_text(encoding="utf-8").endswith("hello ✓\noops\n")
+    assert out.getvalue().endswith("hello ✓\n") and err.getvalue() == "oops\n"

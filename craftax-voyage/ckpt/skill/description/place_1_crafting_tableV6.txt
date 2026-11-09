@@ -1,0 +1,1 @@
+The function verifies that the player has at least 2 units of wood, raising an error if the requirement is not met. It then attempts to place a crafting table on a valid tile in front of the player. The placement process is limited to a maximum of 20 steps. Finally, it returns the updated state after the action is completed or fails.

@@ -1,1 +1,0 @@
-The function aims to kill 1 skeleton on the current floor. First, it checks if arrows are available; if not, it explores for a tree, mines 1 wood, and crafts 2 arrows. Next, it explores until a skeleton is found in sight. Finally, it uses a ranged attack to kill the skeleton within up to 20 steps and returns the resulting state.

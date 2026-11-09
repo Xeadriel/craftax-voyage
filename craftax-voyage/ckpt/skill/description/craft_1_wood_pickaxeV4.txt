@@ -1,0 +1,1 @@
+The function is about crafting 1 wood pickaxe. First, it verifies that at least 1 wood is available in the inventory, raising an error if not. Then, it explores up to 40 steps until a crafting table is visible. Once the table is found, it performs the crafting action to make 1 wood pickaxe within up to 20 steps and returns the updated state.

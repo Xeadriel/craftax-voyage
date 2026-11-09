@@ -181,9 +181,12 @@ def _mob_name(mob_class, type_id):
     return names[type_id] if 0 <= type_id < len(names) else f"{mob_class.name.lower()} {type_id}"
 
 
-def situation_report(state):
+def situation_report(state, include_achievements=True):
     """
     The player-visible state as a short text report.
+
+    include_achievements=False drops the missing achievements, which only
+    matter for deciding what to do next (the action agent only executes).
     """
     level = int(state.player_level)
     inventory = state.inventory
@@ -203,15 +206,20 @@ def situation_report(state):
         f"Sleeping: {'yes' if bool(state.is_sleeping) else 'no'} | "
         f"Resting: {'yes' if bool(state.is_resting) else 'no'}"
     )
+    lines.append("")
     lines.append(
         f"Attributes: XP {int(state.player_xp)} | dexterity {int(state.player_dexterity)} | "
         f"strength {int(state.player_strength)} | intelligence {int(state.player_intelligence)}"
     )
-
+    lines.append("")
     # Mobs in view
+    # MobType is a plain Enum without ordering, so the key compares its value
     mobs = sorted(
-        (int(_distances(state, np.array([[row, col]]))[0]), mob_class, type_id)
-        for mob_class, type_id, row, col, _ in visible_mobs(state)
+        (
+            (int(_distances(state, np.array([[row, col]]))[0]), mob_class, type_id)
+            for mob_class, type_id, row, col, _ in visible_mobs(state)
+        ),
+        key=lambda mob: (mob[0], mob[1].value, mob[2]),
     )
     threats = [
         f"{_mob_name(mob_class, type_id)} {_tiles(distance)} away"
@@ -219,28 +227,30 @@ def situation_report(state):
         if mob_class != MobType.PASSIVE
     ]
     lines.append("Threats in view: " + (", ".join(threats) if threats else "none"))
-
+    lines.append("")
     # Equipment and inventory
     armour = [ARMOUR_NAMES[int(a)] for a in np.asarray(inventory.armour)]
     armour_enchantments = [ENCHANTMENT_NAMES[int(e)] for e in np.asarray(state.armour_enchantments)]
     spells = [name for name, learned in zip(["fireball", "iceball"], np.asarray(state.learned_spells)) if learned]
     lines.append(
-        f"Equipment: pickaxe {TIER_NAMES[int(inventory.pickaxe)]} | "
-        f"sword {TIER_NAMES[int(inventory.sword)]} (enchantment {ENCHANTMENT_NAMES[int(state.sword_enchantment)]}) | "
-        f"bow {'yes' if int(inventory.bow) > 0 else 'no'} (enchantment {ENCHANTMENT_NAMES[int(state.bow_enchantment)]}) | "
+        f"Equipment: {TIER_NAMES[int(inventory.pickaxe)]} pickaxe | "
+        f"{TIER_NAMES[int(inventory.sword)]} sword ({ENCHANTMENT_NAMES[int(state.sword_enchantment)]} enchantment) | "
+        f"{'' if int(inventory.bow) > 0 else 'no'} bow ({ENCHANTMENT_NAMES[int(state.bow_enchantment)]} enchantment) | "
         f"armour slots [{', '.join(armour)}] (enchantments [{', '.join(armour_enchantments)}]) | "
         f"spells: {', '.join(spells) if spells else 'none'}"
     )
+    lines.append("")
     potions = ", ".join(
         f"{colour} potion {int(count)}" for colour, count in zip(POTION_NAMES, np.asarray(inventory.potions))
     )
+    lines.append("")
     lines.append(
         f"Inventory: wood {int(inventory.wood)}, stone {int(inventory.stone)}, coal {int(inventory.coal)}, "
         f"iron {int(inventory.iron)}, diamond {int(inventory.diamond)}, sapphire {int(inventory.sapphire)}, "
         f"ruby {int(inventory.ruby)}, sapling {int(inventory.sapling)}, torch {int(inventory.torches)}, "
         f"arrow {int(inventory.arrows)}, book {int(inventory.books)}, {potions}"
     )
-
+    lines.append("")
     # What is in view right now
     level_map = np.asarray(state.map[level])
     in_view_mask = visible_mask(state)
@@ -277,7 +287,7 @@ def situation_report(state):
     else:
         seen_parts.append(f"ladder down {_tiles(ladder_distance)} away ({ladder_status})")
     lines.append("Seen on this floor: " + ", ".join(seen_parts))
-
+    lines.append("")
     # Stations
     station_parts = []
     for value in STATION_BLOCKS:
@@ -301,13 +311,16 @@ def situation_report(state):
         "Craftable with a crafting table + furnace: "
         + (", ".join(craft_lists["crafting_table+furnace"]) or "nothing")
     )
+    lines.append("")
     enchant_lists = enchantable(state)
     lines.append("Enchantable at a fire enchantment table: " + (", ".join(enchant_lists["fire"]) or "nothing"))
     lines.append("Enchantable at an ice enchantment table: " + (", ".join(enchant_lists["ice"]) or "nothing"))
-
+    lines.append("")
     # Floor and achievements
     floor_name = FLOOR_NAMES[level] if 0 <= level < len(FLOOR_NAMES) else f"floor {level}"
     lines.append(f"Floor: {level} ({floor_name})")
+    if not include_achievements:
+        return "\n".join(lines)
     achievements = np.asarray(state.achievements)
     missing = [
         achievement.name.lower().replace("_", " ")

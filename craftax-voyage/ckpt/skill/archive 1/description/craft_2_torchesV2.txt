@@ -1,1 +1,0 @@
-The function mines 3 trees to gather wood, places a crafting table, and crafts 4 torches. It then searches for grass tiles and places 2 of the crafted torches on the ground. The process involves repeated exploration and placement steps until both torches are successfully positioned.

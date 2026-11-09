@@ -1,1 +1,0 @@
-The function checks if the current inventory already contains at least one wood item, returning early if so. If wood is missing, it explores the environment until a tree block becomes visible. Once a tree is found, it proceeds to mine exactly one wood block from that tree. Finally, it returns the updated state reflecting the successful mining action.

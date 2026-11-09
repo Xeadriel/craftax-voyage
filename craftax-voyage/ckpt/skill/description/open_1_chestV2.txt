@@ -1,0 +1,1 @@
+The function is about opening 1 chest. Since the chest is already visible within the nearest 2 tiles, it directly attempts to open 1 chest within up to 30 steps and returns the resulting state.

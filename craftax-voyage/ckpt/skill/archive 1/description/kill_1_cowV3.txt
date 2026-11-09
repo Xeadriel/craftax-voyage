@@ -1,1 +1,0 @@
-The function is about exploring and killing 1 cow. First explore for up to an unspecified number of steps until a cow is visible. Once a cow is found, kill the cow within up to an unspecified number of steps and return the resulting state.

@@ -1,41 +1,16 @@
 def mine_5_stone(state, log_fn, step_func):
-    from craftax.craftax.constants import Action, BlockType
+    from craftax.craftax.constants import BlockType, Action
     
-    # Check if we already have 5 stone
-    if state.inventory.stone >= 5:
-        log_fn(f"Already have {state.inventory.stone} stone, task complete")
-        return state
+    # I have 0 stone, need 5 more
+    target = state.inventory.stone + 5
     
-    # Check if we have a pickaxe
-    if state.inventory.pickaxe < 1:
-        log_fn("Need a pickaxe to mine stone")
-        
-        # Need 1 wood for wood pickaxe
-        if state.inventory.wood < 1:
-            log_fn("Need wood to craft pickaxe")
-            # Mine a tree
-            state = explore_until(state, log_fn, step_func, BlockType.TREE)
-            state = mine_block(state, log_fn, step_func, BlockType.TREE, 1)
-        
-        # Craft wood pickaxe (craft function places table if needed)
-        log_fn("Crafting wood pickaxe")
-        state = craft(state, log_fn, step_func, Action.MAKE_WOOD_PICKAXE)
+    # First, craft a wood pickaxe (need 1 wood, have 2)
+    state = craft(state, log_fn, step_func, Action.MAKE_WOOD_PICKAXE, 1, max_steps=20)
     
-    # Now mine 5 stone blocks
-    stones_needed = 5 - state.inventory.stone
+    # Explore until stone is in view
+    state = explore_until(state, log_fn, step_func, BlockType.STONE, max_steps=40)
     
-    for i in range(stones_needed):
-        log_fn(f"Mining stone {i+1}/{stones_needed}")
-        
-        # Explore until we can see a stone block
-        state = explore_until(state, log_fn, step_func, BlockType.STONE)
-        
-        # Mine the stone block
-        state = mine_block(state, log_fn, step_func, BlockType.STONE, 1)
-        
-        # Check if we have enough stone now
-        if state.inventory.stone >= 5:
-            log_fn(f"Reached target: {state.inventory.stone} stone")
-            break
+    # Mine 5 stone blocks
+    state = mine_block(state, log_fn, step_func, BlockType.STONE, 5, max_steps=60)
     
     return state

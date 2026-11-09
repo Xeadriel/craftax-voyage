@@ -69,7 +69,7 @@ class ActionAgent:
         *,
         task,
         context,
-        textual_state,
+        situation,
         code="",
         error="",
         log="",
@@ -94,7 +94,7 @@ class ActionAgent:
         else:
             observation += "Log: None\n\n"
 
-        observation += f"{textual_state}\n\n"
+        observation += f"Current situation:\n{situation}\n\n"
         observation += f"Task: {task}\n{self.ADDITIVE_AMOUNTS_NOTE}\n\n"
 
         if context:
@@ -114,7 +114,7 @@ class ActionAgent:
         *,
         task,
         context,
-        textual_state,
+        situation,
         skills=None,
         code="",
         error="",
@@ -155,7 +155,7 @@ class ActionAgent:
             self.render_human_message(
                 task=task,
                 context=context,
-                textual_state=textual_state,
+                situation=situation,
                 code=code,
                 error=error,
                 log=log,

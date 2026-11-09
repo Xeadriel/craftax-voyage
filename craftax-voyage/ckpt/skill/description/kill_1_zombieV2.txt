@@ -1,0 +1,1 @@
+The function is about hunting and killing a single zombie. It immediately initiates a melee attack sequence with a maximum of 30 steps to eliminate the target. Once the zombie is defeated, the function returns the updated state.

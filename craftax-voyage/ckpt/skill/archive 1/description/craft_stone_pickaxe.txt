@@ -1,1 +1,0 @@
-The function crafts a stone pickaxe by first checking for sufficient wood and stone inventory. If a wood pickaxe is missing, it explores and mines one stone block. A crafting table is then placed in front of the player, followed by crafting the stone pickaxe. The process raises an exception if the required resources are insufficient or if the crafting table cannot be placed.

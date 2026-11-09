@@ -1,26 +1,17 @@
 def mine_1_coal(state, log_fn, step_func):
-    from craftax.craftax.constants import BlockType
+    from craftax.craftax.constants import Action, BlockType
     
-    log_fn("Looking for coal to mine")
-    
-    # Check if we already have coal
-    if state.inventory.coal >= 1:
-        log_fn(f"Already have {state.inventory.coal} coal, task complete")
-        return state
-    
-    # Check if we have a pickaxe
+    # Check I have a pickaxe that can mine coal (needs level >= 1)
     if state.inventory.pickaxe < 1:
-        log_fn("Need a pickaxe to mine coal")
-        raise Exception("Need a pickaxe to mine coal")
+        # Need to craft a wood pickaxe first
+        state = explore_until(state, log_fn, step_func, BlockType.TREE, max_steps=40)
+        state = mine_block(state, log_fn, step_func, BlockType.TREE, 1, max_steps=20)
+        state = craft(state, log_fn, step_func, Action.MAKE_WOOD_PICKAXE, 1, max_steps=20)
     
-    # Explore until we can see coal
-    log_fn("Exploring to find coal...")
-    state = explore_until(state, log_fn, step_func, BlockType.COAL)
+    # Explore until coal is in view
+    state = explore_until(state, log_fn, step_func, BlockType.COAL, max_steps=60)
     
-    # Mine the coal
-    log_fn("Mining coal")
-    state = mine_block(state, log_fn, step_func, BlockType.COAL, 1)
-    
-    log_fn(f"Successfully mined coal. Current inventory: {state.inventory.coal} coal")
+    # Mine 1 coal block
+    state = mine_block(state, log_fn, step_func, BlockType.COAL, 1, max_steps=30)
     
     return state

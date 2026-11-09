@@ -1,0 +1,1 @@
+The function is about crafting 2 torches. First, it explores up to 40 steps until a crafting table is visible. It then verifies that the inventory contains at least 2 wood and 2 coal, raising an error if materials are insufficient. Once confirmed, it crafts 2 torches at the crafting table within a maximum of 30 steps and returns the updated state.

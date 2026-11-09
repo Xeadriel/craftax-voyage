@@ -1,1 +1,0 @@
-The function is about placing a furnace. First, it checks if there is at least 1 stone in the inventory. If the stone count is insufficient, it logs the shortage and raises an exception. Otherwise, it proceeds to place the furnace at the current location. Finally, it logs the successful placement and returns the updated state.

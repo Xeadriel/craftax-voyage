@@ -1,1 +1,0 @@
-The function is about killing 1 cow on the current floor. First, it uses a helper to kill the cow within up to 20 steps. Once the cow is killed, the function logs the success and returns the resulting state.

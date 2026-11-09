@@ -1,0 +1,1 @@
+The function verifies that the player has at least one unit of wood before proceeding. If the inventory check fails, it raises an exception indicating the shortage. Assuming sufficient resources, it attempts to craft one wood sword using a crafting table within a maximum of 20 steps. The process returns the updated state upon successful completion or failure.
