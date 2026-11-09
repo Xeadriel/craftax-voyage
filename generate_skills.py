@@ -31,7 +31,7 @@ and therefore you should always check whether you have the required items before
 
 A control primitive must fail if you do not have its prerequisites. You may also define custom situations like for example being 
 interrupted mining or exploring by an enemy getting too close. Always provide an explanation when failing and throwing errors.
-Also make it very clear if the control primitive has succeeded by returning true. Never return false or anything else.
+Also make it very clear if the control primitive has succeeded by returning the final game state (the state returned by the last step function call). Never return false, true or anything else.
 Sleeping and resting cannot be interrupted and therefore must run
 step functions until a sufficient number of steps has been taken and the game logic concludes the sleep/rest.
 
@@ -40,7 +40,13 @@ control primitives may but generally should not be single actions that can be do
 or a maximum number of steps has been reached. 
 Do not create infinite loops or recursive functions. 
 Do not use invalid actions. Do not invent objects or mobs not defined by craftax. Use enums and constants provided by craftax.
-Do not blindly spam one action, but rather write smart conditionals based on the current state. Do not directly edit the state. 
+Do not blindly spam one action, but rather write smart conditionals based on the current state. Do not directly edit the state.
+Only use what the player can see or has seen, do not cheat. The player sees a 9x11 window centred on itself and in it only lit cells
+(light_map > 0.05); every cell seen is remembered per floor. Read the world only through control_primitives/knowledge.py
+(known_blocks, known_items, visible_mask, is_visible, visible_mobs, visible_player_projectiles, ladder_open, boss_vulnerable),
+treat UNKNOWN cells as unexplored and never step into an unknown cell. Never read state.map, item_map, mob_map, light_map,
+the mob or projectile arrays, monsters_killed, boss_progress, boss_timesteps_to_spawn_this_round, potion_mapping, timestep,
+growing_plants_*, down_ladders, up_ladders, chests_opened or the hidden intrinsics (player_hunger, thirst, fatigue, recover).
 Always consider the character's current direction because it matters for many actions.
 Every control primitive must at least take the game state as a parameter as you will heavily make use of it in the code.
 Every control primitive must also take a step function which takes one argument, which is a value from the action enum. 
@@ -112,6 +118,7 @@ class Action(Enum):
 
     def mine_block(state, log, step_func, ...):
         ...
+        return state
 
     === FILE: explore.py ===
     # Description:
@@ -119,6 +126,7 @@ class Action(Enum):
 
     def exploreUntil(state, log, step_func, ...):
         ...
+        return state
 
     Every file must be complete and directly saveable as a .py file.
     Comments/docstrings may explain the implementation, but do not output
@@ -287,7 +295,7 @@ def main():
     
     Now design the following control primitive:
     A control primitive to explore and walk around until a certain specified thing is found or X number of steps are reached. This can be a block or entity.  
-        It should return true at the end if no error was thrown.
+        It should return the final game state at the end if no error was thrown.
         It should throw an error if max_steps number of steps are reached before finding the specified object.
     """
         # It should throw an error if food, drink or energy fall to 3 or below.
@@ -297,7 +305,7 @@ def main():
     #         If possible it should try to close the entrance to that safe spot by placing a block.
     #         Lastly it should enter the sleep or rest state as specified and run steps until the state is concluded.
     #         It should throw an error if the character has less hp than before sleeping/resting.
-    #         It should return true at the end if no error was thrown.
+    #         It should return the final game state at the end if no error was thrown.
     #         It should throw an error if the character died.
 
     # - A control primitive to drink water.
@@ -305,13 +313,13 @@ def main():
     #         It should be able to clear blocks and lave (by placing and removing a block where the lava is) that are in the way.
     #         It should throw an error if if there is no water source nearby.
     #         It should throw an error if an enemy gets too close (1 blocks radius).
-    #         It should return true at the end if no error was thrown.
+    #         It should return the final game state at the end if no error was thrown.
     #         It should throw an error after X (default 20) steps if not succeeded.
     #         It should throw an error if the character died.
     # - A control primitive to mine a specified number X (default value 1) of specified blocks/trees/resources. 
     #         It should move to the nearest block of the given type and mine it and do this X times.
     #         It should be able to clear blocks (by mining it) or water/lava (by placing and removing a block where the water/lava is) that are in the way. 
-    #         It should return true at the end if no error was thrown.
+    #         It should return the final game state at the end if no error was thrown.
     #         It should throw an error if X has not been reached yet but no more blocks of that type exist.
     #         It should throw an error if hunger, thirst or energy fall to 3 or below.
     #         It should throw an error if hp falls to 5 or below.
@@ -325,7 +333,7 @@ def main():
     #         It should decide when to use a melee attack, when to move in, when to retreat, 
     #         when to bait, when to reposition in order to adjust the player character's direction and when to dodge enemy projectiles
     #         It should also attempt to bait the enemy to enter the location the player character is currently facing by making use of the NOOP action when applicable. 
-    #         It should return true at the end if the enemy has been defeated.
+    #         It should return the final game state at the end if the enemy has been defeated.
     #         It should throw an error if hunger, thirst, hp or energy fall to 3 or below.
     #         It should throw an error after X (default 20) steps if not succeeded.
     #         It should throw an error if the character died.
@@ -336,7 +344,7 @@ def main():
     #         when to bait, when to reposition in order to adjust the player character's direction and when to dodge enemy projectiles.
     #         It should also attempt to bait the enemy to enter the location the player character is currently facing by making use of the NOOP action when applicable. 
     #         It should throw an error if hunger, thirst, hp or energy fall to 3 or below.
-    #         It should return true at the end if the enemy was defeated.
+    #         It should return the final game state at the end if the enemy was defeated.
     #         It should throw an error after X (default 20) steps if not succeeded.
     #         It should throw an error if the character died.
     #     - 5 A control primitive to flee to relative safety. 
@@ -344,7 +352,7 @@ def main():
     #         It should succeed when a distance of 5 or more to the closest enemy has been established or there are no enemies in sight.
     #         It should be able to ascend and descend ladders.
     #         It should be able to mine blocks and remove water (by placing and removing where the water is) that are in the way.
-    #         It should return true at the end if no error was thrown.
+    #         It should return the final game state at the end if no error was thrown.
     #         It should throw an error after X (default 20) steps if not succeeded.
     #         It should throw an error if the character died.
     #     - 7 A control primitive to sleep or rest.
@@ -352,7 +360,7 @@ def main():
     #         If possible it should try to close the entrance to that safe spot by placing a block.
     #         Lastly it should enter the sleep or rest state as specified and run steps until the state is concluded.
     #         It should throw an error if the character has less hp than before sleeping/resting.
-    #         It should return true at the end if no error was thrown.
+    #         It should return the final game state at the end if no error was thrown.
     #         It should throw an error if the character died.
     #     - 8 A control primitive to craft an item.
     #         It should check for the items ingredient requirements.
@@ -360,7 +368,7 @@ def main():
     #         It should craft the item.
     #         It should throw an error if there are not enough items in the inventory.
     #         It should throw an error if the necessary crafting station is not available and cannot be built (either because it's not possible or because there is not enough material for the crafting table/furnace).
-    #         It should return true at the end if no error was thrown.
+    #         It should return the final game state at the end if no error was thrown.
     #         It should throw an error after X (default 15) steps if not succeeded.
     #         It should throw an error if the character died.
     #     - 9 A control primitive to level up a given attribute.
